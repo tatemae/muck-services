@@ -1,0 +1,4 @@
+<h2> Нова кінцева точка ІОА була додана в <%= @application_name %> </h2>
+<p> Назва: <%= @oai_endpoint.title %> </p>
+<p> Урі: <%= @oai_endpoint.uri %> </p>
+<p> Управління каналами: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

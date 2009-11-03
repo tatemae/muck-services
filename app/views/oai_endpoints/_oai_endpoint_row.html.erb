@@ -1,0 +1,25 @@
+<tr>
+  <% if defined?(show_admin) && show_admin -%>
+    <td>
+      <% form_for(oai_endpoint_row, :url => admin_feed_path(oai_endpoint_row), :html => { :method => :put }) do |f| -%>
+        <% if oai_endpoint_row.banned? -%>
+          <%= hidden_field_tag :status, 'approve' %>
+          <%= image_submit_tag '/images/icons/exclaim.png', {:width => '16', :height => '16', :alt => t('muck.services.validate_feed') } %>
+        <% elsif oai_endpoint_row.pending? -%>
+           <%= hidden_field_tag :status, 'approve' %>
+           <%= image_submit_tag '/images/icons/pending.png', {:width => '16', :height => '16', :alt => t('muck.services.validate_feed') } %>
+        <% else -%>
+          <%= hidden_field_tag :status, 'ban' %>
+          <%= image_submit_tag '/images/icons/accept.png', {:width => '16', :height => '16', :alt => t('muck.services.ban_feed') } %>
+        <% end -%>
+      <% end -%>
+    </td>
+  <% end -%>
+  <td><%= oai_endpoint_row.default_language.english_name %></td>
+  <td>
+    <%= link_to image_tag('icons/feed.png'), oai_endpoint_row.uri, :target => '_blank' %>
+    <%= link_to h(oai_endpoint_row.title || oai_endpoint_row.display_uri), feed_path(oai_endpoint_row) %>
+    <% if oai_endpoint_row.display_uri != oai_endpoint_row.uri %><%= link_to image_tag('icons/external.png'), oai_endpoint_row.display_uri, :target => '_blank' %><% end %>
+  </td>
+  <td><%= oai_endpoint_row.created_at.strftime('%d %b %y') %></td>
+</tr>

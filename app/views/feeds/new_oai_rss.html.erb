@@ -1,0 +1,50 @@
+<div id="add_oai_rss_feed">
+
+  <ul id="add_oai_rss_feed_menu">
+    <li><a id="add_rss" href="#"><%= t('muck.services.add_rss') %></a></li>
+    <li><a id="add_oai" href="#"><%= t('muck.services.add_oai') %></a></li>
+  <ul>
+    
+  <div id="rss" class="add_data_container">
+    <h1><%= t('muck.services.add_rss_feed') %></h1>
+    <%= error_messages_for :feed -%>
+    <% custom_form_for(:feed, :url => polymorphic_url([@parent, :feeds])) do |f| -%>
+      <%= f.text_field :title, { :label => t('muck.services.title' ) }  %>
+      <%= f.text_field :uri, { :label => t('muck.services.add_feed_url' ) }  %>
+      <%= f.muck_services_language_select :default_language_id  %>
+      <%= f.hidden_field :service_id %>
+      <%= hidden_field_tag :new_template, 'feeds/new_oai_rss' %>
+      <%= hidden_field_tag :layout, 'popup' %>
+      <div class="button form-row">
+        <%= submit_tag t('muck.services.add_feed'), :id => 'add_feed_uri' %>
+        <span id="finding_uri_message" style="display:none;">
+          <%= t('muck.services.submitting_feed_message') %><img src="/images/spinner.gif" alt="<%= t('muck.services.loading_image') %>" />
+        </span>
+      </div>
+    <% end -%>
+  </div>
+
+  <div id="oai" class="add_data_container">
+    <h1><%= t('muck.services.add_oai_feed') %></h1>
+    <%= render :partial => 'oai_endpoints/form', :locals => { :layout => 'popup' } %>
+  </div>
+  
+</div>
+
+<% content_for :javascript do -%>
+jQuery(document).ready(function() {
+  jQuery('#oai').hide();
+  jQuery('#add_rss').click(function(){
+    jQuery('.add_data_container').hide();
+    jQuery('#rss').show();
+  });
+  jQuery('#add_oai').click(function(){
+    jQuery('.add_data_container').hide();
+    jQuery('#oai').show();
+  });
+  jQuery('#add_feed_uri').click(function(){
+    jQuery(this).hide();
+    jQuery('#finding_uri_message').show();
+  });
+});
+<% end -%>

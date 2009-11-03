@@ -1,0 +1,4 @@
+<h2> Một nguồn cấp dữ liệu mới đã được thêm vào <%= @application_name %> </h2>
+<p> Tiêu đề: <%= @feed.title %> </p>
+<p> Loại: <%= @feed.uri %> </p>
+<p> Quản lý nguồn cấp dữ liệu: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

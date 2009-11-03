@@ -1,0 +1,4 @@
+<h2> Nowy punkt końcowy oai został dodany do <%= @application_name %> </h2>
+<p> Tytuł: <%= @oai_endpoint.title %> </p>
+<p> Uri: <%= @oai_endpoint.uri %> </p>
+<p> Zarządzanie RSS: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

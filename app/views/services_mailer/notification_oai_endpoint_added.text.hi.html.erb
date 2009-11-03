@@ -1,0 +1,4 @@
+<h2> एक नया oai endpoint को <%= @application_name %> जोड़ दिया गया है </h2>
+<p> शीर्षक: <%= @oai_endpoint.title %> </p>
+<p> उड़ी: <%= @oai_endpoint.uri %> </p>
+<p> प्रबंधित फ़ीड: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

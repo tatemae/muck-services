@@ -1,0 +1,15 @@
+<% custom_form_for(:topic, :url => topics_path, :html => {:method => :post}) do |f| -%>
+  <%= text_field_tag :terms, params[:terms] || @terms %>
+  <%= f.submit t('muck.services.build_topic'), :id => 'generate_topic' %>
+  <span id="generating_topic_message" style="display:none;">
+    <%= t('muck.services.generating_topic_message') %><img src="/images/spinner.gif" alt="<%= t('muck.services.discover_feed_message') %>" />
+  </span>
+<% end -%>
+<% content_for :javascript do -%>
+jQuery(document).ready(function() {
+    jQuery('#generate_topic').click(function(){
+        jQuery(this).hide();
+        jQuery('#generating_topic_message').show();
+    });
+});
+<% end -%>

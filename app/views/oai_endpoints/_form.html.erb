@@ -1,0 +1,22 @@
+<%= error_messages_for :oai_endpoint -%>
+<% custom_form_for(:oai_endpoint, :url => oai_endpoints_url) do |f| -%>
+  <%= f.text_field :title, { :label => t('muck.services.title' ) }  %>
+  <%= f.text_field :uri, { :label => t('muck.services.add_feed_url' ) }  %>
+  <%= f.text_field :metadata_prefix, { :label => t('muck.services.metadata_prefix' ) } %>
+  <%= f.muck_services_language_select :default_language_id  %>
+  <div class="button form-row">
+    <%= hidden_field_tag :layout, layout if defined?(layout) %>
+    <%= submit_tag t('muck.services.add_feed'), :id => 'add_oai_uri' %>
+    <span id="finding_oai_message" style="display:none;">
+      <%= t('muck.services.submitting_feed_message') %><img src="/images/spinner.gif" alt="<%= t('muck.services.loading_image') %>" />
+    </span>
+  </div>
+<% end -%>
+<% content_for :javascript do -%>
+jQuery(document).ready(function() {
+  jQuery('#add_oai_uri').click(function() {
+    jQuery('#add_oai_uri').hide();
+    jQuery('#finding_oai_message').show();
+  });
+});
+<% end -%>

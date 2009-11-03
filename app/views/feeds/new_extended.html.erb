@@ -1,0 +1,32 @@
+<div id="add_single_feed">
+  <h1><%= t('muck.services.add_extended_feed_title') %></h1>
+  <p><%= t('muck.services.add_extended_feed_sub_title') %></p>
+  <%= error_messages_for :feed -%>
+  <% custom_form_for(:feed, :url => polymorphic_url([@parent, :feeds])) do |f| -%>
+    <%= f.text_field :title, { :label => t('muck.services.title' ) }  %>
+    <%= f.text_field :short_title, { :label => t('muck.services.short_title' ) }  %>    
+    <%= f.text_field :harvested_from_title, { :label => t('muck.services.repository_title' ) }  %>
+    <%= f.text_field :harvested_from_short_title, { :label => t('muck.services.repository_short_title' ) }  %>  
+    <%= f.text_field :uri, { :label => t('muck.services.collection_uri' ) }  %>
+    <%= f.text_field :display_uri, { :label => t('muck.services.collection_home_uri' ) }  %>
+    <%= f.text_area :description, { :label => t('muck.services.collection_description' ) }  %>
+    <%= f.muck_services_language_select :default_language_id, { :label => t('muck.services.add_feed_url' ) }  %>
+    <%= f.muck_services_service_select :service_id, { :label => t('muck.services.type_of_metadata'),
+                                                   :tip => t('muck.services.oai_prompt') } %>
+    <div class="button form-row">
+      <%= hidden_field_tag :new_template, 'feeds/new_extended' %>
+      <%= submit_tag t('muck.services.add_feed'), :id => 'add_feed_uri' %>
+      <span id="finding_uri_message" style="display:none;">
+        <%= t('muck.services.submitting_feed_message') %><img src="/images/loading.gif" alt="<%= t('muck.services.loading_image') %>" />
+      </span>
+    </div>
+  <% end -%>
+</div>
+<% content_for :javascript do -%>
+jQuery(document).ready(function() {
+    jQuery('#add_feed_uri').click(function(){
+        jQuery(this).hide();
+        jQuery('#finding_uri_message').show();
+    });
+});
+<% end -%>

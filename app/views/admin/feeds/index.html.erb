@@ -1,0 +1,35 @@
+<h1><%= t('muck.services.feeds_title') %></h1>
+<div>
+  <p>
+    <%= link_to t('muck.services.discover_feed'), new_feed_preview_path, :class => 'iframe lightbox' %>
+    <%= link_to t('muck.services.add_feed'), new_feed_path, :class => 'iframe lightbox' %>
+    <%= link_to t('muck.services.add_feed_advanced'), new_extended_feeds_path, :class => 'iframe lightbox' %>
+  </p>
+  <table class="feeds">
+    <tr>
+      <th><%= link_to t('muck.services.approval_status'), sort_feeds_link(params[:order], params[:asc], 'status', true) %></th>
+      <th><%= link_to t('muck.services.status'), sort_feeds_link(params[:order], params[:asc], 'status', true) %></th>
+      <th><%= link_to t('muck.services.default_language'), sort_feeds_link(params[:order], params[:asc], 'languages.english_name', true) %></th>
+      <th><%= link_to t('muck.services.entries_count'), sort_feeds_link(params[:order], params[:asc], 'entries_count', true) %></th>
+      <th><%= link_to t('muck.services.repository'), sort_feeds_link(params[:order], params[:asc], 'harvested_from_title', true)  %></th>
+      <th><%= link_to t('muck.services.title'), sort_feeds_link(params[:order], params[:asc], 'title', true)  %></th>
+      <th><%= link_to t('muck.services.harvested_at'), sort_feeds_link(params[:order], params[:asc], 'last_harvested_at', true) %></th>
+      <th><%= link_to t('muck.services.added_date'), sort_feeds_link(params[:order], params[:asc], 'created_at', true) %></th>
+    </tr>
+    <%= render :partial => 'feeds/feed_row', :collection => @feeds, :locals => { :show_admin => true } %>
+  </table>
+  <div class="clear">
+  <%= will_paginate @feeds %>
+  </div>
+</div>
+
+<% content_for :javascript do -%>
+jQuery(document).ready(function() {
+    jQuery('a.lightbox').fancybox({
+        'hideOnContentClick': true,
+        'overlayShow': true,
+        'frameWidth': 700,
+        'frameHeight': 600
+    });
+});
+<% end -%>

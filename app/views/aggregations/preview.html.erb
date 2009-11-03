@@ -1,0 +1,46 @@
+<%= output_errors('', {:class => 'help-box'}) %>
+
+<% custom_form_for(:aggregation, :url => polymorphic_url([@parent, :aggregations])) do |f| -%>
+  
+  <div class="span-24">
+    <h2><%= @title %></h2>
+  </div>
+  
+  <div class="span-24">
+    <% if @show_controls -%>
+      <div id="save_aggregation_preview" class="box">
+        <% if logged_in? -%>
+          <%= f.text_field :title, { :label => t('muck.services.add_aggregation_title') } %>
+          <%= f.hidden_field :terms  %>
+          <%= f.submit t('muck.services.save_aggreation') %>
+          <p><%= t('muck.services.save_aggreation_instructions') %></p>
+        <% else -%>
+          <%= t('muck.services.signup_to_save_aggreation', :login => link_to(t('muck.services.login'), login_path),
+                                                        :signup => link_to(t('muck.services.signup'), signup_path)) %>
+        <% end -%>
+        <p><%= link_to t('muck.services.new_search'), new_polymorphic_url([@parent, :aggregation]) %></p>
+      </div>
+    <% end -%>
+  </div>
+    
+  <div class="span-14 column datafeeds">
+
+    <div id="calculated-feeds">
+      <%= google_feeds(@general_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+    </div>
+
+    <div id="discovered_feeds">
+      <%= google_feeds(@discovered_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos, true) %>
+    </div>
+  </div>
+
+  <div class="span-10 column datafeeds">
+    <%= google_feeds(@photo_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+    <%= google_feeds(@video_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+    <%= google_feeds(@music_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+    <%= google_feeds(@bookmark_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+  </div>
+
+<% end -%>
+
+<%= render :partial => 'google/feeds_scripts' %>

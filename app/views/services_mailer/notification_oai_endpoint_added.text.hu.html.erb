@@ -1,0 +1,4 @@
+<h2> Egy új oai végpont került fel <%= @application_name %> </h2>
+<p> Cím: <%= @oai_endpoint.title %> </p>
+<p> : Uri: <%= @oai_endpoint.uri %> </p>
+<p> Hírcsatornák: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

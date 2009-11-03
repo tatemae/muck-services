@@ -1,0 +1,4 @@
+<h2> Un extremo OAI nuevo ha sido añadido a <%= @application_name %> </h2>
+<p> Título: <%= @oai_endpoint.title %> </p>
+<p> Uri: <%= @oai_endpoint.uri %> </p>
+<p> Administrar los canales: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

@@ -1,0 +1,4 @@
+<h2> Nov vir je bil dodan <%= @application_name %> </h2>
+<p> Naslov: <%= @feed.title %> </p>
+<p> Uri: <%= @feed.uri %> </p>
+<p> Delo z viri: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

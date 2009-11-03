@@ -1,0 +1,4 @@
+<h2> Новый канал был добавлен в <%= @application_name %> </h2>
+<p> Название: <%= @feed.title %> </p>
+<p> Ури: <%= @feed.uri %> </p>
+<p> Управление каналами: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

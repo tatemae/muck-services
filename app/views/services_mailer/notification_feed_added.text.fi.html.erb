@@ -1,0 +1,4 @@
+<h2> Uusi rehu on lisätty <%= @application_name %> </h2>
+<p> Otsikko: <%= @feed.title %> </p>
+<p> URI: <%= @feed.uri %> </p>
+<p> Hallitse syötteet: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

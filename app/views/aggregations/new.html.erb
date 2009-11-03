@@ -1,0 +1,12 @@
+<%= output_errors('', {:class => 'help-box'}) %>
+
+<% custom_form_for(:aggregation, :url => preview_aggregations_path(@parent), :html => {:method => :get}) do |f| -%>
+  <div id="add-data-source" class="services-main span-6 column">
+    <%= render :partial => 'aggregations/preview_form', :locals => {:f => f} %>
+  </div>
+  <div id="data-sources" class="services-main span-16 column">
+    <h2><%= I18n.t('muck.services.available_sources') %></h2>
+    <%= data_sources(@service_categories) %>
+  </div>
+<% end -%>
+

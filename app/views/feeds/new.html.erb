@@ -1,0 +1,21 @@
+<div id="add_single_feed">
+  <%= error_messages_for :feed -%>
+  <% custom_form_for(:feed, :url => polymorphic_url([@parent, :feeds])) do |f| -%>
+    <%= f.text_field :uri, { :label => t('muck.services.add_feed_url' ) }  %>
+    <%= f.text_field :title, { :label => t('muck.services.title' ) }  %>
+    <div class="button form-row">
+      <%= submit_tag t('muck.services.add_feed'), :id => 'add_feed_uri' %>
+      <span id="finding_uri_message" style="display:none;">
+        <%= t('muck.services.discover_feed_message') %><img src="/images/spinner.gif" alt="<%= t('muck.services.loading_image') %>" />
+      </span>
+    </div>
+  <% end -%>
+</div>
+<% content_for :javascript do -%>
+jQuery(document).ready(function() {
+    jQuery('#add_feed_uri').click(function(){
+        jQuery(this).hide();
+        jQuery('#finding_uri_message').show();
+    });
+});
+<% end -%>

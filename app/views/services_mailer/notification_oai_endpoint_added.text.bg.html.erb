@@ -1,0 +1,4 @@
+<h2> Нов крайна OAI е добавен към <%= @application_name %> </h2>
+<p> Заглавие: <%= @oai_endpoint.title %> </p>
+<p> Юри: <%= @oai_endpoint.uri %> </p>
+<p> Управление на емисии: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

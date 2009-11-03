@@ -1,0 +1,16 @@
+<%= output_errors('', {:class => 'help-box'}) %>
+<div class="block">
+  <% if @results.length > 0 %>
+    <%= render(:partial => 'entries/result_status') %>
+    <div class="column span-15">
+      <%= render(:partial => 'entries/results') %>
+      <div class="results-nav"><%= will_paginate(@paginated_results, :next_label => '<b>' + t('muck.services.next_label') + ' &raquo;</b>', :previous_label => '<b>&laquo; ' + t('muck.services.previous_label') + '</b>') %></div>
+    </div>
+    <div class="column span-9 last">
+      <%= render(:partial => 'entries/tag_cloud') %>
+    </div>
+  <% else %>
+    <p><%= @grain_size == 'all' ? t('muck.services.no_tagged_resources', :tags => @search) : t('muck.services.no_tagged_courses', :tags => @tag_filter.split('/').join(', ')) %></p>
+    <p><%= link_to('[' + t('muck.services.explore', :topic => @search.titleize) + ']', topic_path(safe_id(@search))) %></p>
+  <% end %>
+</div>

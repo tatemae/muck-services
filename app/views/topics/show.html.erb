@@ -1,0 +1,80 @@
+<% content_for :head do -%>
+  <%= render :partial => 'topics/rss_discover', :collection => @feeds %>
+<% end -%>
+
+<%= output_errors('', {:class => 'help-box'}) %>
+
+<div id="search-header" class="span-24 column center">
+  <%= topics_form %>
+</div>
+
+<div class="span-24 column">
+  <%= link_to t('muck.services.photos'), photos_topic_path(params[:id], :service_ids => params[:service_ids]) %>
+  <%= link_to t('muck.services.videos'), videos_topic_path(params[:id], :service_ids => params[:service_ids]) %>
+  <%= link_to t('muck.services.download_opml', :terms => @title), @opml_path %>
+</div>
+
+<div class="span-14 column datafeeds">
+  
+  <% if @show_google_search -%>
+    <div id="search-results">
+      <%= google_search('Google Search', [], @terms, %w{web video blog news image local book patent}, 'google_search', I18n.locale) %>
+    </div>
+  <% end -%>
+  
+  <% if @load_feeds_on_server -%>
+    <% if @show_combined -%>
+      <ul class="combined-feed-list">
+        <%= render :partial => 'topics/simple_entry', :collection => @server_combined_data_feeds %>
+      </ul>
+      <script type="text/javascript">
+        jQuery(document).ready(function() {
+          apply_show_entry_content();
+        });
+      </script>
+    <% else -%>
+      <%= render :partial => 'topics/feed', :collection => @server_loaded_data_feeds %>
+    <% end -%>
+  <% elsif @show_combined -%>
+    <%= google_combined_feeds(@general_feeds + @discovered_feeds) %>
+  <% else -%>
+    <div id="calculated-feeds">
+      <%= google_feeds(@general_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+    </div>
+    <div id="discovered_feeds">
+      <%= google_feeds(@discovered_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+    </div>
+  <% end -%>
+  
+</div>
+
+<div class="span-10 column datafeeds">
+  
+  <% if @load_feeds_on_server -%>
+    <div id="photos">
+      <%= render :partial => 'topics/feed', :collection => @server_loaded_photo_feeds %>
+    </div>
+    <div id="videos">
+      <%= render :partial => 'topics/feed', :collection => @server_loaded_video_feeds %>
+    </div>
+  <% else -%>
+    <%= google_feeds(@photo_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+    <%= google_feeds(@video_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+  <% end -%>
+  
+  <%= google_feeds(@music_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+  <%= google_feeds(@bookmark_feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+</div>
+
+<div class="span-24 column">
+  <%= link_to t('muck.services.generate_new_topic'), new_topic_path %>
+  
+  <!--
+  <a href="http://www.google.com/reader/view/feed/<%=CGI.escape(request.url)%>" title="<%=@title%>">
+    <img src="http://buttons.googlesyndication.com/fusion/add.gif" border="0" alt="Add to Google" />
+  </a>
+  -->
+</div>
+
+<%= render :partial => 'google/feeds_scripts' %>
+

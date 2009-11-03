@@ -1,0 +1,10 @@
+<div id="sources-list">
+  <% service_categories.each do |service_category| -%>
+    <% if service_category.tag_services.length > 0 -%>
+      <ul id="<%= service_category.dom_id %>-sources-list" class="services-list">
+        <li class="source-title"><%= service_category.name %></li>
+        <%= render :partial => 'aggregations/data_source', :collection => service_category.tag_services %>
+      </ul>
+    <% end -%>
+  <% end -%>
+</div>

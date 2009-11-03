@@ -1,0 +1,19 @@
+<% if entry.feed.service.video? -%>
+  <% link = Nokogiri::HTML(entry.content).css('a').detect{ |link| !link.css('img').blank? } -%>
+  <% link.to_s.gsub('<a', 'class="feed-video" rel="video_' + content_id) if link -%>
+  <%= link %>
+<% elsif entry.feed.service.photo? -%>
+  <% link = Nokogiri::HTML(entry.content).css('a').detect{ |link| !link.css('img').blank? } -%>
+  <% link.to_s.gsub('<a', 'class="feed-photo" rel="photo_' + content_id) if link -%>
+  <%= link %>
+<% elsif entry.feed.service.bookmark? -%>
+  <div class="hentry <%= cycle("even", "odd") -%>"><h4 class="title"><a class="bookmark-link" href="<%= entry.permalink %>" target="_blank"><%= entry.title %></a></h4></div>
+<% else -%>
+  <div class="hentry <%= cycle("even", "odd") -%>">
+    <h4 class="title"><a class="entry-link" href="#" target="blank"><%= entry.title %></a><span class="entry-close"><a class="entry-link-close" href="#"><%= t('muck.services.close') %></a></span></h4>
+    <div class="entry">
+      <%= entry.content %>
+      <p><a href="<%= entry.permalink %>"><%= t('muck.services.read_more') %></a></p>
+    </div>
+  </div>
+<% end -%>

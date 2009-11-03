@@ -1,0 +1,14 @@
+<div class="span-24 column">
+  <h2><%= @title %></h2>
+</div>
+
+<div class="span-24 column">
+  <%= link_to t('muck.services.back'), topic_path(params[:id], :service_ids => params[:service_ids]) %>
+  <%= link_to t('muck.services.generate_new_topic'), new_topic_path %>
+</div>
+
+<div class="span-24 column datafeeds">
+  <%= google_feeds(@photo_feeds, false, 1, @number_of_images, 1) %>
+</div>
+
+<%= render :partial => 'google/feeds_scripts' %>

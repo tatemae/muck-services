@@ -1,0 +1,7 @@
+<li class="feed-item" <%= service_icon_background(simple_entry.feed.service) %>>
+  <div class="feed-title"><a href="<%= simple_entry.permalink %>" target="_blank"><%= h simple_entry.title %></a></div>
+  <div class="feed-content" style="display:none;">
+  <h3><a href="<%= simple_entry.permalink %>" target="_blank"><%= h simple_entry.title %></a></h3>
+  <%= simple_entry.content %>
+  </div>
+</li>

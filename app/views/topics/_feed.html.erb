@@ -1,0 +1,24 @@
+<% content_id ||= feed_content_id(feed) -%>
+<div class="feed">
+  <div class="feed-header">
+    <h3 <%= service_icon_background(feed.service) %>>
+      <%= link_to "#{feed.title.humanize}", feed.display_uri, :target => 'blank' %>
+      <%= link_to "(rss)", feed.uri, :target => 'blank' %>
+      <% if defined?(show_controls) && show_controls -%>
+        <span class="remove-feed feed-control">
+          <%= link_to t('muck.services.remove'), aggregation_feed_path(0, :aggregation_id => @aggregation.id, :feed_id => feed.id), :class => 'delete-link' %>
+        </span>
+        <% if use_uri_for_control -%>
+          <%= hidden_field_tag "uris[]", feed.uri -%>
+        <% else -%>
+          <%= hidden_field_tag "service_ids[]", feed.service.id -%>
+        <% end -%>
+      <% end -%>
+    </h3>
+  </div>
+  <div class="feed-content">
+    <div id="<%= content_id %>" class="feed-item <%= feed_class(feed) %>">
+      <%= render :partial => 'topics/entry', :collection => feed.entries, :locals => { :content_id => content_id } %>
+    </div>
+  </div>
+</div>

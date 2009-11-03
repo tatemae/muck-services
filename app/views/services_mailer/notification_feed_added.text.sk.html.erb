@@ -1,0 +1,4 @@
+<h2> Nový zdroj bol pridaný <%= @application_name %> </h2>
+<p> Názov: <%= @feed.title %> </p>
+<p> Uri: <%= @feed.uri %> </p>
+<p> Správa kanálov: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

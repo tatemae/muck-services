@@ -1,0 +1,4 @@
+<h2> Il-ġodda għall-għalf ġiet miżjuda mal <%= @application_name %> </h2>
+<p> Titolu: <%= @feed.title %> </p>
+<p> Uri: <%= @feed.uri %> </p>
+<p> Manage feeds: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

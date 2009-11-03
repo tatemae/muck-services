@@ -1,0 +1,4 @@
+<h2> Sebuah feed baru telah ditambahkan ke <%= @application_name %> </h2>
+<p> Judul: <%= @feed.title %> </p>
+<p> Uri: <%= @feed.uri %> </p>
+<p> Kelola feed: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

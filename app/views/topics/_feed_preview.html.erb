@@ -1,0 +1,18 @@
+<div class="datafeeds">
+  <div id="calculated-feeds">
+    <%= render :partial => 'google/feed', :collection => feeds, :locals => {:number_of_items => number_of_items, 
+                                                                            :number_of_images => number_of_images, 
+                                                                            :content_id => content_id, 
+                                                                            :javascript_callback => 'google_load_complete'} %>
+  </div>
+  <% if related_title -%>
+    <h2><%= related_title %></h2>
+  <% end -%>
+  <div id="discovered_feeds">
+    <%= render :partial => 'google/feed', :collection => discovered_feeds, :locals => {:number_of_items => number_of_items, 
+                                                                                       :number_of_images => number_of_images, 
+                                                                                       :content_id => content_id, 
+                                                                                       :javascript_callback => 'google_load_complete'} %>
+  </div>
+</div>
+<%= render :partial => 'google/feeds_scripts' %>

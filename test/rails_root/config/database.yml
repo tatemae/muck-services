@@ -1,0 +1,17 @@
+development:
+  adapter: mysql
+  database: muck_services
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
+
+test: &TEST
+  adapter: mysql
+  database: muck_services_test
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
+cucumber:
+  <<: *TEST

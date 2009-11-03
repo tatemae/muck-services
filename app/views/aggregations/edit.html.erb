@@ -1,0 +1,65 @@
+<%= output_errors('', {:class => 'help-box'}, @aggregation) %>
+<div id="ajax-messages" class="message" style="display:none;"></div>
+<%# TODO Add preview as single feed ie merge everything into a single feed and show that. %>
+<div id="edit-aggregation-controls" class="span-8 column">
+
+  <div class="box">
+    <h2><%= t('muck.services.edit_aggregation')%></h2>
+    <% custom_form_for(@aggregation, :url => polymorphic_url([@parent, @aggregation]), :id => 'update-aggregation-form') do |f| -%>
+      <%= f.text_field :title, { :label => t('muck.services.add_aggregation_title') } %>
+      <%= f.submit t('muck.general.save'), :id => 'update-aggregation-button' %>
+    <% end -%>
+  </div>
+  
+  <div class="box">
+    <h2><%= t('muck.services.add_feed') %></h2>
+    <% custom_form_for(@aggregation, :url => polymorphic_url([@parent, @aggregation]), :id => 'add-feed-form') do |f| -%>
+      <%= text_field_tag :uri, '', :id => 'add_uri' %>
+      <%= submit_tag t('muck.services.add_feed'), :id => 'add-feed-button' %>
+      <div id="add-feed-waiting" class="waiting" style="display:none;"><%= t('muck.services.searching_for_feed')%></div>
+    <% end -%>
+  </div>
+  
+  <div class="box">
+    <h2><%= t('muck.services.add_opml_to_aggregation')%></h2>
+  </div>
+  
+  <div class="box">
+    <h2><%= I18n.t('muck.services.add_sources_by_tag') %></h2>
+    <% custom_form_for(@aggregation, :url => polymorphic_url([@parent, @aggregation]), :id => 'add-sources-form') do |f| -%>
+      <%= text_field_tag :terms %>
+      <%= f.submit t('muck.services.add_more_sources'), :id => 'add-sources-button' %>
+      <div id="edit-data-sources" class="services-main span-16 column">
+        <%= data_sources(@service_categories) %>
+      </div>
+    <% end -%>
+  </div>
+  
+</div>
+
+
+<div id="aggregation-feeds" class="span-16 column datafeeds">
+  <%= google_feeds(@feeds, @show_controls, @number_of_items, @number_of_images, @number_of_videos) %>
+</div>
+
+<%= render :partial => 'google/feeds_scripts' %>
+
+<% content_for :javascript do -%>
+jQuery(document).ready(function() {
+  jQuery("#add-feed-button").click(function() {
+    jQuery('#add-feed-waiting').show();
+    var form = jQuery(this).parents('form');
+    jQuery.post(form.attr('action') + '.json', form.serialize(),
+      function(data){
+        var json = eval('(' + data + ')');
+        if(json.success && json.feeds.length > 0){
+          jQuery('#aggregation-feeds').prepend(json.html);
+        } else {
+          <%= jquery_message('#ajax-messages') %>
+        }
+        jQuery('#add-feed-waiting').hide();
+      });
+    return false;
+  });
+});
+<% end -%>

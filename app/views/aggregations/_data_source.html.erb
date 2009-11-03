@@ -1,0 +1,4 @@
+<li id="<%= data_source.name.parameterize %>-link" <%= service_icon_background(data_source) %> class="service-link">
+  <%= check_box_tag "service_ids[]", data_source.id, data_source_checked?(data_source) -%> 
+  <%= data_source.name %>
+</li>

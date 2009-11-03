@@ -1,0 +1,4 @@
+<h2> Un nuovo endpoint OAI è stato aggiunto alla <%= @application_name %> </h2>
+<p> Titolo: <%= @oai_endpoint.title %> </p>
+<p> Uri: <%= @oai_endpoint.uri %> </p>
+<p> Gestire i feed: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

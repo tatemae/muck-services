@@ -1,0 +1,4 @@
+<h2> Nový oai koniec bol pridaný <%= @application_name %> </h2>
+<p> Názov: <%= @oai_endpoint.title %> </p>
+<p> Uri: <%= @oai_endpoint.uri %> </p>
+<p> Správa kanálov: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

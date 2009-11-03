@@ -1,0 +1,4 @@
+<h2> Endpoint oai ใหม่ได้ถูกเพิ่มลง <%= @application_name %> </h2>
+<p> ชื่อ: <%= @oai_endpoint.title %> </p>
+<p> URI: <%= @oai_endpoint.uri %> </p>
+<p> จัดการข้อมูล: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

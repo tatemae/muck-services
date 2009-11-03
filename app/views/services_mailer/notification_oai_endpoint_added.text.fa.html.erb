@@ -1,0 +1,4 @@
+<h2 style=";text-align:right;direction:rtl"> endpoint óáí جدید اضافه شده است به <%= @application_name %> </h2>
+<p style=";text-align:right;direction:rtl"> عنوان : <%= @oai_endpoint.title %> </p>
+<p style=";text-align:right;direction:rtl"> نوع : <%= @oai_endpoint.uri %> </p>
+<p style=";text-align:right;direction:rtl"> خوردها مدیریت : <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

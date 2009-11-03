@@ -1,0 +1,28 @@
+<div id="feed-container" class="show-feed">
+  <%= output_errors('', {:class => 'help-box'}) %>
+  <h1><%= t('muck.services.feed') %>: <%= feed.title %></h1>
+  <div><span class="label"><%= t('muck.services.feed_id') %></span>: <%= feed.id.to_s %></div>
+  <% if feed.display_uri != feed.uri %><div><%= t('muck.services.feed_display_address') %></span>: <%= link_to feed.display_uri, feed.display_uri %></div><% end %>
+  <div><span class="label"><%= t('muck.services.feed_metadata_address') %></span>: <%= link_to feed.uri, feed.uri %></div>
+  <div><span class="label"><%= t('muck.services.entries_count') %></span>: <%= feed.entries_count.nil? ? "0" : feed.entries_count.to_s %></div>
+  <div><span class="label"><%= t('muck.services.contributor') %></span>: <%= feed_contributor_link(@feed) %></div>
+  <% if defined?(show_admin) && show_admin -%>
+      <% form_for(feed, :url => admin_feed_path(feed), :html => { :method => :put }) do |f| -%>
+      <div><span class="label"><%= t('muck.services.approval_status') %></span>:
+        <% if feed.banned? -%>
+          <%= hidden_field_tag :status, 'approve' %>
+          <%= image_submit_tag '/images/icons/exclaim.png', {:width => '16', :height => '16', :alt => t('muck.services.validate_feed') } %>
+        <% elsif feed.pending? -%>
+           <%= hidden_field_tag :status, 'approve' %>
+           <%= image_submit_tag '/images/icons/pending.png', {:width => '16', :height => '16', :alt => t('muck.services.validate_feed') } %>
+        <% else -%>
+          <%= hidden_field_tag :status, 'ban' %>
+          <%= image_submit_tag '/images/icons/accept.png', {:width => '16', :height => '16', :alt => t('muck.services.ban_feed') } %>
+        <% end -%>
+      </div>
+      <% end -%>
+  <% end %>
+  <hr/>
+  <%= render :partial => 'feeds/entry', :collection => @entries %>
+  <%= will_paginate @entries %>
+</div>

@@ -1,0 +1,12 @@
+<h2><%= I18n.t('muck.services.new_aggregation') %></h2>
+<%= text_field_tag :terms, params[:terms] %>
+<p><%= t('muck.services.terms_instructions') %></p>
+<div class="button form-row">
+  <%= f.submit t('muck.services.search'), :id => 'search' %>
+  <span id="searching_message" style="display:none;">
+    <%= t('muck.services.finding_topics') %><img src="/images/spinner.gif" alt="<%= t('muck.general.loading') %>" />
+  </span>
+</div>
+<% content_for :javascript do -%>
+  <%= show_hide_on_click('searching_message', 'search') %>
+<% end -%>

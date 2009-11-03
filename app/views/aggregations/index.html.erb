@@ -1,0 +1,17 @@
+<%= output_errors('', {:class => 'help-box'}) %>
+<h1><%= @page_title %></h1>
+
+<div id="search-container" class="services-main span-24 column">
+  <% custom_form_for(:aggregation, :url => preview_aggregations_path(@parent), :html => {:method => :get}) do |f| -%>
+    <%= render :partial => 'aggregations/preview_form', :locals => {:f => f} %>
+  <% end -%>
+</div>
+
+<div id="search-container" class="services-main span-24 column">
+  <h2><%= t('muck.services.latest_aggregations')%></h2>
+  <%= render :partial => 'aggregations/aggregation', :collection => @aggregations %>
+</div>
+
+<% content_for :javascript do -%>
+  <%= show_hide_on_click('searching_message', 'search') %>
+<% end -%>

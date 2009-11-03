@@ -1,0 +1,4 @@
+<h2> Μια νέα παράμετρος αξιολόγησης oai έχει προστεθεί <%= @application_name %> </h2>
+<p> Τίτλος: <%= @oai_endpoint.title %> </p>
+<p> URI: <%= @oai_endpoint.uri %> </p>
+<p> Διαχειριστείτε feeds: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

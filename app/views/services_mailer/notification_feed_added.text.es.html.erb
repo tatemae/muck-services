@@ -1,0 +1,4 @@
+<h2> Un nuevo alimento se ha añadido a <%= @application_name %> </h2>
+<p> Título: <%= @feed.title %> </p>
+<p> Uri: <%= @feed.uri %> </p>
+<p> Administrar los canales: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

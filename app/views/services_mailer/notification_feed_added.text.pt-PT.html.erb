@@ -1,0 +1,4 @@
+<h2> Um novo feed foi adicionado à <%= @application_name %> </h2>
+<p> Título: <%= @feed.title %> </p>
+<p> Uri: <%= @feed.uri %> </p>
+<p> Gerenciar feeds: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>

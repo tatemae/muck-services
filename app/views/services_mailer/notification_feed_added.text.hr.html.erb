@@ -1,0 +1,4 @@
+<h2> Novi feed je dodan <%= @application_name %> </h2>
+<p> Naslov: <%= @feed.title %> </p>
+<p> Uri: <%= @feed.uri %> </p>
+<p> Upravljanje izvori: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %> </p>
