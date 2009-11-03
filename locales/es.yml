@@ -1,0 +1,210 @@
+--- 
+es: 
+  muck: 
+    activity_templates: 
+      entry_comment: Comentario
+    services: 
+      add_aggregation: "Añadir Agregación"
+      add_aggregation_title: "Nombre de agregación:"
+      add_edit_feeds: "Añadir / Modificar Feeds"
+      add_extended_feed_sub_title: "Contribuir con una nueva fuente de datos"
+      add_extended_feed_title: "Añadir nuevo feed"
+      add_feed: "Añadir feed"
+      add_feed_advanced: "Add Feed (Avanzado)"
+      add_feed_title: "Añada un nuevo feed"
+      add_feed_url: "Url:"
+      add_feeds_to_aggregation: "Añadir feeds a {{title}}"
+      add_more_sources: "Añadir Fuentes"
+      add_oai: "Añadir OAI"
+      add_oai_feed: "Añadir OAI Endpoint"
+      add_opml_to_aggregation: "Añadir archivo OPML"
+      add_rss: "Añadir RSS"
+      add_rss_feed: "Añadir RSS Feed"
+      add_sources_by_tag: "Añadir más canales por etiquetas."
+      added_date: Añadido
+      aggregation_deleted: "{{title}} Suprimido"
+      aggregation_updated: "Agregación de Actualización"
+      all_resources: "Todos los recursos"
+      already_added_uri_feed: "Que ya ha añadido la url {{uri}}"
+      already_added_username_feed: "Que ya ha añadido una cuenta de {{service}} con el nombre de usuario {{username}}"
+      already_shared: "Que has compartido esta página."
+      amazon_prompt: "Por favor introduce el correo electrónico que utilice con Amazon.com"
+      approval_status: Aprobado
+      atom: Atom
+      available_services: "Servicios disponibles"
+      available_sources: "Fuentes disponibles"
+      back: Espalda
+      ban_feed: "Marcar como no válidos los piensos"
+      banned: prohibido
+      blogger_prompt: "URL de tu blog"
+      build_topic: "Live Search"
+      calculated: calculado
+      cant_modify_aggregation: "Usted no tiene permiso para acceder a la suma especificada."
+      cant_modify_identity_feed: "Usted no tiene permiso para acceder a la alimentación especificado."
+      choose_service: "Elija el servicio:"
+      close: Cerrar
+      collection_description: "Descripción de la Colección:"
+      collection_home_uri: "Dirección de la página Home Collection"
+      collection_uri: "Dirección de la Colección de metadatos:"
+      collections: Colecciones
+      collections_long: "Colecciones indexadas"
+      comment_entries_count: 
+        one: "1 Comentario"
+        other: "Comentarios {{count}}"
+      contributor: Contribuyente
+      course_search_results: "Cursos de <b>{{first}} - {{last}}</b> de <b>{{total}}</b> para <b>{{terms}}</b> de búsqueda"
+      course_tag_results: "Cursos de <b>{{first}} - {{last}}</b> de <b>{{total}} {{terms}}</b> puso"
+      courses_tag_cloud_label: "navegar por cursos usando etiquetas <a href=\"/resources\">[Ver todas las recursos]</a>"
+      default_language: Idioma
+      demo: Demo
+      description: Descripción
+      details: Detalles
+      developers_long: "Información para desarrolladores"
+      direct_link: "[enlace directo]"
+      discover_feed: "Descubre Feed"
+      discover_feed_message: "La búsqueda de información acerca de la URL proporcionada. Por favor, espere."
+      display_address: "Visualiza la dirección"
+      display_url: "URL que se mostrará:"
+      download_opml: "Descargar archivo OPML {{terms}}"
+      edit_aggregation: "Editar Agregación"
+      edit_aggregation_title: "Edición de {{title}}"
+      entries_count: Entradas
+      entry_commment_contents: "escribió sobre {{resource}}"
+      explore: "Buscar {{topic}}"
+      facebook_instructions: "En la página Mis vínculos, haga clic en &quot;Mis Enlaces&quot; y copia el enlace. Nos incluirá automáticamente, el estado, enlaces y notas."
+      facebook_link: "Usted puede encontrar su dirección en su página de Facebook, My Links. {{link}} Y luego haga clic en &quot;Mis Enlaces&quot;"
+      facebook_notes: "Toma nota de Facebook"
+      facebook_notifications: "Notificaciones de Facebook"
+      facebook_prompt: "Su Facebook Mis enlaces URL"
+      facebook_shares: "Facebook compartidas Enlaces"
+      failed_harvests: "Malas cosechas"
+      failed_last_request: "No se pudo última petición: {{error}}"
+      feed: Alimentar
+      feed_banned_message: "Alimento fue prohibido."
+      feed_id: ID
+      feed_metadata_address: "Dirección de metadatos"
+      feed_remove: "Feed eliminados"
+      feed_successfully_created: "Piensos se ha creado correctamente."
+      feed_successfully_updated: "Piensos se ha actualizado correctamente."
+      feed_type: "Tipo de feed"
+      feed_type_prompt: "RSS es el tipo de alimentación más comunes. Sólo seleccione OAI si conoce el repositorio apoya y que ha especificado la variable OAI."
+      feed_validated_message: "Feed fue aprobado."
+      feeds_for_aggregation: "Feeds para esta formación"
+      feeds_title: "Colecciones de registro"
+      finding_topics: "En busca de historias relevantes ..."
+      for: para
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Usted puede encontrar la dirección URL en la parte inferior de su {{link}}."
+      generate_new_topic: "Generar un nuevo tema"
+      generating_topic_message: "Buscando. Esto puede tardar un minuto o así ...."
+      gm_more_prompt: "Más Recursos relacionados"
+      gm_title: "Recursos relacionados"
+      goodreads_prompt: "Goodreads URL"
+      goodreads_rss: "por ejemplo, http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Intervalo de cosecha (hrs)"
+      harvested_at: Cosechada
+      hide: Ocultar
+      identity_feed_removed: "Retirado de servicio"
+      identity_feeds: "Feeds de identidad"
+      import_service: "{{service}} Importación"
+      language_not_supported: "La lengua solicitada no es compatible"
+      latest_aggregations: "Últimos agregados"
+      linkedin_prompt: "Perfil de LinkedIn público URL"
+      linkedin_rss: "Usted puede encontrar la dirección URL en la parte inferior de su {{link}}."
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image &quot;)%&gt;"
+      loading_image: "Cargando Imagen"
+      loading_message: "Cargando ..."
+      login: "Inicio de sesión"
+      login_or_signup_prompt: "{{signup}} O {{login}} para discutir y compartir recursos."
+      login_to_comment: "Inicie sesión para añadir un comentario"
+      metadata: metadatos
+      metadata_prefix: "Prefijo de metadatos"
+      my_identity: "Mi Identidad"
+      my_services: "Mis servicios"
+      narrow_further: "los resultados más estrechos"
+      netflix_prompt: "Netflix cola RSS URL"
+      netflix_rss: "Usted puede encontrar su dirección en su {{link}}. Tenga en cuenta que hay varias fuentes disponibles en su página de Netflix Queue (cola, recomendaciones, críticas de películas, etc.) Añadir tantos como quieras!"
+      new_aggregation: "Nueva Agregación"
+      new_global_feed: "Un nuevo alimento se ha añadido a {{application_name}}"
+      new_search: "Nueva búsqueda"
+      new_topic_title: "Busque un tema nuevo y construir la página de resultados."
+      next: Siguiente
+      next_label: Siguiente
+      no_entries_found: "No hay entradas"
+      no_feeds_at_uri: "No hemos podido encontrar la URL en cuestión"
+      no_feeds_found: "No se encontraron feeds"
+      no_feeds_from_username: "No hemos podido encontrar el relato"
+      no_hits: "Su búsqueda - <b>{{search}}</b> - no produjo ningún <b>{{resource_type}}.</b> Por favor, intenta una búsqueda diferente o elija un idioma diferente."
+      no_recommendations: "No hay recomendaciones fueron encontrados."
+      no_tagged_courses: "No hay <b>cursos</b> se encontraron el tag <b>{{tags}}.</b> <a href='/resources'>Empezar de nuevo</a> o mostrar <a href='/resources/tags/{{tags}}'>todos los recursos etiquetados {{tags}}.</a>"
+      no_tagged_resources: "No se han encontrado <b>recursos</b> etiquetados con <b>{{tags}}.</b> <a href='/resources'>Empezar de nuevo.</a>"
+      no_tags: "No hay etiquetas disponibles"
+      no_terms_error: "Por favor, especifique un término o una lista de términos."
+      oai_endpoint_successfully_created: "Ha agregado extremo OAI"
+      oai_prompt: "Si especifica OAI, se debe especificar la URL completa a la solicitud ListRecords (no sólo el punto final OAI)"
+      of: de
+      ok: OK
+      only_courses: "Sólo Cursos"
+      opml_feeds_for: "Feeds para {{terms}}"
+      opml_generated: "Feeds para {{terms}}"
+      photos: Fotos
+      polyvore_prompt: "Polyvore URL"
+      polyvore_rss: "Su perfil Polyvore URL parece http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "powered by"
+      previous: Anterior
+      previous_label: Anterior
+      problem_adding_feed: "Hubo un problema al añadir el feed:"
+      rdf: RDF
+      read_more: "Leer más"
+      related_feeds: "Fuentes relacionadas"
+      related_resources: relacionados
+      related_resources_title: "Recursos relacionados"
+      relevance: relevancia
+      remix: Remix
+      remove: Eliminar
+      repository: Metadatos
+      repository_short_title: "Repositorio Titulo corto:"
+      repository_title: "Repositorio Título:"
+      resource_search_results: "Recursos de <b>{{first}} - {{last}}</b> de <b>{{total}}</b> para <b>{{terms}}</b> de búsqueda"
+      resource_tag_results: "Recursos de <b>{{first}} - {{last}}</b> de <b>{{total}} {{terms}}</b> puso"
+      resources_tag_cloud_label: "navegar los recursos usando etiquetas <a href=\"/resources?grain_size=course\">[navegar por cursos sólo]</a>"
+      results: Resultados
+      rss: RSS
+      rss_url: "URL de tu feed RSS"
+      save_aggreation: "Guardar esta agregación"
+      save_aggreation_instructions: "Retire cualquier feeds no deseados haciendo clic en &#39;Quitar&#39;. Usted será capaz de añadir nuevo contenido en el próximo paso."
+      search: búsqueda
+      search_button: Ir
+      search_for: "Buscar:"
+      search_link: "Encontrar recursos!"
+      searching_for_feed: "La búsqueda de feeds ..."
+      select_feeds_prompt: "Seleccione las noticias que desea añadir:"
+      select_service_prompt: "Por favor, seleccione un servicio"
+      service_feed_name: "{{term}} En {{service}}"
+      service_username: "Nombre de usuario {{service}}"
+      setup_aggregation: "Configuración de agregación"
+      share: Compartir
+      short_title: "Título corto:"
+      show_tagged_courses: "Mostrar sólo los cursos de"
+      show_tagged_resources: "mostrar cualquier tipo de recurso"
+      signup: Regístrate
+      signup_to_save_aggreation: "{{login}} O {{signup}} para guardar esta búsqueda"
+      spinner_image: "Esperando imagen"
+      start_over: "Empezar de nuevo"
+      status: Estatus
+      submitting_feed_message: "El envío de su feed ..."
+      successfully_added_uri_feed: "Ha agregado {{uri}}"
+      successfully_added_username_feed: "Ha agregado {{service}}"
+      tags: Etiquetas
+      terms_instructions: "Añadir todas las etiquetas o frases como desee. Separa cada una con una coma. es decir, alimentación, recetas, los mejores lugares para comer, orgánicos"
+      title: Título
+      topic_feeds_for: "Feeds para {{terms}}"
+      topic_generated: "Resultados de `{{terms}}`."
+      type_of_metadata: "Tipo de Metadatos:"
+      uri: Url
+      validate_feed: "Marcar como válidos los piensos"
+      videos: Videos
+      visit: visita
+      xml: XML
+      zotero_group_prompt: "Grupo Zotero URL"
+      zotero_group_rss: "Su grupo Zotero URL es así: http://www.zotero.org/groups/adventures_in_library_instruction/items"

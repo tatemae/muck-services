@@ -1,0 +1,210 @@
+--- 
+ca: 
+  muck: 
+    activity_templates: 
+      entry_comment: Comentari
+    services: 
+      add_aggregation: "Afegir Agregació"
+      add_aggregation_title: "Nom d&#39;agregació:"
+      add_edit_feeds: "Afegir / Modificar Feeds"
+      add_extended_feed_sub_title: "Contribuir amb una nova font de dades"
+      add_extended_feed_title: "Afegeix un feed"
+      add_feed: "Afegeix feed"
+      add_feed_advanced: "Add Feed (Avançat)"
+      add_feed_title: "Afegiu un nou feed"
+      add_feed_url: "Url:"
+      add_feeds_to_aggregation: "Afegir feeds a {{title}}"
+      add_more_sources: "Afegir Fonts"
+      add_oai: "Afegir OAI"
+      add_oai_feed: "Afegir OAI Endpoint"
+      add_opml_to_aggregation: "Afegir fitxer OPML"
+      add_rss: "Afegir RSS"
+      add_rss_feed: "Afegir RSS Feed"
+      add_sources_by_tag: "Afegeix més canals per etiquetes."
+      added_date: Afegit
+      aggregation_deleted: "{{title}} Suprimit"
+      aggregation_updated: "Agregació d&#39;Actualització"
+      all_resources: "Tots els recursos"
+      already_added_uri_feed: "Que ja ha afegit el camí que enllaça {{uri}}"
+      already_added_username_feed: "Que ja ha afegit un compte de {{service}} amb el nom d&#39;usuari {{username}}"
+      already_shared: "Que has compartit aquesta pàgina."
+      amazon_prompt: "Si us plau introdueix el correu electrònic que utilitzeu amb Amazon.com"
+      approval_status: Aprovat
+      atom: Atom
+      available_services: "Serveis disponibles"
+      available_sources: "Fonts disponibles"
+      back: Esquena
+      ban_feed: "Marcar com no vàlids els pinsos"
+      banned: prohibit
+      blogger_prompt: "URL del teu bloc"
+      build_topic: "Live Search"
+      calculated: calculat
+      cant_modify_aggregation: "Vostè no té permís per accedir a la suma especificada."
+      cant_modify_identity_feed: "Vostè no té permís per accedir a l&#39;alimentació especificat."
+      choose_service: "Trieu el servei:"
+      close: Tancar
+      collection_description: "Descripció de la Col.lecció:"
+      collection_home_uri: "Direcció de la pàgina Home Collection"
+      collection_uri: "Direcció de la Col.lecció de metadades:"
+      collections: Col.leccions
+      collections_long: "Col.leccions indexades"
+      comment_entries_count: 
+        one: "1 Comentari"
+        other: "Comentaris {{count}}"
+      contributor: Contribuent
+      course_search_results: "Cursos <b>d&#39;{{first}} - {{last}} d&#39;{{total}}</b> per <b>{{terms}}</b> de cerca"
+      course_tag_results: "Cursos <b>d&#39;{{first}} - {{last}}</b> de <b>{{total}} {{terms}}</b> va posar"
+      courses_tag_cloud_label: "navegar per cursos utilitzant etiquetes <a href=\"/resources\">[Veure totes les recursos]</a>"
+      default_language: Idioma
+      demo: Demo
+      description: Descripció
+      details: Detalls
+      developers_long: "Informació per als desenvolupadors"
+      direct_link: "[enllaç directe]"
+      discover_feed: "Descobreix Feed"
+      discover_feed_message: "La recerca d&#39;informació sobre la URL proporcionada. Si us plau, espereu."
+      display_address: "Visualitza l&#39;adreça"
+      display_url: "URL que es mostrarà:"
+      download_opml: "Descarregar fitxer OPML {{terms}}"
+      edit_aggregation: "Edita Agregació"
+      edit_aggregation_title: "Edició de {{title}}"
+      entries_count: Entrades
+      entry_commment_contents: "va escriure sobre {{resource}}"
+      explore: "Cerca {{topic}}"
+      facebook_instructions: "A la pàgina Els meus vincles, feu clic als &quot;Enllaços&quot; i copia l&#39;enllaç. Ens inclourà automàticament, l&#39;estat, enllaços i notes."
+      facebook_link: "Vostè pot trobar la seva adreça a la seva pàgina de Facebook, My Links. {{link}} I després feu clic als &quot;Enllaços&quot;"
+      facebook_notes: "Pren nota de Facebook"
+      facebook_notifications: "Notificacions de Facebook"
+      facebook_prompt: "La seva Facebook meus enllaços URL"
+      facebook_shares: "Facebook compartits Enllaços"
+      failed_harvests: "Males collites"
+      failed_last_request: "No es pot darrera petició: {{error}}"
+      feed: Alimentar
+      feed_banned_message: "Aliment va ser prohibit."
+      feed_id: ID
+      feed_metadata_address: "Direcció de metadades"
+      feed_remove: "Feed eliminats"
+      feed_successfully_created: "Pinsos s&#39;ha creat correctament."
+      feed_successfully_updated: "Pinsos s&#39;ha actualitzat correctament."
+      feed_type: "Tipus de feed"
+      feed_type_prompt: "RSS és el tipus d&#39;alimentació més comuns. Només seleccioneu OAI si coneix el repositori dóna suport i que ha especificat la variable OAI."
+      feed_validated_message: "Feed va ser aprovat."
+      feeds_for_aggregation: "Feeds per a aquesta formació"
+      feeds_title: "Col leccions de registre"
+      finding_topics: "A la recerca d&#39;històries rellevants ..."
+      for: per
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Vostè pot trobar l&#39;adreça URL a la part inferior del seu {{link}}."
+      generate_new_topic: "Generar un nou tema"
+      generating_topic_message: "Cercant. Això pot trigar un minut o així ...."
+      gm_more_prompt: "Més Recursos relacionats"
+      gm_title: "Recursos relacionats"
+      goodreads_prompt: "Goodreads URL"
+      goodreads_rss: "per exemple, http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Interval de collita (hrs)"
+      harvested_at: Collit
+      hide: Amaga
+      identity_feed_removed: "Retirat de servei"
+      identity_feeds: "Feeds d&#39;identitat"
+      import_service: "{{service}} Importació"
+      language_not_supported: "La llengua sol licitada no és compatible"
+      latest_aggregations: "Últims agregats"
+      linkedin_prompt: "Perfil de LinkedIn públic URL"
+      linkedin_rss: "Vostè pot trobar l&#39;adreça URL a la part inferior del seu {{link}}."
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image &quot;)%&gt;"
+      loading_image: "Carregant Imatge"
+      loading_message: "Carregant ..."
+      login: "Inici de sessió"
+      login_or_signup_prompt: "{{signup}} O {{login}} per discutir i compartir recursos."
+      login_to_comment: "Inicieu sessió per afegir un comentari"
+      metadata: metadades
+      metadata_prefix: "Prefix de metadades"
+      my_identity: "La meva Identitat"
+      my_services: "Els meus serveis"
+      narrow_further: "els resultats més estrets"
+      netflix_prompt: "Netflix cua RSS URL"
+      netflix_rss: "Vostè pot trobar la seva adreça en el seu {{link}}. Tingueu en compte que hi ha diverses fonts disponibles en la seva pàgina de Netflix Queue (cua, recomanacions, crítiques de pel lícules, etc.) Afegir tants com vulguis!"
+      new_aggregation: "Nova Agregació"
+      new_global_feed: "Un nou aliment s&#39;ha afegit a {{application_name}}"
+      new_search: "Nova cerca"
+      new_topic_title: "Busqueu nous temes i construir la pàgina de resultats."
+      next: Següent
+      next_label: Següent
+      no_entries_found: "No hi ha entrades"
+      no_feeds_at_uri: "No hem pogut trobar la URL en qüestió"
+      no_feeds_found: "No es van trobar feeds"
+      no_feeds_from_username: "No hem pogut trobar el relat"
+      no_hits: "La seva cerca - <b>{{search}}</b> - no va produir cap <b>{{resource_type}}.</b> Si us plau, intenta una cerca diferent o seleccioneu un idioma diferent."
+      no_recommendations: "No hi ha recomanacions van ser trobats."
+      no_tagged_courses: "No hi ha <b>cursos</b> es van trobar el tag <b>{{tags}}.</b> <a href='/resources'>Començar de nou</a> o mostrar <a href='/resources/tags/{{tags}}'>tots els recursos etiquetats {{tags}}.</a>"
+      no_tagged_resources: "No s&#39;han trobat <b>recursos</b> etiquetats amb <b>{{tags}}.</b> <a href='/resources'>Començar de nou.</a>"
+      no_tags: "No hi ha etiquetes disponibles"
+      no_terms_error: "Si us plau, introduïu un terme o una llista de termes."
+      oai_endpoint_successfully_created: "Ha afegit extrem OAI"
+      oai_prompt: "Si especifiqueu OAI, s&#39;ha d&#39;especificar l&#39;URL complet a la sol.licitud ListRecords (no només el punt final OAI)"
+      of: de
+      ok: OK
+      only_courses: "Només Cursos"
+      opml_feeds_for: "Feeds per {{terms}}"
+      opml_generated: "Feeds per {{terms}}"
+      photos: Fotos
+      polyvore_prompt: "Polyvore URL"
+      polyvore_rss: "El seu perfil Polyvore URL sembla http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "powered by"
+      previous: Anterior
+      previous_label: Anterior
+      problem_adding_feed: "Hi va haver un problema en afegir el feed:"
+      rdf: RDF
+      read_more: "Llegir més"
+      related_feeds: "Fonts relacionades"
+      related_resources: relacionats
+      related_resources_title: "Recursos relacionats"
+      relevance: rellevància
+      remix: Remix
+      remove: Eliminar
+      repository: Metadades
+      repository_short_title: "Repositori Títol curt:"
+      repository_title: "Repositori Títol:"
+      resource_search_results: "Recursos <b>d&#39;{{first}} - {{last}} d&#39;{{total}}</b> per <b>{{terms}}</b> de cerca"
+      resource_tag_results: "Recursos <b>d&#39;{{first}} - {{last}}</b> de <b>{{total}} {{terms}}</b> va posar"
+      resources_tag_cloud_label: "navegar els recursos utilitzant etiquetes <a href=\"/resources?grain_size=course\">[navegar per cursos només]</a>"
+      results: Resultats
+      rss: RSS
+      rss_url: "URL del teu feed RSS"
+      save_aggreation: "Desa aquesta agregació"
+      save_aggreation_instructions: "Traieu els feeds no desitjats fent clic a &#39;Treure&#39;. Vostè serà capaç d&#39;afegir nou contingut en el proper pas."
+      search: cerca
+      search_button: Anar
+      search_for: "Cerca:"
+      search_link: "Trobar recursos!"
+      searching_for_feed: "La recerca de feeds ..."
+      select_feeds_prompt: "Seleccioneu les notícies que voleu afegir:"
+      select_service_prompt: "Si us plau, seleccioneu un servei"
+      service_feed_name: "{{term}} A {{service}}"
+      service_username: "Nom d&#39;usuari {{service}}"
+      setup_aggregation: "Configuració d&#39;agregació"
+      share: Compartir
+      short_title: "Títol curt:"
+      show_tagged_courses: "Mostra només els cursos de"
+      show_tagged_resources: "mostra qualsevol tipus de recurs"
+      signup: "Registra&#39;t"
+      signup_to_save_aggreation: "{{login}} O {{signup}} per guardar aquesta cerca"
+      spinner_image: "Esperant imatge"
+      start_over: "Començar de nou"
+      status: Estatus
+      submitting_feed_message: "L&#39;enviament de la seva feed ..."
+      successfully_added_uri_feed: "Ha afegit {{uri}}"
+      successfully_added_username_feed: "Ha afegit {{service}}"
+      tags: Etiquetes
+      terms_instructions: "Afegeix totes les etiquetes o frases com vulgui. Separeu cada una amb una coma. és a dir, alimentació, receptes, els millors llocs per menjar, orgànics"
+      title: Títol
+      topic_feeds_for: "Feeds per {{terms}}"
+      topic_generated: "Resultats de `{{terms}}`."
+      type_of_metadata: "Tipus de Metadades:"
+      uri: Url
+      validate_feed: "Marcar com a vàlids els pinsos"
+      videos: Videos
+      visit: visita
+      xml: XML
+      zotero_group_prompt: "Grup Zotero URL"
+      zotero_group_rss: "El seu grup Zotero URL és així: http://www.zotero.org/groups/adventures_in_library_instruction/items"

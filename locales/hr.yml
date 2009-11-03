@@ -1,0 +1,210 @@
+--- 
+hr: 
+  muck: 
+    activity_templates: 
+      entry_comment: Komentar
+    services: 
+      add_aggregation: "Dodaj Agregacija"
+      add_aggregation_title: "Naziv agregacije:"
+      add_edit_feeds: "Dodaj / Uredi Feeds"
+      add_extended_feed_sub_title: "Pridonijeti novi izvor podataka"
+      add_extended_feed_title: "Dodaj novi feed"
+      add_feed: "Add Feed"
+      add_feed_advanced: "Add Feed (Advanced)"
+      add_feed_title: "Dodaj novi feed"
+      add_feed_url: "Url:"
+      add_feeds_to_aggregation: "Dodaj feedove {{title}}"
+      add_more_sources: "Dodaj Izvori"
+      add_oai: "Dodaj OAI"
+      add_oai_feed: "Dodaj OAI Endpoint"
+      add_opml_to_aggregation: "Dodaj OPML datoteku"
+      add_rss: "Dodaj Rss"
+      add_rss_feed: "Dodaj RSS Feed"
+      add_sources_by_tag: "Dodajte još feeds oznake."
+      added_date: Added
+      aggregation_deleted: "{{title}} Izbrisan"
+      aggregation_updated: "Agregacija Updated"
+      all_resources: "Svi izvori"
+      already_added_uri_feed: "Koje ste već dodali url {{uri}}"
+      already_added_username_feed: "Ste već dodao {{service}} račun s korisničkim imenom {{username}}"
+      already_shared: "Ste ranije dijeli ovu stranicu."
+      amazon_prompt: "Molimo unesite e-pošte koju koristite sa Amazon.com"
+      approval_status: Odobreno
+      atom: Atom
+      available_services: "Dostupne usluge"
+      available_sources: "Raspoloživih izvora"
+      back: Natrag
+      ban_feed: "Označi kao nevažeći feed"
+      banned: zabranjeno
+      blogger_prompt: "URL svoje blog"
+      build_topic: "Live Search"
+      calculated: izračunati
+      cant_modify_aggregation: "Nemate dozvolu za pristup određenom agregacije."
+      cant_modify_identity_feed: "Nemate dozvolu za pristup naveden izvor."
+      choose_service: "Odaberite uslugu:"
+      close: Zatvoriti
+      collection_description: "Collection Description:"
+      collection_home_uri: "Adresa zbirke Home Page"
+      collection_uri: "Adresa zbirke Metadata:"
+      collections: Zbirke
+      collections_long: "Indexed Zbirke"
+      comment_entries_count: 
+        one: "1 komentar"
+        other: "{{count}} Komentari"
+      contributor: Contributor
+      course_search_results: "Tečajevi <b>{{first}} - {{last}}</b> od <b>{{total}}</b> za pretraživanje <b>{{terms}}</b>"
+      course_tag_results: "Tečajevi <b>{{first}} - {{last}}</b> od <b>{{total}}</b> tagged <b>{{terms}}</b>"
+      courses_tag_cloud_label: "Pregledaj tekstove pomoću oznaka <a href=\"/resources\">[pregledavati sve resurse]</a>"
+      default_language: Jezik
+      demo: Demo
+      description: Opis
+      details: Detalji
+      developers_long: "Informacije za programere"
+      direct_link: "[direktni link]"
+      discover_feed: "Otkrijte Feed"
+      discover_feed_message: "Tražeći informacije o URL koji ste unijeli. Molimo pričekajte."
+      display_address: "Display Adresa"
+      display_url: "Url koji će biti prikazani:"
+      download_opml: "Download datoteke OPML za {{terms}}"
+      edit_aggregation: "Uredi Agregacija"
+      edit_aggregation_title: "Uređivanje {{title}}"
+      entries_count: Ulaz
+      entry_commment_contents: "komentirao {{resource}}"
+      explore: "Traži {{topic}}"
+      facebook_instructions: "Na stranici Moj Links, desni klik na &#39;My Links &quot;i kopirajte link. Mi će automatski uključiti, status, veze i note."
+      facebook_link: "Možete pronaći svoj URL na Facebook Moji Linkovi stranici. {{link}} A zatim kliknite na &#39;Moj Links&#39;"
+      facebook_notes: "Facebook Bilješke"
+      facebook_notifications: "Facebook Notifications"
+      facebook_prompt: "Vaša Facebook Moji Linkovi URL"
+      facebook_shares: "Facebook Zajednička Linkovi"
+      failed_harvests: "Neuspjelo vršidbe"
+      failed_last_request: "Neuspješno posljednji zahtjev: {{error}}"
+      feed: "Sažetak sadržaja"
+      feed_banned_message: "Feed je bio zabranjen."
+      feed_id: ID
+      feed_metadata_address: "Metadata Adresa"
+      feed_remove: "Feed Uklonjeno"
+      feed_successfully_created: "Feed je uspješno napravljen."
+      feed_successfully_updated: "Feed je uspješno ažuriran."
+      feed_type: "Feed type"
+      feed_type_prompt: "RSS je najčešći tip hrane. Samo odaberite OAI ako znate repozitorij ga podržava i imate navedene OAI endpoint."
+      feed_validated_message: "Feed je bio odobren."
+      feeds_for_aggregation: "Hranjenje za ovaj agregacije"
+      feeds_title: "Registrirani Zbirke"
+      finding_topics: "Searching for relevantne priče ..."
+      for: za
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Možete pronaći svoj URL na dnu vašeg {{link}}."
+      generate_new_topic: "Generiraj novu temu"
+      generating_topic_message: "Searching. Ovo može trajati minute ili tako ...."
+      gm_more_prompt: "Više Povezani resursi"
+      gm_title: "Povezani resursi"
+      goodreads_prompt: "Goodreads Profile URL"
+      goodreads_rss: "npr., http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Harvest interval (sati)"
+      harvested_at: Dobivenih
+      hide: Sakriti
+      identity_feed_removed: "Uklonjeno usluge"
+      identity_feeds: "Identitet Feeds"
+      import_service: "Uvoz {{service}}"
+      language_not_supported: "Zatražio jezik nije podržan"
+      latest_aggregations: "Najnoviji aggregations"
+      linkedin_prompt: "LinkedIn javni profil URL"
+      linkedin_rss: "Možete pronaći svoj URL na dnu vašeg {{link}}."
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image&#39;)%&gt;"
+      loading_image: "Loading Image"
+      loading_message: "Loading ..."
+      login: Prijava
+      login_or_signup_prompt: "{{signup}} Ili {{login}} razgovarati i dijeliti resurse."
+      login_to_comment: "Login to add a comment"
+      metadata: metadata
+      metadata_prefix: "Metadata Prefiks"
+      my_identity: "Moj identitet"
+      my_services: "My Services"
+      narrow_further: "uskim rezultati dalje"
+      netflix_prompt: "Netflix Queue RSS URL"
+      netflix_rss: "Možete pronaći svoj URL na {{link}}. Imajte na umu da postoji nekoliko izvori dostupni na svoju stranicu Netflix red (red, Preporuke, Recenzije filmova, itd.). Dodati koliko god želite!"
+      new_aggregation: "Novi Agregacija"
+      new_global_feed: "Novi feed je dodan {{application_name}}"
+      new_search: "New Search"
+      new_topic_title: "Traži novu temu i graditi stranici s rezultatima."
+      next: Dalje
+      next_label: Dalje
+      no_entries_found: "No entries found"
+      no_feeds_at_uri: "Nismo mogli naći dati url"
+      no_feeds_found: "Nema feeds pronađena su"
+      no_feeds_from_username: "Nismo mogli naći dati račun"
+      no_hits: "Vaša pretraga - <b>{{search}}</b> - ne odgovara nijednom <b>{{resource_type}}.</b> Molimo pokušajte različite pretrage ili odaberite drugi jezik."
+      no_recommendations: "Nema preporuke su pronađena."
+      no_tagged_courses: "Nema <b>tečajevi</b> su pronađeni tagged with <b>{{tags}}.</b> <a href='/resources'>Počni ispočetka</a> ili prikaz <a href='/resources/tags/{{tags}}'>svih resursa označenih {{tags}}.</a>"
+      no_tagged_resources: "Nema <b>resursi</b> su pronađeni tagged with <b>{{tags}}.</b> <a href='/resources'>Počni ispočetka.</a>"
+      no_tags: "No tags yet available"
+      no_terms_error: "Navedite pojam ili popis pojmova."
+      oai_endpoint_successfully_created: "Uspješno dodan OAI endpoint"
+      oai_prompt: "Ako odredite OAI, morate navesti punu URL to ListRecords zahtjev (a ne samo krajnja točka OAI)"
+      of: od
+      ok: "U redu"
+      only_courses: "Samo Tečajevi"
+      opml_feeds_for: "Feedovi za {{terms}}"
+      opml_generated: "Feedovi za {{terms}}"
+      photos: Fotografije
+      polyvore_prompt: "Polyvore Profile URL"
+      polyvore_rss: "Vaš profil Polyvore URL izgleda kao http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "powered by"
+      previous: Prethodna
+      previous_label: Prethodna
+      problem_adding_feed: "Došlo je do problema dodajući feed:"
+      rdf: RDF
+      read_more: "pročitaj više"
+      related_feeds: "Related Feeds"
+      related_resources: vezane
+      related_resources_title: "Povezani resursi"
+      relevance: Relevance
+      remix: Remix
+      remove: Ukloniti
+      repository: Metapodaci
+      repository_short_title: "Repozitorij Short Naslov:"
+      repository_title: "Repozitorij Naslov:"
+      resource_search_results: "Resursi <b>{{first}} - {{last}}</b> od <b>{{total}}</b> za pretraživanje <b>{{terms}}</b>"
+      resource_tag_results: "Resursi <b>{{first}} - {{last}}</b> od <b>{{total}}</b> tagged <b>{{terms}}</b>"
+      resources_tag_cloud_label: "browse resursa pomoću oznaka <a href=\"/resources?grain_size=course\">[browse samo tečajevi]</a>"
+      results: Rezultati
+      rss: RSS
+      rss_url: "Url za vaš RSS feed"
+      save_aggreation: "Spremi ovu Agregacija"
+      save_aggreation_instructions: "Uklonite neželjene hrani klikom na &quot;Ukloni&quot;. Bit ćete u mogućnosti da biste dodali nove izvore u sljedećem koraku."
+      search: pretraživanje
+      search_button: Ići
+      search_for: "Search for:"
+      search_link: "Find Resources!"
+      searching_for_feed: "Potraga za hranjenje ..."
+      select_feeds_prompt: "Odaberite feedove koje želite dodati:"
+      select_service_prompt: "Molimo odaberite uslugu"
+      service_feed_name: "{{term}} Na {{service}}"
+      service_username: "{{service}} Korisničko ime"
+      setup_aggregation: "Postava Agregacija"
+      share: Dijeliti
+      short_title: "Skraćeni naslov:"
+      show_tagged_courses: "prikaži samo tečajevi"
+      show_tagged_resources: "pokazuju bilo kakve resursa"
+      signup: "Sign Up"
+      signup_to_save_aggreation: "{{login}} Ili {{signup}} spremiti ovu pretragu"
+      spinner_image: "Waiting image"
+      start_over: "početi ispočetka"
+      status: Stanje
+      submitting_feed_message: "Slanje sažetka ..."
+      successfully_added_uri_feed: "Uspješno dodan {{uri}}"
+      successfully_added_username_feed: "Uspješno dodan {{service}}"
+      tags: oznake
+      terms_instructions: "Dodaj onoliko oznake ili fraze kao što želite. Odvojite svaki sa zarezom. tj. hrana, recepti, najbolja mjesta za jesti, organske"
+      title: Naslov
+      topic_feeds_for: "Feedovi za {{terms}}"
+      topic_generated: "Rezultati za `{{terms}}`."
+      type_of_metadata: "Vrsta Metadata:"
+      uri: Url
+      validate_feed: "Označi feed kao valjan"
+      videos: Videos
+      visit: posjetite
+      xml: XML
+      zotero_group_prompt: "Zotero grupa URL"
+      zotero_group_rss: "Vaš Zotero grupa URL izgleda ovako: http://www.zotero.org/groups/adventures_in_library_instruction/items"

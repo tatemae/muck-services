@@ -1,0 +1,210 @@
+--- 
+el: 
+  muck: 
+    activity_templates: 
+      entry_comment: Σχόλιο
+    services: 
+      add_aggregation: "Προσθήκη Aggregation"
+      add_aggregation_title: "Όνομα για την άθροιση:"
+      add_edit_feeds: "Προσθήκη / Επεξεργασία Feeds"
+      add_extended_feed_sub_title: "Συνεισφέρετε νέο αρχείο προέλευσης δεδομένων"
+      add_extended_feed_title: "Προσθήκη νέων ζωοτροφών"
+      add_feed: "Προσθήκη Feed"
+      add_feed_advanced: "Προσθήκη Feed (Advanced)"
+      add_feed_title: "Προσθέστε ένα νέο feed"
+      add_feed_url: "Url:"
+      add_feeds_to_aggregation: "Προσθήκη feeds για {{title}}"
+      add_more_sources: "Προσθήκη Πηγές"
+      add_oai: "Προσθήκη OAI"
+      add_oai_feed: "Προσθήκη OAI Endpoint"
+      add_opml_to_aggregation: "Προσθήκη OPML αρχείο"
+      add_rss: "Προσθήκη Rss"
+      add_rss_feed: "Προσθήκη RSS Feed"
+      add_sources_by_tag: "Προσθέστε περισσότερες τροφές με ετικέτες."
+      added_date: Προστέθηκε
+      aggregation_deleted: "{{title}} Διαγράφεται"
+      aggregation_updated: "Aggregation Ενημερώθηκε"
+      all_resources: "Όλες Πόροι"
+      already_added_uri_feed: "Έχετε ήδη προσθέσει το url {{uri}}"
+      already_added_username_feed: "Έχετε ήδη προσθέσει έναν {{service}} λογαριασμό με το όνομα χρήστη {{username}}"
+      already_shared: "Έχετε κοινά προηγουμένως αυτή τη σελίδα."
+      amazon_prompt: "Παρακαλούμε εισάγετε το e-mail που χρησιμοποιείτε με το Amazon.com"
+      approval_status: Εγκεκριμένο
+      atom: Atom
+      available_services: "Διαθέσιμες υπηρεσίες"
+      available_sources: "Διαθέσιμες πηγές"
+      back: Πίσω
+      ban_feed: "Mark ζωοτροφών ως άκυρο"
+      banned: απαγορευθεί
+      blogger_prompt: "URL του Blog σας"
+      build_topic: "Live Search"
+      calculated: υπολογίζονται
+      cant_modify_aggregation: "Δεν έχετε την άδεια να μεταβούν στη συγκεκριμένη συγκέντρωση."
+      cant_modify_identity_feed: "Δεν έχετε την άδεια να μεταβούν στη συγκεκριμένη ζωοτροφή."
+      choose_service: "Επιλέξτε υπηρεσία:"
+      close: Κλείνω
+      collection_description: "Συλλογή Περιγραφή:"
+      collection_home_uri: "Διεύθυνση της Συλλογής Αρχική Σελίδα"
+      collection_uri: "Διεύθυνση της Συλλογής Μεταδεδομένα:"
+      collections: Συλλογές
+      collections_long: "Indexed Συλλογές"
+      comment_entries_count: 
+        one: "1 Σχόλιο"
+        other: "{{count}} Σχόλια"
+      contributor: Contributor
+      course_search_results: "Μαθήματα <b>{{first}} - {{last}}</b> της <b>{{total}}</b> για <b>{{terms}}</b> αναζήτηση"
+      course_tag_results: "Μαθήματα <b>{{first}} - {{last}}</b> της <b>{{total}}</b> tagged <b>{{terms}}</b>"
+      courses_tag_cloud_label: "περιηγηθείτε μαθήματα χρησιμοποιώντας ετικέτες <a href=\"/resources\">[προβολή όλων των πόρων]</a>"
+      default_language: Γλώσσα
+      demo: Demo
+      description: Περιγραφή
+      details: Λεπτομέρειες
+      developers_long: "Πληροφορίες για προγραμματιστές"
+      direct_link: "[άμεσος σύνδεσμος]"
+      discover_feed: "Ανακαλύψτε Feed"
+      discover_feed_message: "Ψάχνοντας για πληροφορίες σχετικά με το url που δώσατε. Παρακαλώ περιμένετε."
+      display_address: "Εμφάνιση Διεύθυνση"
+      display_url: "URL που θα εμφανίζεται:"
+      download_opml: "Κατεβάστε OPML αρχείο για {{terms}}"
+      edit_aggregation: "Επεξεργασία Aggregation"
+      edit_aggregation_title: "Μοντάζ {{title}}"
+      entries_count: Ενδείξεις
+      entry_commment_contents: "σχολίασε {{resource}}"
+      explore: "Αναζήτηση για {{topic}}"
+      facebook_instructions: "Στη σελίδα μου Links, κάντε δεξί κλικ στο «Σύνδεσμοι μου &#39;και να αντιγράψετε το σύνδεσμο. Θα περιλαμβάνει αυτόματα, το καθεστώς, συνδέσεις και σημειώσεις."
+      facebook_link: "Μπορείτε να βρείτε το URL σας στο Facebook μου σελίδα σας Links. {{link}} Και στη συνέχεια κάντε κλικ στο «Σύνδεσμοι μου"
+      facebook_notes: "Facebook Σημειώσεις"
+      facebook_notifications: "Facebook Notifications"
+      facebook_prompt: "Facebook σας μου Σύνδεσμοι URL"
+      facebook_shares: "Facebook Shared Σύνδεσμοι"
+      failed_harvests: "Κακές συγκομιδές"
+      failed_last_request: "Failed τελευταίο αίτημα: {{error}}"
+      feed: Τροφοδοσία
+      feed_banned_message: "Ζωοτροφές απαγορεύτηκε."
+      feed_id: ID
+      feed_metadata_address: "Μεταδεδομένα Διεύθυνση"
+      feed_remove: "Feed Removed"
+      feed_successfully_created: "Feed δημιουργήθηκε με επιτυχία."
+      feed_successfully_updated: "Feed ενημερώθηκε με επιτυχία."
+      feed_type: "Feed Τύπος"
+      feed_type_prompt: "RSS είναι ο πιο κοινός τύπος ζωοτροφών. Μόνο επιλέξτε OAI αν γνωρίζετε το αποθετήριο υποστηρίζει και έχετε ορίσει το τελικό σημείο OAI."
+      feed_validated_message: "Ζωοτροφές εγκρίθηκε."
+      feeds_for_aggregation: "Feeds για το συνυπολογισμό"
+      feeds_title: "Εγγεγραμμένοι Συλλογές"
+      finding_topics: "Ψάχνοντας για τις σχετικές ιστορίες ..."
+      for: για
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Μπορείτε να βρείτε το URL σας στο κάτω μέρος της {{link}}. σας"
+      generate_new_topic: "Δημιουργήστε ένα νέο θέμα"
+      generating_topic_message: "Searching. Αυτό θα μπορούσε να λάβει ένα λεπτό ή έτσι ...."
+      gm_more_prompt: "Περισσότερα Σχετικοί πόροι"
+      gm_title: "Σχετικοί πόροι"
+      goodreads_prompt: "Goodreads προφίλ URL"
+      goodreads_rss: "π.χ., http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Harvest διάστημα (ώρες)"
+      harvested_at: Συγκομιδής
+      hide: Κρύβομαι
+      identity_feed_removed: "Αφαιρέθηκε υπηρεσία"
+      identity_feeds: "Ταυτότητα Feeds"
+      import_service: "{{service}} Εισαγωγή"
+      language_not_supported: "Η ζητούμενη γλώσσα δεν υποστηρίζεται"
+      latest_aggregations: "Τελευταία συσσωματώματα"
+      linkedin_prompt: "LinkedIn δημόσιο προφίλ URL"
+      linkedin_rss: "Μπορείτε να βρείτε το URL σας στο κάτω μέρος της {{link}}. σας"
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image&#39;)%&gt;"
+      loading_image: "Φόρτωση εικόνας"
+      loading_message: "Loading ..."
+      login: Σύνδεση
+      login_or_signup_prompt: "{{signup}} Ή {{login}} να συζητήσουν και να μοιράζονται πόρους."
+      login_to_comment: "Συνδεθείτε για να προσθέσετε ένα σχόλιο"
+      metadata: μεταδεδομένα
+      metadata_prefix: "Μεταδεδομένα Πρόθεμα"
+      my_identity: "Ταυτότητά μου"
+      my_services: "Υπηρεσίες μου"
+      narrow_further: "περιορίσετε τα αποτελέσματα της περαιτέρω"
+      netflix_prompt: "Netflix Queue RSS URL"
+      netflix_rss: "Μπορείτε να βρείτε το URL σας για {{link}}. σας Σημειώστε ότι υπάρχουν πολλές τρέφεται διαθέσιμες για Netflix Queue σελίδα σας (Queue, συστάσεις, κριτικές ταινιών, κλπ). Προσθέστε όσες θέλετε!"
+      new_aggregation: "Νέα Aggregation"
+      new_global_feed: "Ένα νέο ζωοτροφές έχει προστεθεί {{application_name}}"
+      new_search: "Νέα Αναζήτηση"
+      new_topic_title: "Αναζήτηση για ένα νέο θέμα και τη δημιουργία της σελίδας αποτελεσμάτων."
+      next: Επόμενος
+      next_label: Επόμενος
+      no_entries_found: "Δεν βρέθηκαν εγγραφές"
+      no_feeds_at_uri: "Δεν μπορέσαμε να βρούμε το δεδομένο url"
+      no_feeds_found: "Δεν βρέθηκαν ροές"
+      no_feeds_from_username: "Δεν μπορέσαμε να βρούμε το συγκεκριμένο λογαριασμό"
+      no_hits: "Η αναζήτησή σας - <b>{{search}}</b> - δεν ταιριάζει με κανένα <b>{{resource_type}}.</b> Δοκιμάστε μια διαφορετική αναζήτηση ή επιλέξτε μια διαφορετική γλώσσα."
+      no_recommendations: "Δεν βρέθηκαν συστάσεις."
+      no_tagged_courses: "Δεν βρέθηκαν <b>μαθήματα</b> με ετικέτα <b>{{tags}}.</b> <a href='/resources'>Ξεκινήστε πάνω</a> ή δείτε <a href='/resources/tags/{{tags}}'>όλους τους πόρους tagged {{tags}}.</a>"
+      no_tagged_resources: "Δεν <b>πόροι</b> βρέθηκαν tagged with <b>{{tags}}.</b> <a href='/resources'>Ξεκινήστε πάνω.</a>"
+      no_tags: "Δεν ετικέτες διαθέσιμη ακόμα"
+      no_terms_error: "Παρακαλούμε να προσδιορίσετε έναν όρο ή μια λίστα των όρων."
+      oai_endpoint_successfully_created: "Επιτυχώς προστιθέμενη OAI τελικό σημείο"
+      oai_prompt: "Εάν καθορίσετε OAI, πρέπει να καθορίσετε την πλήρη διεύθυνση URL στο αίτημα ListRecords (δεν είναι μόνο το τελικό σημείο OAI)"
+      of: από
+      ok: OK
+      only_courses: "Μόνο Μαθήματα"
+      opml_feeds_for: "Ροές για {{terms}}"
+      opml_generated: "Ροές για {{terms}}"
+      photos: Φωτογραφίες
+      polyvore_prompt: "Polyvore προφίλ URL"
+      polyvore_rss: "Polyvore προφίλ σας URL μοιάζει http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "powered by"
+      previous: Προηγούμενη
+      previous_label: Προηγούμενη
+      problem_adding_feed: "Υπήρξε ένα πρόβλημα με προσθήκη του ζωοτροφών:"
+      rdf: RDF
+      read_more: "διαβάστε περισσότερα"
+      related_feeds: "Σχετικά Feeds"
+      related_resources: συναφείς
+      related_resources_title: "Σχετικοί πόροι"
+      relevance: ενδιαφέρον
+      remix: Remix
+      remove: Αφαιρώ
+      repository: Μεταδεδομένα
+      repository_short_title: "Repository Σύντομη Τίτλος:"
+      repository_title: "Repository Τίτλος:"
+      resource_search_results: "Πόροι <b>{{first}} - {{last}}</b> της <b>{{total}}</b> για <b>{{terms}}</b> αναζήτηση"
+      resource_tag_results: "Πόροι <b>{{first}} - {{last}}</b> της <b>{{total}}</b> tagged <b>{{terms}}</b>"
+      resources_tag_cloud_label: "περιηγηθείτε πόρων με τη χρήση ετικετών <a href=\"/resources?grain_size=course\">[browse μόνο μαθήματα]</a>"
+      results: Αποτελέσματα
+      rss: RSS
+      rss_url: "Url για το rss feed σας"
+      save_aggreation: "Αποθήκευση αυτής Aggregation"
+      save_aggreation_instructions: "Αφαιρέστε οποιαδήποτε ανεπιθύμητη τρέφεται κάνοντας κλικ στο &#39;Αφαίρεση&#39;. Θα μπορείτε να προσθέσετε νέες ειδοποιήσεις στο επόμενο βήμα."
+      search: αναζήτηση
+      search_button: Πάω
+      search_for: "Αναζήτηση για:"
+      search_link: "Βρείτε Πόρων!"
+      searching_for_feed: "Ψάχνοντας για ροές δεδομένων ..."
+      select_feeds_prompt: "Επιλέξτε τις τροφές που θα θέλατε να προσθέσετε:"
+      select_service_prompt: "Παρακαλώ επιλέξτε μια υπηρεσία"
+      service_feed_name: "{{term}} Για {{service}}"
+      service_username: "{{service}} Username"
+      setup_aggregation: "Setup Aggregation"
+      share: Μοιράζομαι
+      short_title: "Σύντομος τίτλος:"
+      show_tagged_courses: "Δείτε μόνο τα μαθήματα"
+      show_tagged_resources: "παρουσιάζουν οποιοδήποτε είδος πόρου"
+      signup: Εγγραφή
+      signup_to_save_aggreation: "{{login}} Ή {{signup}} για να αποθηκεύσετε αυτή την αναζήτηση"
+      spinner_image: "Αναμονή εικόνας"
+      start_over: "ξεκινήσετε από την αρχή"
+      status: Κατάσταση
+      submitting_feed_message: "Υποβολή feed σας ..."
+      successfully_added_uri_feed: "Επιτυχώς προστιθέμενη {{uri}}"
+      successfully_added_username_feed: "Επιτυχώς προστιθέμενη {{service}}"
+      tags: tags
+      terms_instructions: "Προσθέστε όσες ετικέτες ή φράσεις όπως θέλετε. Ξεχωριστή καθένα με ένα κόμμα. δηλαδή τα τρόφιμα, συνταγές, καλύτερα μέρη για να φάει, βιολογική"
+      title: Τίτλος
+      topic_feeds_for: "Ροές για {{terms}}"
+      topic_generated: "Αποτελέσματα για `{{terms}}`."
+      type_of_metadata: "Τύπος της Μεταδεδομένα:"
+      uri: Url
+      validate_feed: "Mark ζωοτροφών ως έγκυρα"
+      videos: Βίντεο
+      visit: επίσκεψη
+      xml: XML
+      zotero_group_prompt: "Zotero URL ομάδας"
+      zotero_group_rss: "Zotero ομάδα σας URL μοιάζει με: http://www.zotero.org/groups/adventures_in_library_instruction/items"

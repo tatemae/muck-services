@@ -1,0 +1,210 @@
+--- 
+sl: 
+  muck: 
+    activity_templates: 
+      entry_comment: Komentar
+    services: 
+      add_aggregation: "Dodaj Seštevanje"
+      add_aggregation_title: "Ime za seštevanje:"
+      add_edit_feeds: "Dodaj / Uredi Feeds"
+      add_extended_feed_sub_title: "Contribute nov vir podatkov"
+      add_extended_feed_title: "Dodaj novo krmo"
+      add_feed: "Add Feed"
+      add_feed_advanced: "Add Feed (Advanced)"
+      add_feed_title: "Dodaj nov vir"
+      add_feed_url: "Url:"
+      add_feeds_to_aggregation: "Dodaj viri {{title}}"
+      add_more_sources: "Dodaj Viri"
+      add_oai: "Dodaj OAI"
+      add_oai_feed: "Dodaj OAI Endpoint"
+      add_opml_to_aggregation: "Dodaj OPML file"
+      add_rss: "Dodaj Rss"
+      add_rss_feed: "Dodaj RSS Feed"
+      add_sources_by_tag: "Dodajte več virov, ki jih oznake."
+      added_date: Dodano
+      aggregation_deleted: "{{title}} Črtano"
+      aggregation_updated: "Seštevanje Updated"
+      all_resources: "Vse Resources"
+      already_added_uri_feed: "Ste že na dodano url {{uri}}"
+      already_added_username_feed: "Ste že na dodano {{service}} račun z uporabniškim imenom {{username}}"
+      already_shared: "Vi ste prej skupni rabi to stran."
+      amazon_prompt: "Vpišite e-pošto z uporabo Amazon.com"
+      approval_status: Odobreno
+      atom: Atom
+      available_services: "Razpoložljive storitve"
+      available_sources: "Razpoložljivi viri"
+      back: Nazaj
+      ban_feed: "Mark krmo kot neveljavne"
+      banned: prepovedane
+      blogger_prompt: "Url vaše Blog"
+      build_topic: "Live Search"
+      calculated: izračunana
+      cant_modify_aggregation: "Nimate dovoljenja za dostop do določenih združevanja."
+      cant_modify_identity_feed: "Nimate dovoljenja za dostop do določenih krme."
+      choose_service: "Izberite storitev:"
+      close: Blizu
+      collection_description: "Collection Description:"
+      collection_home_uri: "Naslov zbirke Domača stran"
+      collection_uri: "Naslov zbirke metapodatkov:"
+      collections: Zbirke
+      collections_long: "Indexed Zbirke"
+      comment_entries_count: 
+        one: "1 Comment"
+        other: "{{count}} Komentarji"
+      contributor: Sodelavec
+      course_search_results: "Tečaji <b>{{first}} - {{last}}</b> of <b>{{total}}</b> za iskanje <b>{{terms}}</b>"
+      course_tag_results: "Tečaji <b>{{first}} - {{last}}</b> of <b>{{total}}</b> tagged <b>{{terms}}</b>"
+      courses_tag_cloud_label: "brskanje tečaji z uporabo oznak <a href=\"/resources\">[browse vsa sredstva]</a>"
+      default_language: Jezik
+      demo: Demo
+      description: Opis
+      details: Podrobnosti
+      developers_long: "Informacije za razvijalce"
+      direct_link: "[neposredna povezava]"
+      discover_feed: "Odkrijte Feed"
+      discover_feed_message: "Iskanje informacij o url ste ga navedli. Prosimo, počakajte."
+      display_address: "Prikaži Naslov"
+      display_url: "Url naj bodo prikazani:"
+      download_opml: "Download OPML file za {{terms}}"
+      edit_aggregation: "Edit Seštevanje"
+      edit_aggregation_title: "Urejanje {{title}}"
+      entries_count: Entries
+      entry_commment_contents: "komentiral {{resource}}"
+      explore: "Iskanje {{topic}}"
+      facebook_instructions: "Na strani Moje povezave, desni klik na &quot;Moje povezave&quot; in kopirati povezavo. Bomo samodejno vključi, status, povezave in opombe."
+      facebook_link: "Lahko najdete svoj URL na vaši strani Facebook Moje povezave. {{link}} In nato kliknite na &quot;Moje povezave&quot;"
+      facebook_notes: "Facebook Opombe"
+      facebook_notifications: "Facebook Obvestila"
+      facebook_prompt: "Vaše Facebook Moje povezave URL"
+      facebook_shares: "Facebook Shared Povezave"
+      failed_harvests: "Failed žetev"
+      failed_last_request: "Failed zadnje zahteve: {{error}}"
+      feed: Hraniti
+      feed_banned_message: "Feed je bil prepovedan."
+      feed_id: ID
+      feed_metadata_address: "Metadata Naslov"
+      feed_remove: "Feed Removed"
+      feed_successfully_created: "Krma je bila uspešno ustvarjena."
+      feed_successfully_updated: "Feed je bil uspešno posodobljen."
+      feed_type: "Feed Type"
+      feed_type_prompt: "RSS je najpogostejša vrsta krme. Samo izberite OAI če poznate skladišče podpira in imate določene končne točke OAI."
+      feed_validated_message: "Feed je bil sprejet."
+      feeds_for_aggregation: "Viri za to združitev"
+      feeds_title: "Registrirani Zbirke"
+      finding_topics: "Iskanje ustreznih zgodb ..."
+      for: za
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Lahko najdete svoj URL na dnu vašega {{link}}."
+      generate_new_topic: "Ustvari novo temo"
+      generating_topic_message: "Searching. To lahko traja minuto ali tako ...."
+      gm_more_prompt: "Več Sorodni viri"
+      gm_title: "Sorodni viri"
+      goodreads_prompt: "Goodreads profila URL"
+      goodreads_rss: "npr http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Harvest interval (ure)"
+      harvested_at: Spravilo
+      hide: Skriti
+      identity_feed_removed: "Odstranjeno storitve"
+      identity_feeds: "Identity Feeds"
+      import_service: "Import {{service}}"
+      language_not_supported: "Zahteval jezik ni podprta"
+      latest_aggregations: "Zadnje združbami"
+      linkedin_prompt: "LinkedIn javni profil URL"
+      linkedin_rss: "Lahko najdete svoj URL na dnu vašega {{link}}."
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image&#39;)%&gt;"
+      loading_image: "Nalaganje slike"
+      loading_message: "Nalaganje ..."
+      login: Prijava
+      login_or_signup_prompt: "{{signup}} Ali {{login}} za razpravo in izmenjavo virov."
+      login_to_comment: "Prijava za dodajanje komentarjev"
+      metadata: metapodatkov
+      metadata_prefix: "Metadata Predpona"
+      my_identity: "My Identity"
+      my_services: "My Services"
+      narrow_further: "ozke rezultati nadaljnjih"
+      netflix_prompt: "Netflix Queue RSS URL"
+      netflix_rss: "Lahko najdete svoj URL na vašem {{link}}. Upoštevajte, da obstaja več virov na voljo na vaši strani Netflix Queue (Queue, priporočila, Movie Reviews, itd.) Dodajte toliko, kot želite!"
+      new_aggregation: "New Seštevanje"
+      new_global_feed: "Nov vir je bil dodan {{application_name}}"
+      new_search: "Novo iskanje"
+      new_topic_title: "Iskanje novo temo in izgradnjo strani z rezultati."
+      next: Naslednji
+      next_label: Naslednji
+      no_entries_found: "No vnosi najti"
+      no_feeds_at_uri: "Nismo mogli najti, ki url"
+      no_feeds_found: "No virov je bilo ugotovljeno,"
+      no_feeds_from_username: "Nismo mogli najti, ki račun"
+      no_hits: "Vaše iskanje - <b>{{search}}</b> - se ne ujema z nobenim <b>{{resource_type}}.</b> Poskusite z drugačnim iskanjem ali izberite drug jezik."
+      no_recommendations: "Ni priporočil so bile ugotovljene."
+      no_tagged_courses: "No <b>tečajev</b> je bilo ugotovljeno, označenih z <b>{{tags}}.</b> <a href='/resources'>Začni znova</a> ali pokazati <a href='/resources/tags/{{tags}}'>vse vire označeni {{tags}}.</a>"
+      no_tagged_resources: "No <b>virov</b> je bilo ugotovljeno, označenih z <b>{{tags}}.</b> <a href='/resources'>Začni znova.</a>"
+      no_tags: "No tags še niso na voljo"
+      no_terms_error: "Navedite izraz ali seznam izrazov."
+      oai_endpoint_successfully_created: "Uspešno dodano OAI končna točka"
+      oai_prompt: "Če navedete OAI, morate navesti polno url na zahtevo ListRecords (ne samo končne točke OAI)"
+      of: od
+      ok: OK
+      only_courses: "Samo Tečaji"
+      opml_feeds_for: "Viri za {{terms}}"
+      opml_generated: "Viri za {{terms}}"
+      photos: Fotografije
+      polyvore_prompt: "Polyvore profila URL"
+      polyvore_rss: "Vaš profil Polyvore URL izgleda http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "powered by"
+      previous: Prejšnja
+      previous_label: Prejšnja
+      problem_adding_feed: "Prišlo je do težave dodal krme:"
+      rdf: RDF
+      read_more: "preberi več"
+      related_feeds: "Related Feeds"
+      related_resources: povezanih
+      related_resources_title: "Sorodni viri"
+      relevance: relevance
+      remix: Remix
+      remove: Odstraniti
+      repository: Metadata
+      repository_short_title: "Repository Kratek Naziv:"
+      repository_title: "Repository Naslov:"
+      resource_search_results: "Viri <b>{{first}} - {{last}}</b> of <b>{{total}}</b> za iskanje <b>{{terms}}</b>"
+      resource_tag_results: "Viri <b>{{first}} - {{last}}</b> of <b>{{total}}</b> tagged <b>{{terms}}</b>"
+      resources_tag_cloud_label: "brskanje virov z uporabo oznak <a href=\"/resources?grain_size=course\">[browse le tečajev]</a>"
+      results: Rezultati
+      rss: RSS
+      rss_url: "Url za vašo rss feed"
+      save_aggreation: "Shrani to Seštevanje"
+      save_aggreation_instructions: "Odstranite morebitne nezaželene vire tako, da kliknete &quot;Odstrani&quot;. Boste lahko dodate nove vire v naslednjem koraku."
+      search: iskati
+      search_button: Iti
+      search_for: "Search for:"
+      search_link: "Poišči Resources!"
+      searching_for_feed: "Searching for feeds ..."
+      select_feeds_prompt: "Izberite vire, ki bi jih radi dodali:"
+      select_service_prompt: "Prosimo, izberite storitev"
+      service_feed_name: "{{term}} Na {{service}}"
+      service_username: "{{service}} Uporabniško ime"
+      setup_aggregation: "Setup Seštevanje"
+      share: Deliti
+      short_title: "Kratek naslov:"
+      show_tagged_courses: "show samo tečaji"
+      show_tagged_resources: "kažejo vse vrste sredstev"
+      signup: "Sign Up"
+      signup_to_save_aggreation: "{{login}} Ali {{signup}} shraniti to iskanje"
+      spinner_image: "Waiting image"
+      start_over: "start over"
+      status: Status
+      submitting_feed_message: "Predložitev vaše krme ..."
+      successfully_added_uri_feed: "Uspešno dodano {{uri}}"
+      successfully_added_username_feed: "Uspešno dodano {{service}}"
+      tags: tags
+      terms_instructions: "Dodajte toliko oznake ali besedne zveze, kot želite. Ločite z vejicami. to je hrana, recepti, najboljša mesta za jesti, organska"
+      title: Naslov
+      topic_feeds_for: "Viri za {{terms}}"
+      topic_generated: "Rezultati za `{{terms}}`."
+      type_of_metadata: "Vrsta Metapodatki:"
+      uri: Url
+      validate_feed: "Mark krmo kot veljavne"
+      videos: "Video posnetki"
+      visit: Obisk
+      xml: XML
+      zotero_group_prompt: "Zotero skupino URL"
+      zotero_group_rss: "Vaša skupina Zotero URL izgleda: http://www.zotero.org/groups/adventures_in_library_instruction/items"

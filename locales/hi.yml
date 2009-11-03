@@ -1,0 +1,210 @@
+--- 
+hi: 
+  muck: 
+    activity_templates: 
+      entry_comment: टिप्पणी
+    services: 
+      add_aggregation: "एकत्रिकरण जोड़ें"
+      add_aggregation_title: "एकत्रीकरण के लिए नाम:"
+      add_edit_feeds: "जोड़ें / संपादित करें फ़ीड"
+      add_extended_feed_sub_title: "योगदान एक नया डेटा स्रोत"
+      add_extended_feed_title: "नए फ़ीड जोड़ें"
+      add_feed: "फ़ीड जोड़ें"
+      add_feed_advanced: "फ़ीड जोड़ें उन्नत ()"
+      add_feed_title: "एक नई फ़ीड जोड़ें"
+      add_feed_url: "Url:"
+      add_feeds_to_aggregation: "जोड़ने के लिए {{title}} फ़ीड"
+      add_more_sources: "सूत्रों जोड़ें"
+      add_oai: "OAI जोड़ें"
+      add_oai_feed: "OAI Endpoint जोड़ें"
+      add_opml_to_aggregation: "OPML फ़ाइल जोड़ें"
+      add_rss: "आरएसएस जोड़ें"
+      add_rss_feed: "आरएसएस फ़ीड जोड़ें"
+      add_sources_by_tag: "और जोड़ें टैग से खिलाती है."
+      added_date: "जोड़ा गया"
+      aggregation_deleted: "नष्ट {{title}}"
+      aggregation_updated: "एकत्रिकरण अद्यतन"
+      all_resources: "सभी संसाधन"
+      already_added_uri_feed: "आप पहले से ही url {{uri}} जोड़ दिया है"
+      already_added_username_feed: "आप पहले से ही उपयोगकर्ता नाम {{service}} के साथ एक {{username}} खाते में जोड़ दिया है"
+      already_shared: "आपने पहले इस पेज को साझा किया है."
+      amazon_prompt: "कृपया ईमेल Amazon.com के साथ प्रयोग करें"
+      approval_status: स्वीकृत
+      atom: एटम
+      available_services: "उपलब्ध सेवाएं"
+      available_sources: "उपलब्ध सूत्रों"
+      back: पीछे
+      ban_feed: "अवैध रूप में चिह्नित करें फ़ीड"
+      banned: "पर प्रतिबंध लगाया"
+      blogger_prompt: "अपने ब्लॉग का यूआरएल"
+      build_topic: "Live खोज"
+      calculated: गणना
+      cant_modify_aggregation: "आप निर्दिष्ट एकत्रीकरण का उपयोग की अनुमति नहीं है."
+      cant_modify_identity_feed: "आप निर्दिष्ट फ़ीड तक पहुँच की अनुमति नहीं है."
+      choose_service: "सेवा चुनें:"
+      close: "बंद करना"
+      collection_description: "संग्रह विवरण:"
+      collection_home_uri: "संग्रह होम पेज का पता"
+      collection_uri: "संग्रह Metadata का पता:"
+      collections: संग्रह
+      collections_long: "अनुक्रमित संग्रह"
+      comment_entries_count: 
+        one: "1 टिप्पणी"
+        other: "{{count}} टिप्पणियाँ"
+      contributor: योगदानकर्ता
+      course_search_results: "पाठ्यक्रम <b>{{first}} -</b> खोज <b>{{last}}</b> के लिए <b>{{total}}</b> के <b>{{terms}}</b>"
+      course_tag_results: "पाठ्यक्रम <b>{{first}} - {{last}}</b> टैग <b>{{total}}</b> के <b>{{terms}}</b>"
+      courses_tag_cloud_label: "टैग का उपयोग कर पाठ्यक्रमों को ब्राउज़ करें <a href=\"/resources\">[सभी संसाधनों को ब्राउज़ करें]</a>"
+      default_language: भाषा
+      demo: डेमो
+      description: विवरण
+      details: विवरण
+      developers_long: "डेवलपर्स के लिए जानकारी"
+      direct_link: "[सीधा लिंक]"
+      discover_feed: "खोज फ़ीड"
+      discover_feed_message: "Url आपके द्वारा प्रदान के बारे में जानकारी के लिए खोज रहे हैं. कृपया प्रतीक्षा करें."
+      display_address: "प्रदर्शन पता"
+      display_url: "Url प्रदर्शित होगा:"
+      download_opml: "डाउनलोड {{terms}} के लिए OPML फ़ाइल"
+      edit_aggregation: "संपादित करें एग्रीगेशन"
+      edit_aggregation_title: "संपादन {{title}}"
+      entries_count: प्रविष्टियां
+      entry_commment_contents: "{{resource}} पर टिप्पणी"
+      explore: "{{topic}} के लिए खोजें"
+      facebook_instructions: "मेरी लिंक पृष्ठ पर, सही &#39;मेरा&#39; कड़ियाँ और लिंक की प्रतिलिपि पर क्लिक करें. हम स्वचालित रूप से शामिल हैं, स्थिति, संपर्क और नोट्स होगा."
+      facebook_link: "आप अपने Facebook मेरी लिंक पृष्ठ पर अपनी यूआरएल ढूँढ सकते हैं. &#39;पर क्लिक करें और फिर {{link}} मेरा कड़ियाँ"
+      facebook_notes: "Facebook नोट्स"
+      facebook_notifications: "Facebook सूचनाएँ"
+      facebook_prompt: "आपके Facebook मेरे लिंक यूआरएल"
+      facebook_shares: "Facebook साझा कड़ियाँ"
+      failed_harvests: "विफल रही फसल"
+      failed_last_request: "पिछले अनुरोध विफल: {{error}}"
+      feed: खुराक
+      feed_banned_message: "फ़ीड पर प्रतिबंध लगा दिया गया था."
+      feed_id: आईडी
+      feed_metadata_address: "Metadata पता"
+      feed_remove: "फ़ीड को हटाया"
+      feed_successfully_created: "फ़ीड सफलतापूर्वक बनाया गया था."
+      feed_successfully_updated: "फ़ीड सफलतापूर्वक नवीनीकृत हो गया था."
+      feed_type: "फ़ीड प्रकार"
+      feed_type_prompt: "आरएसएस फ़ीड सबसे आम प्रकार है. केवल OAI चुनें अगर आप भण्डार पता है कि यह समर्थन करता है और आप OAI endpoint निर्दिष्ट किए हैं."
+      feed_validated_message: "फ़ीड को मंजूरी दी थी."
+      feeds_for_aggregation: "इस एकत्रीकरण के लिए फ़ीड"
+      feeds_title: "पंजीकृत संग्रह"
+      finding_topics: "प्रासंगिक कहानियों के लिए खोज रहा है ..."
+      for: "के लिए"
+      friendfeed_prompt: "FriendFeed आरएसएस यूआरएल"
+      friendfeed_rss: "आप अपने {{link}}. के नीचे अपने यूआरएल ढूँढ सकते हैं"
+      generate_new_topic: "उत्पन्न एक नया विषय"
+      generating_topic_message: "खोज. यह एक मिनट या तो ले सकते हैं ...."
+      gm_more_prompt: "अधिक संबंधित संसाधन"
+      gm_title: "संबंधित संसाधन"
+      goodreads_prompt: "Goodreads प्रोफ़ाइल यूआरएल"
+      goodreads_rss: "जैसे, http://www.goodreads.com/user/show/1111"
+      harvest_interval: "फसल अंतराल बजे ()"
+      harvested_at: काटा
+      hide: छिपना
+      identity_feed_removed: "सेवा हटाया"
+      identity_feeds: "पहचान फ़ीड्स"
+      import_service: "आयात {{service}}"
+      language_not_supported: "अनुरोध भाषा समर्थित नहीं है"
+      latest_aggregations: "नवीनतम aggregations"
+      linkedin_prompt: "LinkedIn सार्वजनिक प्रोफ़ाइल यूआरएल"
+      linkedin_rss: "आप अपने {{link}}. के नीचे अपने यूआरएल ढूँढ सकते हैं"
+      loading_content_image: "% &lt;= T &#39;(&#39; muck.services.loading_image%)&gt;"
+      loading_image: "छवि लोड हो रहा है"
+      loading_message: "लोड हो रहा है ..."
+      login: "लॉग इन"
+      login_or_signup_prompt: "{{signup}} या {{login}} और बातचीत करने के लिए संसाधनों का हिस्सा."
+      login_to_comment: "लॉगिन टिप्पणी जोड़ने के लिए"
+      metadata: Metadata
+      metadata_prefix: "Metadata उपसर्ग"
+      my_identity: "मेरी पहचान"
+      my_services: "मेरी सेवाएँ"
+      narrow_further: "संकीर्ण और परिणाम"
+      netflix_prompt: "Netflix पंक्ति आरएसएस यूआरएल"
+      netflix_rss: "आप अपने {{link}}. पर अपना यूआरएल ढूँढ सकते हैं ध्यान दें कि वहाँ रहे हैं कई अपने Netflix पंक्ति पृष्ठ पर उपलब्ध है (पंक्ति, अनुशंसाएँ, मूवी की समीक्षा, आदि फ़ीड). जोड़ने के रूप में कई के रूप में तुम्हारे जैसे!"
+      new_aggregation: "नई एग्रीगेशन"
+      new_global_feed: "एक नई फ़ीड की {{application_name}} जोड़ दिया गया है"
+      new_search: "नई खोज"
+      new_topic_title: "एक नए विषय के लिए और खोज परिणाम पृष्ठ का निर्माण."
+      next: अगला
+      next_label: अगला
+      no_entries_found: "कोई प्रविष्टि नहीं मिली"
+      no_feeds_at_uri: "हम दी url नहीं मिला"
+      no_feeds_found: "कोई फ़ीड थे पाया"
+      no_feeds_from_username: "हम दी खाता नहीं मिला"
+      no_hits: "आपकी खोज - <b>{{search}}</b> - किसी भी <b>{{resource_type}}</b> से मेल नहीं खाती. कृपया किसी भिन्न खोज का प्रयास करें या कोई अन्य भाषा को चुन सकते हैं."
+      no_recommendations: "नहीं सिफारिशों पाए गए."
+      no_tagged_courses: "कोई <b>पाठ्यक्रम {{tags}}</b> के साथ टैग नहीं मिला. <a href='/resources'>आरंभ करें</a> या <a href='/resources/tags/{{tags}}'>सभी {{tags}} टैग संसाधनों</a> दिखा रहे थे."
+      no_tagged_resources: "कोई <b>संसाधनों {{tags}}</b> के साथ टैग नहीं मिला. <a href='/resources'>प्रारंभ पर</a> थे."
+      no_tags: "कोई टैग नहीं अभी तक उपलब्ध है"
+      no_terms_error: "कृपया एक शब्द या शब्दों की सूची निर्दिष्ट करें."
+      oai_endpoint_successfully_created: "सफलतापूर्वक OAI endpoint जोड़ा"
+      oai_prompt: "यदि आप OAI निर्दिष्ट करें, आप ListRecords अनुरोध (न सिर्फ OAI endpoint को पूरा URL निर्दिष्ट करना होगा)"
+      of: का
+      ok: "ठीक है"
+      only_courses: "केवल पाठ्यक्रम"
+      opml_feeds_for: "{{terms}} के लिए फ़ीड"
+      opml_generated: "{{terms}} के लिए फ़ीड"
+      photos: तस्वीरें
+      polyvore_prompt: "Polyvore प्रोफ़ाइल यूआरएल"
+      polyvore_rss: "अपने Polyvore प्रोफ़ाइल यूआरएल http://www.polyvore.com/cgi/profile?id=00000 की तरह लग रहा है"
+      powered_by: "इसके द्वारा संचालित"
+      previous: पिछला
+      previous_label: पिछला
+      problem_adding_feed: "एक फ़ीड जोड़ने से समस्या थी:"
+      rdf: RDF
+      read_more: "और अधिक पढ़ें"
+      related_feeds: "संबंधित फ़ीड्स"
+      related_resources: संबंधित
+      related_resources_title: "संबंधित संसाधन"
+      relevance: प्रासंगिकता
+      remix: रीमिक्स
+      remove: हटाना
+      repository: Metadata
+      repository_short_title: "भंडार लघु शीर्षक:"
+      repository_title: "भंडार शीर्षक:"
+      resource_search_results: "संसाधन <b>{{first}} -</b> खोज <b>{{last}}</b> के लिए <b>{{total}}</b> के <b>{{terms}}</b>"
+      resource_tag_results: "संसाधन <b>{{first}} - {{last}}</b> टैग <b>{{total}}</b> के <b>{{terms}}</b>"
+      resources_tag_cloud_label: "टैग ब्राउज़ करें का उपयोग कर संसाधनों <a href=\"/resources?grain_size=course\">[केवल पाठ्यक्रम ब्राउज़]</a>"
+      results: परिणाम
+      rss: आरएसएस
+      rss_url: "आपके आरएसएस फ़ीड के लिए यूआरएल"
+      save_aggreation: "यह एग्रीगेशन सहेजें"
+      save_aggreation_instructions: "किसी भी अवांछित हटाएँ &#39;पर क्लिक करके फ़ीड&#39; निकालें. आप को जोड़ने के नए अगले कदम में फ़ीड कर सकेंगे."
+      search: खोज
+      search_button: जाना
+      search_for: "के लिए खोजें:"
+      search_link: "खोजें संसाधन!"
+      searching_for_feed: "खोज के लिए फ़ीड ..."
+      select_feeds_prompt: "चुनें फ़ीड आप जोड़ना चाहते हैं:"
+      select_service_prompt: "कृपया एक सेवा चुनें"
+      service_feed_name: "{{term}} पर {{service}}"
+      service_username: "{{service}} उपयोगकर्ता नाम"
+      setup_aggregation: "सेटअप एग्रीगेशन"
+      share: हिस्सा
+      short_title: "लघु शीर्षक:"
+      show_tagged_courses: "केवल पाठ्यक्रम शो"
+      show_tagged_resources: "संसाधनों की किसी भी तरह का शो"
+      signup: "साइन अप"
+      signup_to_save_aggreation: "{{login}} या {{signup}} इस खोज को बचाने के लिए"
+      spinner_image: "छवि प्रतीक्षा"
+      start_over: "शुरू से अधिक"
+      status: स्थिति
+      submitting_feed_message: "अपनी फ़ीड भेजने से ..."
+      successfully_added_uri_feed: "सफलतापूर्वक जोड़ा {{uri}}"
+      successfully_added_username_feed: "सफलतापूर्वक जोड़ा {{service}}"
+      tags: टैग
+      terms_instructions: "के रूप में बहुत से टैग या वाक्यांश के रूप में आप चाहें जोड़ें. हर एक अल्पविराम से अलग. यानी भोजन, व्यंजनों, सर्वोत्तम स्थानों खाते हैं, के लिए जैविक"
+      title: शीर्षक
+      topic_feeds_for: "{{terms}} के लिए फ़ीड"
+      topic_generated: "`{{terms}}`. के लिए परिणाम"
+      type_of_metadata: "Metadata का प्रकार:"
+      uri: Url
+      validate_feed: "मान्य के रूप में मार्क फ़ीड"
+      videos: वीडियो
+      visit: यात्रा
+      xml: XML
+      zotero_group_prompt: "Zotero समूह URL"
+      zotero_group_rss: "अपने Zotero समूह यूआरएल की तरह दिखता है: http://www.zotero.org/groups/adventures_in_library_instruction/items"

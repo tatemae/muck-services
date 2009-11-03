@@ -1,0 +1,210 @@
+--- 
+et: 
+  muck: 
+    activity_templates: 
+      entry_comment: Kommentaar
+    services: 
+      add_aggregation: "Lisa liitmine"
+      add_aggregation_title: "Nimi liitmise:"
+      add_edit_feeds: "Lisa / Muuda Feeds"
+      add_extended_feed_sub_title: "Kaasa uute andmete allikaks"
+      add_extended_feed_title: "Lisa uus sööt"
+      add_feed: "Lisa uudisvoog"
+      add_feed_advanced: "Lisa kanal (Advanced)"
+      add_feed_title: "Uue kanali lisamine"
+      add_feed_url: "Url:"
+      add_feeds_to_aggregation: "Lisa infovood {{title}}"
+      add_more_sources: "Lisa Allikad"
+      add_oai: "Lisa OAI"
+      add_oai_feed: "Lisa OAI Tulemusnäitaja"
+      add_opml_to_aggregation: "Lisa OPML-fail"
+      add_rss: "Lisa RSS"
+      add_rss_feed: "Lisa RSS"
+      add_sources_by_tag: "Lisa vooge sildid."
+      added_date: Lisatud
+      aggregation_deleted: "{{title}} Välja"
+      aggregation_updated: "Liitmine Updated"
+      all_resources: "Kõik ressursid"
+      already_added_uri_feed: "Te olete juba lisatud url {{uri}}"
+      already_added_username_feed: "Te olete juba lisatud {{service}} konto kasutajanimi {{username}}"
+      already_shared: "Olete varem jagatud lehekülg."
+      amazon_prompt: "Palun sisestage e-kirja kasutamiseks Amazon.com"
+      approval_status: "Vastu võetud"
+      atom: Atom
+      available_services: "Saadaval Teenused"
+      available_sources: "Kättesaadavatest allikatest"
+      back: Tagasi
+      ban_feed: "Mark sööda kehtetuks"
+      banned: keelatud
+      blogger_prompt: "URL Blog"
+      build_topic: "Live Search"
+      calculated: arvutatud
+      cant_modify_aggregation: "Sul ei ole õigust kasutada nimetatud varad."
+      cant_modify_identity_feed: "Sul ei ole õigust kasutada nimetatud sööta."
+      choose_service: "Vali teenus:"
+      close: Sulgema
+      collection_description: "Collection Description:"
+      collection_home_uri: "Aadress kogumise Esileht"
+      collection_uri: "Aadress kogumise Vaheandmed:"
+      collections: Kogud
+      collections_long: "Indekseeritud Kogud"
+      comment_entries_count: 
+        one: "1 kommentaar"
+        other: "{{count}} Kommentaarid"
+      contributor: Kaastöö
+      course_search_results: "Kursused <b>{{first}} - {{last}}</b> on <b>{{total}}</b> otsingu <b>{{terms}}</b>"
+      course_tag_results: "Kursused <b>{{first}} - {{last}}</b> on <b>{{total}}</b> tagged <b>{{terms}}</b>"
+      courses_tag_cloud_label: "Kursuste sirvimine, kasutades koode <a href=\"/resources\">[Sirvi kõiki vahendeid]</a>"
+      default_language: Keel
+      demo: Demo
+      description: Kirjeldus
+      details: Detailid
+      developers_long: "Info arendajatele"
+      direct_link: "[link]"
+      discover_feed: "Avasta Feed"
+      discover_feed_message: "Otsin infot url andsite. Palun oota."
+      display_address: "Näita Aadress"
+      display_url: "Url näidatakse:"
+      download_opml: "Lae OPML faili {{terms}}"
+      edit_aggregation: "Muuda liitmine"
+      edit_aggregation_title: "Toimetajad {{title}}"
+      entries_count: Entries
+      entry_commment_contents: "kommenteeris {{resource}}"
+      explore: "Otsi {{topic}}"
+      facebook_instructions: "On My Links Page paremklõpsake teemal &quot;Minu lingid&quot; ja kopeerida link. Me automaatselt lisada, staatuse, linke ja märkusi."
+      facebook_link: "Leiad URL-i Facebook My Links Page. {{link}} Ja kliki &quot;Minu lingid&quot;"
+      facebook_notes: "Facebook Märkused"
+      facebook_notifications: "Facebook Teavitused"
+      facebook_prompt: "Teie Facebook Minu lingid URL"
+      facebook_shares: "Facebook Jagatud Viited"
+      failed_harvests: "Ebaõnnestus saagi"
+      failed_last_request: "Ebaõnnestus viimase nõudmisel: {{error}}"
+      feed: Toide
+      feed_banned_message: "Sööt on keelatud."
+      feed_id: ID
+      feed_metadata_address: "Vaheandmed Aadress"
+      feed_remove: "Feed Removed"
+      feed_successfully_created: "Feed on loodud."
+      feed_successfully_updated: "Feed on edukalt uuendatud."
+      feed_type: "Sööda tüüp"
+      feed_type_prompt: "RSS on kõige levinum sööda tüüp. Vali ainult OAI kui tead hoidla seda toetab ja olete määratud OAI lõpp."
+      feed_validated_message: "Sööt kiitis selle heaks."
+      feeds_for_aggregation: "Feeds selle liitmist"
+      feeds_title: "Registreerunud Kogud"
+      finding_topics: "Otsin asjakohaste lood ..."
+      for: jaoks
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Leiad URL allosas oma {{link}}."
+      generate_new_topic: "Loo uus teema"
+      generating_topic_message: "Otsimine. See võib võtta minuti või nii ...."
+      gm_more_prompt: "Veel Seostuvad ressursid"
+      gm_title: "Seostuvad ressursid"
+      goodreads_prompt: "Goodreads profiili URL"
+      goodreads_rss: "nt http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Saagikoristuse järel (kl)"
+      harvested_at: Koristatud
+      hide: Peitma
+      identity_feed_removed: "Eemaldatud teenus"
+      identity_feeds: "Isikut Feeds"
+      import_service: "Import {{service}}"
+      language_not_supported: "Taotluse keel ei ole toetatud"
+      latest_aggregations: "Viimased kolooniad"
+      linkedin_prompt: "LinkedIn avalikku profiili URL"
+      linkedin_rss: "Leiad URL allosas oma {{link}}."
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image &quot;)%&gt;"
+      loading_image: "Loading Image"
+      loading_message: "Loading ..."
+      login: "Sisse logima"
+      login_or_signup_prompt: "{{signup}} Või {{login}} arutada ja jagada ressursse."
+      login_to_comment: "Logi sisse kommentaari lisamiseks"
+      metadata: metaandmed
+      metadata_prefix: "Vaheandmed on eesliide"
+      my_identity: "Minu identiteet"
+      my_services: "Minu teenused"
+      narrow_further: "kitsas tulemusi veelgi"
+      netflix_prompt: "Netflix Queue RSS URL"
+      netflix_rss: "Leiad URL-i {{link}}. Pange tähele, et on mitmeid kanaleid salvestatud teie Netflix Queue lehel (järjekord, soovitused, Movie Reviews, jne). Lisage nii palju kui soovite!"
+      new_aggregation: "Uus liitmine"
+      new_global_feed: "Uue kanali on lisatud {{application_name}}"
+      new_search: "Uus otsing"
+      new_topic_title: "Otsi uus teema ning ehitada lehel."
+      next: Järgmine
+      next_label: Järgmine
+      no_entries_found: "No entries leitud"
+      no_feeds_at_uri: "Me ei suutnud leida antud url"
+      no_feeds_found: "No feeds leitud"
+      no_feeds_from_username: "Me ei suutnud leida antud konto"
+      no_hits: "Sinu otsing - <b>{{search}}</b> - ei vastanud ühtegi <b>{{resource_type}}.</b> Proovige teistsugust otsingut või valige teine keel."
+      no_recommendations: "Nr soovitusi ei leitud."
+      no_tagged_courses: "Nr <b>kursused</b> leiti tagged with <b>{{tags}}.</b> <a href='/resources'>Algusesse üle</a> või näitavad <a href='/resources/tags/{{tags}}'>kõik vahendid tagged {{tags}}.</a>"
+      no_tagged_resources: "Nr <b>vahendeid</b> leitud kodeeritud <b>{{tags}}.</b> <a href='/resources'>Start üle.</a>"
+      no_tags: "No tags veel puuduvad"
+      no_terms_error: "Palun täpsustada mõiste või mõistete nimekirja."
+      oai_endpoint_successfully_created: "Edukalt lisatud OAI tulemusnäitaja"
+      oai_prompt: "Kui määrate OAI, peate täpsustama täieliku URL List Records taotlus (mitte ainult OAI tulemusnäitaja)"
+      of: sellest
+      ok: OK
+      only_courses: "Ainult Kursused"
+      opml_feeds_for: "Toidab {{terms}}"
+      opml_generated: "Toidab {{terms}}"
+      photos: Fotod
+      polyvore_prompt: "Polyvore profiili URL"
+      polyvore_rss: "Teie Polyvore profiili URL näeb välja http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "powered by"
+      previous: Eelmine
+      previous_label: Eelmine
+      problem_adding_feed: "Probleem lisamisega söödale:"
+      rdf: RDF
+      read_more: "loe lähemalt"
+      related_feeds: "Related Feeds"
+      related_resources: seotud
+      related_resources_title: "Seostuvad ressursid"
+      relevance: tekst
+      remix: Remix
+      remove: Eemaldama
+      repository: Metaandmed
+      repository_short_title: "Hoidla Lühipealkiri:"
+      repository_title: "Hoidla Pealkiri:"
+      resource_search_results: "Ressursid <b>{{first}} - {{last}}</b> on <b>{{total}}</b> otsingu <b>{{terms}}</b>"
+      resource_tag_results: "Ressursid <b>{{first}} - {{last}}</b> on <b>{{total}}</b> tagged <b>{{terms}}</b>"
+      resources_tag_cloud_label: "Lehitse vahendeid kasutades sildid <a href=\"/resources?grain_size=course\">[sirvida ainult kursustel]</a>"
+      results: Tulemused
+      rss: RSS
+      rss_url: "URL RSS feed"
+      save_aggreation: "Salvesta see liitmine"
+      save_aggreation_instructions: "Eemalda soovimatuid kanaleid, klõpsates &quot;Eemalda&quot;. Te saate lisada uusi kanaleid järgmiseks sammuks."
+      search: otsima
+      search_button: Minema
+      search_for: "Otsi:"
+      search_link: "Leida vahendeid!"
+      searching_for_feed: "Otsin toidab ..."
+      select_feeds_prompt: "Valige toidab soovid lisada:"
+      select_service_prompt: "Vali teenus"
+      service_feed_name: "{{term}} Kohta {{service}}"
+      service_username: "{{service}} Kasutajanimi"
+      setup_aggregation: "Setup liitmine"
+      share: Jagama
+      short_title: "Lühipealkiri:"
+      show_tagged_courses: "Näita ainult kursused"
+      show_tagged_resources: "Näita tahes ressursi"
+      signup: "Sign Up"
+      signup_to_save_aggreation: "{{login}} Või {{signup}} salvestada selle otsingu"
+      spinner_image: "Ootel pilt"
+      start_over: "uuesti alustada"
+      status: Staatus
+      submitting_feed_message: "Sisestades ..."
+      successfully_added_uri_feed: "Edukalt lisatud {{uri}}"
+      successfully_added_username_feed: "Edukalt lisatud {{service}}"
+      tags: Sildid
+      terms_instructions: "Lisa nii palju silte või väljendeid, kui soovite. Eraldage komadega. st toidu, retseptid, parimad kohad süüa, orgaanilise"
+      title: Pealkiri
+      topic_feeds_for: "Toidab {{terms}}"
+      topic_generated: "Tulemused `{{terms}}`."
+      type_of_metadata: "Tüüp Vaheandmed:"
+      uri: Url
+      validate_feed: "Mark sööda kehtiv"
+      videos: Videod
+      visit: Külasta
+      xml: XML
+      zotero_group_prompt: "Zotero Grupi URL"
+      zotero_group_rss: "Teie Zotero grupp URL näeb välja selline: http://www.zotero.org/groups/adventures_in_library_instruction/items"

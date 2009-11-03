@@ -1,0 +1,210 @@
+--- 
+ja: 
+  muck: 
+    activity_templates: 
+      entry_comment: コメント
+    services: 
+      add_aggregation: 集計の追加
+      add_aggregation_title: 集計の名前：
+      add_edit_feeds: "Add / Editをフィード"
+      add_extended_feed_sub_title: 貢献し、新しいデータソース
+      add_extended_feed_title: 新しいフィードを追加する
+      add_feed: フィードを追加する
+      add_feed_advanced: （詳細）フィードを追加する
+      add_feed_title: 新しいフィードを追加する
+      add_feed_url: URLを：
+      add_feeds_to_aggregation: "追加{{title}}フィードを購読する"
+      add_more_sources: ソースを追加する
+      add_oai: はOAI追加
+      add_oai_feed: はOAIエンドポイントを追加
+      add_opml_to_aggregation: 追加OPMLファイル
+      add_rss: RSSを追加
+      add_rss_feed: RSSフィードに追加
+      add_sources_by_tag: もっとタグを追加してフィード。
+      added_date: 追加されました
+      aggregation_deleted: "{{title}}削除"
+      aggregation_updated: 集約更新
+      all_resources: すべてのリソース
+      already_added_uri_feed: "既にURLを{{uri}}を追加しました"
+      already_added_username_feed: "あなたはすでに名{{service}}と{{username}}アカウントを追加しました"
+      already_shared: 以前にこのページを共有した。
+      amazon_prompt: してくださいあなたAmazon.comで使用するメールアドレスを入力
+      approval_status: 承認
+      atom: アトム
+      available_services: 利用可能なサービス
+      available_sources: 利用可能なソース
+      back: 後ろの
+      ban_feed: 無効としてマークフィード
+      banned: 禁止
+      blogger_prompt: URLを自分のBlogの
+      build_topic: "Live Searchの"
+      calculated: 計算
+      cant_modify_aggregation: アクセス許可は、指定した集計にアクセスする必要はありません。
+      cant_modify_identity_feed: アクセス許可指定されたフィードにアクセスする必要はありません。
+      choose_service: サービスを選択します：
+      close: 閉じる
+      collection_description: コレクションの概要：
+      collection_home_uri: アドレスは、コレクションのホームページの
+      collection_uri: コレクションのメタデータの住所：
+      collections: コレクション
+      collections_long: インデックス付きのコレクション
+      comment_entries_count: 
+        one: 1つのコメント
+        other: "{{count}}コメント"
+      contributor: コントリビューター
+      course_search_results: "コース<b>{{first}} - {{last}} {{total}}</b>の検索<b>{{terms}}</b>の"
+      course_tag_results: "コース<b>{{first}} - {{last}} {{total}}</b>タグ<b>{{terms}}</b>の"
+      courses_tag_cloud_label: "コースのタグを使用して参照<a href=\"/resources\">[すべてのリソースを参照]</a>"
+      default_language: 言語
+      demo: デモ
+      description: 商品概要
+      details: 詳細
+      developers_long: 情報開発者のため
+      direct_link: "[直リンク]"
+      discover_feed: ディスフィード
+      discover_feed_message: に指定されたURLに関する情報を検索する。しばらくお待ちください。
+      display_address: 表示アドレス
+      display_url: URLを表示する：
+      download_opml: "{{terms}}ダウンロードOPMLファイル"
+      edit_aggregation: 編集の集約
+      edit_aggregation_title: "編集{{title}}"
+      entries_count: エントリー
+      entry_commment_contents: "{{resource}}コメント"
+      explore: "検索{{topic}}の"
+      facebook_instructions: "マイリンクのページでは、&#39;マイリンク&#39;とのリンクをコピー上で右クリックします。我々は自動的に、ステータス、リンク、およびメモが含まれます。"
+      facebook_link: "あなたのFacebookの私のリンクページ上のURLを見つけることができます。 &#39;に{{link}}し、[マイリンク&#39;"
+      facebook_notes: Facebookの注意事項
+      facebook_notifications: Facebookの通知
+      facebook_prompt: 自分のFacebookの私のリンクのURL
+      facebook_shares: Facebookの共有リンク
+      failed_harvests: 失敗したの収穫
+      failed_last_request: "最後の要求が失敗しました：{{error}}"
+      feed: 食料
+      feed_banned_message: フィードを禁止された。
+      feed_id: 番号
+      feed_metadata_address: メタデータ住所
+      feed_remove: フィードを削除
+      feed_successfully_created: フィードが正常に作成されました。
+      feed_successfully_updated: フィードが正常に更新されました。
+      feed_type: フィードの種類
+      feed_type_prompt: RSSは、最も一般的なフィードのタイプです。場合は、リポジトリを知っているだけのOAIを選択しそれをサポートするとは、OAIのエンドポイントを指定している。
+      feed_validated_message: フィードを承認された。
+      feeds_for_aggregation: この集計のフィード
+      feeds_title: 登録コレクション
+      finding_topics: 関連記事の検索...
+      for: 〜のために
+      friendfeed_prompt: FriendFeedのRSSのURL
+      friendfeed_rss: "あなたの{{link}}.の下部にあるあなたのURLを見つけることができます"
+      generate_new_topic: 生成の新しいトピック
+      generating_topic_message: 検索。これほど....分かかる場合があります
+      gm_more_prompt: 関連リソース
+      gm_title: 関連リソース
+      goodreads_prompt: GoodreadsのプロフィールのURL
+      goodreads_rss: "例えば、http://www.goodreads.com/user/show/1111"
+      harvest_interval: 収穫間隔（時間）
+      harvested_at: 収穫
+      hide: 隠す
+      identity_feed_removed: サービスを削除
+      identity_feeds: アイデンティティフィード
+      import_service: "インポート{{service}}"
+      language_not_supported: 要求された言語がサポートされていません
+      latest_aggregations: 最新の集計
+      linkedin_prompt: LinkedInの公開プロフィールのURL
+      linkedin_rss: "あなたの{{link}}.の下部にあるあなたのURLを見つけることができます"
+      loading_content_image: "&quot;％=トン（&#39;muck.services.loading_image&#39;）％&quot;"
+      loading_image: イメージのロード
+      loading_message: 読み込んでいます...
+      login: ログイン
+      login_or_signup_prompt: "{{signup}}または{{login}}とリソースを共有議論する。"
+      login_to_comment: ログインコメントを追加する
+      metadata: メタデータ
+      metadata_prefix: メタデータの接頭辞
+      my_identity: "My Identityを"
+      my_services: マイサービス
+      narrow_further: 狭い結果をさらに絞り込む
+      netflix_prompt: NetflixのキューのRSSのURL
+      netflix_rss: "あなたの{{link}}.上のURLを見つけることができますは、いくつかのNetflixのキューのページ（キュー、提言、映画レビュー、などご利用いただけます）フィード注意してください。追加好きなように、多くの！"
+      new_aggregation: 新しい集約
+      new_global_feed: "新しいフィードを{{application_name}}に追加されている"
+      new_search: 新しい検索
+      new_topic_title: 新しいトピックを検索し、検索結果ページを作成します。
+      next: 次の
+      next_label: 次の
+      no_entries_found: エントリはありませんが見つかりました
+      no_feeds_at_uri: 我々は、与えられたURLを見つけることができませんでした
+      no_feeds_found: いいえ発見されたフィード
+      no_feeds_from_username: 我々は、指定されたアカウントを見つけることができませんでした
+      no_hits: "検索結果- <b>{{search}}</b> -任意の<b>{{resource_type}}</b>一致しませんでした。してください別の検索を試行するか、別の言語を選択します。"
+      no_recommendations: いいえ勧告を発見された。
+      no_tagged_courses: "<b>コース</b>はありません<b>。{{tags}}</b>をタグ付けが発見された。 <a href='/resources'>スタート以上</a> 、または<a href='/resources/tags/{{tags}}'>すべてのリソースを{{tags}}タグ</a>を見る。"
+      no_tagged_resources: "<b>リソース</b>がない<b>{{tags}}</b>をタグ付けが発見された。 <a href='/resources'>スタートで</a> 。"
+      no_tags: いいえタグはまだ利用
+      no_terms_error: してください用語や用語のリストを指定します。
+      oai_endpoint_successfully_created: 正常のOAIのエンドポイントを追加
+      oai_prompt: 場合はOAI指定すると、ListRecords（リクエストだけではなくは、OAIのエンドポイント）への完全なURLを指定する必要があります
+      of: の
+      ok: "[OK]を"
+      only_courses: 唯一のコース
+      opml_feeds_for: "{{terms}}のフィード"
+      opml_generated: "{{terms}}のフィード"
+      photos: 写真
+      polyvore_prompt: PolyvoreプロフィールのURL
+      polyvore_rss: "あなたのPolyvoreプロフィールのURL http://www.polyvore.com/cgi/profile?id=00000ようになります。"
+      powered_by: によって供給さ
+      previous: 前へ
+      previous_label: 前へ
+      problem_adding_feed: 問題があるフィードを追加されました：
+      rdf: RDFの
+      read_more: 続きを読む
+      related_feeds: 関連フィード
+      related_resources: 関連
+      related_resources_title: 関連リソース
+      relevance: 妥当性
+      remix: リミックス
+      remove: 取り外す
+      repository: メタデータ
+      repository_short_title: リポジトリ短いタイトル：
+      repository_title: リポジトリのタイトル：
+      resource_search_results: "資源<b>{{first}} - {{last}} {{total}}</b>の検索<b>{{terms}}</b>の"
+      resource_tag_results: "資源<b>{{first}} - {{last}} {{total}}</b>タグ<b>{{terms}}</b>の"
+      resources_tag_cloud_label: "参照のリソースタグを使用して<a href=\"/resources?grain_size=course\">[のみのコースを閲覧]</a>"
+      results: 検索結果
+      rss: RSSフィード
+      rss_url: URLをあなたのRSSフィード
+      save_aggreation: この集約を保存
+      save_aggreation_instructions: "不要な削除&#39;をクリックしてフィードを削除&#39;。新しい次のステップでフィードを追加することができます。"
+      search: 探す
+      search_button: 行く
+      search_for: 検索：
+      search_link: を見つけるの資源！
+      searching_for_feed: の検索フィード...
+      select_feeds_prompt: を選択して追加したいフィード：
+      select_service_prompt: してくださいサービスを選択
+      service_feed_name: "{{term}} {{service}}に"
+      service_username: "{{service}}名"
+      setup_aggregation: セットアップの集約
+      share: 共有する
+      short_title: 短いタイトル：
+      show_tagged_courses: 唯一のコースを見る
+      show_tagged_resources: リソースの任意の種類を見る
+      signup: サインアップ
+      signup_to_save_aggreation: "{{login}}または{{signup}}この検索を保存する"
+      spinner_image: 画像待ち
+      start_over: 開始以上
+      status: 地位
+      submitting_feed_message: あなたのフィードを送信する...
+      successfully_added_uri_feed: "正常に{{uri}}追加"
+      successfully_added_username_feed: "正常に{{service}}追加"
+      tags: タグ
+      terms_instructions: 多くのタグやフレーズを好きなようにしたいを追加します。カンマごとに区切ります。すなわち、食品、レシピ、最高の場所、オーガニックを食べる
+      title: タイトル
+      topic_feeds_for: "{{terms}}のフィード"
+      topic_generated: "`{{terms}}`.の検索結果"
+      type_of_metadata: メタデータのタイプ：
+      uri: URLを
+      validate_feed: 有効なものとしてマークフィード
+      videos: 動画
+      visit: 参照してください
+      xml: XMLの
+      zotero_group_prompt: ZoteroのグループのURL
+      zotero_group_rss: "あなたのZoteroのグループのURLのようになります：http://www.zotero.org/groups/adventures_in_library_instruction/items"
