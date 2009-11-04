@@ -45,7 +45,7 @@ begin
     gem.summary = "Feeds, aggregations and services for muck"
     gem.description = "This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem."
     gem.email = "justin@tatemae.com"
-    gem.homepage = "git://github.com/tatemae/muck-services.git"
+    gem.homepage = "http://github.com/tatemae/muck-services"
     gem.authors = ["Joel Duffin", "Justin Ball"]
     gem.add_dependency "acts-as-taggable-on"
     gem.add_dependency "will_paginate"
@@ -58,7 +58,7 @@ begin
     gem.add_dependency "muck-engine"
     gem.add_dependency "muck-users"
     gem.add_dependency "muck-comments"
-    gem.add_development_dependency "thoughtbot-shoulda"
+    gem.add_development_dependency "shoulda"
     gem.files.exclude "public/images/service_icons/source/*"
     gem.files.exclude "test/*"
     gem.test_files.exclude 'test/feed_archive/**'

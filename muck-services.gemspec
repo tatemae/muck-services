@@ -730,7 +730,7 @@ Gem::Specification.new do |s|
      "public/stylesheets/muck_services.css",
      "rails/init.rb"
   ]
-  s.homepage = %q{git://github.com/tatemae/muck-services.git}
+  s.homepage = %q{http://github.com/tatemae/muck-services}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
@@ -859,7 +859,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<muck-engine>, [">= 0"])
       s.add_runtime_dependency(%q<muck-users>, [">= 0"])
       s.add_runtime_dependency(%q<muck-comments>, [">= 0"])
-      s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+      s.add_development_dependency(%q<shoulda>, [">= 0"])
     else
       s.add_dependency(%q<acts-as-taggable-on>, [">= 0"])
       s.add_dependency(%q<will_paginate>, [">= 0"])
@@ -872,7 +872,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<muck-engine>, [">= 0"])
       s.add_dependency(%q<muck-users>, [">= 0"])
       s.add_dependency(%q<muck-comments>, [">= 0"])
-      s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+      s.add_dependency(%q<shoulda>, [">= 0"])
     end
   else
     s.add_dependency(%q<acts-as-taggable-on>, [">= 0"])
@@ -886,6 +886,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<muck-engine>, [">= 0"])
     s.add_dependency(%q<muck-users>, [">= 0"])
     s.add_dependency(%q<muck-comments>, [">= 0"])
-    s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+    s.add_dependency(%q<shoulda>, [">= 0"])
   end
 end
