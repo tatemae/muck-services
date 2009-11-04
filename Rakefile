@@ -41,11 +41,11 @@ task :default => :test
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "muck_services"
+    gem.name = "muck-services"
     gem.summary = "Feeds, aggregations and services for muck"
     gem.description = "This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem."
     gem.email = "justin@tatemae.com"
-    gem.homepage = "http://github.com/jbasdf/muck_services"
+    gem.homepage = "git://github.com/tatemae/muck-services.git"
     gem.authors = ["Joel Duffin", "Justin Ball"]
     gem.add_dependency "acts-as-taggable-on"
     gem.add_dependency "mislav-will_paginate"
