@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-services}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2009-11-03}
+  s.date = %q{2009-11-04}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -462,7 +462,7 @@ Gem::Specification.new do |s|
      "locales/zh-CN.yml",
      "locales/zh-TW.yml",
      "locales/zh.yml",
-     "muck_services.gemspec",
+     "muck-services.gemspec",
      "public/images/service_icons/16/amazon.png",
      "public/images/service_icons/16/ask.png",
      "public/images/service_icons/16/bibsonomy.png",
@@ -849,49 +849,43 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<acts-as-taggable-on>, [">= 0"])
-      s.add_runtime_dependency(%q<mislav-will_paginate>, [">= 0"])
+      s.add_runtime_dependency(%q<will_paginate>, [">= 0"])
       s.add_runtime_dependency(%q<httparty>, [">= 0"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
-      s.add_runtime_dependency(%q<muck-feedbag>, [">= 0"])
+      s.add_runtime_dependency(%q<feedbag>, [">= 0"])
       s.add_runtime_dependency(%q<river>, [">= 0"])
       s.add_runtime_dependency(%q<overlord>, [">= 0"])
       s.add_runtime_dependency(%q<feedzirra>, [">= 0"])
       s.add_runtime_dependency(%q<muck-engine>, [">= 0"])
       s.add_runtime_dependency(%q<muck-users>, [">= 0"])
       s.add_runtime_dependency(%q<muck-comments>, [">= 0"])
-      s.add_runtime_dependency(%q<muck-solr>, [">= 0"])
-      s.add_runtime_dependency(%q<muck-raker>, [">= 0"])
       s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     else
       s.add_dependency(%q<acts-as-taggable-on>, [">= 0"])
-      s.add_dependency(%q<mislav-will_paginate>, [">= 0"])
+      s.add_dependency(%q<will_paginate>, [">= 0"])
       s.add_dependency(%q<httparty>, [">= 0"])
       s.add_dependency(%q<nokogiri>, [">= 0"])
-      s.add_dependency(%q<muck-feedbag>, [">= 0"])
+      s.add_dependency(%q<feedbag>, [">= 0"])
       s.add_dependency(%q<river>, [">= 0"])
       s.add_dependency(%q<overlord>, [">= 0"])
       s.add_dependency(%q<feedzirra>, [">= 0"])
       s.add_dependency(%q<muck-engine>, [">= 0"])
       s.add_dependency(%q<muck-users>, [">= 0"])
       s.add_dependency(%q<muck-comments>, [">= 0"])
-      s.add_dependency(%q<muck-solr>, [">= 0"])
-      s.add_dependency(%q<muck-raker>, [">= 0"])
       s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     end
   else
     s.add_dependency(%q<acts-as-taggable-on>, [">= 0"])
-    s.add_dependency(%q<mislav-will_paginate>, [">= 0"])
+    s.add_dependency(%q<will_paginate>, [">= 0"])
     s.add_dependency(%q<httparty>, [">= 0"])
     s.add_dependency(%q<nokogiri>, [">= 0"])
-    s.add_dependency(%q<muck-feedbag>, [">= 0"])
+    s.add_dependency(%q<feedbag>, [">= 0"])
     s.add_dependency(%q<river>, [">= 0"])
     s.add_dependency(%q<overlord>, [">= 0"])
     s.add_dependency(%q<feedzirra>, [">= 0"])
     s.add_dependency(%q<muck-engine>, [">= 0"])
     s.add_dependency(%q<muck-users>, [">= 0"])
     s.add_dependency(%q<muck-comments>, [">= 0"])
-    s.add_dependency(%q<muck-solr>, [">= 0"])
-    s.add_dependency(%q<muck-raker>, [">= 0"])
     s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
   end
 end
