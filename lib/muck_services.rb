@@ -4,6 +4,7 @@ require 'muck_services/languages'
 
 require 'nokogiri'
 require 'httparty'
+require 'feedzirra'
 
 ActionController::Base.send :helper, MuckServicesHelper
 ActionController::Base.send :helper, MuckServicesFeedsHelper
