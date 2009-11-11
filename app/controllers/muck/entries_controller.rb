@@ -63,8 +63,8 @@ class Muck::EntriesController < ApplicationController
   
   def track_clicks
     user_agent = request.env['HTTP_USER_AGENT']
-    redirect_to Entry.track_click(session, params[:id], request.env['HTTP_REFERER'], params[:target], request.env['HTTP_X_FORWARDED_FOR'], user_agent) if !/Googlebot/.match(user_agent)
-    else redirect_to '/'
+    redirect_to Entry.track_click(session, params[:id], request.env['HTTP_REFERER'], params[:target], request.env['HTTP_X_FORWARDED_FOR'], user_agent) if !/Googlebot/.match(user_agent) and return
+    else redirect_to '/' and return
   end
   
   def collections
