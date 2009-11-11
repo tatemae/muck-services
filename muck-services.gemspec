@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-services}
-  s.version = "0.1.6"
+  s.version = "0.1.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2009-11-06}
+  s.date = %q{2009-11-10}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -852,7 +852,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<will_paginate>, [">= 0"])
       s.add_runtime_dependency(%q<httparty>, [">= 0"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
-      s.add_runtime_dependency(%q<feedbag>, [">= 0"])
+      s.add_runtime_dependency(%q<muck-feedbag>, [">= 0"])
       s.add_runtime_dependency(%q<river>, [">= 0"])
       s.add_runtime_dependency(%q<overlord>, [">= 0"])
       s.add_runtime_dependency(%q<feedzirra>, [">= 0"])
@@ -865,7 +865,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<will_paginate>, [">= 0"])
       s.add_dependency(%q<httparty>, [">= 0"])
       s.add_dependency(%q<nokogiri>, [">= 0"])
-      s.add_dependency(%q<feedbag>, [">= 0"])
+      s.add_dependency(%q<muck-feedbag>, [">= 0"])
       s.add_dependency(%q<river>, [">= 0"])
       s.add_dependency(%q<overlord>, [">= 0"])
       s.add_dependency(%q<feedzirra>, [">= 0"])
@@ -879,7 +879,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<will_paginate>, [">= 0"])
     s.add_dependency(%q<httparty>, [">= 0"])
     s.add_dependency(%q<nokogiri>, [">= 0"])
-    s.add_dependency(%q<feedbag>, [">= 0"])
+    s.add_dependency(%q<muck-feedbag>, [">= 0"])
     s.add_dependency(%q<river>, [">= 0"])
     s.add_dependency(%q<overlord>, [">= 0"])
     s.add_dependency(%q<feedzirra>, [">= 0"])
