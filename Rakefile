@@ -51,7 +51,7 @@ begin
     gem.add_dependency "will_paginate"
     gem.add_dependency "httparty"
     gem.add_dependency "nokogiri"
-    gem.add_dependency "feedbag"
+    gem.add_dependency "muck-feedbag"
     gem.add_dependency "river"
     gem.add_dependency "overlord"
     gem.add_dependency "feedzirra"
@@ -78,7 +78,7 @@ Rake::RDocTask.new do |rdoc|
   end
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "muck_services #{version}"
+  rdoc.title = "muck-services #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
