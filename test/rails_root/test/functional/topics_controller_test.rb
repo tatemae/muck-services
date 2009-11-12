@@ -6,6 +6,10 @@ class Muck::TopicsControllerTest < ActionController::TestCase
 
   context "topics controller" do
 
+    setup do
+      bootstrap_services
+    end
+    
     context "GET new" do
       setup do
         get :new

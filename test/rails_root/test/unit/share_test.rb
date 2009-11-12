@@ -21,6 +21,9 @@ class ShareTest < ActiveSupport::TestCase
     setup do
       @share = Factory(:share)
     end
+    
+    subject { @share }
+    
     should_belong_to :entry
     should "return entry for discover_attach_to" do
       assert_equal @share.entry, @share.discover_attach_to

@@ -34,6 +34,9 @@ class UserTest < ActiveSupport::TestCase
     setup do
       @user = Factory(:user)
     end
+    
+    subject { @user }
+    
     should_have_many :feed_parents
     should_have_many :aggregations
     should_have_many :feeds
