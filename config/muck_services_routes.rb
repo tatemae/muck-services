@@ -25,6 +25,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :oai_endpoints, :controller => 'muck/oai_endpoints', :has_many => :feeds
     
   map.resources :feeds, :controller => 'muck/feeds', :collection => { :new_extended => :get, :new_oai_rss => :get }, :has_many => :entries
+
+  map.connect 'recommendations/real_time', :controller => 'muck/recommendations', :action => 'real_time'
+  map.connect 'recommendations/get_button', :controller => 'muck/recommendations', :action => 'get_button'
   map.resources :recommendations, :controller => 'muck/recommendations'
 
   map.resources :identity_feeds, :controller => 'muck/identity_feeds'

@@ -11,7 +11,7 @@ xml.recommendations(:document_id => @entry.nil? ? "" : @entry.id, :uri => @uri, 
         xml.recommendation do
             xml.title recommendation["title"]
             xml.collection recommendation["collection"]
-            xml.link "http://folksemantic.com/r?id=" + recommendation["id"].to_s  
+            xml.link "http://www.folksemantic.com/r?id=" + recommendation["id"].to_s  
 #            xml.link "http://localhost:3000/r?id=" + recommendation["id"].to_s
             xml.has_direct_link "true" if (recommendation["direct_link"] != nil and @uri[0..20] == recommendation["uri"][0..20]) 
             

@@ -176,15 +176,11 @@ class Entry < ActiveRecord::Base
     words = text.split()
     words[0..(length-1)].join(' ') + (words.length > length ? end_string : '')
   end
-  
+
   def ranked_recommendations(limit = 5, order = "mixed", details = false, omit_feeds = nil)
-#    if self.id.nil?
-#      return Entry.real_time_recommendations(self.permalink, details, :core => 'en', :limit => limit)
-#    else
-      return relevant_recommendations(limit, "clicks DESC, relevance", details, omit_feeds) if order == "clicks" 
-      return relevant_recommendations(limit, "relevance", details, omit_feeds) if (order == "relevance" || details == true)
-      return relevant_recommendations_filtered(limit, details, omit_feeds) if omit_feeds != nil 
-#    end
+    return relevant_recommendations(limit, "clicks DESC, relevance", details, omit_feeds) if order == "clicks"
+    return relevant_recommendations(limit, "relevance", details, omit_feeds) if (order == "relevance" || details == true)
+    return relevant_recommendations_filtered(limit, details, omit_feeds) if omit_feeds != nil
 
     recs = []
     if self.popular != nil && !self.popular.empty?
@@ -332,10 +328,11 @@ class Entry < ActiveRecord::Base
     uri.sub(/index.?\.(html|aspx|shtm|htm|asp|php|cfm|jsp|shtml|jhtml)$/, '')
   end
   
-  def self.real_time_recommendations(uri, details = false, options = {})
+  def self.real_time_recommendations(uri, language='en', limit=5, details=false, options = {})
+    raise MuckServices::Exceptions::LanguageNotSupported, I18n.t('muck.services.language_not_supported') unless Recommender::Languages.supported_languages.include?(language)
     fields = "entries.id, entries.title, entries.permalink, entries.direct_link, feeds.short_title AS collection"
     fields << ", entries.published_at, entries.description, entries.author" if details == true 
-    more_like_this(uri, options.merge(:select => fields, :joins => "INNER JOIN feeds ON feeds.id = entries.feed_id"))
+    more_like_this(uri, options.merge(:select => fields, :joins => "INNER JOIN feeds ON feeds.id = entries.feed_id", :core => language, :limit => limit))
   end
 
 end

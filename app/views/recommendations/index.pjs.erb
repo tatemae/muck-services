@@ -6,7 +6,7 @@ if !@json_recommendations.nil?
 var catalog_page = <%= !@entry.direct_link.nil? and @uri == @entry.permalink %>;
 var document_host = '<%= @host %>';
 var recs = <%= @json_recommendations %>;
-var app = "http://folksemantic.com/"; 
+var app = "http://www.folksemantic.com/"; 
 <% if @details == true -%>
 function truncate(text, length) {
 	nEnd = text.indexOf(" ", 200);

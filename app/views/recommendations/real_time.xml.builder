@@ -9,7 +9,7 @@ else
       xml.recommendation do
         xml.title recommendation["title"]
         xml.collection recommendation["collection"]
-        xml.link "http://folksemantic.com/visits/" + recommendation["id"].to_s
+        xml.link "http://www.folksemantic.com/visits/" + recommendation["id"].to_s
 
         if @details == true
           xml.description recommendation["description"]
