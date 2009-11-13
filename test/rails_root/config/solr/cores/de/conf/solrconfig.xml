@@ -40,6 +40,11 @@
     <maxFieldLength>10000</maxFieldLength>
     <writeLockTimeout>1000</writeLockTimeout>
     <commitLockTimeout>10000</commitLockTimeout>
+<<<<<<< HEAD:config/solr/cores/de/conf/solrconfig.xml
+    <unlockOnStartup>true</unlockOnStartup>
+    <lockType>single</lockType>
+=======
+>>>>>>> d950b4d55122a438bcec931773789c624950abce:config/solr/cores/de/conf/solrconfig.xml
   </indexDefaults>
     <!-- options specific to the main on-disk lucene index -->
 <!--
