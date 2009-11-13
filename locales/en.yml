@@ -206,7 +206,8 @@ en:
       videos: "Videos"
       back: "Back"
       explore: "Search for {{topic}}"
-      language_not_supported: "The requested language is not supported"
+      language_not_supported: The requested language is not supported
+      get_recommendations: Get Recommendations
       comment_entries_count:
         one: "1 Comment"
         other: "{{count}} Comments"

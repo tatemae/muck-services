@@ -33,5 +33,6 @@ Rails::Initializer.run do |config|
   config.gem 'muck-activities', :lib => 'muck_activities'
   config.gem 'muck-shares', :lib => 'muck_shares'
   config.gem 'muck-solr', :lib => 'acts_as_solr'
+  config.gem 'muck-raker', :lib => 'muck-raker'
   config.plugin_locators << TestGemLocator
 end
