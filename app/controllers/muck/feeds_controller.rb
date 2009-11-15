@@ -50,7 +50,7 @@ class Muck::FeedsController < ApplicationController
 
   def create
 
-    Feed.discover_feeds(params[:feed][:uri])
+    Feed.discover_feeds(params[:feed][:uri]) unless params[:feed][:uri].blank?
     
     @feed = Feed.new(params[:feed])
     @feed.contributor = current_user # record the user that submitted the feed for auditing purposes
@@ -118,8 +118,9 @@ class Muck::FeedsController < ApplicationController
         end
       else
         fail_template = params[:new_template] || 'feeds/new'
+        layout_template = params[:layout] unless params[:layout].empty?
         respond_to do |format|
-          format.html { render :template => fail_template, :layout => params[:layout] || true }
+          format.html { render :template => fail_template, :layout => layout_template || true }
           format.pjs { render :template => fail_template, :layout => false }
           format.json { render :json => @feed.as_json }
           format.xml  { render :xml => @feed.errors.to_xml }
