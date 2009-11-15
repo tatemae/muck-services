@@ -3,6 +3,7 @@
   <% custom_form_for(:feed, :url => polymorphic_url([@parent, :feeds])) do |f| -%>
     <%= f.text_field :uri, { :label => t('muck.services.add_feed_url' ) }  %>
     <%= f.text_field :title, { :label => t('muck.services.title' ) }  %>
+    <%= hidden_field_tag :layout, params[:layout] %>
     <div class="button form-row">
       <%= submit_tag t('muck.services.add_feed'), :id => 'add_feed_uri' %>
       <span id="finding_uri_message" style="display:none;">

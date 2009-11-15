@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2009-11-13}
+  s.date = %q{2009-11-14}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -688,12 +688,12 @@ Gem::Specification.new do |s|
      "public/javascripts/muck_services.js",
      "public/javascripts/recommenderextension.user.js",
      "public/stylesheets/frame.css",
-     "public/stylesheets/muck_services.css",
      "rails/init.rb"
   ]
   s.homepage = %q{http://github.com/tatemae/muck-services}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
+  s.rubyforge_project = %q{muck-services}
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{Feeds, aggregations and services for muck}
   s.test_files = [

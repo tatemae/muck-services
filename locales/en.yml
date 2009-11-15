@@ -3,6 +3,7 @@ en:
     activity_templates:
       entry_comment: Comment
     services:
+      add_new_feed_title: "Add a new feed"
       no_tags: "No tags available yet"
       collections: Collections
       demo: Demo
