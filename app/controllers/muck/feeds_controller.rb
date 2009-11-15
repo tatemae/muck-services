@@ -18,7 +18,7 @@ class Muck::FeedsController < ApplicationController
     @feed = Feed.find(params[:id])
     @entries = @feed.entries.paginate(:page => @page, :per_page => @per_page)
     respond_to do |format|
-      format.html { render :template => 'feeds/show', :layout => params[:layout] || true  }
+      format.html { render :template => 'feeds/show', :layout => get_layout_by_params  }
       format.pjs do
         render :update do |page|
           page.replace_html('feed-container', :partial => 'feeds/feed', :object => @feed)
@@ -31,20 +31,20 @@ class Muck::FeedsController < ApplicationController
   def new
     setup_new
     respond_to do |format|
-      format.html { render :template => 'feeds/new', :layout => params[:layout] || true }
+      format.html { render :template => 'feeds/new', :layout => get_layout_by_params }
     end
   end
 
   def new_oai_rss
     setup_new
     respond_to do |format|
-      format.html { render :template => 'feeds/new_oai_rss', :layout => params[:layout] || true }
+      format.html { render :template => 'feeds/new_oai_rss', :layout => get_layout_by_params }
     end
   end
   
   def new_extended
     respond_to do |format|
-      format.html { render :template => 'feeds/new_extended', :layout => params[:layout] || true }
+      format.html { render :template => 'feeds/new_extended', :layout => get_layout_by_params }
     end
   end
 
@@ -72,7 +72,7 @@ class Muck::FeedsController < ApplicationController
   def edit
     @feed = Feed.find(params[:id])
     respond_to do |format|
-      format.html { render :template => 'feeds/edit', :layout => params[:layout] || true }
+      format.html { render :template => 'feeds/edit', :layout => get_layout_by_params }
     end
   end
   
@@ -111,16 +111,15 @@ class Muck::FeedsController < ApplicationController
       if success
         flash[:notice] = t('muck.services.feed_successfully_created')
         respond_to do |format|
-          format.html { redirect_to feed_path(@feed, :layout => params[:layout] || true) }
+          format.html { redirect_to feed_path(@feed, :layout => get_layout_by_params) }
           format.pjs { redirect_to feed_path(@feed, :layout => 'popup') }
           format.json { render :json => @feed.as_json }
           format.xml  { head :created, :location => feed_url(@feed) }
         end
       else
         fail_template = params[:new_template] || 'feeds/new'
-        layout_template = params[:layout] unless params[:layout].empty?
         respond_to do |format|
-          format.html { render :template => fail_template, :layout => layout_template || true }
+          format.html { render :template => fail_template, :layout => get_layout_by_params }
           format.pjs { render :template => fail_template, :layout => false }
           format.json { render :json => @feed.as_json }
           format.xml  { render :xml => @feed.errors.to_xml }
@@ -134,7 +133,7 @@ class Muck::FeedsController < ApplicationController
       respond_to do |format|
         if success
           flash[:notice] = t('muck.services.feed_successfully_updated')
-          format.html { redirect_to feed_path(@feed) }
+          format.html { redirect_to feed_path(@feed, :layout => get_layout_by_params) }
           format.xml  { head :ok }
         else
           format.html { render :template => "feeds/edit" }
@@ -160,4 +159,13 @@ class Muck::FeedsController < ApplicationController
       @oai_endpoint = OaiEndpoint.new
       @oai_endpoint.default_language = @feed.default_language
     end
+    
+    def get_layout_by_params
+      if params[:layout].empty?
+        true
+      else
+        params[:layout] 
+      end
+    end
+    
 end
