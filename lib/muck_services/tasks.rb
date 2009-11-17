@@ -87,6 +87,31 @@ module MuckServices
             system "rsync -ruv #{path}/public ."
           end
 
+          desc "Create global_feeds aggregation and add feeds to it"
+          task :create_global_feeds => :environment do
+            admin_id = User.find_by_login('admin').id
+                    global_aggregation = Aggregation.create(:title => 'global_feeds', :terms => 'global_feeds',
+                          :description => 'Feeds included in the site indexes.',
+                          :ownable_id => admin_id, :ownable_type => 'User')
+            global_aggregation = Aggregation.find_by_title('global_feeds')
+            global_aggregation.feeds << Feed.find(:all, :conditions => "uri LIKE 'http://www.oercommons.org%' OR id < 1047364815")
+            global_aggregation.save!
+            AggregationFeed.update_all("feed_type = 'Feed'")
+            OaiEndpoint.find(:all).each do |ep|
+              AggregationFeed.create(:aggregation_id => global_aggregation.id, :feed_type => 'OaiEndpoint', :feed_id => ep.id)
+            end
+          end
+
+          desc "Add attention types"
+          task :add_attention_types => :environment do
+            AttentionType.create(:id => AttentionType::WRITE, :name => 'write', :default_weight => 10)
+            AttentionType.create(:id => AttentionType::BOOKMARK, :name => 'bookmark', :default_weight => 5)
+            AttentionType.create(:id => AttentionType::SEARCH, :name => 'search', :default_weight => 3)
+            AttentionType.create(:id => AttentionType::CLICK, :name => 'click', :default_weight => 4)
+            AttentionType.create(:id => AttentionType::SHARE, :name => 'share', :default_weight => 6)
+            AttentionType.create(:id => AttentionType::DISCUSS, :name => 'discuss', :default_weight => 7)
+          end
+
         end
 
       end
