@@ -17,6 +17,7 @@
     jQuery('.close_link').click(function(){
       jQuery('.tool').hide();
       jQuery("#content_iframe").width('100%');
+      jQuery('#recs_panel').css("left", jQuery("#toolbar").width() - 252);
       return false;
     });
     setup_entry_comment_submit();

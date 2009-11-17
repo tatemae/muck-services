@@ -1,8 +1,12 @@
-<div style="position:absolute;top:0;left:300;width:250px;height:250px;">
- <h3><%= t('muck.services.gm_title')</h3>
- <ul>
-   <% @recommendations.each do |r| %>
-   <li><%= link_to h(r.title), visits_path(r.id% ></li>
+<div id="recs_panel">
+ <h3 id="recs_header"><%= t('muck.services.gm_title') %></h3>
+ <ul id="recs_list">
+   <% @recommendations.each_with_index do |r, i| %>
+   <li <%= i%2 == 0 ? 'class="even"' : ''%>><%= link_to "#{r.title} (#{r.collection})", visit_path(r.dest_entry_id) %></li>
    <% end %>
  </ul>
+ <div id="more_recs"><%= link_to t('muck.services.gm_more_prompt'), resource_path(@entry) %></div>
 </div>
+<script type="text/javascript">
+initRecsPanel();
+</script>

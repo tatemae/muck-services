@@ -9,6 +9,7 @@ class Muck::VisitsController < ApplicationController
     @page_title = @entry.title
     @resource_uri = @entry.resource_uri
     @share = Share.new(:title => @entry.title, :uri => @resource_uri, :entry_id => @entry.id) if GlobalConfig.enable_services_shares
+    @recommendations = @entry.recommendations(5)
 
     if GlobalConfig.enable_services_comments
       # Show the activities related to this entry
