@@ -688,12 +688,12 @@ Gem::Specification.new do |s|
      "public/javascripts/muck_services.js",
      "public/javascripts/recommenderextension.user.js",
      "public/stylesheets/frame.css",
-     "public/stylesheets/muck_services.css",
      "rails/init.rb"
   ]
   s.homepage = %q{http://github.com/tatemae/muck-services}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
+  s.rubyforge_project = %q{muck-services}
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{Feeds, aggregations and services for muck}
   s.test_files = [

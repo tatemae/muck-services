@@ -3,7 +3,7 @@
   <ul id="add_oai_rss_feed_menu">
     <li><a id="add_rss" href="#"><%= t('muck.services.add_rss') %></a></li>
     <li><a id="add_oai" href="#"><%= t('muck.services.add_oai') %></a></li>
-  <ul>
+  </ul>
     
   <div id="rss" class="add_data_container">
     <h1><%= t('muck.services.add_rss_feed') %></h1>
@@ -14,7 +14,7 @@
       <%= f.muck_services_language_select :default_language_id  %>
       <%= f.hidden_field :service_id %>
       <%= hidden_field_tag :new_template, 'feeds/new_oai_rss' %>
-      <%= hidden_field_tag :layout, 'popup' %>
+      <%= hidden_field_tag :layout, params[:layout] %>
       <div class="button form-row">
         <%= submit_tag t('muck.services.add_feed'), :id => 'add_feed_uri' %>
         <span id="finding_uri_message" style="display:none;">

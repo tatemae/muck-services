@@ -18,7 +18,7 @@ class Muck::FeedsController < ApplicationController
     @feed = Feed.find(params[:id])
     @entries = @feed.entries.paginate(:page => @page, :per_page => @per_page)
     respond_to do |format|
-      format.html { render :template => 'feeds/show', :layout => params[:layout] || true  }
+      format.html { render :template => 'feeds/show', :layout => get_layout_by_params  }
       format.pjs do
         render :update do |page|
           page.replace_html('feed-container', :partial => 'feeds/feed', :object => @feed)
@@ -29,31 +29,28 @@ class Muck::FeedsController < ApplicationController
   end
 
   def new
+    setup_new
     respond_to do |format|
-      format.html { render :template => 'feeds/new', :layout => params[:layout] || true }
+      format.html { render :template => 'feeds/new', :layout => get_layout_by_params }
     end
   end
 
   def new_oai_rss
-    @feed = Feed.new
-    @feed.default_language = Language.find_by_locale('en')
-    @feed.service_id = MuckServices::Services::RSS
-    @oai_endpoint = OaiEndpoint.new
-    @oai_endpoint.default_language = @feed.default_language
+    setup_new
     respond_to do |format|
-      format.html { render :template => 'feeds/new_oai_rss', :layout => 'popup' }
+      format.html { render :template => 'feeds/new_oai_rss', :layout => get_layout_by_params }
     end
   end
   
   def new_extended
     respond_to do |format|
-      format.html { render :template => 'feeds/new_extended', :layout => 'popup' }
+      format.html { render :template => 'feeds/new_extended', :layout => get_layout_by_params }
     end
   end
 
   def create
 
-    Feed.discover_feeds(params[:feed][:uri])
+    Feed.discover_feeds(params[:feed][:uri]) unless params[:feed][:uri].blank?
     
     @feed = Feed.new(params[:feed])
     @feed.contributor = current_user # record the user that submitted the feed for auditing purposes
@@ -75,7 +72,7 @@ class Muck::FeedsController < ApplicationController
   def edit
     @feed = Feed.find(params[:id])
     respond_to do |format|
-      format.html { render :template => 'feeds/edit', :layout => 'popup' }
+      format.html { render :template => 'feeds/edit', :layout => get_layout_by_params }
     end
   end
   
@@ -114,7 +111,7 @@ class Muck::FeedsController < ApplicationController
       if success
         flash[:notice] = t('muck.services.feed_successfully_created')
         respond_to do |format|
-          format.html { redirect_to feed_path(@feed) }
+          format.html { redirect_to feed_path(@feed, :layout => get_layout_by_params) }
           format.pjs { redirect_to feed_path(@feed, :layout => 'popup') }
           format.json { render :json => @feed.as_json }
           format.xml  { head :created, :location => feed_url(@feed) }
@@ -122,7 +119,7 @@ class Muck::FeedsController < ApplicationController
       else
         fail_template = params[:new_template] || 'feeds/new'
         respond_to do |format|
-          format.html { render :template => fail_template }
+          format.html { render :template => fail_template, :layout => get_layout_by_params }
           format.pjs { render :template => fail_template, :layout => false }
           format.json { render :json => @feed.as_json }
           format.xml  { render :xml => @feed.errors.to_xml }
@@ -136,7 +133,7 @@ class Muck::FeedsController < ApplicationController
       respond_to do |format|
         if success
           flash[:notice] = t('muck.services.feed_successfully_updated')
-          format.html { redirect_to feed_path(@feed) }
+          format.html { redirect_to feed_path(@feed, :layout => get_layout_by_params) }
           format.xml  { head :ok }
         else
           format.html { render :template => "feeds/edit" }
@@ -151,6 +148,23 @@ class Muck::FeedsController < ApplicationController
       respond_to do |format|
         format.html { redirect_to feeds_path }
         format.xml  { head :ok }
+      end
+    end
+    
+    def setup_new
+      @page_title = t('muck.services.add_new_feed_title')
+      @feed = Feed.new
+      @feed.default_language = Language.find_by_locale('en')
+      @feed.service_id = MuckServices::Services::RSS
+      @oai_endpoint = OaiEndpoint.new
+      @oai_endpoint.default_language = @feed.default_language
+    end
+    
+    def get_layout_by_params
+      if params[:layout].empty?
+        true
+      else
+        params[:layout] 
       end
     end
     

@@ -59,6 +59,7 @@ begin
     gem.add_dependency "muck-users"
     gem.add_dependency "muck-comments"
     gem.add_development_dependency "shoulda"
+    gem.rubyforge_project = 'muck-services'
     gem.files.exclude "public/images/service_icons/source/*"
     gem.files.exclude "test/*"
     gem.test_files.exclude 'test/feed_archive/**'
