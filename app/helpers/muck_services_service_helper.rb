@@ -6,10 +6,10 @@ module MuckServicesServiceHelper
     render :partial => 'services/summary', :locals => { :identity_feeds => identity_feeds }
   end
 
-  # Render recommended resources
-  def recommended_resources(user_id, limit = 5)
-    resources = PersonalRecommendation.find(:all, :conditions => {:user_id => user_id}, :limit => limit)
-    render :partial => 'services/personal_recommendations', :locals => { :resources => resources }
+  # Render personal recommendations
+  def personal_recommendations(user, limit = 5)
+    recommendations = user.recommended_resources
+    render :partial => 'services/personal_recommendations', :locals => { :recommendations => recommendations }
   end
   
   # Render a view with all services in categories.

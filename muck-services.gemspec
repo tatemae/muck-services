@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2009-11-14}
+  s.date = %q{2009-11-16}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -42,12 +42,14 @@ Gem::Specification.new do |s|
      "app/models/aggregation.rb",
      "app/models/aggregation_feed.rb",
      "app/models/attention.rb",
+     "app/models/attention_type.rb",
      "app/models/click.rb",
      "app/models/entry.rb",
      "app/models/feed.rb",
      "app/models/feed_parent.rb",
      "app/models/identity_feed.rb",
      "app/models/oai_endpoint.rb",
+     "app/models/personal_recommendation.rb",
      "app/models/recommendation.rb",
      "app/models/service.rb",
      "app/models/service_category.rb",
@@ -138,6 +140,7 @@ Gem::Specification.new do |s|
      "app/views/service_templates/_zotero_group.html.erb",
      "app/views/services/_edit_service.html.erb",
      "app/views/services/_new_service.html.erb",
+     "app/views/services/_personal_recommendations.html.erb",
      "app/views/services/_summary.html.erb",
      "app/views/services/_view_service.html.erb",
      "app/views/services_mailer/notification_feed_added.text.ar.html.erb",
@@ -365,6 +368,8 @@ Gem::Specification.new do |s|
      "db/migrate/20090924200750_add_uri_data_template_to_services.rb",
      "db/migrate/20091006183742_add_feed_count_to_aggregation.rb",
      "db/migrate/20091022150615_add_uri_key_to_services.rb",
+     "db/migrate/20091115011828_add_aggregations_for_personal_recs.rb",
+     "db/migrate/20091116094447_rename_action_table.rb",
      "lib/active_record/acts/muck_aggregation_owner.rb",
      "lib/active_record/acts/muck_feed_owner.rb",
      "lib/active_record/acts/muck_feed_parent.rb",
@@ -688,6 +693,7 @@ Gem::Specification.new do |s|
      "public/javascripts/muck_services.js",
      "public/javascripts/recommenderextension.user.js",
      "public/stylesheets/frame.css",
+     "public/stylesheets/muck-services.css",
      "rails/init.rb"
   ]
   s.homepage = %q{http://github.com/tatemae/muck-services}
