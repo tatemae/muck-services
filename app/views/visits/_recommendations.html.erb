@@ -1,0 +1,8 @@
+<div style="position:absolute;top:0;left:300;width:250px;height:250px;">
+ <h3><%= t('muck.services.gm_title')</h3>
+ <ul>
+   <% @recommendations.each do |r| %>
+   <li><%= link_to h(r.title), visits_path(r.id% ></li>
+   <% end %>
+ </ul>
+</div>
