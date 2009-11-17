@@ -5,6 +5,12 @@ module MuckServicesServiceHelper
     identity_feeds = parent.identity_feeds.find(:all, :include => [{:feed => :service}])
     render :partial => 'services/summary', :locals => { :identity_feeds => identity_feeds }
   end
+
+  # Render recommended resources
+  def recommended_resources(user_id, limit = 5)
+    resources = PersonalRecommendation.find(:all, :conditions => {:user_id => user_id}, :limit => limit)
+    render :partial => 'services/personal_recommendations', :locals => { :resources => resources }
+  end
   
   # Render a view with all services in categories.
   # service_categories: Results from a query to service_categories.  For performance try something like this:
