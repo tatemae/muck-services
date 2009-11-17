@@ -19,12 +19,14 @@ class Aggregation < ActiveRecord::Base
   has_friendly_id :terms, :use_slug => true
   
   belongs_to :ownable, :polymorphic => true
-  has_many :aggregation_feeds
+  has_many :aggregation_feeds, :conditions => ['feed_type = ?', 'Feed']
+  has_many :aggregation_oai_endpoints, :conditions => ['feed_type = ?', 'OaiEndpoint']
   has_many :feeds, :through => :aggregation_feeds
   
   named_scope :by_title, :order => "title ASC"
   named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
   named_scope :newest, :order => "created_at DESC"
+
     
   # Builds and then adds feeds for a given terms
   # user:         User to be associated with each feed.  Default is nil which makes each feed global.
