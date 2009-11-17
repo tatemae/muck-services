@@ -49,7 +49,7 @@ class Entry < ActiveRecord::Base
   
   @@default_time_on_page = 60.0
   
-  acts_as_solr({:if => false, :fields => [{:feed_id => :integer}, {:grain_size => :string}, {:tags => :string}]}, {:type_field => :type_s})
+  acts_as_solr({:if => false, :fields => [{:aggregation => :integer}, {:feed_id => :integer}, {:grain_size => :string}, {:tags => :string}]}, {:type_field => :type_s})
 
   def resource_uri 
     self.direct_link.nil? ? self.permalink : self.direct_link
@@ -61,7 +61,7 @@ class Entry < ActiveRecord::Base
   
   def self.search(search_terms, grain_size = nil, language = "en", limit = 10, offset = 0, operator = :or)
     raise MuckServices::Exceptions::LanguageNotSupported, I18n.t('muck.services.language_not_supported') unless Recommender::Languages.supported_languages.include?(language)
-    query = (!grain_size.nil? && grain_size != 'all') ? (search_terms + ") AND (grain_size:#{grain_size}") : search_terms
+    query = ((!grain_size.nil? && grain_size != 'all') ? (search_terms + ") AND (grain_size:#{grain_size}") : search_terms) + ") AND (aggregation:#{Aggregation.global_feeds_id}"
     return find_by_solr(query, :limit => limit, :offset => offset, :scores => true,
         :select => "entries.id, entries.title, entries.permalink, entries.direct_link, entries.published_at, entries.description, entries.feed_id, feeds.short_title AS collection",
         :joins => "INNER JOIN feeds ON feeds.id = entries.feed_id", :core => language, :operator => operator)

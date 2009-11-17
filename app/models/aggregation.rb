@@ -90,5 +90,9 @@ class Aggregation < ActiveRecord::Base
       false
     end
   end
+
+  def self.global_feeds_id
+    @@global_feeds_id = Aggregation.find_by_terms('global_feeds').id
+  end
   
 end
