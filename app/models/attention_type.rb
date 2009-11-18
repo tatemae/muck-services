@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: attention_types
+#
+#  id             :integer(4)      not null, primary key
+#  name           :string(255)
+#  default_weight :integer(4)
+#
+
 
 class AttentionType < ActiveRecord::Base
   WRITE     = 1

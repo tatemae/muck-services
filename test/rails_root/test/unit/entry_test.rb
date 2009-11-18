@@ -22,18 +22,7 @@
 #  relevant                :text
 #  other                   :text
 #  grain_size              :string(255)     default("unknown")
-#
-# Indexes
-#
-#  index_entries_on_direct_link              (direct_link)
-#  index_entries_on_feed_id                  (feed_id)
-#  index_entries_on_indexed_at               (indexed_at)
-#  index_entries_on_language_id              (language_id)
-#  index_entries_on_oai_identifier           (oai_identifier)
-#  index_entries_on_permalink                (permalink)
-#  index_entries_on_published_at             (published_at)
-#  index_entries_on_relevance_calculated_at  (relevance_calculated_at)
-#  index_entries_on_grain_size               (grain_size)
+#  comment_count           :integer(4)      default(0)
 #
 
 require File.dirname(__FILE__) + '/../test_helper'

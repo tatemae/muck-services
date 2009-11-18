@@ -3,7 +3,7 @@
 # Table name: aggregations
 #
 #  id           :integer(4)      not null, primary key
-#  terms         :string(255)
+#  terms        :string(255)
 #  title        :string(255)
 #  description  :text
 #  top_tags     :text
@@ -11,6 +11,7 @@
 #  updated_at   :datetime
 #  ownable_id   :integer(4)
 #  ownable_type :string(255)
+#  feed_count   :integer(4)      default(0)
 #
 
 class Aggregation < ActiveRecord::Base

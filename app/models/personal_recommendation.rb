@@ -7,8 +7,9 @@
 #  personal_recommendable_type :string(255)
 #  destination_id              :integer(4)
 #  destination_type            :string(255)
-#  rank                        :integer(4)
 #  relevance                   :float
+#  created_at                  :datetime
+#  visited_at                  :datetime
 #
 
 class PersonalRecommendation < ActiveRecord::Base

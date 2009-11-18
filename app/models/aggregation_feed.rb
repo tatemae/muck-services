@@ -5,6 +5,7 @@
 #  id             :integer(4)      not null, primary key
 #  aggregation_id :integer(4)
 #  feed_id        :integer(4)
+#  feed_type      :string(255)     default("Feed")
 #
 
 class AggregationFeed < ActiveRecord::Base
