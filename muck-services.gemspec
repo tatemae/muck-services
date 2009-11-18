@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-services}
-  s.version = "0.1.12"
+  s.version = "0.1.13"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2009-11-16}
+  s.date = %q{2009-11-17}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -332,6 +332,7 @@ Gem::Specification.new do |s|
      "app/views/topics/videos.html.erb",
      "app/views/visits/_comments_tool.html.erb",
      "app/views/visits/_frame_scripts.html.erb",
+     "app/views/visits/_recommendations.html.erb",
      "app/views/visits/_share_tool.html.erb",
      "app/views/visits/_toolbar.html.erb",
      "app/views/visits/show.html.erb",
