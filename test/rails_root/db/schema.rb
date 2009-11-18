@@ -9,12 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091022150615) do
-
-  create_table "action_types", :force => true do |t|
-    t.string  "action_type"
-    t.integer "weight"
-  end
+ActiveRecord::Schema.define(:version => 20091116094447) do
 
   create_table "activities", :force => true do |t|
     t.integer  "item_id"
@@ -49,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20091022150615) do
   create_table "aggregation_feeds", :force => true do |t|
     t.integer "aggregation_id"
     t.integer "feed_id"
+    t.string  "feed_type"
   end
 
   add_index "aggregation_feeds", ["aggregation_id"], :name => "index_aggregation_feeds_on_aggregation_id"
@@ -68,13 +64,22 @@ ActiveRecord::Schema.define(:version => 20091022150615) do
 
   add_index "aggregations", ["ownable_id", "ownable_type"], :name => "index_aggregations_on_ownable_id_and_ownable_type"
 
-  create_table "attentions", :force => true do |t|
-    t.integer "attentionable_id"
-    t.string  "attentionable_type"
-    t.integer "entry_id"
-    t.string  "action_type"
-    t.float   "weight"
+  create_table "attention_types", :force => true do |t|
+    t.string  "name"
+    t.integer "default_weight"
   end
+
+  create_table "attentions", :force => true do |t|
+    t.integer  "attentionable_id"
+    t.string   "attentionable_type", :default => "User"
+    t.integer  "entry_id"
+    t.integer  "attention_type_id"
+    t.integer  "weight",             :default => 5
+    t.datetime "created_at"
+  end
+
+  add_index "attentions", ["attention_type_id"], :name => "index_attentions_on_attention_type_id"
+  add_index "attentions", ["entry_id"], :name => "index_attentions_on_entry_id"
 
   create_table "clicks", :force => true do |t|
     t.integer  "recommendation_id"
@@ -327,13 +332,16 @@ ActiveRecord::Schema.define(:version => 20091022150615) do
   end
 
   create_table "personal_recommendations", :force => true do |t|
-    t.integer "personal_recommendable_id"
-    t.string  "personal_recommendable_type"
-    t.integer "destination_id"
-    t.string  "destination_type"
-    t.integer "rank"
-    t.float   "relevance"
+    t.integer  "personal_recommendable_id"
+    t.string   "personal_recommendable_type"
+    t.integer  "destination_id"
+    t.string   "destination_type"
+    t.float    "relevance"
+    t.datetime "created_at"
+    t.datetime "visited_at"
   end
+
+  add_index "personal_recommendations", ["personal_recommendable_id"], :name => "index_personal_recommendations_on_personal_recommendable_id"
 
   create_table "queries", :force => true do |t|
     t.text    "name"
