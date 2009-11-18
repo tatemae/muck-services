@@ -374,6 +374,7 @@ Gem::Specification.new do |s|
      "lib/active_record/acts/muck_aggregation_owner.rb",
      "lib/active_record/acts/muck_feed_owner.rb",
      "lib/active_record/acts/muck_feed_parent.rb",
+     "lib/active_record/acts/muck_recommendations.rb",
      "lib/active_record/acts/muck_services_comment.rb",
      "lib/active_record/acts/muck_services_share.rb",
      "lib/muck_services.rb",
