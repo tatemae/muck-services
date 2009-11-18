@@ -15,6 +15,7 @@ de:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Hinzufügen RSS-Feeds zu {{title}}"
       add_more_sources: "Quellen hinzufügen"
+      add_new_feed_title: "Fügen Sie einen neuen Feed"
       add_oai: "Add OAI"
       add_oai_feed: "Add OAI Endpoint"
       add_opml_to_aggregation: "OPML-Datei hinzufügen"
@@ -97,6 +98,7 @@ de:
       friendfeed_rss: "Sie können Ihre URL finden Sie auf der Unterseite Ihres {{link}}."
       generate_new_topic: "Generieren Sie ein neues Thema"
       generating_topic_message: "Searching. Dies kann einige Minuten dauern, so ...."
+      get_recommendations: "Holen Sie sich Empfehlungen"
       gm_more_prompt: "Mehr Verwandte Ressourcen"
       gm_title: "Verwandte Ressourcen"
       goodreads_prompt: "Goodreads Profil URL"
@@ -147,6 +149,7 @@ de:
       only_courses: "Nur Kurse"
       opml_feeds_for: "Feeds für {{terms}}"
       opml_generated: "Feeds für {{terms}}"
+      personal_recommendations: Empfehlungen
       photos: Fotos
       polyvore_prompt: "Polyvore Profil URL"
       polyvore_rss: "Ihr Profil Polyvore URL aussieht http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ de:
       setup_aggregation: Setup-Aggregation
       share: Anteil
       short_title: "Titel:"
+      show_related_resources: "Show Verwandte Ressourcen"
       show_tagged_courses: "zeigen nur Kurse"
       show_tagged_resources: "zeigen, jede Art von Ressourcen"
       signup: "Sign Up"

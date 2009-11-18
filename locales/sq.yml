@@ -15,6 +15,7 @@ sq:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Add feeds të {{title}}"
       add_more_sources: "Add Burimet"
+      add_new_feed_title: "Shto një ushqim të ri"
       add_oai: "Add ÒÂÏ"
       add_oai_feed: "Add ÒÂÏ Endpoint"
       add_opml_to_aggregation: "Add OPML file"
@@ -97,6 +98,7 @@ sq:
       friendfeed_rss: "Ju mund të gjeni URL-në tuaj në fund të {{link}}. tuaj"
       generate_new_topic: "Gjenerojë një temë të re"
       generating_topic_message: "Searching. Kjo mund të marrin një minutë apo më shumë ...."
+      get_recommendations: "Get Rekomandime"
       gm_more_prompt: "Resources More Related"
       gm_title: "Burime të ngjashme"
       goodreads_prompt: "Goodreads profilin URL"
@@ -147,6 +149,7 @@ sq:
       only_courses: "Vetëm Kurset"
       opml_feeds_for: "Feeds për {{terms}}"
       opml_generated: "Feeds për {{terms}}"
+      personal_recommendations: Rekomandime
       photos: Photos
       polyvore_prompt: "Polyvore profilin URL"
       polyvore_rss: "Profili juaj Polyvore URL duket si http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ sq:
       setup_aggregation: "Setup grumbull"
       share: Pjesë
       short_title: "Titulli i shkurtër:"
+      show_related_resources: "Show Burime të ngjashme"
       show_tagged_courses: "tregojnë se vetëm kurse të"
       show_tagged_resources: "tregojnë ndonjë lloj të burimeve"
       signup: Regjistrohu

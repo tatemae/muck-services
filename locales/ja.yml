@@ -15,6 +15,7 @@ ja:
       add_feed_url: URLを：
       add_feeds_to_aggregation: "追加{{title}}フィードを購読する"
       add_more_sources: ソースを追加する
+      add_new_feed_title: 新しいフィードを追加する
       add_oai: はOAI追加
       add_oai_feed: はOAIエンドポイントを追加
       add_opml_to_aggregation: 追加OPMLファイル
@@ -97,6 +98,7 @@ ja:
       friendfeed_rss: "あなたの{{link}}.の下部にあるあなたのURLを見つけることができます"
       generate_new_topic: 生成の新しいトピック
       generating_topic_message: 検索。これほど....分かかる場合があります
+      get_recommendations: 勧告を取得
       gm_more_prompt: 関連リソース
       gm_title: 関連リソース
       goodreads_prompt: GoodreadsのプロフィールのURL
@@ -147,6 +149,7 @@ ja:
       only_courses: 唯一のコース
       opml_feeds_for: "{{terms}}のフィード"
       opml_generated: "{{terms}}のフィード"
+      personal_recommendations: 勧告
       photos: 写真
       polyvore_prompt: PolyvoreプロフィールのURL
       polyvore_rss: "あなたのPolyvoreプロフィールのURL http://www.polyvore.com/cgi/profile?id=00000ようになります。"
@@ -185,6 +188,7 @@ ja:
       setup_aggregation: セットアップの集約
       share: 共有する
       short_title: 短いタイトル：
+      show_related_resources: 表示関連リソース
       show_tagged_courses: 唯一のコースを見る
       show_tagged_resources: リソースの任意の種類を見る
       signup: サインアップ

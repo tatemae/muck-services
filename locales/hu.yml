@@ -15,6 +15,7 @@ hu:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Add hírcsatornák {{title}}"
       add_more_sources: "Add Források"
+      add_new_feed_title: "Új feed"
       add_oai: "Add OAI -"
       add_oai_feed: "Add OAI Végpont"
       add_opml_to_aggregation: "Add OPML-fájl"
@@ -97,6 +98,7 @@ hu:
       friendfeed_rss: "Megtalálhatja az URL alján a {{link}}."
       generate_new_topic: "Létrehoz egy új témát"
       generating_topic_message: "Keresést. Ez eltarthat egy perc múlva ...."
+      get_recommendations: "Get Ajánlások"
       gm_more_prompt: "További Kapcsolódó anyagok"
       gm_title: "Kapcsolódó anyagok"
       goodreads_prompt: "Goodreads Profil URL"
@@ -147,6 +149,7 @@ hu:
       only_courses: "Csak Tanfolyamok"
       opml_feeds_for: "Feedek {{terms}}"
       opml_generated: "Feedek {{terms}}"
+      personal_recommendations: Ajánlásokkal
       photos: Photos
       polyvore_prompt: "Polyvore Profil URL"
       polyvore_rss: "Ön Polyvore Profil URL néz http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ hu:
       setup_aggregation: "Aggregation Setup"
       share: Megoszt
       short_title: "Rövid cím:"
+      show_related_resources: "Show Kapcsolódó anyagok"
       show_tagged_courses: "Csak tanfolyamok"
       show_tagged_resources: "mutatnak semmiféle forrás"
       signup: "Sign Up"

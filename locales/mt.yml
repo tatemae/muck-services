@@ -15,6 +15,7 @@ mt:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Żid feeds li {{title}}"
       add_more_sources: "Żid Sources"
+      add_new_feed_title: "Żid ġodda għall-għalf"
       add_oai: "Żid ÖÀÎ"
       add_oai_feed: "Żid ÖÀÎ Tmiem"
       add_opml_to_aggregation: "Żid OPML fajl"
@@ -45,7 +46,7 @@ mt:
       close: Viċin
       collection_description: "Ġbir Deskrizzjoni:"
       collection_home_uri: "Indirizz ta &#39;l-Home Page Ġbir"
-      collection_uri: "Indirizz tal-metadata Ġbir:"
+      collection_uri: "Indirizz ta &#39;l-metadata Ġbir:"
       collections: Kollezzjonijiet
       collections_long: "Kollezzjonijiet Indexed"
       comment_entries_count: 
@@ -97,6 +98,7 @@ mt:
       friendfeed_rss: "Tista &#39;ssib URL tiegħek fil-qiegħ tal {{link}}. tiegħek"
       generate_new_topic: "Iġġenera tema ġdida"
       generating_topic_message: "Tiftix. Dan jista &#39;jieħu minuta jew hekk ...."
+      get_recommendations: "Get Rakkomandazzjonijiet"
       gm_more_prompt: "Riżorsi More Related"
       gm_title: "Related resources"
       goodreads_prompt: "Profil Goodreads URL"
@@ -147,6 +149,7 @@ mt:
       only_courses: "Biss Korsijiet"
       opml_feeds_for: "Feeds għall {{terms}}"
       opml_generated: "Feeds għall {{terms}}"
+      personal_recommendations: Rakkomandazzjonijiet
       photos: Photos
       polyvore_prompt: "Profil Polyvore URL"
       polyvore_rss: "Polyvore profil tiegħek URL Dehra http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ mt:
       setup_aggregation: "Setup Aggregazzjoni"
       share: Aqsam
       short_title: "Titolu fil-qosor:"
+      show_related_resources: "Show Riżorsi Relatati"
       show_tagged_courses: "juru biss il-korsijiet"
       show_tagged_resources: "juru kull tip ta &#39;riżorsi"
       signup: "Sign Up"

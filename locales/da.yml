@@ -15,6 +15,7 @@ da:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Tilføje feeds til {{title}}"
       add_more_sources: "Tilføj Kilder"
+      add_new_feed_title: "Tilføj en ny feed"
       add_oai: "Tilføj OAI"
       add_oai_feed: "Tilføj OAI Endpoint"
       add_opml_to_aggregation: "Tilføj OPML fil"
@@ -97,6 +98,7 @@ da:
       friendfeed_rss: "Du kan finde din webadresse nederst i din {{link}}."
       generate_new_topic: "Generer et nyt emne"
       generating_topic_message: "Søger. Dette kan tage et minut eller så ...."
+      get_recommendations: "Få Anbefalinger"
       gm_more_prompt: "Mere Relaterede ressourcer"
       gm_title: "Relaterede ressourcer"
       goodreads_prompt: "Goodreads profil URL"
@@ -147,6 +149,7 @@ da:
       only_courses: "Kun Kurser"
       opml_feeds_for: "Feeds til {{terms}}"
       opml_generated: "Feeds til {{terms}}"
+      personal_recommendations: Anbefalinger
       photos: Billeder
       polyvore_prompt: "Polyvore profil URL"
       polyvore_rss: "Din Polyvore profil URL udseende http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ da:
       setup_aggregation: "Setup Sammenlægning"
       share: Del
       short_title: "Kort titel:"
+      show_related_resources: "Vis Relaterede ressourcer"
       show_tagged_courses: "Vis kun kurser"
       show_tagged_resources: "vise nogen form for ressource"
       signup: Tilmeld

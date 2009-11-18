@@ -15,6 +15,7 @@ id:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Tambah feed untuk {{title}}"
       add_more_sources: "Tambahkan Sumber"
+      add_new_feed_title: "Menambahkan feed baru"
       add_oai: "Tambahkan oai"
       add_oai_feed: "Tambahkan oai Endpoint"
       add_opml_to_aggregation: "Tambahkan file OPML"
@@ -97,6 +98,7 @@ id:
       friendfeed_rss: "Anda dapat menemukan URL Anda di bagian bawah {{link}}. Anda"
       generate_new_topic: "Buat topik baru"
       generating_topic_message: "Pencarian. Ini mungkin akan mengambil satu menit atau lebih ...."
+      get_recommendations: "Dapatkan Rekomendasi"
       gm_more_prompt: "More Related Resources"
       gm_title: "Related Resources"
       goodreads_prompt: "Profil Goodreads URL"
@@ -147,6 +149,7 @@ id:
       only_courses: "Hanya Kursus"
       opml_feeds_for: "Feed untuk {{terms}}"
       opml_generated: "Feed untuk {{terms}}"
+      personal_recommendations: Rekomendasi
       photos: Foto
       polyvore_prompt: "URL profil Polyvore"
       polyvore_rss: "Profil Polyvore Anda URL terlihat seperti http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ id:
       setup_aggregation: "Setup Aggregation"
       share: Berbagi
       short_title: "Short title:"
+      show_related_resources: "Tampilkan Related Resources"
       show_tagged_courses: "hanya menampilkan kursus"
       show_tagged_resources: "menunjukkan jenis sumber daya"
       signup: Daftar

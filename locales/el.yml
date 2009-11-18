@@ -15,6 +15,7 @@ el:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Προσθήκη feeds για {{title}}"
       add_more_sources: "Προσθήκη Πηγές"
+      add_new_feed_title: "Προσθέστε ένα νέο feed"
       add_oai: "Προσθήκη OAI"
       add_oai_feed: "Προσθήκη OAI Endpoint"
       add_opml_to_aggregation: "Προσθήκη OPML αρχείο"
@@ -97,6 +98,7 @@ el:
       friendfeed_rss: "Μπορείτε να βρείτε το URL σας στο κάτω μέρος της {{link}}. σας"
       generate_new_topic: "Δημιουργήστε ένα νέο θέμα"
       generating_topic_message: "Searching. Αυτό θα μπορούσε να λάβει ένα λεπτό ή έτσι ...."
+      get_recommendations: "Αποκτήστε Συστάσεις"
       gm_more_prompt: "Περισσότερα Σχετικοί πόροι"
       gm_title: "Σχετικοί πόροι"
       goodreads_prompt: "Goodreads προφίλ URL"
@@ -147,6 +149,7 @@ el:
       only_courses: "Μόνο Μαθήματα"
       opml_feeds_for: "Ροές για {{terms}}"
       opml_generated: "Ροές για {{terms}}"
+      personal_recommendations: Συστάσεις
       photos: Φωτογραφίες
       polyvore_prompt: "Polyvore προφίλ URL"
       polyvore_rss: "Polyvore προφίλ σας URL μοιάζει http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ el:
       setup_aggregation: "Setup Aggregation"
       share: Μοιράζομαι
       short_title: "Σύντομος τίτλος:"
+      show_related_resources: "Δείτε Σχετικοί πόροι"
       show_tagged_courses: "Δείτε μόνο τα μαθήματα"
       show_tagged_resources: "παρουσιάζουν οποιοδήποτε είδος πόρου"
       signup: Εγγραφή

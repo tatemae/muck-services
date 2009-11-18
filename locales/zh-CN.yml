@@ -15,6 +15,7 @@ zh-CN:
       add_feed_url: 网址：
       add_feeds_to_aggregation: "添加供稿{{title}}"
       add_more_sources: 添加源
+      add_new_feed_title: 添加新的饲料
       add_oai: 添加醪河
       add_oai_feed: 添加端点醪河
       add_opml_to_aggregation: 添加OPML文件
@@ -97,6 +98,7 @@ zh-CN:
       friendfeed_rss: "您可以在您的{{link}}.底部您的网址"
       generate_new_topic: 生成一个新课题
       generating_topic_message: 搜索。这可能需要1分钟左右....
+      get_recommendations: 获得建议
       gm_more_prompt: 更多相关资源
       gm_title: 相关资源
       goodreads_prompt: Goodreads个人资料的网址
@@ -147,6 +149,7 @@ zh-CN:
       only_courses: 只有课程
       opml_feeds_for: "供稿{{terms}}"
       opml_generated: "供稿{{terms}}"
+      personal_recommendations: 建议
       photos: 照片
       polyvore_prompt: Polyvore个人资料的网址
       polyvore_rss: "您Polyvore个人资料的网址看起来像http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ zh-CN:
       setup_aggregation: 安装聚合
       share: 共享
       short_title: 简称：
+      show_related_resources: 显示相关资源
       show_tagged_courses: 只显示课程
       show_tagged_resources: 显示任何类型的资源
       signup: 注册

@@ -17,6 +17,6 @@ ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckServicesComment 
 ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckServicesShare }
 ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckFeedOwner }
 ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckAggregationOwner }
-
+ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckRecommendations }
 
 I18n.load_path += Dir[ File.join(File.dirname(__FILE__), '..', 'locales', '*.{rb,yml}') ]

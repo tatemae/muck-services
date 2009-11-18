@@ -21,8 +21,8 @@ Rails::Initializer.run do |config|
   config.gem "bcrypt-ruby", :lib => "bcrypt", :version => ">=2.0.5"
   config.gem "acts-as-taggable-on"
   config.gem "awesome_nested_set"
-  config.gem "muck-feedbag", :lib => "feedbag", :source => "http://gems.github.com"
-  config.gem "pauldix-feedzirra", :lib => 'feedzirra', :source => "http://gems.github.com"
+  config.gem "muck-feedbag", :lib => "feedbag"
+  config.gem "feedzirra"
   config.gem "httparty"
   config.gem "river"
   config.gem "overlord"
@@ -33,6 +33,6 @@ Rails::Initializer.run do |config|
   config.gem 'muck-activities', :lib => 'muck_activities'
   config.gem 'muck-shares', :lib => 'muck_shares'
   config.gem 'muck-solr', :lib => 'acts_as_solr'
-  config.gem 'muck-raker', :lib => 'muck-raker'
+  config.gem 'muck-raker', :lib => 'muck_raker'
   config.plugin_locators << TestGemLocator
 end

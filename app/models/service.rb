@@ -15,6 +15,8 @@
 #  active              :boolean(1)      default(TRUE)
 #  prompt              :string(255)
 #  template            :string(255)
+#  uri_data_template   :string(2083)    default("")
+#  uri_key             :string(255)
 #
 
 class Service < ActiveRecord::Base

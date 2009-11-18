@@ -15,6 +15,7 @@ et:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Lisa infovood {{title}}"
       add_more_sources: "Lisa Allikad"
+      add_new_feed_title: "Uue kanali lisamine"
       add_oai: "Lisa OAI"
       add_oai_feed: "Lisa OAI Tulemusnäitaja"
       add_opml_to_aggregation: "Lisa OPML-fail"
@@ -97,6 +98,7 @@ et:
       friendfeed_rss: "Leiad URL allosas oma {{link}}."
       generate_new_topic: "Loo uus teema"
       generating_topic_message: "Otsimine. See võib võtta minuti või nii ...."
+      get_recommendations: "Get Soovitused"
       gm_more_prompt: "Veel Seostuvad ressursid"
       gm_title: "Seostuvad ressursid"
       goodreads_prompt: "Goodreads profiili URL"
@@ -147,6 +149,7 @@ et:
       only_courses: "Ainult Kursused"
       opml_feeds_for: "Toidab {{terms}}"
       opml_generated: "Toidab {{terms}}"
+      personal_recommendations: Soovitused
       photos: Fotod
       polyvore_prompt: "Polyvore profiili URL"
       polyvore_rss: "Teie Polyvore profiili URL näeb välja http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ et:
       setup_aggregation: "Setup liitmine"
       share: Jagama
       short_title: "Lühipealkiri:"
+      show_related_resources: "Näita Seostuvad ressursid"
       show_tagged_courses: "Näita ainult kursused"
       show_tagged_resources: "Näita tahes ressursi"
       signup: "Sign Up"

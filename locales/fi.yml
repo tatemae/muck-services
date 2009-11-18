@@ -15,6 +15,7 @@ fi:
       add_feed_url: "URL:"
       add_feeds_to_aggregation: "Lisää syötteitä {{title}}"
       add_more_sources: "Lisää Lähteet"
+      add_new_feed_title: "Lisää uusi syöte"
       add_oai: "Lisää OAI"
       add_oai_feed: "Lisää OAI Endpoint"
       add_opml_to_aggregation: "Lisää OPML-tiedosto"
@@ -97,6 +98,7 @@ fi:
       friendfeed_rss: "Löydät URL alareunassa voit {{link}}."
       generate_new_topic: "Luo uusi aihe"
       generating_topic_message: "Searching. Tämä voi kestää minuutin tai niin ...."
+      get_recommendations: "Get Suositukset"
       gm_more_prompt: "Lisää Muita resursseja"
       gm_title: "Muita resursseja"
       goodreads_prompt: "Goodreads profiili URL"
@@ -147,6 +149,7 @@ fi:
       only_courses: "Vain Kurssit"
       opml_feeds_for: "Syötteitä {{terms}}"
       opml_generated: "Syötteitä {{terms}}"
+      personal_recommendations: Suositukset
       photos: Valokuvat
       polyvore_prompt: "Polyvore profiili URL"
       polyvore_rss: "Sinun Polyvore profiili URL näyttää http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ fi:
       setup_aggregation: "Setup yhdistäminen"
       share: Jakaa
       short_title: "Lyhyt otsikko:"
+      show_related_resources: "Näytä Muita resursseja"
       show_tagged_courses: "Näytä vain kurssit"
       show_tagged_resources: "Näytä mitään keinoja"
       signup: Kirjautumaan

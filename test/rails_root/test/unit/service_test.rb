@@ -6,7 +6,7 @@
 #  uri                 :string(2083)    default("")
 #  name                :string(1000)    default("")
 #  api_uri             :string(2083)    default("")
-#  uri_data_template        :string(2083)    default("")
+#  uri_template        :string(2083)    default("")
 #  icon                :string(2083)    default("rss.gif")
 #  sort                :integer(4)
 #  requires_password   :boolean(1)
@@ -15,6 +15,8 @@
 #  active              :boolean(1)      default(TRUE)
 #  prompt              :string(255)
 #  template            :string(255)
+#  uri_data_template   :string(2083)    default("")
+#  uri_key             :string(255)
 #
 
 require File.dirname(__FILE__) + '/../test_helper'

@@ -15,6 +15,7 @@ sv:
       add_feed_url: "URL:"
       add_feeds_to_aggregation: "Lägg till feeds till {{title}}"
       add_more_sources: "Lägg Källor"
+      add_new_feed_title: "Lägg till ett nytt flöde"
       add_oai: "Lägg OAI"
       add_oai_feed: "Lägg OAI Endpoint"
       add_opml_to_aggregation: "Lägg OPML-fil"
@@ -97,6 +98,7 @@ sv:
       friendfeed_rss: "Du kan hitta din webbadress längst ned i ditt {{link}}."
       generate_new_topic: "Generera ett nytt ämne"
       generating_topic_message: "Searching. Detta kan ta en minut eller så ...."
+      get_recommendations: "Få rekommendationer"
       gm_more_prompt: "Mer Närliggande resurser"
       gm_title: "Närliggande resurser"
       goodreads_prompt: "Goodreads Profile URL"
@@ -147,6 +149,7 @@ sv:
       only_courses: "Endast kurser"
       opml_feeds_for: "Feeds för {{terms}}"
       opml_generated: "Feeds för {{terms}}"
+      personal_recommendations: Rekommendationer
       photos: Bilder
       polyvore_prompt: "Polyvore Profile URL"
       polyvore_rss: "Din Polyvore profil URL ser ut http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ sv:
       setup_aggregation: "Setup Aggregation"
       share: Del
       short_title: "Kortform:"
+      show_related_resources: "Visa Närliggande resurser"
       show_tagged_courses: "Visa endast kurser"
       show_tagged_resources: "visa någon form av resurs"
       signup: Underteckna

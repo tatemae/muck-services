@@ -15,6 +15,7 @@ bg:
       add_feed_url: "URL:"
       add_feeds_to_aggregation: "Добави емисии, за да {{title}}"
       add_more_sources: "Добави Източници"
+      add_new_feed_title: "Добавяне на нова емисия"
       add_oai: "Добави OAI"
       add_oai_feed: "Добави OAI Крайна точка"
       add_opml_to_aggregation: "Добави OPML файл"
@@ -97,6 +98,7 @@ bg:
       friendfeed_rss: "Можете да намерите вашия URL в долната част на вашия {{link}}."
       generate_new_topic: "Генериране на нова тема"
       generating_topic_message: "Търсене. Това може да отнеме минута или така че ...."
+      get_recommendations: "Потърсете препоръки"
       gm_more_prompt: "Още Сродни ресурси"
       gm_title: "Сродни ресурси"
       goodreads_prompt: "Goodreads профил URL"
@@ -147,6 +149,7 @@ bg:
       only_courses: "Само Курсове"
       opml_feeds_for: "Feeds за {{terms}}"
       opml_generated: "Feeds за {{terms}}"
+      personal_recommendations: Препоръчваме
       photos: Снимки
       polyvore_prompt: "Polyvore профил URL"
       polyvore_rss: "Вашият профил Polyvore URL прилича http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ bg:
       setup_aggregation: "Настройка Сумиране"
       share: Дял
       short_title: "Кратко заглавие:"
+      show_related_resources: "Покажи Сродни ресурси"
       show_tagged_courses: "Покажи само курсове"
       show_tagged_resources: "покажи всички видове ресурси"
       signup: "Sign Up"

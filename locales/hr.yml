@@ -15,6 +15,7 @@ hr:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Dodaj feedove {{title}}"
       add_more_sources: "Dodaj Izvori"
+      add_new_feed_title: "Dodaj novi feed"
       add_oai: "Dodaj OAI"
       add_oai_feed: "Dodaj OAI Endpoint"
       add_opml_to_aggregation: "Dodaj OPML datoteku"
@@ -97,6 +98,7 @@ hr:
       friendfeed_rss: "Možete pronaći svoj URL na dnu vašeg {{link}}."
       generate_new_topic: "Generiraj novu temu"
       generating_topic_message: "Searching. Ovo može trajati minute ili tako ...."
+      get_recommendations: "Get Preporuke"
       gm_more_prompt: "Više Povezani resursi"
       gm_title: "Povezani resursi"
       goodreads_prompt: "Goodreads Profile URL"
@@ -147,6 +149,7 @@ hr:
       only_courses: "Samo Tečajevi"
       opml_feeds_for: "Feedovi za {{terms}}"
       opml_generated: "Feedovi za {{terms}}"
+      personal_recommendations: Preporuke
       photos: Fotografije
       polyvore_prompt: "Polyvore Profile URL"
       polyvore_rss: "Vaš profil Polyvore URL izgleda kao http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ hr:
       setup_aggregation: "Postava Agregacija"
       share: Dijeliti
       short_title: "Skraćeni naslov:"
+      show_related_resources: "Pokaži Povezani resursi"
       show_tagged_courses: "prikaži samo tečajevi"
       show_tagged_resources: "pokazuju bilo kakve resursa"
       signup: "Sign Up"

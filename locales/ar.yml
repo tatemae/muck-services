@@ -15,6 +15,7 @@ ar:
       add_feed_url: "عنوان الموقع :"
       add_feeds_to_aggregation: "إضافة إلى يغذي {{title}}"
       add_more_sources: "تضيف المصادر"
+      add_new_feed_title: "إضافة تغذية جديدة"
       add_oai: "إضافة صلى"
       add_oai_feed: "إضافة صلى نقطة النهاية"
       add_opml_to_aggregation: "إضافة ملف أبمل]"
@@ -97,6 +98,7 @@ ar:
       friendfeed_rss: "يمكنك العثور على عنوان موقعك في أسفل بك {{link}}."
       generate_new_topic: "إنشاء موضوع جديد"
       generating_topic_message: "البحث. هذا الأمر قد يستغرق ذلك دقيقة أو نحو ذلك...."
+      get_recommendations: "الحصول على التوصيات"
       gm_more_prompt: "مزيد من موارد ذات الصلة"
       gm_title: "موارد ذات الصلة"
       goodreads_prompt: "Goodreads ملف رابط"
@@ -147,6 +149,7 @@ ar:
       only_courses: "فقط المقررات"
       opml_feeds_for: "ليغذي {{terms}}"
       opml_generated: "ليغذي {{terms}}"
+      personal_recommendations: التوصيات
       photos: صور
       polyvore_prompt: "Polyvore ملف رابط"
       polyvore_rss: "Polyvore بك لمحة رابط يشبه http://www.polyvore.com/cgi/profile؟id=00000"
@@ -185,6 +188,7 @@ ar:
       setup_aggregation: "الإعداد التجميع"
       share: مشاركة
       short_title: "الاسم المختصر :"
+      show_related_resources: "وتظهر موارد ذات الصلة"
       show_tagged_courses: "وتظهر فقط الدورات"
       show_tagged_resources: "وتظهر أي نوع من الموارد"
       signup: التوقيع

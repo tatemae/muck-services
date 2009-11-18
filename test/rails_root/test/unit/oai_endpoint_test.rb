@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: oai_endpoints
+#
+#  id                  :integer(4)      not null, primary key
+#  uri                 :string(2083)
+#  display_uri         :string(2083)
+#  metadata_prefix     :string(255)
+#  title               :string(1000)
+#  short_title         :string(100)
+#  contributor_id      :integer(4)
+#  status              :integer(4)
+#  default_language_id :integer(4)
+#  created_at          :datetime
+#  updated_at          :datetime
+#
+
 require File.dirname(__FILE__) + '/../test_helper'
 
 # Used to test muck_content_permission

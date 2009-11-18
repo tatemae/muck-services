@@ -15,6 +15,7 @@ hi:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "जोड़ने के लिए {{title}} फ़ीड"
       add_more_sources: "सूत्रों जोड़ें"
+      add_new_feed_title: "एक नई फ़ीड जोड़ें"
       add_oai: "OAI जोड़ें"
       add_oai_feed: "OAI Endpoint जोड़ें"
       add_opml_to_aggregation: "OPML फ़ाइल जोड़ें"
@@ -97,6 +98,7 @@ hi:
       friendfeed_rss: "आप अपने {{link}}. के नीचे अपने यूआरएल ढूँढ सकते हैं"
       generate_new_topic: "उत्पन्न एक नया विषय"
       generating_topic_message: "खोज. यह एक मिनट या तो ले सकते हैं ...."
+      get_recommendations: "सिफारिशों जाओ"
       gm_more_prompt: "अधिक संबंधित संसाधन"
       gm_title: "संबंधित संसाधन"
       goodreads_prompt: "Goodreads प्रोफ़ाइल यूआरएल"
@@ -147,6 +149,7 @@ hi:
       only_courses: "केवल पाठ्यक्रम"
       opml_feeds_for: "{{terms}} के लिए फ़ीड"
       opml_generated: "{{terms}} के लिए फ़ीड"
+      personal_recommendations: सिफारिशें
       photos: तस्वीरें
       polyvore_prompt: "Polyvore प्रोफ़ाइल यूआरएल"
       polyvore_rss: "अपने Polyvore प्रोफ़ाइल यूआरएल http://www.polyvore.com/cgi/profile?id=00000 की तरह लग रहा है"
@@ -185,6 +188,7 @@ hi:
       setup_aggregation: "सेटअप एग्रीगेशन"
       share: हिस्सा
       short_title: "लघु शीर्षक:"
+      show_related_resources: "दिखाएँ संबंधित संसाधन"
       show_tagged_courses: "केवल पाठ्यक्रम शो"
       show_tagged_resources: "संसाधनों की किसी भी तरह का शो"
       signup: "साइन अप"

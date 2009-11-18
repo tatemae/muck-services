@@ -15,6 +15,7 @@ cs:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Přidat kanály do {{title}}"
       add_more_sources: "Přidat Zdroje"
+      add_new_feed_title: "Přidat nový krmivo"
       add_oai: "Přidat OAI"
       add_oai_feed: "Přidat OAI Endpoint"
       add_opml_to_aggregation: "Přidat soubor OPML"
@@ -97,6 +98,7 @@ cs:
       friendfeed_rss: "Můžete najít adresu URL ve spodní části {{link}}."
       generate_new_topic: "Vygenerovat nové téma"
       generating_topic_message: "Vyhledávání. To může trvat minutu nebo tak ...."
+      get_recommendations: "Get Doporučení"
       gm_more_prompt: "Více Související zdroje informací"
       gm_title: "Související zdroje informací"
       goodreads_prompt: "Goodreads profil URL"
@@ -147,6 +149,7 @@ cs:
       only_courses: "Pouze Kurzy"
       opml_feeds_for: "Krmiva pro {{terms}}"
       opml_generated: "Krmiva pro {{terms}}"
+      personal_recommendations: Doporučení
       photos: Fotografie
       polyvore_prompt: "Polyvore profil URL"
       polyvore_rss: "Vaše Polyvore profil URL vypadá http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ cs:
       setup_aggregation: "Nastavení Agregace"
       share: Sdílet
       short_title: "Zkrácený název:"
+      show_related_resources: "Show Související zdroje informací"
       show_tagged_courses: "zobrazit pouze kurzy"
       show_tagged_resources: "show jakéhokoli zdroje"
       signup: "Sign Up"

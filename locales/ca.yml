@@ -15,6 +15,7 @@ ca:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Afegir feeds a {{title}}"
       add_more_sources: "Afegir Fonts"
+      add_new_feed_title: "Afegiu un nou feed"
       add_oai: "Afegir OAI"
       add_oai_feed: "Afegir OAI Endpoint"
       add_opml_to_aggregation: "Afegir fitxer OPML"
@@ -97,6 +98,7 @@ ca:
       friendfeed_rss: "Vostè pot trobar l&#39;adreça URL a la part inferior del seu {{link}}."
       generate_new_topic: "Generar un nou tema"
       generating_topic_message: "Cercant. Això pot trigar un minut o així ...."
+      get_recommendations: "Obtenir recomanacions"
       gm_more_prompt: "Més Recursos relacionats"
       gm_title: "Recursos relacionats"
       goodreads_prompt: "Goodreads URL"
@@ -147,6 +149,7 @@ ca:
       only_courses: "Només Cursos"
       opml_feeds_for: "Feeds per {{terms}}"
       opml_generated: "Feeds per {{terms}}"
+      personal_recommendations: Recomanacions
       photos: Fotos
       polyvore_prompt: "Polyvore URL"
       polyvore_rss: "El seu perfil Polyvore URL sembla http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ ca:
       setup_aggregation: "Configuració d&#39;agregació"
       share: Compartir
       short_title: "Títol curt:"
+      show_related_resources: "Mostra Recursos relacionats"
       show_tagged_courses: "Mostra només els cursos de"
       show_tagged_resources: "mostra qualsevol tipus de recurs"
       signup: "Registra&#39;t"

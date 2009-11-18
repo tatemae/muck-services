@@ -44,6 +44,7 @@ class Entry < ActiveRecord::Base
   belongs_to :language
   has_many :activities, :as => :attachable, :dependent => :destroy
   has_many :attentions, :dependent => :destroy
+  has_many :personal_recommendations, :as => :destination
   acts_as_commentable
   acts_as_taggable
   

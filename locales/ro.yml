@@ -15,6 +15,7 @@ ro:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Adauga feed-uri pentru a {{title}}"
       add_more_sources: "Adauga Surse"
+      add_new_feed_title: "Adauga un feed nou"
       add_oai: "Adauga OAI"
       add_oai_feed: "Adauga OAI Endpoint"
       add_opml_to_aggregation: "Adauga fişier OPML"
@@ -97,6 +98,7 @@ ro:
       friendfeed_rss: "Puteţi găsi URL-ul dvs. la partea de jos a {{link}}. dvs."
       generate_new_topic: "Generaţi un subiect nou"
       generating_topic_message: "Searching. Acest lucru ar putea dura un minut sau cam asa ceva ...."
+      get_recommendations: "Ia Recomandări"
       gm_more_prompt: "Mai multe resurse asociate"
       gm_title: "Resurse asociate"
       goodreads_prompt: "Goodreads profil URL-ul"
@@ -147,6 +149,7 @@ ro:
       only_courses: "Numai Cursuri"
       opml_feeds_for: "Feed-uri pentru {{terms}}"
       opml_generated: "Feed-uri pentru {{terms}}"
+      personal_recommendations: Recomandari
       photos: Poze
       polyvore_prompt: "Polyvore profil URL-ul"
       polyvore_rss: "Profilul dvs. Polyvore URL-ul arată ca http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ ro:
       setup_aggregation: "Setup Aggregation"
       share: Împărtăşi
       short_title: "Titlu scurt:"
+      show_related_resources: "Show Resurse asociate"
       show_tagged_courses: "arata doar cursuri de"
       show_tagged_resources: "arată nici un fel de resursă"
       signup: Înscrie-te

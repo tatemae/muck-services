@@ -15,6 +15,7 @@ tr:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "{{title}} Eklemek için beslemeleri"
       add_more_sources: "Kaynaklar ekle"
+      add_new_feed_title: "Yeni bir besleme ekleyin"
       add_oai: "OAI ekle"
       add_oai_feed: "OAI Endpoint ekle"
       add_opml_to_aggregation: "Add OPML dosyası"
@@ -97,6 +98,7 @@ tr:
       friendfeed_rss: "Size {{link}}. altındaki URL bulabilirsiniz"
       generate_new_topic: "Oluşturmak Yeni bir konu"
       generating_topic_message: "Arıyor. Bu kadar .... bir dakika sürebilir"
+      get_recommendations: "Önerileri al"
       gm_more_prompt: "Daha İlgili Kaynaklar"
       gm_title: "İlgili Kaynaklar"
       goodreads_prompt: "Goodreads profil URL"
@@ -147,6 +149,7 @@ tr:
       only_courses: "Sadece Dersleri"
       opml_feeds_for: "{{terms}} Için Besleme"
       opml_generated: "{{terms}} Için Besleme"
+      personal_recommendations: Öneriler
       photos: Fotoğraflar
       polyvore_prompt: "Polyvore profil URL"
       polyvore_rss: "Your Polyvore profil URL http://www.polyvore.com/cgi/profile?id=00000 benziyor"
@@ -185,6 +188,7 @@ tr:
       setup_aggregation: "Kur Toplama"
       share: Paylaşmak
       short_title: "Kısa Başlık:"
+      show_related_resources: "Show İlgili Kaynaklar"
       show_tagged_courses: "sadece ders göster"
       show_tagged_resources: "kaynak her türlü göstermek"
       signup: Kayıt

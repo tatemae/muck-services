@@ -15,6 +15,7 @@ uk:
       add_feed_url: "URL:"
       add_feeds_to_aggregation: "Додати канали для {{title}}"
       add_more_sources: "Додати джерела"
+      add_new_feed_title: "Додати новий канал"
       add_oai: "Додати ІОА"
       add_oai_feed: "Додати ІОА Endpoint"
       add_opml_to_aggregation: "Додати файл OPML"
@@ -97,6 +98,7 @@ uk:
       friendfeed_rss: "Ви можете знайти потрібний URL в нижній частині вашої {{link}}."
       generate_new_topic: "Створити нову тему"
       generating_topic_message: "Пошук. Це може зайняти хвилину або близько того ...."
+      get_recommendations: "Отримайте рекомендації"
       gm_more_prompt: "Додаткові ресурси, що відносяться"
       gm_title: "Інші ресурси"
       goodreads_prompt: "Goodreads профіль URL"
@@ -147,6 +149,7 @@ uk:
       only_courses: "Тільки курси"
       opml_feeds_for: "Корми для {{terms}}"
       opml_generated: "Корми для {{terms}}"
+      personal_recommendations: Рекомендацій
       photos: Фотографій
       polyvore_prompt: "Polyvore профіль URL"
       polyvore_rss: "Ваш профіль Polyvore URL виглядає http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ uk:
       setup_aggregation: "Установка Агрегація"
       share: Розділяти
       short_title: "Скорочена назва:"
+      show_related_resources: "Показати Інші ресурси"
       show_tagged_courses: "Показати тільки курсах"
       show_tagged_resources: "Показати будь-якого ресурсу"
       signup: Зареєструватися

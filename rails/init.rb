@@ -7,7 +7,7 @@ else
     require 'acts-as-taggable-on'
   rescue LoadError
     begin
-      gem 'mbleigh-acts-as-taggable-on'
+      gem 'acts-as-taggable-on'
     rescue Gem::LoadError
       puts "Please install the acts-as-taggable-on gem"
     end

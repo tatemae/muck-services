@@ -15,6 +15,7 @@ zh-TW:
       add_feed_url: 網址：
       add_feeds_to_aggregation: "添加供稿{{title}}"
       add_more_sources: 添加源
+      add_new_feed_title: 添加新的飼料
       add_oai: 添加醪河
       add_oai_feed: 添加端點醪河
       add_opml_to_aggregation: 添加OPML文件
@@ -97,6 +98,7 @@ zh-TW:
       friendfeed_rss: "您可以找到您的網址在底部您{{link}}."
       generate_new_topic: 生成一個新課題
       generating_topic_message: 搜索。這可能需要1分鐘左右....
+      get_recommendations: 獲得建議
       gm_more_prompt: 更多相關資源
       gm_title: 相關資源
       goodreads_prompt: Goodreads個人資料的網址
@@ -147,6 +149,7 @@ zh-TW:
       only_courses: 只有課程
       opml_feeds_for: "供稿{{terms}}"
       opml_generated: "供稿{{terms}}"
+      personal_recommendations: 建議
       photos: 照片
       polyvore_prompt: Polyvore個人資料的網址
       polyvore_rss: "您Polyvore個人資料的網址看起來像http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ zh-TW:
       setup_aggregation: 安裝聚合
       share: 共享
       short_title: 簡稱：
+      show_related_resources: 顯示相關資源
       show_tagged_courses: 只顯示課程
       show_tagged_resources: 表現出任何一種資源
       signup: 註冊

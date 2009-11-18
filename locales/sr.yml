@@ -15,6 +15,7 @@ sr:
       add_feed_url: "Урл:"
       add_feeds_to_aggregation: "Додај феед {{title}}"
       add_more_sources: "Додај Извори"
+      add_new_feed_title: "Додај нови феед"
       add_oai: "Додај ОАИ"
       add_oai_feed: "Додај ОАИ Ендпоинт"
       add_opml_to_aggregation: "Додај ОПМЛ датотеку"
@@ -97,6 +98,7 @@ sr:
       friendfeed_rss: "Можете наћи ваш УРЛ у дну {{link}}."
       generate_new_topic: "Генеришите нову тему"
       generating_topic_message: "Претраживање. Ово може да траје минут или тако ...."
+      get_recommendations: "Гет Препоруке"
       gm_more_prompt: "Више Сродни ресурси"
       gm_title: "Слични извори"
       goodreads_prompt: "Гоодреадс УРЛ адресе профил"
@@ -147,6 +149,7 @@ sr:
       only_courses: "Само Курсеви"
       opml_feeds_for: "Феедс фор {{terms}}"
       opml_generated: "Феедс фор {{terms}}"
+      personal_recommendations: Препоруке
       photos: Фотографије
       polyvore_prompt: "Полыворе УРЛ адресе профил"
       polyvore_rss: "Ваш профил Полыворе УРЛ адреса изгледа хттп://ууу.полыворе.цом/цги/профиле?ид=00000"
@@ -185,6 +188,7 @@ sr:
       setup_aggregation: "Сетуп Агрегација"
       share: Поделити
       short_title: "Кратак наслов:"
+      show_related_resources: "Прикажи Слични извори"
       show_tagged_courses: "Прикажи само курсеви"
       show_tagged_resources: "показују било какав ресурс"
       signup: "Пријавите се"

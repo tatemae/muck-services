@@ -15,6 +15,7 @@ lv:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Pievienot plūsmas, lai {{title}}"
       add_more_sources: "Pievienot avoti"
+      add_new_feed_title: "Pievienot jaunu barotni"
       add_oai: "Pievienot OAI"
       add_oai_feed: "Pievienot OAI Rezultāts"
       add_opml_to_aggregation: "Pievienot OPML failu"
@@ -97,6 +98,7 @@ lv:
       friendfeed_rss: "Jūs varat atrast savu URL apakšā Jūsu {{link}}."
       generate_new_topic: "Ģenerēt jaunu tēmu"
       generating_topic_message: "Meklēšanu. Tas varētu ņemt minūtes, vai arī tā ...."
+      get_recommendations: "Get Ieteikumi"
       gm_more_prompt: "Vairāk Saistītie resursi"
       gm_title: "Saistītie resursi"
       goodreads_prompt: "Goodreads profils URL"
@@ -147,6 +149,7 @@ lv:
       only_courses: "Tikai Kursi"
       opml_feeds_for: "Plūsmas {{terms}}"
       opml_generated: "Plūsmas {{terms}}"
+      personal_recommendations: Ieteikumi
       photos: Fotogrāfijas
       polyvore_prompt: "Polyvore profils URL"
       polyvore_rss: "Jūsu Polyvore profils URL izskatās http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ lv:
       setup_aggregation: "Setup Summēšana"
       share: Dalīties
       short_title: "Short nosaukums:"
+      show_related_resources: "Show Saistītie resursi"
       show_tagged_courses: "Rādīt tikai kursi"
       show_tagged_resources: "Parādīt visu veidu resursu"
       signup: "Sign Up"

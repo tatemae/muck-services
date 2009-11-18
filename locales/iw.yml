@@ -15,6 +15,7 @@ iw:
       add_feed_url: "כתובת האתר:"
       add_feeds_to_aggregation: "הוסף הזנות {{title}}"
       add_more_sources: "הוסף מקורות"
+      add_new_feed_title: "הוסף עדכון חדש"
       add_oai: "הוסף OAI"
       add_oai_feed: "הוסף OAI Endpoint"
       add_opml_to_aggregation: "הוספת קובץ OPML"
@@ -97,6 +98,7 @@ iw:
       friendfeed_rss: "אתה יכול למצוא את כתובת האתר שלך בתחתית {{link}}. שלך"
       generate_new_topic: "צור נושא חדש"
       generating_topic_message: "מחפש. זה עלול להימשך דקה או כל כך ...."
+      get_recommendations: "קבל המלצות"
       gm_more_prompt: "יותר משאבים קשורים"
       gm_title: "משאבים קשורים"
       goodreads_prompt: "Goodreads פרופיל כתובת"
@@ -147,6 +149,7 @@ iw:
       only_courses: "רק קורסים"
       opml_feeds_for: "הזנות עבור {{terms}}"
       opml_generated: "הזנות עבור {{terms}}"
+      personal_recommendations: המלצות
       photos: תמונות
       polyvore_prompt: "Polyvore פרופיל כתובת"
       polyvore_rss: "פרופיל Polyvore כתובת האתר שלך נראה כמו http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ iw:
       setup_aggregation: "הגדרת צבירה"
       share: לשתף
       short_title: "כותרת קצרה:"
+      show_related_resources: "הצג משאבים קשורים"
       show_tagged_courses: "להראות רק קורסים"
       show_tagged_resources: "להראות כל סוג של משאב"
       signup: הרשם

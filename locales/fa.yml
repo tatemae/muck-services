@@ -15,6 +15,7 @@ fa:
       add_feed_url: "آدرس :"
       add_feeds_to_aggregation: "افزودنیهای خوردها به {{title}}"
       add_more_sources: "افزودن منابع"
+      add_new_feed_title: "افزودن یک اشتراک جدید"
       add_oai: "اضافه کردن óáí"
       add_oai_feed: "اضافه کردن óáí Endpoint"
       add_opml_to_aggregation: "اضافه کردن فایل OPML"
@@ -97,6 +98,7 @@ fa:
       friendfeed_rss: "شما می توانید آدرس خود وارد کنید در پایین {{link}}.خود را پیدا کنید"
       generate_new_topic: "ایجاد موضوع جدید"
       generating_topic_message: "جستجو. این ممکن است یک دقیقه یا بیشتر را...."
+      get_recommendations: "برنامه ، جزوه"
       gm_more_prompt: "بیشتر منابع مرتبط"
       gm_title: "منابع مرتبط"
       goodreads_prompt: "Goodreads مشخصات آدرس"
@@ -147,6 +149,7 @@ fa:
       only_courses: "فقط در دروس"
       opml_feeds_for: "خوردها برای {{terms}}"
       opml_generated: "خوردها برای {{terms}}"
+      personal_recommendations: توصیه
       photos: عکس
       polyvore_prompt: "Polyvore مشخصات آدرس"
       polyvore_rss: "مشخصات شما Polyvore آدرس شبیه http://www.polyvore.com/cgi/profile؟id=00000"
@@ -185,6 +188,7 @@ fa:
       setup_aggregation: "راه اندازی دانه بندی"
       share: تقسیم
       short_title: "عنوان کوتاه :"
+      show_related_resources: "یافتن منابع مرتبط"
       show_tagged_courses: "نشان دادن فقط در دروس"
       show_tagged_resources: "نشان دادن هر نوع منبع"
       signup: "ثبت نام"

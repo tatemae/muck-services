@@ -16,6 +16,7 @@
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Legg strømmer til {{title}}"
       add_more_sources: "Legg Kilder"
+      add_new_feed_title: "Legg til en ny feed"
       add_oai: "Legg OAI"
       add_oai_feed: "Legg OAI Endpoint"
       add_opml_to_aggregation: "Legg OPML-fil"
@@ -98,6 +99,7 @@
       friendfeed_rss: "Du finner nettadressen nederst {{link}}. din"
       generate_new_topic: "Generer et nytt emne"
       generating_topic_message: "Søker. Dette kan ta et minutt eller så ...."
+      get_recommendations: "Få Anbefalinger"
       gm_more_prompt: "Flere Beslektede ressurser"
       gm_title: "Beslektede ressurser"
       goodreads_prompt: "Goodreads profil URL"
@@ -148,6 +150,7 @@
       only_courses: "Bare Kurs"
       opml_feeds_for: "Feeds for {{terms}}"
       opml_generated: "Feeds for {{terms}}"
+      personal_recommendations: Anbefalinger
       photos: Bilder
       polyvore_prompt: "Polyvore profil URL"
       polyvore_rss: "Din Polyvore profil URL ser slik http://www.polyvore.com/cgi/profile?id=00000"
@@ -186,6 +189,7 @@
       setup_aggregation: "Oppsett Aggregation"
       share: Dele
       short_title: "Kort tittel:"
+      show_related_resources: "Show Beslektede ressurser"
       show_tagged_courses: "viser bare kurs"
       show_tagged_resources: "viser noen form for ressurs"
       signup: "Sign Up"

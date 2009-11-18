@@ -15,6 +15,7 @@ th:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "เพิ่มฟีดที่ {{title}}"
       add_more_sources: เพิ่มมา
+      add_new_feed_title: เพิ่มฟีดใหม่
       add_oai: "เพิ่ม OAI"
       add_oai_feed: "เพิ่ม OAI Endpoint"
       add_opml_to_aggregation: "เพิ่มไฟล์ OPML"
@@ -97,6 +98,7 @@ th:
       friendfeed_rss: "คุณสามารถหา URL ของคุณที่ด้านล่างของ {{link}}. ของคุณ"
       generate_new_topic: สร้างหัวข้อใหม่
       generating_topic_message: "ค้นหา. นี้อาจใช้เวลาสักครู่เพื่อ ...."
+      get_recommendations: ขอคำแนะนำ
       gm_more_prompt: "ที่เกี่ยวข้องเพิ่มเติม Resources"
       gm_title: ข้อมูลที่เกี่ยวข้อง
       goodreads_prompt: "Goodreads URL โปรไฟล์"
@@ -147,6 +149,7 @@ th:
       only_courses: เฉพาะหลักสูตร
       opml_feeds_for: "ฟีดสำหรับ {{terms}}"
       opml_generated: "ฟีดสำหรับ {{terms}}"
+      personal_recommendations: ข้อเสนอแนะ
       photos: Photos
       polyvore_prompt: "Polyvore URL โปรไฟล์"
       polyvore_rss: "โปรไฟล์ Polyvore URL ของคุณดูเหมือนว่า http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ th:
       setup_aggregation: สรุปรวมการติดตั้ง
       share: แบ่งปัน
       short_title: "ชื่อย่อ:"
+      show_related_resources: แสดงทรัพยากรที่เกี่ยวข้อง
       show_tagged_courses: แสดงหลักสูตรเฉพาะ
       show_tagged_resources: แสดงประเภททรัพยากรใดๆ
       signup: สมัครสมาชิก

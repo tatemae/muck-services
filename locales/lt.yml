@@ -15,6 +15,7 @@ lt:
       add_feed_url: "URL:"
       add_feeds_to_aggregation: "Pridėti kanalai {{title}}"
       add_more_sources: "Pridėti šaltiniai"
+      add_new_feed_title: "Pridėti naują kanalą"
       add_oai: "Pridėti OAI"
       add_oai_feed: "Pridėti OAI Vertinamoji baigtis"
       add_opml_to_aggregation: "Pridėti OPML failą"
@@ -97,6 +98,7 @@ lt:
       friendfeed_rss: "Jūs galite rasti nuorodą į savo {{link}}. apačioje"
       generate_new_topic: "Sukurti naują temą"
       generating_topic_message: "Paieška. Tai gali trukti minutę ar taip ...."
+      get_recommendations: "Gauti Atsiliepimai"
       gm_more_prompt: "Daugiau informacijos Susiję šaltiniai ir ištekliai"
       gm_title: "Susiję šaltiniai ir ištekliai"
       goodreads_prompt: "Goodreads profilis URL"
@@ -147,6 +149,7 @@ lt:
       only_courses: "Tik Kursai"
       opml_feeds_for: "Pašarai {{terms}}"
       opml_generated: "Pašarai {{terms}}"
+      personal_recommendations: Atsiliepimai
       photos: Nuotraukos
       polyvore_prompt: "Polyvore profilis URL"
       polyvore_rss: "Jūsų Polyvore profilis URL išvaizda http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ lt:
       setup_aggregation: "Installer sumavimas"
       share: Dalytis
       short_title: "Trumpas pavadinimas:"
+      show_related_resources: "Rodyti Susiję šaltiniai ir ištekliai"
       show_tagged_courses: "Rodyti tik kursus"
       show_tagged_resources: "jokių išteklių rūšis"
       signup: Registruotis

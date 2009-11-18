@@ -15,6 +15,7 @@ tl:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Magdagdag ng mga feed sa {{title}}"
       add_more_sources: "Magdagdag ng mga Pinagmumulan ng"
+      add_new_feed_title: "Magdagdag ng isang bagong feed"
       add_oai: "Magdagdag ng OAI"
       add_oai_feed: "Magdagdag ng OAI Endpoint"
       add_opml_to_aggregation: "Magdagdag ng OPML file"
@@ -97,6 +98,7 @@ tl:
       friendfeed_rss: "Maaari mong mahanap ang iyong URL sa ibaba ng iyong {{link}}."
       generate_new_topic: "Gumawa ng isang bagong paksa"
       generating_topic_message: "Searching. Ito ay maaaring tumagal ng isang minuto o kaya ...."
+      get_recommendations: "Kumuha ng mga rekomendasyon"
       gm_more_prompt: "Higit pang mga kaugnay na Resources"
       gm_title: "Related Resources"
       goodreads_prompt: "Goodreads profile URL"
@@ -147,6 +149,7 @@ tl:
       only_courses: "Tanging mga sangay"
       opml_feeds_for: "Feeds para sa {{terms}}"
       opml_generated: "Feeds para sa {{terms}}"
+      personal_recommendations: "Mga rekomendasyon"
       photos: Photos
       polyvore_prompt: "Polyvore profile URL"
       polyvore_rss: "Ang iyong Polyvore profile URL Mukhang http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ tl:
       setup_aggregation: "Setup ng pagsasama-sama"
       share: Ibahagi
       short_title: "Maikling pamagat:"
+      show_related_resources: "Ipakita ang mga Kaugnay na Gamit-yaman"
       show_tagged_courses: "ipakita lamang ang mga kurso"
       show_tagged_resources: "ipakita ang anumang mga uri ng yaman"
       signup: "Mag-sign Up"

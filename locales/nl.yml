@@ -15,6 +15,7 @@ nl:
       add_feed_url: "Url:"
       add_feeds_to_aggregation: "Feeds toevoegen aan {{title}}"
       add_more_sources: "Bronnen toevoegen"
+      add_new_feed_title: "Voeg een nieuwe feed"
       add_oai: "Voeg OAI"
       add_oai_feed: "Voeg OAI Eindpunt"
       add_opml_to_aggregation: "Voeg OPML-bestand"
@@ -97,6 +98,7 @@ nl:
       friendfeed_rss: "U kunt uw URL op de bodem van uw {{link}}."
       generate_new_topic: "Genereer een nieuw onderwerp"
       generating_topic_message: "Searching. Dit kan een minuut of zo ...."
+      get_recommendations: "Aanbevelingen Get"
       gm_more_prompt: "Meer Verwante bronnen"
       gm_title: "Verwante bronnen"
       goodreads_prompt: "Goodreads profiel URL"
@@ -147,6 +149,7 @@ nl:
       only_courses: "Alleen Cursussen"
       opml_feeds_for: "Feeds voor {{terms}}"
       opml_generated: "Feeds voor {{terms}}"
+      personal_recommendations: Aanbevelingen
       photos: Foto
       polyvore_prompt: "Polyvore profiel URL"
       polyvore_rss: "Uw profiel Polyvore URL ziet er als volgt http://www.polyvore.com/cgi/profile?id=00000"
@@ -185,6 +188,7 @@ nl:
       setup_aggregation: "Setup Aggregation"
       share: Delen
       short_title: "Korte titel:"
+      show_related_resources: "Toon gerelateerde bronnen"
       show_tagged_courses: "toon alleen cursussen"
       show_tagged_resources: "ga naar elke vorm van resource"
       signup: Aanmelden
