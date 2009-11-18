@@ -19,9 +19,11 @@ class Aggregation < ActiveRecord::Base
   has_friendly_id :terms, :use_slug => true
   
   belongs_to :ownable, :polymorphic => true
+  
   has_many :aggregation_feeds, :conditions => ['feed_type = ?', 'Feed']
-  has_many :aggregation_oai_endpoints, :conditions => ['feed_type = ?', 'OaiEndpoint']
+  has_many :aggregation_oai_endpoints, :conditions => ['feed_type = ?', 'OaiEndpoint'], :source => 'aggregation_feeds'
   has_many :feeds, :through => :aggregation_feeds
+  has_many :oai_endpoints, :through => :aggregation_feeds
   
   named_scope :by_title, :order => "title ASC"
   named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
@@ -41,11 +43,12 @@ class Aggregation < ActiveRecord::Base
     safe_add_feeds(Feed.create_tag_feeds(user, uris))
   end
   
-  # Only add feeds that aren't already part of the aggregation
-  def safe_add_feeds(new_feeds)
+  # Only add feeds that aren't already part of the aggregation.  This will setup the feed
+  # as type 'Feed'.  It is important to add feeds using this method or the type won't be set.
+  def safe_add_feeds(new_feeds, type = 'Feed')
     new_feeds.each do |feed|
       begin
-        self.feeds << feed
+        self.aggregation_feeds.create(:feed => feed, :feed_type => type)
       rescue ActiveRecord::RecordInvalid => ex
         # Throw away exception.  Feed already exists so we don't need to do anything.
       end

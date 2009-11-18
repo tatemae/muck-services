@@ -150,8 +150,6 @@ class Service < ActiveRecord::Base
     uris.collect{ |u| Feed.find_or_create(u.url, u.title, username, password, service.id, contributor) } if uris
   end
 
-
-
   def self.build_photo_feeds(terms, user, service_ids = nil, refresh_services = false)
     if service_ids.nil?
       service_ids = get_photo_tag_services(refresh_services).map(&:id)

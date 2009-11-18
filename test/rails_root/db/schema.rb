@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091116094447) do
+ActiveRecord::Schema.define(:version => 20091118203605) do
 
   create_table "activities", :force => true do |t|
     t.integer  "item_id"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20091116094447) do
   create_table "aggregation_feeds", :force => true do |t|
     t.integer "aggregation_id"
     t.integer "feed_id"
-    t.string  "feed_type"
+    t.string  "feed_type",      :default => "Feed"
   end
 
   add_index "aggregation_feeds", ["aggregation_id"], :name => "index_aggregation_feeds_on_aggregation_id"
