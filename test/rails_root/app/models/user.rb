@@ -38,6 +38,7 @@ class User < ActiveRecord::Base
   acts_as_muck_feed_owner
   acts_as_muck_aggregation_owner
   has_muck_recommendations
+  acts_as_muck_recommendation
   def feed_to
     self
   end

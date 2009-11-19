@@ -20,5 +20,5 @@ class PersonalRecommendation < ActiveRecord::Base
   named_scope :limited, lambda { |num| { :limit => num } }
   named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
   named_scope :newest, :order => "created_at DESC"
-  
+  named_scope :entries, :conditions => ['destination_type == Entry']
 end

@@ -11,9 +11,12 @@ module ActiveRecord
         # +has_muck_recommendations+ gives the class it is called on personalized recommendations
         def has_muck_recommendations
           has_many :personal_recommendations, :as => :personal_recommendable
-          has_many :recommended_resources, :through => :personal_recommendations, :source => :destination
         end
 
+        def acts_as_muck_recommendation
+          has_many :recommended_to, :as => :destination, :class_name => 'PersonalRecommendation'
+        end
+        
       end
 
     end

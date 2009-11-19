@@ -42,5 +42,6 @@ class UserTest < ActiveSupport::TestCase
     should_have_many :feeds
     should_have_many :own_feeds
     should_have_many :identity_feeds
+    
   end
 end
