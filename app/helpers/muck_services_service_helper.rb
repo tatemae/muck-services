@@ -8,8 +8,7 @@ module MuckServicesServiceHelper
 
   # Render personal recommendations
   def personal_recommendations(user, limit = 5)
-    recommendations = user.recommended_resources
-    render :partial => 'services/personal_recommendations', :locals => { :recommendations => recommendations }
+    render :partial => 'services/personal_recommendations', :locals => { :recommendations => user.personal_recommendations.limit(5) }
   end
   
   # Render a view with all services in categories.

@@ -54,7 +54,7 @@ class PersonalRecommendationTest < ActiveSupport::TestCase
       end
       context "limited" do
         should "only return a limited number of recommendations" do
-          assert_equal 1, @user.personal_recommendations.limited(1).length
+          assert_equal 1, @user.personal_recommendations.limit(1).length
         end
       end
       context "recent" do
@@ -76,7 +76,3 @@ class PersonalRecommendationTest < ActiveSupport::TestCase
     
   end
 end
-
-
-
-

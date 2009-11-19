@@ -36,6 +36,7 @@ class Entry < ActiveRecord::Base
   has_many :personal_recommendations, :as => :destination
   acts_as_commentable
   acts_as_taggable
+  acts_as_muck_recommendation
   
   @@default_time_on_page = 60.0
   
