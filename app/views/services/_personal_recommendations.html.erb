@@ -1,5 +1,5 @@
 <ul>
-<% recommendations.each do |r| %>
-    <li><%= r.destination.title %></li>
-<% end %>
+<% recommendations.each do |r| -%>
+  <li><%= link_to r.destination.title, r.destination %></li>
+<% end -%>
 </ul>    
