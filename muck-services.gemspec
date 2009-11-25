@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2009-11-18}
+  s.date = %q{2009-11-25}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -347,7 +347,6 @@ Gem::Specification.new do |s|
      "db/migrate/20090623181458_add_grain_size_to_entries.rb",
      "db/migrate/20090623193525_add_grain_size_to_tag_clouds.rb",
      "db/migrate/20090703175825_denormalize_entries_subjects.rb",
-     "db/migrate/20090704220055_create_slugs.rb",
      "db/migrate/20090716035935_change_tag_cloud_grain_sizes.rb",
      "db/migrate/20090717173900_add_contributor_to_feeds.rb",
      "db/migrate/20090717175825_normalize_entries_subjects.rb",
@@ -371,6 +370,7 @@ Gem::Specification.new do |s|
      "db/migrate/20091022150615_add_uri_key_to_services.rb",
      "db/migrate/20091115011828_add_aggregations_for_personal_recs.rb",
      "db/migrate/20091116094447_rename_action_table.rb",
+     "db/migrate/20091118203605_add_default_feed_type_to_aggregation_feed.rb",
      "lib/active_record/acts/muck_aggregation_owner.rb",
      "lib/active_record/acts/muck_feed_owner.rb",
      "lib/active_record/acts/muck_feed_parent.rb",
@@ -765,6 +765,9 @@ Gem::Specification.new do |s|
      "test/rails_root/db/migrate/20090924200750_add_uri_data_template_to_services.rb",
      "test/rails_root/db/migrate/20091006183742_add_feed_count_to_aggregation.rb",
      "test/rails_root/db/migrate/20091022150615_add_uri_key_to_services.rb",
+     "test/rails_root/db/migrate/20091115011828_add_aggregations_for_personal_recs.rb",
+     "test/rails_root/db/migrate/20091116094447_rename_action_table.rb",
+     "test/rails_root/db/migrate/20091118203605_add_default_feed_type_to_aggregation_feed.rb",
      "test/rails_root/db/schema.rb",
      "test/rails_root/features/step_definitions/common_steps.rb",
      "test/rails_root/features/step_definitions/visit_steps.rb",
@@ -793,6 +796,7 @@ Gem::Specification.new do |s|
      "test/rails_root/test/unit/feed_test.rb",
      "test/rails_root/test/unit/identity_feed_test.rb",
      "test/rails_root/test/unit/oai_endpoint_test.rb",
+     "test/rails_root/test/unit/personal_recommendation_test.rb",
      "test/rails_root/test/unit/service_category_test.rb",
      "test/rails_root/test/unit/service_test.rb",
      "test/rails_root/test/unit/services_mailer_test.rb",
