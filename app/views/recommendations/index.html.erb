@@ -1,4 +1,4 @@
-<% if @recommendations.results.blank? -%>
+<% if @recommendations.blank? || @recommendations.results.blank? -%>
   <%= t('muck.services.no_recommendations') %>
 <% else -%>
   <%= render :partial => 'entries/result', :collection => @recommendations.results -%>
