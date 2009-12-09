@@ -27,6 +27,8 @@ Rails::Initializer.run do |config|
   config.gem "river"
   config.gem "overlord"
   config.gem "friendly_id"
+  config.gem "sanitize"
+  config.gem "geokit"
   config.gem 'muck-engine', :lib => 'muck_engine'
   config.gem 'muck-users', :lib => 'muck_users'
   config.gem 'muck-comments', :lib => 'muck_comments'
