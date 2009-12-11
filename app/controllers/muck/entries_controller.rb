@@ -78,29 +78,30 @@ class Muck::EntriesController < ApplicationController
 
   protected
 
-  def _search operator = :or
-    @page = (params[:page] || 1).to_i
-    @per_page = (params[:per_page] || 10).to_i
-    @offset = (@page-1)*@per_page
-    if !@search.nil?
-      @term_list = URI.escape(@search) 
-      results = Entry.search(@search, @grain_size, I18n.locale.to_s, @per_page, @offset, operator)
-      @hit_count = results.total
-      @results = results.results
-      @paginated_results = @results.paginate(:page => @page, :per_page => @per_page, :total_entries => @hit_count)
-      log_query(current_user.nil? ? request.remote_addr : current_user.id, Language.locale_id, @tag_filter.nil? ? 'search' : 'browse', @search, @grain_size, @hit_count)
+    def _search operator = :or
+      @page = (params[:page] || 1).to_i
+      @per_page = (params[:per_page] || 10).to_i
+      @offset = (@page-1)*@per_page
+      if !@search.nil?
+        @term_list = URI.escape(@search)
+        results = Entry.search(@search, @grain_size, I18n.locale.to_s, @per_page, @offset, operator)
+        @hit_count = results.total
+        @results = results.results
+        @paginated_results = @results.paginate(:page => @page, :per_page => @per_page, :total_entries => @hit_count)
+        log_query(current_user.nil? ? request.remote_addr : current_user.id, Language.locale_id, @tag_filter.nil? ? 'search' : 'browse', @search, @grain_size, @hit_count)
+      end
+    rescue RuntimeError, MuckServices::Exceptions::LanguageNotSupported => ex
+      @hit_count = 0
+      @results = []
+      flash[:error] = t('muck.services.search_problem') + '<p class="support-information">Information for support: <br />' + ex.to_s + '</p>'
     end
-  rescue MuckServices::Exceptions::LanguageNotSupported => ex
-    @hit_count = 0
-    @results = []
-    flash[:error] = ex.to_s
-  end
   
-  def query_logger
-    @@query_logger ||= Logger.new("#{RAILS_ROOT}/log/queries_#{Date.today}.log")
-  end
+    def query_logger
+      @@query_logger ||= Logger.new("#{RAILS_ROOT}/log/queries_#{Date.today}.log")
+    end
   
-  def log_query(user_id, locale, search_type, query, grain_size, hits)
-    query_logger.info "#{Time.new.to_i},#{user_id},#{locale},#{search_type},\"#{query.gsub(/"/, '\\\\"')}\",#{grain_size},#{hits}"
-  end
+    def log_query(user_id, locale, search_type, query, grain_size, hits)
+      query_logger.info "#{Time.new.to_i},#{user_id},#{locale},#{search_type},\"#{query.gsub(/"/, '\\\\"')}\",#{grain_size},#{hits}"
+    end
+    
 end

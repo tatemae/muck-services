@@ -211,6 +211,7 @@ en:
       explore: "Search for {{topic}}"
       language_not_supported: The requested language is not supported
       get_recommendations: Get Recommendations
+      search_problem: "There was a problem with your search.  Please review your search criteria and try again."
       comment_entries_count:
         one: "1 Comment"
         other: "{{count}} Comments"
