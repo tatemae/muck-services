@@ -24,6 +24,11 @@ module ActiveRecord
       end
       
       module InstanceMethods
+        
+        # Override this method to define whether or not a user can add feeds.
+        def can_add_feeds?
+          false
+        end
       end
       
     end

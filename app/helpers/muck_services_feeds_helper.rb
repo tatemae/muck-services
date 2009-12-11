@@ -17,7 +17,7 @@ module MuckServicesFeedsHelper
       admin = Feed.find_by_login('admin')
       'unknown'
     else
-      link_to feed.contributor.display_name, user_path(feed.contributor_id)
+      link_to feed.contributor.display_name, profile_path(feed.contributor)
     end
   end
 
