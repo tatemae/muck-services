@@ -73,7 +73,7 @@ class Muck::EntriesController < ApplicationController
   def collections
     @feeds = Feed.find(:all, :order => "harvested_from_title, title")
     @languages = Language.find(:all, :order => "name")
-    render :template => "documents/collections", :layout => "default"
+    render :template => "entries/collections", :layout => "default"
   end
 
   protected
