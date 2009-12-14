@@ -29,44 +29,10 @@ class AggregationTest < ActiveSupport::TestCase
     should_have_many :aggregation_feeds
     should_have_many :feeds
 
-    context "named scope" do
-      context "by_title" do
-        setup do
-          Aggregation.delete_all
-          @first = Factory(:aggregation, :title => 'a')
-          @second = Factory(:aggregation, :title => 'b')
-        end
-        should "sort by title" do
-          assert_equal @first, Aggregation.by_title[0]
-          assert_equal @second, Aggregation.by_title[1]
-        end    
-      end
-      context "recent" do
-        setup do
-          Aggregation.delete_all
-          @recent = Factory(:aggregation)
-          @not_recent = Factory(:aggregation, :created_at => 10.weeks.ago)
-        end
-        should "get recent aggregations" do
-          assert Aggregation.recent.include?(@recent)
-        end
-        should "not get recent aggregations" do
-          assert !Aggregation.recent.include?(@not_recent)
-        end
-      end
-      context "newest" do
-        setup do
-          Aggregation.delete_all
-          @first = Factory(:aggregation, :created_at => 1.day.ago)
-          @second = Factory(:aggregation, :created_at => 1.week.ago)
-        end
-        should "sort by created_at" do
-          assert_equal @first, Aggregation.newest[0]
-          assert_equal @second, Aggregation.newest[1]
-        end
-      end
-    end
-  
+    should_scope_by_title
+    should_scope_recent
+    should_scope_newest
+
     context "filter feed types" do
       setup do
         build_music_service

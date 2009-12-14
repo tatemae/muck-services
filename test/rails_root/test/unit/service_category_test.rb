@@ -13,7 +13,7 @@ class ServiceCategoryTest < ActiveSupport::TestCase
 
   context "service category instance" do
     should_have_many :services
-    should_have_named_scope :sorted
+    should_scope_sorted
   end
   
 end

@@ -53,11 +53,12 @@ class FeedTest < ActiveSupport::TestCase
     
     should_validate_presence_of :uri
     
-    should_have_named_scope :by_newest
+    should_scope_by_title
+    should_scope_recent
+    should_scope_by_newest
+    
     should_have_named_scope :banned
     should_have_named_scope :valid
-    should_have_named_scope :by_title
-    should_have_named_scope :recent
     
     should "set 24 hours as default interval" do
       assert_equal @feed.harvest_interval_hours, 24

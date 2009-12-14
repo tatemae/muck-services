@@ -31,6 +31,7 @@ Rails::Initializer.run do |config|
   config.gem "geokit"
   config.gem 'muck-engine', :lib => 'muck_engine'
   config.gem 'muck-users', :lib => 'muck_users'
+  config.gem 'muck-profiles', :lib => 'muck_profiles'
   config.gem 'muck-comments', :lib => 'muck_comments'
   config.gem 'muck-activities', :lib => 'muck_activities'
   config.gem 'muck-shares', :lib => 'muck_shares'

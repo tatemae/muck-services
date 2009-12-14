@@ -24,11 +24,24 @@ require File.dirname(__FILE__) + '/../test_helper'
 class ServiceTest < ActiveSupport::TestCase
 
   context "service instance" do
-    
+
     should_belong_to :service_category
-    should_have_named_scope :sorted
-    should_have_named_scope :identity_services
-    should_have_named_scope :tag_services
+    should_scope_sorted
+    
+    context "named scope" do
+      context "identity_services" do
+        # named_scope :identity_services, :conditions => ['use_for = ?', 'identity']
+      end
+      context "tag_services" do
+        #     named_scope :tag_services, :conditions => ['use_for = ?', 'tags']
+      end
+      context "sorted_id" do
+        # named_scope :sorted_id, :order => "id ASC"
+      end
+      context "photo_services" do
+        #     named_scope :photo_services, :conditions => ["service_categories.id = services.service_category_id AND service_categories.name = 'Photos'"], :include => ['service_category']
+      end
+    end
     
     context "photos" do
       setup do
