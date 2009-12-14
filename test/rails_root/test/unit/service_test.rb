@@ -31,15 +31,55 @@ class ServiceTest < ActiveSupport::TestCase
     context "named scope" do
       context "identity_services" do
         # named_scope :identity_services, :conditions => ['use_for = ?', 'identity']
+        setup do
+          @service = Factory(:service, :use_for => 'identity')
+          @service_not = Factory(:service, :use_for => 'not')
+        end
+        should "find services that have use_for=='identity_services'" do
+          assert Service.identity_services.include?(@service)
+        end
+        should "not find services that where use_for!='identity_services'" do
+          assert !Service.identity_services.include?(@service_not)
+        end
       end
       context "tag_services" do
-        #     named_scope :tag_services, :conditions => ['use_for = ?', 'tags']
+        # named_scope :tag_services, :conditions => ['use_for = ?', 'tags']
+        setup do
+          @service = Factory(:service, :use_for => 'tags')
+          @service_not = Factory(:service, :use_for => 'not')
+        end
+        should "find services that have use_for=='tags'" do
+          assert Service.tag_services.include?(@service)
+        end
+        should "not find services that where use_for!='tags'" do
+          assert !Service.tag_services.include?(@service_not)
+        end
       end
       context "sorted_id" do
         # named_scope :sorted_id, :order => "id ASC"
+        setup do
+          Service.delete_all
+          @first = Factory(:service)
+          @second = Factory(:service)
+        end
+        should "sort by 'sort' field" do
+          assert_equal @first, Service.sorted_id[0]
+          assert_equal @second, Service.sorted_id[1]
+        end
       end
       context "photo_services" do
-        #     named_scope :photo_services, :conditions => ["service_categories.id = services.service_category_id AND service_categories.name = 'Photos'"], :include => ['service_category']
+        # named_scope :photo_services, :conditions => ["service_categories.id = services.service_category_id AND service_categories.name = 'Photos'"], :include => ['service_category']
+        setup do
+          @service_category = Factory(:service_category, :name => 'Photos')
+          @service = Factory(:service, :service_category => @service_category)
+          @service_not = Factory(:service)
+        end
+        should "find services that have 'Photos' for a service category" do
+          assert Service.photo_services.include?(@service)
+        end
+        should "not find services that don't have 'Photos' for a service category" do
+          assert !Service.photo_services.include?(@service_not)
+        end
       end
     end
     
