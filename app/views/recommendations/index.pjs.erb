@@ -36,7 +36,7 @@ for(nRec = 0; nRec < recs.length; nRec++) {
 	document.write(' <span class="oer_recommender_published_at">(' + format_date(r.published_at) + ')</span>');
 	document.write(' <span class="oer_recommender_relevance_score"><%= t('muck.services.relevance')%>: ' + Math.round(r.relevance*100)/100 + '</span>');
 	document.write('<br/><span class="oer_recommender_description">' + truncate(r.description) + '</span>');
-	document.write('<br/><span class="oer_recommender_uri">' + r.uri + '</span>');
+	document.write('<br/><span class="oer_recommender_uri">' + r.permalink + '</span>');
 <% end -%>	
 	document.write('</a></p>');
 }
