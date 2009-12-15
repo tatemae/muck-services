@@ -26,6 +26,7 @@ document.write('<div class="oer_recommender_list">');
 for(nRec = 0; nRec < recs.length; nRec++) {
 	r = recs[nRec].entry;
     if (r == null) r = recs[nRec].attributes;
+    if (r == null) r = recs[nRec];
 	metadata_link = catalog_page && document_host == r.uri.substring(0, document_host.length);
 	direct_link = metadata_link && r.direct_link;
 	document.write('<p class="oer_recommender_item">');
