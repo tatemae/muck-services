@@ -35,9 +35,7 @@ class OaiEndpointTest < ActiveSupport::TestCase
     should_scope_by_title
     should_scope_recent
     should_scope_by_newest
-    should_have_named_scope :banned
-    should_have_named_scope :valid
-    
+
     context "named scope" do
       context "banned" do
         # named_scope :banned, :conditions => ["status = ?", MuckServices::Status::BANNED]

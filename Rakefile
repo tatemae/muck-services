@@ -3,6 +3,9 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
 
+desc 'Default: run unit tests.'
+task :default => :test
+
 desc 'Translate this gem'
 task :translate do
   file = File.join(File.dirname(__FILE__), 'locales', 'en.yml')
@@ -34,9 +37,6 @@ Rake::TestTask.new(:test) do |t|
   t.pattern = 'test/rails_root/test/**/*_test.rb'
   t.verbose = true
 end
-
-task :test => :check_dependencies
-task :default => :test
 
 begin
   require 'jeweler'

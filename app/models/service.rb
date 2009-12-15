@@ -230,7 +230,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database  
   def self.get_photo_services(refresh_services = false)
     @photo_services = nil if refresh_services
-    @photo_services ||= get_services(refresh_services).find_all{|service| service.service_category.name == 'Photos' }
+    @photo_services ||= get_services(refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Photos' }
   end
   
   # Get all video services
@@ -239,7 +239,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_video_services(refresh_services = false)
     @video_services = nil if refresh_services
-    @video_services ||= get_services(refresh_services).find_all{|service| service.service_category.name == 'Videos' }
+    @video_services ||= get_services(refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Videos' }
   end
   
   # Get all bookmark services
@@ -248,7 +248,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_bookmark_services(refresh_services = false)
     @bookmark_services = nil if refresh_services
-    @bookmark_services ||= get_services(refresh_services).find_all{|service| service.service_category.name == 'Bookmarks' }
+    @bookmark_services ||= get_services(refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Bookmarks' }
   end
   
   # Get all music services
@@ -257,7 +257,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_music_services(refresh_services = false)
     @music_services = nil if refresh_services
-    @music_services ||= get_services(refresh_services).find_all{|service| service.service_category.name == 'Music' }
+    @music_services ||= get_services(refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Music' }
   end
 
   # Get all news services
@@ -266,7 +266,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_news_services(refresh_services = false)
     @news_services = nil if refresh_services
-    @news_services ||= get_services(refresh_services).find_all{|service| service.service_category.name == 'News' }
+    @news_services ||= get_services(refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'News' }
   end
   
   # Get all blog services
@@ -275,7 +275,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_blog_services(refresh_services = false)
     @blog_services = nil if refresh_services
-    @blog_services ||= get_services(refresh_services).find_all{|service| service.service_category.name == 'Blogging' }
+    @blog_services ||= get_services(refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Blogging' }
   end
   
   # Get all search services
@@ -284,7 +284,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_search_services(refresh_services = false)
     @search_services = nil if refresh_services
-    @search_services ||= get_services(refresh_services).find_all{|service| service.service_category.name == 'Search' }
+    @search_services ||= get_services(refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Search' }
   end
   
   # Get all general services. These are all services except photo, video, bookmark and music.
@@ -304,7 +304,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_photo_tag_services(refresh_services = false)
     @photo_services = nil if refresh_services
-    @photo_services ||= get_tag_services(nil, refresh_services).find_all{|service| service.service_category.name == 'Photos' }
+    @photo_services ||= get_tag_services(nil, refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Photos' }
   end
 
   # Get all video services that are used to generate tag feeds
@@ -313,7 +313,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database  
   def self.get_video_tag_services(refresh_services = false)
     @video_services = nil if refresh_services
-    @video_services ||= get_tag_services(nil, refresh_services).find_all{|service| service.service_category.name == 'Videos' }
+    @video_services ||= get_tag_services(nil, refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Videos' }
   end
   
   # Get all bookmark services that are used to generate tag feeds
@@ -322,7 +322,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_bookmark_tag_services(refresh_services = false)
     @bookmark_services = nil if refresh_services
-    @bookmark_services ||= get_tag_services(nil, refresh_services).find_all{|service| service.service_category.name == 'Bookmarks' }
+    @bookmark_services ||= get_tag_services(nil, refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Bookmarks' }
   end
   
   # Get all music services that are used to generate tag feeds
@@ -331,7 +331,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_music_tag_services(refresh_services = false)
     @music_services = nil if refresh_services
-    @music_services ||= get_tag_services(nil, refresh_services).find_all{|service| service.service_category.name == 'Music' }
+    @music_services ||= get_tag_services(nil, refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Music' }
   end
   
   # Get all news services that are used to generate tag feeds
@@ -340,7 +340,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_news_tag_services(refresh_services = false)
     @news_services = nil if refresh_services
-    @news_services ||= get_tag_services(nil, refresh_services).find_all{|service| service.service_category.name == 'News' }
+    @news_services ||= get_tag_services(nil, refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'News' }
   end
   
   # Get all blog services that are used to generate tag feeds
@@ -349,7 +349,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_blog_tag_services(refresh_services = false)
     @blog_services = nil if refresh_services
-    @blog_services ||= get_tag_services(nil, refresh_services).find_all{|service| service.service_category.name == 'Blogging' }
+    @blog_services ||= get_tag_services(nil, refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Blogging' }
   end
   
   # Get all search services that are used to generate tag feeds
@@ -358,7 +358,7 @@ class Service < ActiveRecord::Base
   #                       will result in the values being repopulated from the database
   def self.get_search_tag_services(refresh_services = false)
     @search_services = nil if refresh_services
-    @search_services ||= get_tag_services(nil, refresh_services).find_all{|service| service.service_category.name == 'Search' }
+    @search_services ||= get_tag_services(nil, refresh_services).find_all{|service| !service.service_category.blank? && service.service_category.name == 'Search' }
   end
   
   # Get all general services that are used to generate tag feeds
