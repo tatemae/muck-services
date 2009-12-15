@@ -54,6 +54,7 @@ en:
       all_resources: All Resources
       only_courses: Only Courses
       add_feed: Add
+      feed_display_address: 'Feed Url'
       add_feed_url: "Url:"
       discover_feed_message: "Searching for information about the url you provided.  Please wait."
       select_feeds_prompt: "Select the feeds you would like to add:"
@@ -211,6 +212,7 @@ en:
       explore: "Search for {{topic}}"
       language_not_supported: The requested language is not supported
       get_recommendations: Get Recommendations
+      search_problem: "There was a problem with your search.  Please review your search criteria and try again."
       comment_entries_count:
         one: "1 Comment"
         other: "{{count}} Comments"

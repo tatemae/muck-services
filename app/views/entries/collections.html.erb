@@ -20,7 +20,7 @@
 	<%= link_to feed.title, feed_query_uri(feed), :rel => "nofollow" %>
 	<span class="harvest_time">
 		(feed_id = <%= feed.id.to_s %>)
-		(<%= feed.entries_count %> record<%= feed.entries_count == 1 ? "" : "s" %>) harvested on <%= feed.last_harvested_at.strftime("%d %b %Y") %>
+		(<%= feed.entries_count %> record<%= feed.entries_count == 1 ? "" : "s" %>) harvested on <%= feed.last_harvested_at.strftime("%d %b %Y") if feed.last_harvested_at -%>
 	</span>
 </li>
 <% end %>

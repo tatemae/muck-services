@@ -99,6 +99,7 @@ class Muck::FeedsController < ApplicationController
     def has_permission_to_add_feed(user, parent)
       return false if user.blank?
       return true if user.admin?
+      return true if user.can_add_feeds?
       return false if parent.blank?
       user == parent || parent.can_add_feed?(user)
     end

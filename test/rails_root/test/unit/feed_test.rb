@@ -53,11 +53,9 @@ class FeedTest < ActiveSupport::TestCase
     
     should_validate_presence_of :uri
     
-    should_have_named_scope :by_newest
-    should_have_named_scope :banned
-    should_have_named_scope :valid
-    should_have_named_scope :by_title
-    should_have_named_scope :recent
+    should_scope_by_title
+    should_scope_recent
+    should_scope_by_newest
     
     should "set 24 hours as default interval" do
       assert_equal @feed.harvest_interval_hours, 24
@@ -66,6 +64,35 @@ class FeedTest < ActiveSupport::TestCase
     should "set harvest interval by hours" do
       @feed.harvest_interval_hours = 10
       assert_equal @feed.harvest_interval, 10 * 3600
+    end
+    
+    context "named scope" do
+      context "banned" do
+        # named_scope :banned, :conditions => ["status = ?", MuckServices::Status::BANNED]
+        setup do
+          @feed = Factory(:feed, :status => MuckServices::Status::BANNED)
+          @feed_not = Factory(:feed)
+        end
+        should "find feeds that are banned" do
+          assert Feed.banned.include?(@feed)
+        end
+        should "not find feeds that are not banned" do
+          assert !Feed.banned.include?(@feed_not)
+        end
+      end
+      context "valid" do
+        # named_scope :valid, :conditions => "status >= 0", :include => [:default_language]
+        setup do
+          @feed = Factory(:feed, :status => 0)
+          @feed_not = Factory(:feed, :status => MuckServices::Status::BANNED)
+        end
+        should "find valid feeds" do
+          assert Feed.valid.include?(@feed)
+        end
+        should "not find invalid feeds" do
+          assert !Feed.valid.include?(@feed_not)
+        end
+      end
     end
     
   end

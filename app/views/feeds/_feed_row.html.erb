@@ -24,6 +24,6 @@
     <%= link_to h(feed_row.title || feed_row.display_uri), feed_path(feed_row) %>
     <% if feed_row.display_uri != feed_row.uri %><%= link_to image_tag('icons/external.png'), feed_row.display_uri, :target => '_blank' %><% end %>
   </td>
-  <td><%= feed_row.last_harvested_at.strftime('%d %b at %H:%M') %></td>
-  <td><%= feed_row.created_at.strftime('%d %b %y') %></td>
+  <td><%= feed_row.last_harvested_at.strftime('%d %b at %H:%M') if feed_row.last_harvested_at %></td>
+  <td><%= feed_row.created_at.strftime('%d %b %y') if feed_row.created_at %></td>
 </tr>
