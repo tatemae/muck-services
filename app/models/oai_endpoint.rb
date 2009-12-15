@@ -14,18 +14,6 @@
 #  created_at          :datetime
 #  updated_at          :datetime
 #
-
-# == Schema Information
-#
-# Table name: oai_endpoints
-#
-#  id              :integer(4)      not null, primary key
-#  uri             :string(2083)
-#  display_uri     :string(2083)
-#  metadata_prefix :string(255)
-#  title           :string(1000)
-#  short_title     :string(100)
-#
 class OaiEndpoint < ActiveRecord::Base
   
   belongs_to :contributor, :class_name => 'User', :foreign_key => 'contributor_id'
@@ -33,7 +21,7 @@ class OaiEndpoint < ActiveRecord::Base
   
   validates_presence_of :uri
   
-  named_scope :banned, :conditions => "status < 0"
+  named_scope :banned, :conditions => ["status = ?", MuckServices::Status::BANNED]
   named_scope :valid, :conditions => "status >= 0"
   named_scope :by_title, :order => "title ASC"
   named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }

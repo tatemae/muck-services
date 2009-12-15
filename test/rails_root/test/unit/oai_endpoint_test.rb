@@ -38,19 +38,48 @@ class OaiEndpointTest < ActiveSupport::TestCase
     should_have_named_scope :banned
     should_have_named_scope :valid
     
+    context "named scope" do
+      context "banned" do
+        # named_scope :banned, :conditions => ["status = ?", MuckServices::Status::BANNED]
+        setup do
+          @oai_endpoint = Factory(:oai_endpoint, :status => MuckServices::Status::BANNED)
+          @oai_endpoint_not = Factory(:oai_endpoint)
+        end
+        should "find oai_endpoints that are banned" do
+          assert OaiEndpoint.banned.include?(@oai_endpoint)
+        end
+        should "not find oai_endpoints that are not banned" do
+          assert !OaiEndpoint.banned.include?(@oai_endpoint_not)
+        end
+      end
+      context "valid" do
+        # named_scope :valid, :conditions => "status >= 0", :include => [:default_language]
+        setup do
+          @oai_endpoint = Factory(:oai_endpoint, :status => 0)
+          @oai_endpoint_not = Factory(:oai_endpoint, :status => MuckServices::Status::BANNED)
+        end
+        should "find valid oai_endpoints" do
+          assert OaiEndpoint.valid.include?(@oai_endpoint)
+        end
+        should "not find invalid oai_endpoints" do
+          assert !OaiEndpoint.valid.include?(@oai_endpoint_not)
+        end
+      end
+    end
+    
   end
   
   context "banned/unbanned" do
     setup do
-      @feed = Factory(:feed)
+      @oai_endpoint = Factory(:oai_endpoint)
     end
     should "be banned" do
-      @feed.status = -1
-      assert @feed.banned?
+      @oai_endpoint.status = -1
+      assert @oai_endpoint.banned?
     end
     should "not be banned" do
-      @feed.status = 0
-      assert !@feed.banned?
+      @oai_endpoint.status = 0
+      assert !@oai_endpoint.banned?
     end
   end
   
