@@ -78,8 +78,10 @@ muck-services uses muck-comments and muck-activities to add comments to entries 
 muck-services also uses muck-shares and muck-activities to share entries with other users.  Again you can omit these gems if you don't desire the share capability.
 
 To turn on this functionality add these lines to your global_config.yml file:
-  enable_raker_comments: true
-  enable_raker_shares: true
+  inform_admin_of_global_feed: true   # If true then the 'admin_email' will recieve an email anytime a global feed (one that is not 
+                                      # attached to any object) is added.
+  enable_services_comments: true      # Enables or disables comments in the frame that wraps content as a user browses recommendation results
+  enable_services_shares: true        # Enables or disables sharing in the frame that wraps content as a user browses recommendation results
 
 To install these gems:
   sudo gem install muck-comments
