@@ -1,6 +1,6 @@
 <%
 @json_recommendations = @entry.json_recommendations(@limit, params[:order] || "mixed", true, params[:omit_feeds] || nil) 
-if !@json_recommendations.nil? 
+if !@json_recommendations.empty? 
 @direct_link_text = params[:direct_link_text] || t('muck.services.direct_link')
 %>
 var catalog_page = <%= !@entry.direct_link.nil? and @uri == @entry.permalink %>;
@@ -26,6 +26,7 @@ document.write('<div class="oer_recommender_list">');
 for(nRec = 0; nRec < recs.length; nRec++) {
 	r = recs[nRec].entry;
     if (r == null) r = recs[nRec].attributes;
+    if (r == null) r = recs[nRec];
 	metadata_link = catalog_page && document_host == r.uri.substring(0, document_host.length);
 	direct_link = metadata_link && r.direct_link;
 	document.write('<p class="oer_recommender_item">');
@@ -35,11 +36,11 @@ for(nRec = 0; nRec < recs.length; nRec++) {
 	document.write(' <span class="oer_recommender_published_at">(' + format_date(r.published_at) + ')</span>');
 	document.write(' <span class="oer_recommender_relevance_score"><%= t('muck.services.relevance')%>: ' + Math.round(r.relevance*100)/100 + '</span>');
 	document.write('<br/><span class="oer_recommender_description">' + truncate(r.description) + '</span>');
-	document.write('<br/><span class="oer_recommender_uri">' + r.uri + '</span>');
+	document.write('<br/><span class="oer_recommender_uri">' + r.permalink + '</span>');
 <% end -%>	
 	document.write('</a></p>');
 }
 document.write('</div>');	
-<% if params[:more_link] %>document.write('<div class="oer_recommender_more_link"><a href="' + app + 'documents/<%= @entry.id %>"><%= t('muck.services.gm_more_prompt') %></a></div>');<% end %>	
+<% if params[:more_link] %>document.write('<div class="oer_recommender_more_link"><a href="' + app + 'resources/<%= @entry.id %>"><%= t('muck.services.gm_more_prompt') %></a></div>');<% end %>
 document.write('</div>');	
 <% end %>

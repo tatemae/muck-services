@@ -46,10 +46,6 @@ class Entry < ActiveRecord::Base
     self.direct_link.nil? ? self.permalink : self.direct_link
   end
   
-  def self.top_tags(tags = nil)
-    
-  end
-  
   def self.search(search_terms, grain_size = nil, language = "en", limit = 10, offset = 0, operator = :or)
     raise MuckServices::Exceptions::LanguageNotSupported, I18n.t('muck.services.language_not_supported') unless Recommender::Languages.supported_languages.include?(language)
     query = ((!grain_size.nil? && grain_size != 'all') ? (search_terms + ") AND (grain_size:#{grain_size}") : search_terms) + ") AND (aggregation:#{Aggregation.global_feeds_id}"
@@ -63,19 +59,6 @@ class Entry < ActiveRecord::Base
     Entry.find(:first, :conditions => ['permalink = ? OR direct_link = ?', uri, uri], :order => 'direct_link IS NULL DESC') || Entry.new(:permalink => uri)
   end
   
-  def recommendations(limit = 20, order = "relevance", details = false, omit_feeds = nil)
-    sql = "SELECT recommendations.id, dest_entry_id, entries.permalink, entries.title, entries.description, entries.direct_link, feeds.short_title AS collection "
-    sql << ", relevance_calculated_at, relevance, clicks, avg_time_at_dest AS avg_time_on_target, author, published_at " if details == true
-    sql << "FROM recommendations "
-    sql << "INNER JOIN entries ON recommendations.dest_entry_id = entries.id "
-    sql << "INNER JOIN feeds ON entries.feed_id = feeds.id "
-    sql << "WHERE recommendations.entry_id = ? "
-    sql << ("AND entries.feed_id NOT IN (" + omit_feeds.gsub(/[^0-9,]/,'') + ") ") if omit_feeds != nil
-    sql << "ORDER BY " + order + " DESC "
-    sql << "LIMIT " + limit.to_s
-    Entry.find_by_sql([sql,self.id])
-  end
-
   def recommendation_entries(limit = 20, order = "relevance", details = false, omit_feeds = nil)
     sql = "SELECT recommendations.dest_entry_id AS id, entries.permalink, entries.title, entries.description, entries.direct_link, feeds.short_title AS collection "
     sql << ", relevance_calculated_at, relevance, clicks, avg_time_at_dest AS avg_time_on_target, author, published_at " if details == true
@@ -89,90 +72,26 @@ class Entry < ActiveRecord::Base
     Entry.find_by_sql([sql,self.id])
   end
 
-  def self.track_time_on_page(session, uri)
-    recommendation_id = session[:last_clicked_recommendation]
-    if !recommendation_id.nil?
-      time_on_page = (Time.now - session[:last_clicked_recommendation_time].to_f).to_i
-      
-      # if they spend longer than two minutes on a page, we don't infer anything
-      if time_on_page > 5 and time_on_page < 120
-        if normalized_uri(uri) != session[:last_clicked_recommendation_uri] 
-          recommendation = Recommendation.find(recommendation_id)
-          entry = Entry.find(recommendation.entry_id)
-          new_avg = (recommendation.avg_time_at_dest*recommendation.clicks - @@default_time_on_page + time_on_page)/recommendation.clicks
-          recommendation.avg_time_at_dest = new_avg
-          recommendation.save!
-          entry.rank_recommendations
-          session[:last_clicked_recommendation] = nil
-        end
-      else
-        session[:last_clicked_recommendation] = nil if time_on_page > 5
-      end
-    end
-  end
-  
-  def self.avg_time(clicks, old_avg, time_on_page)
-    return (old_avg*(clicks-1) + time_on_page)/clicks
-  end
-
-  def self.track_click(session, recommendation_id, referrer, redirect_type = "direct_link", requester = "unknown", user_agent = "unknown")
-    # look up the recommendation
-    recommendation = Recommendation.find(recommendation_id)
-    return "" if !recommendation
-    
-    # get the entries being linked from and to
-    entry = Entry.find(recommendation.entry_id)
-    target = Entry.find(recommendation.dest_entry_id)
-    
-    # get the list of recommendations that have been clicked during this session
-    clicks = session[:rids] || Array.new
-    
-    # redirect to our frame page
-    redirect = "/visits/#{recommendation.dest_entry_id}"
-    
-    # track the time on the last page
-    track_time_on_page(session, redirect)
-    
-    # if this is first time the user clicked on this recommendation during this session 
-    if !clicks.include?(recommendation_id)
-      
-      # add this recommendation to the end of the list 
-      clicks << recommendation_id
-      session[:rids] = clicks
-      
-      # update the click time
-      recommendation.avg_time_at_dest = ((recommendation.avg_time_at_dest*recommendation.clicks) + @@default_time_on_page)/(recommendation.clicks + 1) 
-      recommendation.clicks += 1 
-      recommendation.save!
-      
-      # store info about this click in the session
-      now = Time.now
-      session[:last_clicked_recommendation] = recommendation_id
-      session[:last_clicked_recommendation_time] = now
-      session[:last_clicked_recommendation_uri] = redirect
-
-      # update the recommendation cache for the entry
-      entry.rank_recommendations if entry
-      
-      # track the click in the db
-      Click.create(:recommendation_id => recommendation_id, :when => now, :referrer => referrer, :requester => requester, :user_agent => user_agent)
-    end
-    
-    return redirect   
+  def recommendations(limit = 20, order = "relevance", details = false, omit_feeds = nil)
+    sql = "SELECT recommendations.id, dest_entry_id, entries.permalink, entries.title, entries.description, entries.direct_link, feeds.short_title AS collection "
+    sql << ", relevance_calculated_at, relevance, clicks, avg_time_at_dest AS avg_time_on_target, author, published_at " if details == true
+    sql << "FROM recommendations "
+    sql << "INNER JOIN entries ON recommendations.dest_entry_id = entries.id "
+    sql << "INNER JOIN feeds ON entries.feed_id = feeds.id "
+    sql << "WHERE recommendations.entry_id = ? "
+    sql << ("AND entries.feed_id NOT IN (" + omit_feeds.gsub(/[^0-9,]/,'') + ") ") if omit_feeds != nil
+    sql << "ORDER BY " + order + " DESC "
+    sql << "LIMIT " + limit.to_s
+    Entry.find_by_sql([sql,self.id])
   end
 
   def relevant_recommendations(limit = 5, order = "relevance", details = false, omit_feeds = nil)
     return self.recommendations(limit, order, details, omit_feeds)
   end
 
-  def self.truncate_words(text, length = 30, end_string = ' ...')
-    words = text.split()
-    words[0..(length-1)].join(' ') + (words.length > length ? end_string : '')
-  end
-
   def ranked_recommendations(limit = 5, order = "mixed", details = false, omit_feeds = nil)
-    return relevant_recommendations(limit, "clicks DESC, relevance", details, omit_feeds) if order == "clicks"
-    return relevant_recommendations(limit, "relevance", details, omit_feeds) if (order == "relevance" || details == true)
+    return self.recommendations(limit, "clicks DESC, relevance", details, omit_feeds) if order == "clicks"
+    return self.recommendations(limit, "relevance", details, omit_feeds) if (order == "relevance" || details == true)
     return relevant_recommendations_filtered(limit, details, omit_feeds) if omit_feeds != nil
 
     recs = []
@@ -190,6 +109,11 @@ class Entry < ActiveRecord::Base
     return recs
   end
   
+  def json_recommendations(limit = 5, order = "mixed", details = false, omit_feeds = nil)
+    recs = ranked_recommendations(limit, order, details, omit_feeds)
+    (recs.nil? || recs.empty?) ? "" : ActiveSupport::JSON.encode(recs)
+  end
+
   def relevant_recommendations_filtered(limit, details, omit_feeds)
     # get recommendations for the entry from the recommendations table
     recs = self.recommendations(limit, "mixed", details, omit_feeds)
@@ -222,10 +146,6 @@ class Entry < ActiveRecord::Base
     return (popular_recs + relevant_recs + other_recs)[0..limit]
   end
 
-  def json_recommendations(limit = 5, order = "mixed", details = false, omit_feeds = nil)
-    ActiveSupport::JSON.encode(ranked_recommendations(limit, order, details, omit_feeds))
-  end
-  
   def rank_recommendations
     return
     # get recommendations for the entry from the recommendations table
@@ -304,6 +224,83 @@ class Entry < ActiveRecord::Base
     return threshold > 5 ? threshold : 5
   end
   
+  def self.avg_time(clicks, old_avg, time_on_page)
+    return (old_avg*(clicks-1) + time_on_page)/clicks
+  end
+
+  def self.track_time_on_page(session, uri)
+    recommendation_id = session[:last_clicked_recommendation]
+    if !recommendation_id.nil?
+      time_on_page = (Time.now - session[:last_clicked_recommendation_time].to_f).to_i
+
+      # if they spend longer than two minutes on a page, we don't infer anything
+      if time_on_page > 5 and time_on_page < 120
+        if normalized_uri(uri) != session[:last_clicked_recommendation_uri]
+          recommendation = Recommendation.find(recommendation_id)
+          entry = Entry.find(recommendation.entry_id)
+          new_avg = (recommendation.avg_time_at_dest*recommendation.clicks - @@default_time_on_page + time_on_page)/recommendation.clicks
+          recommendation.avg_time_at_dest = new_avg
+          recommendation.save!
+          entry.rank_recommendations
+          session[:last_clicked_recommendation] = nil
+        end
+      else
+        session[:last_clicked_recommendation] = nil if time_on_page > 5
+      end
+    end
+  end
+
+  def self.track_click(session, recommendation_id, referrer, redirect_type = "direct_link", requester = "unknown", user_agent = "unknown")
+    # look up the recommendation
+    recommendation = Recommendation.find(recommendation_id)
+    return "" if !recommendation
+
+    # get the entries being linked from and to
+    entry = Entry.find(recommendation.entry_id)
+    target = Entry.find(recommendation.dest_entry_id)
+
+    # get the list of recommendations that have been clicked during this session
+    clicks = session[:rids] || Array.new
+
+    # redirect to our frame page
+    redirect = "/visits/#{recommendation.dest_entry_id}"
+
+    # track the time on the last page
+    track_time_on_page(session, redirect)
+
+    # if this is first time the user clicked on this recommendation during this session
+    if !clicks.include?(recommendation_id)
+
+      # add this recommendation to the end of the list
+      clicks << recommendation_id
+      session[:rids] = clicks
+
+      # update the click time
+      recommendation.avg_time_at_dest = ((recommendation.avg_time_at_dest*recommendation.clicks) + @@default_time_on_page)/(recommendation.clicks + 1)
+      recommendation.clicks += 1
+      recommendation.save!
+
+      # store info about this click in the session
+      now = Time.now
+      session[:last_clicked_recommendation] = recommendation_id
+      session[:last_clicked_recommendation_time] = now
+      session[:last_clicked_recommendation_uri] = redirect
+
+      # update the recommendation cache for the entry
+      entry.rank_recommendations if entry
+
+      # track the click in the db
+      Click.create(:recommendation_id => recommendation_id, :when => now, :referrer => referrer, :requester => requester, :user_agent => user_agent)
+    end
+
+    return redirect
+  end
+
+  def self.truncate_words(text, length = 30, end_string = ' ...')
+    words = text.split()
+    words[0..(length-1)].join(' ') + (words.length > length ? end_string : '')
+  end
+
   protected
   
 #  def self.redirect_uri(target, referrer, redirect_type)
