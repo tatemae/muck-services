@@ -37,23 +37,12 @@ module MuckServicesServiceHelper
   def services_for_user_edit(identity_feeds, title = nil, css = '')
     render :partial => 'identity_feeds/services_for_user', :locals => { :identity_feeds => identity_feeds, :css => css, :title => title, :edit => true }
   end
-  
-  # Renders an icon for the given service
-  # Name is the name of the image file associated with the service
-  # Size can be one of 16, 24, 48 or 60.
-  def service_icon(name, size = 24)
-    %Q{<img src="/images/service_icons/#{size}/#{name}" />}
-  end
-  
-  def service_image(name, size = 24)
-    %Q{/images/service_icons/#{size}/#{name}}
-  end
-  
+
   # Renders name and icon for the service
   def service_title(service)
     %Q{<div class="identity-service-title" #{service_icon_background(service)}>#{service_prompt(service)}</div>}
   end
-  
+    
   # By default renders Service username e.g. Flickr username
   # If the service has a 'prompt' set it will look for a value in the localization
   # files.  For example, setting service.prompt to 'blog_url' will cause this method
