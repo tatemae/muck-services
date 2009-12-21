@@ -96,10 +96,6 @@ module MuckServicesServiceHelper
     end
   end
   
-  def service_icon_background(service)
-    %Q{style="background: transparent url('#{service_image(service.icon, 24)}') no-repeat scroll left top;"}
-  end
-  
   def url_by_identity_feed(owner, identity_feed, service)
     if identity_feed
       polymorphic_url([owner, identity_feed], :service_id => service.to_param)
