@@ -82,6 +82,7 @@ hu:
       failed_last_request: "Sikertelen utolsó kérése: {{error}}"
       feed: Etet
       feed_banned_message: "Feed betiltották."
+      feed_display_address: "Feed URL"
       feed_id: Azonosítót
       feed_metadata_address: "Metadata Cím"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ hu:
       opml_generated: "Feedek {{terms}}"
       personal_recommendations: Ajánlásokkal
       photos: Photos
+      please_specify_url: "Kérem adjon meg egy URL-t"
       polyvore_prompt: "Polyvore Profil URL"
       polyvore_rss: "Ön Polyvore Profil URL néz http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ hu:
       search_button: Jár
       search_for: "Keresés:"
       search_link: "Forrásokat találni!"
+      search_problem: "Volt egy probléma a keresést. Kérjük, nézze meg a keresési feltételeknek, és próbálja újra."
       searching_for_feed: "Searching for feeds ..."
       select_feeds_prompt: "Válassza ki a feedeket szeretne hozzáadni:"
       select_service_prompt: "Kérjük, válasszon egy szolgáltatást"

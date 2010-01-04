@@ -82,6 +82,7 @@ nl:
       failed_last_request: "Mislukt laatste verzoek: {{error}}"
       feed: Voeden
       feed_banned_message: "Feed werd verboden."
+      feed_display_address: "Feed Url"
       feed_id: ID
       feed_metadata_address: "Metadata Adres"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ nl:
       opml_generated: "Feeds voor {{terms}}"
       personal_recommendations: Aanbevelingen
       photos: Foto
+      please_specify_url: "Geef een url"
       polyvore_prompt: "Polyvore profiel URL"
       polyvore_rss: "Uw profiel Polyvore URL ziet er als volgt http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ nl:
       search_button: Gaan
       search_for: "Zoeken naar:"
       search_link: "Vind Resources!"
+      search_problem: "Er was een probleem met uw zoekopdracht. Controleer uw zoekcriteria en probeer het opnieuw."
       searching_for_feed: "Searching for feeds ..."
       select_feeds_prompt: "Selecteer de feeds die u wilt toevoegen:"
       select_service_prompt: "Selecteer een dienst"

@@ -82,6 +82,7 @@ ja:
       failed_last_request: "最後の要求が失敗しました：{{error}}"
       feed: 食料
       feed_banned_message: フィードを禁止された。
+      feed_display_address: フィードのURLを
       feed_id: 番号
       feed_metadata_address: メタデータ住所
       feed_remove: フィードを削除
@@ -151,6 +152,7 @@ ja:
       opml_generated: "{{terms}}のフィード"
       personal_recommendations: 勧告
       photos: 写真
+      please_specify_url: してくださいURLを指定
       polyvore_prompt: PolyvoreプロフィールのURL
       polyvore_rss: "あなたのPolyvoreプロフィールのURL http://www.polyvore.com/cgi/profile?id=00000ようになります。"
       powered_by: によって供給さ
@@ -180,6 +182,7 @@ ja:
       search_button: 行く
       search_for: 検索：
       search_link: を見つけるの資源！
+      search_problem: あなたの検索に問題があった。あなたの検索条件を評価し、もう一度試してください。
       searching_for_feed: の検索フィード...
       select_feeds_prompt: を選択して追加したいフィード：
       select_service_prompt: してくださいサービスを選択

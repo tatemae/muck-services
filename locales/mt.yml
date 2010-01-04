@@ -82,6 +82,7 @@ mt:
       failed_last_request: "Naqset it-talba l-aħħar: {{error}}"
       feed: "Itma &#39;"
       feed_banned_message: "Feed ġie pprojbit."
+      feed_display_address: "Feed Url"
       feed_id: ID
       feed_metadata_address: "Metadata Indirizz"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ mt:
       opml_generated: "Feeds għall {{terms}}"
       personal_recommendations: Rakkomandazzjonijiet
       photos: Photos
+      please_specify_url: "Jekk jogħġbok speċifika l-url"
       polyvore_prompt: "Profil Polyvore URL"
       polyvore_rss: "Polyvore profil tiegħek URL Dehra http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ mt:
       search_button: Mur
       search_for: "Search for:"
       search_link: "Find Riżorsi!"
+      search_problem: "Kien hemm problema bil-tiftixa tiegħek. Jekk jogħġbok irrevedi l-kriterji ta &#39;tfittxija tiegħek u erġa&#39; pprova."
       searching_for_feed: "Tiftix għal għalf ..."
       select_feeds_prompt: "Agħżel l-għalf li tixtieq żid:"
       select_service_prompt: "Jekk jogħġbok agħżel servizz"

@@ -28,7 +28,7 @@ da:
       all_resources: "Alle ressourcer"
       already_added_uri_feed: "Du har allerede tilføjet den url {{uri}}"
       already_added_username_feed: "Du har allerede tilføjet en {{service}} konto med brugernavnet {{username}}"
-      already_shared: "Du tidligere har delt denne side."
+      already_shared: "Du har tidligere delte denne side."
       amazon_prompt: "Indtast den e-mail, du bruger med Amazon.com"
       approval_status: Godkendt
       atom: Atom
@@ -82,6 +82,7 @@ da:
       failed_last_request: "Mislykket sidste anmodning: {{error}}"
       feed: Fodre
       feed_banned_message: "Feed blev forbudt."
+      feed_display_address: "Feed URL"
       feed_id: ID
       feed_metadata_address: "Metadata Adresse"
       feed_remove: "Feed Fjernet"
@@ -121,7 +122,7 @@ da:
       login_to_comment: "Log ind for at tilføje en kommentar"
       metadata: metadata
       metadata_prefix: "Metadata Præfiks"
-      my_identity: "Min identitet"
+      my_identity: "Min Identity"
       my_services: "Min Service"
       narrow_further: "indsnævre resultaterne yderligere"
       netflix_prompt: "Netflix Kø RSS URL"
@@ -151,6 +152,7 @@ da:
       opml_generated: "Feeds til {{terms}}"
       personal_recommendations: Anbefalinger
       photos: Billeder
+      please_specify_url: "Angiv en URL"
       polyvore_prompt: "Polyvore profil URL"
       polyvore_rss: "Din Polyvore profil URL udseende http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ da:
       search_button: Start
       search_for: "Søg efter:"
       search_link: "Find ressourcer!"
+      search_problem: "Der var et problem med din søgning. Gennemgå venligst dine søgekriterier, og prøv igen."
       searching_for_feed: "Søger efter feeds ..."
       select_feeds_prompt: "Vælg de feeds, du ønsker at tilføje:"
       select_service_prompt: "Vælg en tjeneste"

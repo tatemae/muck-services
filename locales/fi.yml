@@ -82,6 +82,7 @@ fi:
       failed_last_request: "Epäonnistui viime pyyntö: {{error}}"
       feed: Syöttää
       feed_banned_message: "Rehu on kielletty."
+      feed_display_address: "Feed URL"
       feed_id: ID
       feed_metadata_address: "Metadata Osoite"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ fi:
       opml_generated: "Syötteitä {{terms}}"
       personal_recommendations: Suositukset
       photos: Valokuvat
+      please_specify_url: "Ilmoittakaa URL"
       polyvore_prompt: "Polyvore profiili URL"
       polyvore_rss: "Sinun Polyvore profiili URL näyttää http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: voimanlähteenä
@@ -180,6 +182,7 @@ fi:
       search_button: Mennä
       search_for: "Hae:"
       search_link: "Löydä resurssit!"
+      search_problem: "Oli ongelma hakua. Tarkista hakukriteereitä ja yritä uudelleen."
       searching_for_feed: "Searching for feeds ..."
       select_feeds_prompt: "Valitse syötteet haluat lisätä:"
       select_service_prompt: "Valitse palvelu"

@@ -82,6 +82,7 @@ de:
       failed_last_request: "Failed letzte Bitte: {{error}}"
       feed: Füttern
       feed_banned_message: "Feed wurde verboten."
+      feed_display_address: Feed-URL
       feed_id: ID
       feed_metadata_address: Metadaten-Adresse
       feed_remove: "Feed entfernt"
@@ -151,6 +152,7 @@ de:
       opml_generated: "Feeds für {{terms}}"
       personal_recommendations: Empfehlungen
       photos: Fotos
+      please_specify_url: "Bitte geben Sie eine URL"
       polyvore_prompt: "Polyvore Profil URL"
       polyvore_rss: "Ihr Profil Polyvore URL aussieht http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ de:
       search_button: Gehen
       search_for: "Suchen nach:"
       search_link: "Finden Sie Resources!"
+      search_problem: "Es gab ein Problem mit Ihrer Suche. Bitte überprüfen Sie Ihre Suchkriterien und versuchen Sie es erneut."
       searching_for_feed: "Auf der Suche nach RSS-Feeds ..."
       select_feeds_prompt: "Wählen Sie die Feeds, die Sie möchte hinzufügen:"
       select_service_prompt: "Bitte wählen Sie einen Dienst"

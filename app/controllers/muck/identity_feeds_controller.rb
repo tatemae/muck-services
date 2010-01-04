@@ -28,19 +28,25 @@ class Muck::IdentityFeedsController < ApplicationController
   
   def create
     @service = Service.find(params[:service_id])
-    @feed = Feed.new(:uri => params[:uri], :login => params[:username])
-    feeds = Service.create_tag_feeds_for_service(@service, params[:uri], params[:username], params[:password], current_user.id)
-    if feeds.blank?
-      success = false
-      if params[:username]
-        message = I18n.t('muck.services.no_feeds_from_username')
+    if !params[:uri].blank?
+      @feed = Feed.new(:uri => params[:uri], :login => params[:username])
+      feeds = Service.create_tag_feeds_for_service(@service, params[:uri], params[:username], params[:password], current_user.id)
+      if feeds.blank?
+        success = false
+        if params[:username]
+          message = I18n.t('muck.services.no_feeds_from_username')
+        else
+          message = I18n.t('muck.services.no_feeds_at_uri')
+        end
       else
-        message = I18n.t('muck.services.no_feeds_at_uri')
+        success, messages = add_feeds_to_parent(@parent, feeds)
+        message = messages.join('<br />')
       end
     else
-      success, messages = add_feeds_to_parent(@parent, feeds)
-      message = messages.join('<br />')
+      success = false
+      message = I18n.t('muck.services.please_specify_url')
     end
+    
     respond_to do |format|
       format.html do
         flash[:notice] = message if message

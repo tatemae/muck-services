@@ -82,6 +82,7 @@ sq:
       failed_last_request: "Failed kërkesë fundit: {{error}}"
       feed: Ushqimi
       feed_banned_message: "Feed u ndalua."
+      feed_display_address: "Feed URL"
       feed_id: ID
       feed_metadata_address: "Metadata Adresa"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ sq:
       opml_generated: "Feeds për {{terms}}"
       personal_recommendations: Rekomandime
       photos: Photos
+      please_specify_url: "Ju lutem specifikoni një url"
       polyvore_prompt: "Polyvore profilin URL"
       polyvore_rss: "Profili juaj Polyvore URL duket si http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ sq:
       search_button: Shkoj
       search_for: "For:"
       search_link: "Gjej Resources!"
+      search_problem: "Kishte një problem me kërkimin tuaj. Ju lutemi lexojeni kriteret e kërkimit tuaj dhe provoni përsëri."
       searching_for_feed: "Searching for feeds ..."
       select_feeds_prompt: "Zgjidhni prurjet që dëshironi të shtoni:"
       select_service_prompt: "Ju lutem zgjidhni një shërbim"

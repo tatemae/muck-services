@@ -82,6 +82,7 @@ ar:
       failed_last_request: "فشل الطلب الأخير : {{error}}"
       feed: تغذية
       feed_banned_message: "تغذية كانت محظورة."
+      feed_display_address: "رابط الخلاصة"
       feed_id: معرف
       feed_metadata_address: "الفوقية العنوان"
       feed_remove: "تغذية إزالتها"
@@ -151,6 +152,7 @@ ar:
       opml_generated: "ليغذي {{terms}}"
       personal_recommendations: التوصيات
       photos: صور
+      please_specify_url: "يرجى تحديد رابط"
       polyvore_prompt: "Polyvore ملف رابط"
       polyvore_rss: "Polyvore بك لمحة رابط يشبه http://www.polyvore.com/cgi/profile؟id=00000"
       powered_by: "مدعوم من"
@@ -180,6 +182,7 @@ ar:
       search_button: يذهب
       search_for: "البحث عن :"
       search_link: "العثور على موارد!"
+      search_problem: "كانت هناك مشكلة مع البحث. يرجى مراجعة معايير البحث الخاصة بك وحاول مرة أخرى."
       searching_for_feed: "البحث عن يغذي..."
       select_feeds_prompt: "حدد يغذي كنت أود أن أضيف :"
       select_service_prompt: "يرجى اختيار خدمة"

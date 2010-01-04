@@ -82,6 +82,7 @@ sr:
       failed_last_request: "Последњи захтев није успео: {{error}}"
       feed: Хранити
       feed_banned_message: "Феед је био забрањен."
+      feed_display_address: "Феед УРЛ"
       feed_id: Број
       feed_metadata_address: "Метадата Адреса"
       feed_remove: "Феед Уклоњено"
@@ -151,6 +152,7 @@ sr:
       opml_generated: "Феедс фор {{terms}}"
       personal_recommendations: Препоруке
       photos: Фотографије
+      please_specify_url: "Молимо Вас да наведете УРЛ"
       polyvore_prompt: "Полыворе УРЛ адресе профил"
       polyvore_rss: "Ваш профил Полыворе УРЛ адреса изгледа хттп://ууу.полыворе.цом/цги/профиле?ид=00000"
       powered_by: "Поуеред бы"
@@ -180,6 +182,7 @@ sr:
       search_button: Ићи
       search_for: "Тражи:"
       search_link: "Пронађи ресурси!"
+      search_problem: "Дошло је до проблема са претрагом. Молимо Вас прегледајте вашим критеријумима претраге и покушајте поново."
       searching_for_feed: "У потрази за извори ..."
       select_feeds_prompt: "Изаберите феед који желите да додате:"
       select_service_prompt: "Молимо изаберите услугу"

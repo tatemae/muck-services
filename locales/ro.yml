@@ -82,6 +82,7 @@ ro:
       failed_last_request: "Eşuare cererea ultimul: {{error}}"
       feed: Hrăni
       feed_banned_message: "Feed a fost interzis."
+      feed_display_address: "Feed URL"
       feed_id: ID-ul
       feed_metadata_address: "Metadata Adresa"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ ro:
       opml_generated: "Feed-uri pentru {{terms}}"
       personal_recommendations: Recomandari
       photos: Poze
+      please_specify_url: "Vă rugăm să specificaţi un URL"
       polyvore_prompt: "Polyvore profil URL-ul"
       polyvore_rss: "Profilul dvs. Polyvore URL-ul arată ca http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ ro:
       search_button: Merge
       search_for: "Search for:"
       search_link: "Găsiţi resurse!"
+      search_problem: "Nu a fost o problemă cu dvs. de căutare. Vă rugăm să analizaţi de criteriile de căutare şi încercaţi din nou."
       searching_for_feed: "Cautarea pentru feed-uri ..."
       select_feeds_prompt: "Selectaţi feed-uri pe care doriţi să adăugaţi:"
       select_service_prompt: "Vă rugăm să selectaţi un serviciu"

@@ -82,6 +82,7 @@ cs:
       failed_last_request: "Neúspěšný poslední dotaz: {{error}}"
       feed: Krmit
       feed_banned_message: "Krmivo byl zakázán."
+      feed_display_address: "Feed URL"
       feed_id: ID
       feed_metadata_address: "Metadata Adresa"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ cs:
       opml_generated: "Krmiva pro {{terms}}"
       personal_recommendations: Doporučení
       photos: Fotografie
+      please_specify_url: "Prosím, zadejte adresu URL"
       polyvore_prompt: "Polyvore profil URL"
       polyvore_rss: "Vaše Polyvore profil URL vypadá http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ cs:
       search_button: Jít
       search_for: "Hledat:"
       search_link: "Najít zdroje!"
+      search_problem: "Došlo k problému s výsledky vašeho hledání. Projděte si prosím kritéria vyhledávání a zkuste to znovu."
       searching_for_feed: "Vyhledávání kanálů ..."
       select_feeds_prompt: "Vyberte kanály, který chcete přidat:"
       select_service_prompt: "Prosím vyberte službu"

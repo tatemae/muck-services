@@ -82,6 +82,7 @@ th:
       failed_last_request: "คำขอล้มเหลวล่าสุด: {{error}}"
       feed: ให้อาหาร
       feed_banned_message: อาหารถูกห้าม.
+      feed_display_address: "URL ของฟีด"
       feed_id: ID
       feed_metadata_address: ที่อยู่เมตาดาต้า
       feed_remove: ฟีดลบ
@@ -151,6 +152,7 @@ th:
       opml_generated: "ฟีดสำหรับ {{terms}}"
       personal_recommendations: ข้อเสนอแนะ
       photos: Photos
+      please_specify_url: "โปรดระบุ url"
       polyvore_prompt: "Polyvore URL โปรไฟล์"
       polyvore_rss: "โปรไฟล์ Polyvore URL ของคุณดูเหมือนว่า http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: ขับเคลื่อนโดย
@@ -180,6 +182,7 @@ th:
       search_button: ไป
       search_for: "ค้นหา:"
       search_link: หาข้อมูล!
+      search_problem: "มีปัญหากับการค้นหาของคุณถูก. โปรดอ่านเกณฑ์การค้นหาและลองอีกครั้ง."
       searching_for_feed: "ค้นหาฟีด ..."
       select_feeds_prompt: "เลือกข้อมูลที่คุณต้องการเพิ่ม:"
       select_service_prompt: กรุณาเลือกบริการ

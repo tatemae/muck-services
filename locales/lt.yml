@@ -82,6 +82,7 @@ lt:
       failed_last_request: "Nepavyko paskutinį prašymą: {{error}}"
       feed: Maitinti
       feed_banned_message: "Pašarus buvo uždrausta."
+      feed_display_address: Kanalo
       feed_id: ID
       feed_metadata_address: "Duomenys Adresas"
       feed_remove: "Pašarų Removed"
@@ -151,6 +152,7 @@ lt:
       opml_generated: "Pašarai {{terms}}"
       personal_recommendations: Atsiliepimai
       photos: Nuotraukos
+      please_specify_url: "Prašome nurodyti adresą"
       polyvore_prompt: "Polyvore profilis URL"
       polyvore_rss: "Jūsų Polyvore profilis URL išvaizda http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: varomas
@@ -180,6 +182,7 @@ lt:
       search_button: Eiti
       search_for: "Ieškoti:"
       search_link: "Rasti ištekliai!"
+      search_problem: "Nebuvo su paieškos problema. Prašome patikrinti savo paieškos kriterijus ir bandykite dar kartą."
       searching_for_feed: "Ieškoma kanalus ..."
       select_feeds_prompt: "Pasirinkite kanalus norite pridėti:"
       select_service_prompt: "Pasirinkite paslaugą"

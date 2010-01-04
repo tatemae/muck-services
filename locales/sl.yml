@@ -82,6 +82,7 @@ sl:
       failed_last_request: "Failed zadnje zahteve: {{error}}"
       feed: Hraniti
       feed_banned_message: "Feed je bil prepovedan."
+      feed_display_address: "Feed URL"
       feed_id: ID
       feed_metadata_address: "Metadata Naslov"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ sl:
       opml_generated: "Viri za {{terms}}"
       personal_recommendations: Priporočila
       photos: Fotografije
+      please_specify_url: "Navedite url"
       polyvore_prompt: "Polyvore profila URL"
       polyvore_rss: "Vaš profil Polyvore URL izgleda http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ sl:
       search_button: Iti
       search_for: "Search for:"
       search_link: "Poišči Resources!"
+      search_problem: "Prišlo je do težave z iskanjem. Prosimo, preglejte iskalne kriterije in poskusite znova."
       searching_for_feed: "Searching for feeds ..."
       select_feeds_prompt: "Izberite vire, ki bi jih radi dodali:"
       select_service_prompt: "Prosimo, izberite storitev"

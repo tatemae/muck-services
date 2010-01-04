@@ -82,6 +82,7 @@ et:
       failed_last_request: "Ebaõnnestus viimase nõudmisel: {{error}}"
       feed: Toide
       feed_banned_message: "Sööt on keelatud."
+      feed_display_address: "Feed Url"
       feed_id: ID
       feed_metadata_address: "Vaheandmed Aadress"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ et:
       opml_generated: "Toidab {{terms}}"
       personal_recommendations: Soovitused
       photos: Fotod
+      please_specify_url: "Palun täpsustage url"
       polyvore_prompt: "Polyvore profiili URL"
       polyvore_rss: "Teie Polyvore profiili URL näeb välja http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ et:
       search_button: Minema
       search_for: "Otsi:"
       search_link: "Leida vahendeid!"
+      search_problem: "Probleem otsingusse. Palun kontrolli otsingu kriteeriumid ja proovige uuesti."
       searching_for_feed: "Otsin toidab ..."
       select_feeds_prompt: "Valige toidab soovid lisada:"
       select_service_prompt: "Vali teenus"

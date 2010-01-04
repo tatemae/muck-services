@@ -82,6 +82,7 @@ pt-PT:
       failed_last_request: "Falha último pedido: {{error}}"
       feed: Alimentar
       feed_banned_message: "Alimentos para animais foi proibida."
+      feed_display_address: "Feed Url"
       feed_id: ID
       feed_metadata_address: "Metadados Endereço"
       feed_remove: "Feed Removido"
@@ -151,6 +152,7 @@ pt-PT:
       opml_generated: "Alimentos para {{terms}}"
       personal_recommendations: Recomendações
       photos: Fotos
+      please_specify_url: "Por favor, especifique um URL"
       polyvore_prompt: "Perfil Polyvore URL"
       polyvore_rss: "Seu perfil Polyvore URL parece http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ pt-PT:
       search_button: Ir
       search_for: "Search for:"
       search_link: "Encontrar recursos!"
+      search_problem: "Houve um problema com sua pesquisa. Por favor reveja os seus critérios de pesquisa e tente novamente."
       searching_for_feed: "Searching for feeds ..."
       select_feeds_prompt: "Selecione os feeds que você gostaria de acrescentar:"
       select_service_prompt: "Por favor selecione um serviço"

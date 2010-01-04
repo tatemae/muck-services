@@ -82,6 +82,7 @@ lv:
       failed_last_request: "Failed pēdējā pieprasījuma: {{error}}"
       feed: Barot
       feed_banned_message: "Barība ir aizliegta."
+      feed_display_address: "Feed URL"
       feed_id: ID
       feed_metadata_address: "Metadata Adrese"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ lv:
       opml_generated: "Plūsmas {{terms}}"
       personal_recommendations: Ieteikumi
       photos: Fotogrāfijas
+      please_specify_url: "Lūdzu, norādiet url"
       polyvore_prompt: "Polyvore profils URL"
       polyvore_rss: "Jūsu Polyvore profils URL izskatās http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ lv:
       search_button: Iet
       search_for: "Meklēt:"
       search_link: "Atrast resursus!"
+      search_problem: "Tur bija ar jūsu meklēšanas problēmu. Lūdzu, pārskatiet jūsu meklēšanas kritērijus un mēģiniet vēlreiz."
       searching_for_feed: "Meklēt barību ..."
       select_feeds_prompt: "Izvēlieties feeds vēlaties pievienot:"
       select_service_prompt: "Lūdzu, izvēlieties dienests"

@@ -82,6 +82,7 @@ iw:
       failed_last_request: "נכשל הבקשה האחרונה: {{error}}"
       feed: להזין
       feed_banned_message: "Feed הוחרם."
+      feed_display_address: "Feed URL"
       feed_id: מק&quot;ט
       feed_metadata_address: "Metadata כתובת"
       feed_remove: "Feed הוסר"
@@ -151,6 +152,7 @@ iw:
       opml_generated: "הזנות עבור {{terms}}"
       personal_recommendations: המלצות
       photos: תמונות
+      please_specify_url: "אנא ציין כתובת אתר"
       polyvore_prompt: "Polyvore פרופיל כתובת"
       polyvore_rss: "פרופיל Polyvore כתובת האתר שלך נראה כמו http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "מופעל על ידי"
@@ -180,6 +182,7 @@ iw:
       search_button: "לעבור אל"
       search_for: "חפש:"
       search_link: "מצא משאבים!"
+      search_problem: "היתה בעיה עם החיפוש שלך. אנא בדוק את קריטריון החיפוש שלך ונסה שוב."
       searching_for_feed: "מחפש מאכיל ..."
       select_feeds_prompt: "בחר את הזנות שאתה רוצה להוסיף:"
       select_service_prompt: "אנא בחר שירות"

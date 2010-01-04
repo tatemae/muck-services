@@ -82,6 +82,7 @@ sk:
       failed_last_request: "Neúspešný posledný dotaz: {{error}}"
       feed: Kŕmiť
       feed_banned_message: "Krmivo bol zakázaný."
+      feed_display_address: "Feed URL"
       feed_id: ID
       feed_metadata_address: "Metadata Adresa"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ sk:
       opml_generated: "Krmivá pre {{terms}}"
       personal_recommendations: Odporúčanie
       photos: Fotografie
+      please_specify_url: "Prosím, zadajte adresu URL"
       polyvore_prompt: "Polyvore profil URL"
       polyvore_rss: "Vaša Polyvore profil URL vyzerá http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ sk:
       search_button: Choď
       search_for: "Hľadať:"
       search_link: "Nájsť zdroje!"
+      search_problem: "Došlo k problému s výsledky vášho hľadania. Prejdite si prosím kritériá vyhľadávania a skúste to znova."
       searching_for_feed: "Vyhľadávanie kanálov ..."
       select_feeds_prompt: "Vyberte kanály, ktorý chcete pridať:"
       select_service_prompt: "Prosím vyberte službu"

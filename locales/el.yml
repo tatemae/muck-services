@@ -82,6 +82,7 @@ el:
       failed_last_request: "Failed τελευταίο αίτημα: {{error}}"
       feed: Τροφοδοσία
       feed_banned_message: "Ζωοτροφές απαγορεύτηκε."
+      feed_display_address: "Feed URL"
       feed_id: ID
       feed_metadata_address: "Μεταδεδομένα Διεύθυνση"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ el:
       opml_generated: "Ροές για {{terms}}"
       personal_recommendations: Συστάσεις
       photos: Φωτογραφίες
+      please_specify_url: "Προσδιορίστε ένα URL"
       polyvore_prompt: "Polyvore προφίλ URL"
       polyvore_rss: "Polyvore προφίλ σας URL μοιάζει http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ el:
       search_button: Πάω
       search_for: "Αναζήτηση για:"
       search_link: "Βρείτε Πόρων!"
+      search_problem: "Υπήρξε ένα πρόβλημα με την αναζήτησή σας. Παρακαλώ εξετάστε τα κριτήρια αναζήτησης σας και προσπαθήστε ξανά."
       searching_for_feed: "Ψάχνοντας για ροές δεδομένων ..."
       select_feeds_prompt: "Επιλέξτε τις τροφές που θα θέλατε να προσθέσετε:"
       select_service_prompt: "Παρακαλώ επιλέξτε μια υπηρεσία"

@@ -82,6 +82,7 @@ ru:
       failed_last_request: "Ошибка Последний запрос: {{error}}"
       feed: Кормить
       feed_banned_message: "Было запрещено канал."
+      feed_display_address: "URL канала"
       feed_id: ID
       feed_metadata_address: "Адрес Метаданные"
       feed_remove: "Feed Удален"
@@ -151,6 +152,7 @@ ru:
       opml_generated: "Корма для {{terms}}"
       personal_recommendations: Рекомендаций
       photos: Фотографий
+      please_specify_url: "Пожалуйста, укажите URL"
       polyvore_prompt: "Polyvore профиль URL"
       polyvore_rss: "Ваш профиль Polyvore URL выглядит http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "Powered By"
@@ -180,6 +182,7 @@ ru:
       search_button: Идти
       search_for: "Искать:"
       search_link: "Поиск ресурсов!"
+      search_problem: "Был проблемы с поиском. Пожалуйста, просмотрите ваши критерии поиска и повторите попытку."
       searching_for_feed: "Поиск каналов ..."
       select_feeds_prompt: "Выбор каналов вы хотели бы добавить следующее:"
       select_service_prompt: "Пожалуйста, выберите услугу"

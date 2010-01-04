@@ -82,6 +82,7 @@ hi:
       failed_last_request: "पिछले अनुरोध विफल: {{error}}"
       feed: खुराक
       feed_banned_message: "फ़ीड पर प्रतिबंध लगा दिया गया था."
+      feed_display_address: "फ़ीड URL"
       feed_id: आईडी
       feed_metadata_address: "Metadata पता"
       feed_remove: "फ़ीड को हटाया"
@@ -151,6 +152,7 @@ hi:
       opml_generated: "{{terms}} के लिए फ़ीड"
       personal_recommendations: सिफारिशें
       photos: तस्वीरें
+      please_specify_url: "कृपया एक यूआरएल निर्दिष्ट"
       polyvore_prompt: "Polyvore प्रोफ़ाइल यूआरएल"
       polyvore_rss: "अपने Polyvore प्रोफ़ाइल यूआरएल http://www.polyvore.com/cgi/profile?id=00000 की तरह लग रहा है"
       powered_by: "इसके द्वारा संचालित"
@@ -180,6 +182,7 @@ hi:
       search_button: जाना
       search_for: "के लिए खोजें:"
       search_link: "खोजें संसाधन!"
+      search_problem: "आपके खोज के साथ एक समस्या थी. कृपया अपने खोज मापदंड की समीक्षा करें और फिर कोशिश करें."
       searching_for_feed: "खोज के लिए फ़ीड ..."
       select_feeds_prompt: "चुनें फ़ीड आप जोड़ना चाहते हैं:"
       select_service_prompt: "कृपया एक सेवा चुनें"

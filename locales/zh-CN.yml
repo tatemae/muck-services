@@ -82,6 +82,7 @@ zh-CN:
       failed_last_request: "失败的最后一个请求：{{error}}"
       feed: 喂养
       feed_banned_message: 饲料被取缔。
+      feed_display_address: 饲料网址
       feed_id: 编号
       feed_metadata_address: 元数据地址
       feed_remove: 饲料删除
@@ -151,6 +152,7 @@ zh-CN:
       opml_generated: "供稿{{terms}}"
       personal_recommendations: 建议
       photos: 照片
+      please_specify_url: 请指定URL
       polyvore_prompt: Polyvore个人资料的网址
       polyvore_rss: "您Polyvore个人资料的网址看起来像http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: 采用
@@ -180,6 +182,7 @@ zh-CN:
       search_button: 离去
       search_for: 搜索：
       search_link: 资源！
+      search_problem: 有一个与您的搜索问题。请检查您的搜索条件，然后再试一次。
       searching_for_feed: 搜索供稿...
       select_feeds_prompt: 选择供稿您想补充：
       select_service_prompt: 请选择服务

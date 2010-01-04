@@ -83,6 +83,7 @@
       failed_last_request: "Mislyktes siste ønske: {{error}}"
       feed: Mate
       feed_banned_message: "Feed ble forbudt."
+      feed_display_address: "Feed URL"
       feed_id: ID
       feed_metadata_address: "Metadata Adresse"
       feed_remove: "Feed Removed"
@@ -152,6 +153,7 @@
       opml_generated: "Feeds for {{terms}}"
       personal_recommendations: Anbefalinger
       photos: Bilder
+      please_specify_url: "Angi en URL"
       polyvore_prompt: "Polyvore profil URL"
       polyvore_rss: "Din Polyvore profil URL ser slik http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -181,6 +183,7 @@
       search_button: Dra
       search_for: "Søk etter:"
       search_link: "Finn ressurser!"
+      search_problem: "Det var et problem med søket. Se gjennom dine søkekriterier og prøv igjen."
       searching_for_feed: "Searching for feeds ..."
       select_feeds_prompt: "Velg feedene du ønsker å legge til:"
       select_service_prompt: "Velg en tjeneste"

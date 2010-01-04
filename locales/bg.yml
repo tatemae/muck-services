@@ -82,6 +82,7 @@ bg:
       failed_last_request: "Неуспешно последната заявка: {{error}}"
       feed: Храня
       feed_banned_message: "Фуражът е забранена."
+      feed_display_address: "Feed URL"
       feed_id: ID
       feed_metadata_address: "Метаданните Адрес"
       feed_remove: "Премахнато Feed"
@@ -151,6 +152,7 @@ bg:
       opml_generated: "Feeds за {{terms}}"
       personal_recommendations: Препоръчваме
       photos: Снимки
+      please_specify_url: "Моля, посочете URL"
       polyvore_prompt: "Polyvore профил URL"
       polyvore_rss: "Вашият профил Polyvore URL прилича http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "захранва от"
@@ -180,6 +182,7 @@ bg:
       search_button: Отивам
       search_for: "Търсене за:"
       search_link: "Намери ресурси!"
+      search_problem: "Имаше проблем с вашето търсене. Моля, прегледайте критериите за търсене и опитайте отново."
       searching_for_feed: "Търсене на емисии ..."
       select_feeds_prompt: "Изберете емисии, който искате да добавите:"
       select_service_prompt: "Моля изберете услуга"

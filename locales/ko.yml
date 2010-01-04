@@ -82,6 +82,7 @@ ko:
       failed_last_request: "마지막 요청이 실패했습니다 : {{error}}"
       feed: "음식을 주다"
       feed_banned_message: "피드를 금지했다."
+      feed_display_address: "피드 URL"
       feed_id: 아이디
       feed_metadata_address: "메타 데이터 주소"
       feed_remove: "피드 제거"
@@ -151,6 +152,7 @@ ko:
       opml_generated: "{{terms}}에 대한 피드"
       personal_recommendations: 추천
       photos: 사진
+      please_specify_url: "URL을 지정하시기 바랍니다"
       polyvore_prompt: "프로필에 URL을 Polyvore"
       polyvore_rss: "귀하의 Polyvore 프로필에 URL을 http://www.polyvore.com/cgi/profile?id=00000 같은데"
       powered_by: "에 의해 구동"
@@ -180,6 +182,7 @@ ko:
       search_button: 가다
       search_for: "검색 :"
       search_link: "찾기 자료!"
+      search_problem: "여기에서 귀하의 검색 문제가있습니다. 귀하의 검색 기준을 검토하고 다시 시도하십시오."
       searching_for_feed: "에 대한 검색 피드 ..."
       select_feeds_prompt: "을 선택하면 추가하려는 피드 :"
       select_service_prompt: "서비스를 선택하시기 바랍니다"

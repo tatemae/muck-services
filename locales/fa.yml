@@ -82,6 +82,7 @@ fa:
       failed_last_request: "عدم درخواست آخرین : {{error}}"
       feed: اشتراک
       feed_banned_message: "اشتراک بود ممنوع اعلام شد."
+      feed_display_address: "اشتراک آدرس"
       feed_id: شناسه
       feed_metadata_address: "فراداده آدرس"
       feed_remove: "اشتراک حذف"
@@ -151,6 +152,7 @@ fa:
       opml_generated: "خوردها برای {{terms}}"
       personal_recommendations: توصیه
       photos: عکس
+      please_specify_url: "لطفا یک آدرس مشخص"
       polyvore_prompt: "Polyvore مشخصات آدرس"
       polyvore_rss: "مشخصات شما Polyvore آدرس شبیه http://www.polyvore.com/cgi/profile؟id=00000"
       powered_by: "طراحی توسط"
@@ -180,6 +182,7 @@ fa:
       search_button: برو
       search_for: "جستجو برای :"
       search_link: "پیدا کردن منابع!"
+      search_problem: "بود مشکل با جستجوی شما وجود ندارد. لطفا بررسی معیارهای جستجو را دوباره امتحان کنید."
       searching_for_feed: "جستجو به دنبال خوردها..."
       select_feeds_prompt: "خوردها را انتخاب کنید که می خواهید اضافه کنید :"
       select_service_prompt: "لطفا یک سرویس را انتخاب کنید"

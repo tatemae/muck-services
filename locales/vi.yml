@@ -82,6 +82,7 @@ vi:
       failed_last_request: "Đã không yêu cầu cuối: {{error}}"
       feed: "Cho ăn"
       feed_banned_message: "Thức ăn đã bị cấm."
+      feed_display_address: "Feed Url"
       feed_id: ID
       feed_metadata_address: "Metadata Địa chỉ"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ vi:
       opml_generated: "Cấp dữ liệu cho {{terms}}"
       personal_recommendations: "Đề nghị"
       photos: "Hình ảnh"
+      please_specify_url: "Xin vui lòng chỉ định một URL"
       polyvore_prompt: "Polyvore profile URL"
       polyvore_rss: "Polyvore URL của bạn cấu hình như http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ vi:
       search_button: Đi
       search_for: "Tìm kiếm:"
       search_link: "Tìm nguyên!"
+      search_problem: "Có vấn đề với tìm kiếm của bạn. Vui lòng xem lại các tiêu chí tìm kiếm của bạn và thử lại."
       searching_for_feed: "Tìm kiếm các nguồn cấp dữ liệu ..."
       select_feeds_prompt: "Chọn các nguồn cấp dữ liệu bạn muốn thêm:"
       select_service_prompt: "Hãy chọn một dịch vụ"

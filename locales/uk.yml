@@ -82,6 +82,7 @@ uk:
       failed_last_request: "Помилка Останній запит: {{error}}"
       feed: Годувати
       feed_banned_message: "Було заборонено канал."
+      feed_display_address: "URL каналу"
       feed_id: ID
       feed_metadata_address: "Адреса Метадані"
       feed_remove: "Feed Вилучений"
@@ -151,6 +152,7 @@ uk:
       opml_generated: "Корми для {{terms}}"
       personal_recommendations: Рекомендацій
       photos: Фотографій
+      please_specify_url: "Будь ласка, вкажіть URL"
       polyvore_prompt: "Polyvore профіль URL"
       polyvore_rss: "Ваш профіль Polyvore URL виглядає http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "Powered By"
@@ -180,6 +182,7 @@ uk:
       search_button: Йти
       search_for: "Шукати:"
       search_link: "Пошук ресурсів!"
+      search_problem: "Був проблеми з пошуком. Будь ласка, перегляньте ваші критерії пошуку і спробуйте ще раз."
       searching_for_feed: "Пошук каналів ..."
       select_feeds_prompt: "Вибір каналів ви хотіли б додати наступне:"
       select_service_prompt: "Будь ласка, виберіть послугу"

@@ -82,6 +82,7 @@ sv:
       failed_last_request: "Misslyckades sista önskan: {{error}}"
       feed: Mata
       feed_banned_message: "Foder förbjöds."
+      feed_display_address: Feedwebbadress
       feed_id: ID
       feed_metadata_address: "Metadata Adress"
       feed_remove: "Feed Removed"
@@ -151,6 +152,7 @@ sv:
       opml_generated: "Feeds för {{terms}}"
       personal_recommendations: Rekommendationer
       photos: Bilder
+      please_specify_url: "Ange en URL"
       polyvore_prompt: "Polyvore Profile URL"
       polyvore_rss: "Din Polyvore profil URL ser ut http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ sv:
       search_button: Gå
       search_for: "Sök efter:"
       search_link: "Hitta resurser!"
+      search_problem: "Det uppstod ett problem med din sökning. Titta igenom dina sökkriterier och försök igen."
       searching_for_feed: "Searching for feeds ..."
       select_feeds_prompt: "Välj de feeds du vill tillägga:"
       select_service_prompt: "Välj en tjänst"

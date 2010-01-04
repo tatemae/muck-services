@@ -82,6 +82,7 @@ ca:
       failed_last_request: "No es pot darrera petició: {{error}}"
       feed: Alimentar
       feed_banned_message: "Aliment va ser prohibit."
+      feed_display_address: "URL del canal"
       feed_id: ID
       feed_metadata_address: "Direcció de metadades"
       feed_remove: "Feed eliminats"
@@ -151,6 +152,7 @@ ca:
       opml_generated: "Feeds per {{terms}}"
       personal_recommendations: Recomanacions
       photos: Fotos
+      please_specify_url: "Si us plau, introduïu un URL"
       polyvore_prompt: "Polyvore URL"
       polyvore_rss: "El seu perfil Polyvore URL sembla http://www.polyvore.com/cgi/profile?id=00000"
       powered_by: "powered by"
@@ -180,6 +182,7 @@ ca:
       search_button: Anar
       search_for: "Cerca:"
       search_link: "Trobar recursos!"
+      search_problem: "Hi va haver un problema amb la cerca. Si us plau, revisi els seus criteris de cerca i torna a intentar-ho."
       searching_for_feed: "La recerca de feeds ..."
       select_feeds_prompt: "Seleccioneu les notícies que voleu afegir:"
       select_service_prompt: "Si us plau, seleccioneu un servei"
@@ -211,4 +214,4 @@ ca:
       visit: visita
       xml: XML
       zotero_group_prompt: "Grup Zotero URL"
-      zotero_group_rss: "El seu grup Zotero URL és així: http://www.zotero.org/groups/adventures_in_library_instruction/items"
+      zotero_group_rss: "Seva grup Zotero URL és així: http://www.zotero.org/groups/adventures_in_library_instruction/items"
