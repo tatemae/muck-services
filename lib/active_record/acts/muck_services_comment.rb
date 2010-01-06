@@ -22,6 +22,7 @@ module ActiveRecord
         
         def after_create
           if self.commentable.is_a?(Entry)
+            return if self.user.blank?
             # Create a new entry_comment activity.  Attach the activity to the entry via self.commentable
             # Include all users in the discussion ie all users from all comments attached to self.commentable
             feed_to = []

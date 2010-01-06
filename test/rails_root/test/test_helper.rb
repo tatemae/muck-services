@@ -17,10 +17,6 @@ class ActiveSupport::TestCase
   TEST_RSS_URI = 'http://www.engadget.com/rss.xml'
   TEST_USERNAME_TEMPLATE = 'http://feeds.delicious.com/v2/rss/{username}?count=100'
   
-  def ensure_flash(val)
-    assert_contains flash.values, val, ", Flash: #{flash.inspect}"
-  end
-  
 end
 
 
