@@ -111,15 +111,24 @@ class Service < ActiveRecord::Base
     if self.name == 'Facebook'
       # Facebook can't just use feeds like everyone else.
       params = {}
-      pairs = uri.split('?')[1].split('&')
-      pairs.each do |pair|
-        p = pair.split('=')
-        params[p[0].to_sym] = p[1]
-      end
       uris = []
-      uris << OpenStruct.new(:url => "http://www.facebook.com/feeds/notifications.php?id=#{params[:id]}&viewer=#{params[:id]}&key=#{params[:key]}&format=rss20", :title => I18n.t('muck.services.facebook_notifications'))
-      uris << OpenStruct.new(:url => "http://www.facebook.com/feeds/share_posts.php?id=#{params[:id]}&viewer=#{params[:id]}&key=#{params[:key]}&format=rss20", :title => I18n.t('muck.services.facebook_shares'))
-      uris << OpenStruct.new(:url => "http://www.facebook.com/feeds/notes.php?id=#{params[:id]}&viewer=#{params[:id]}&key=#{params[:key]}&format=rss20", :title => I18n.t('muck.services.facebook_notes'))
+      uri = "http://#{uri}" unless uri.starts_with?("http://")
+      parsed_uri = URI.parse(uri)
+      if parsed_uri.host == 'facebook.com' # check to make sure that the url provided really comes from Facebook
+        if parsed_uri.query.blank?
+          # Assume that they provided their Facebook Identity Uri (no feeds)
+            uris << OpenStruct.new(:url => uri, :display_uri => uri, :title => I18n.t('muck.services.facebook'))
+        else
+          pairs = uri.split('?')[1].split('&')
+          pairs.each do |pair|
+            p = pair.split('=')
+            params[p[0].to_sym] = p[1]
+          end
+          uris << OpenStruct.new(:url => "http://www.facebook.com/feeds/notifications.php?id=#{params[:id]}&viewer=#{params[:id]}&key=#{params[:key]}&format=rss20", :title => I18n.t('muck.services.facebook_notifications'))
+          uris << OpenStruct.new(:url => "http://www.facebook.com/feeds/share_posts.php?id=#{params[:id]}&viewer=#{params[:id]}&key=#{params[:key]}&format=rss20", :title => I18n.t('muck.services.facebook_shares'))
+          uris << OpenStruct.new(:url => "http://www.facebook.com/feeds/notes.php?id=#{params[:id]}&viewer=#{params[:id]}&key=#{params[:key]}&format=rss20", :title => I18n.t('muck.services.facebook_notes'))
+        end
+      end
       uris
     elsif self.name == 'Amazon'
       return [] if username.blank?

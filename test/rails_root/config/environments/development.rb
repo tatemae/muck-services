@@ -18,19 +18,20 @@ config.action_mailer.raise_delivery_errors = false
 
 HOST = "localhost"
 
-config.gem 'flyerhzm-bullet', :lib => 'bullet', :source => 'http://gems.github.com'
-
-config.after_initialize do
-  Bullet.enable = true 
-  Bullet.alert = true
-  Bullet.bullet_logger = true  
-  Bullet.console = true
-  Bullet.rails_logger = true
-  Bullet.disable_browser_cache = true
-  begin
-    require 'ruby-growl'
-    Bullet.growl = true
-  rescue MissingSourceFile
-  end
-end
-
+# Enable bullet to get an understanding of which sql queries are causing problems.
+# config.gem 'bullet'
+# 
+# config.after_initialize do
+#   Bullet.enable = true 
+#   Bullet.alert = true
+#   Bullet.bullet_logger = true  
+#   Bullet.console = true
+#   Bullet.rails_logger = true
+#   Bullet.disable_browser_cache = true
+#   begin
+#     require 'ruby-growl'
+#     Bullet.growl = true
+#   rescue MissingSourceFile
+#   end
+# end
+# 

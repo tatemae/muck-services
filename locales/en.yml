@@ -63,6 +63,7 @@ en:
       polyvore_prompt: Polyvore profile URL
       login_or_signup_prompt: "{{signup}} or {{login}} to discuss and share resources."
       facebook_shares: Facebook Shared Links
+      facebook: Facebook
       for: for
       zotero_group_prompt: Zotero group URL
       download_opml: Download OPML file for {{terms}}
