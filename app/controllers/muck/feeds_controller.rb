@@ -162,7 +162,7 @@ class Muck::FeedsController < ApplicationController
     end
     
     def get_layout_by_params
-      if params[:layout].blank?
+      if params[:layout].blank? || params[:layout] == 'true'
         true
       else
         params[:layout] 
