@@ -44,7 +44,7 @@ class Muck::IdentityFeedsControllerTest < ActionController::TestCase
     context "POST create using bogus service and username" do
       setup do
         @service = Factory(:service)
-        post :create, :service_id => @service.to_param, :username => 'test', :user_id => @user
+        post :create, :service_id => @service.to_param, :username => 'test', :user_id => @user, :uri => 'http://www.example.com'
       end
       should_set_the_flash_to(I18n.t('muck.services.no_feeds_from_username'))
       should_redirect_to("parent") { user_identity_feeds_url(@user.id) }
@@ -68,7 +68,7 @@ class Muck::IdentityFeedsControllerTest < ActionController::TestCase
       end
       context "html" do
         setup do
-          post :create, :service_id => @service.to_param, :username => @username, :user_id => @user
+          post :create, :service_id => @service.to_param, :username => @username, :user_id => @user, :uri => 'http://www.example.com'
         end
         should_set_the_flash_to(I18n.t('muck.services.successfully_added_username_feed', :service => ''))
         should_redirect_to("parent") { user_identity_feeds_url(@user.id) }
@@ -85,8 +85,8 @@ class Muck::IdentityFeedsControllerTest < ActionController::TestCase
       setup do
         @service = Factory(:service, :uri_data_template => TEST_USERNAME_TEMPLATE)
         @username = 'jbasdf'
-        post :create, :service_id => @service.to_param, :username => @username, :user_id => @user
-        post :create, :service_id => @service.to_param, :username => @username, :user_id => @user
+        post :create, :service_id => @service.to_param, :username => @username, :user_id => @user, :uri => 'http://www.example.com'
+        post :create, :service_id => @service.to_param, :username => @username, :user_id => @user, :uri => 'http://www.example.com'
       end
       should_set_the_flash_to(I18n.t('muck.services.already_added_username_feed', :service => '', :username => 'jbasdf')) # really do have to hard code the string here.  @username is nil
       should_redirect_to("parent") { user_identity_feeds_url(@user.id) } 
