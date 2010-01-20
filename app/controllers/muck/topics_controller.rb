@@ -6,6 +6,8 @@ class Muck::TopicsController < ApplicationController
   before_filter :build_tag_feeds, :only => [:show, :rss_discovery]
   before_filter :configure_feed_loading, :only => [:show, :rss_discovery]
   
+  caches_page [:show, :rss_discovery, :photos, :videos]
+  
   def show
     
     load_feeds
