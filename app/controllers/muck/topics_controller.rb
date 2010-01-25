@@ -1,7 +1,7 @@
 class Muck::TopicsController < ApplicationController
   unloadable
   
-  before_filter :adjust_format_for_iphone
+  #before_filter :adjust_format_for_iphone
   before_filter :check_terms, :except => [:new]
   before_filter :build_tag_feeds, :only => [:show, :rss_discovery]
   before_filter :configure_feed_loading, :only => [:show, :rss_discovery]
@@ -19,7 +19,7 @@ class Muck::TopicsController < ApplicationController
         render :template => 'topics/show'
       end
       format.opml { render :template => 'topics/show' }
-      format.iphone { render :template => 'topics/show' }
+      #format.iphone { render :template => 'topics/show' }
     end
   end
 
@@ -32,12 +32,11 @@ class Muck::TopicsController < ApplicationController
     @page_title = @title = @terms.titleize
     @photo_feeds = Service.build_photo_feeds(@terms, current_user, params[:service_ids])
     @number_of_images = 36
-    respond_to do |format|
-      format.html do
-        render :template => 'topics/photos'
-      end
-      format.iphone { render :template => 'topics/photos' }
-    end
+    render :template => 'topics/photos'
+    # respond_to do |format|
+    #   format.html { render :template => 'topics/photos' }
+    #   format.iphone { render :template => 'topics/photos' }
+    # end
   end
 
   def videos
@@ -45,20 +44,20 @@ class Muck::TopicsController < ApplicationController
     @page_title = @title = @terms.titleize
     @videos_feeds = Service.build_video_feeds(@terms, current_user, params[:service_ids])
     @number_of_videos = 36
-    respond_to do |format|
-      format.html do
-        render :template => 'topics/videos'
-      end
-      format.iphone { render :template => 'topics/videos' }
-    end
+    render :template => 'topics/videos'
+    # respond_to do |format|
+    #   format.html { render :template => 'topics/videos' }
+    #   format.iphone { render :template => 'topics/videos' }
+    # end
   end
   
   def new
     @page_title = I18n.t('muck.services.new_topic_title')
     @service_categories = ServiceCategory.sorted.find(:all, :include => [:tag_services])
-    respond_to do |format|
-      format.html { render :template => 'topics/new' }
-    end
+    render :template => 'topics/new'
+    # respond_to do |format|
+    #   format.html { render :template => 'topics/new' }
+    # end
   end
 
   def create

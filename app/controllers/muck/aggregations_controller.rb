@@ -18,10 +18,11 @@ class Muck::AggregationsController < ApplicationController
     else
       @aggregations = Aggregation.newest
     end
-    respond_to do |format|
-      format.html { render(:template => 'aggregations/index') }
-      format.iphone { render(:template => 'aggregations/index') }
-    end
+    render(:template => 'aggregations/index')
+    # respond_to do |format|
+    #   format.html { render(:template => 'aggregations/index') }
+    #   format.iphone { render(:template => 'aggregations/index') }
+    # end
   end
   
   def rss_discovery
