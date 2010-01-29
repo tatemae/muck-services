@@ -1,12 +1,13 @@
+<% cache({:format => 'pjs', :details => @details, :limit => @limit, :order => @order, :id => + @entry.id}, :omit_feeds => @omit_feeds) do %>
 <%
-@json_recommendations = @entry.json_recommendations(@limit, params[:order] || "mixed", true, params[:omit_feeds] || nil) 
-if !@json_recommendations.empty? 
+@host = "http://#{URI.parse(@uri).host}"
+if !@recommendations.empty?
 @direct_link_text = params[:direct_link_text] || t('muck.services.direct_link')
 %>
 var catalog_page = <%= !@entry.direct_link.nil? and @uri == @entry.permalink %>;
 var document_host = '<%= @host %>';
-var recs = <%= @json_recommendations %>;
-var app = "<%= app = request.protocol + request.host_with_port + '/' %>"; 
+var recs = <%= @recommendations.to_json %>;
+var app = "<%= request.protocol + request.host_with_port + '/' %>"; 
 <% if @details == true -%>
 function truncate(text, length) {
 	nEnd = text.indexOf(" ", 200);
@@ -30,8 +31,8 @@ for(nRec = 0; nRec < recs.length; nRec++) {
 	metadata_link = catalog_page && document_host == r.uri.substring(0, document_host.length);
 	direct_link = metadata_link && r.direct_link;
 	document.write('<p class="oer_recommender_item">');
-	document.write('<a class="oer_recommender_recommendation_link" href="' + app + 'r?id=' + r.id + (metadata_link ? "&target=metadata" : "") + '">' + r.title + ' (' + r.collection + ')</a>');
-	if (direct_link) document.write(' <a class="oer_recommender_direct_link" href="' + app + 'r?id=' + r.id + '&target=direct_link"><%= @direct_link_text %></a>');
+	document.write('<a class="oer_recommender_recommendation_link" href="' + app + 'r?id=' + r.recommendation_id + (metadata_link ? "&target=metadata" : "") + '">' + r.title + ' (' + r.collection + ')</a>');
+	if (direct_link) document.write(' <a class="oer_recommender_direct_link" href="' + app + 'r?id=' + r.recommendation_id + '&target=direct_link"><%= @direct_link_text %></a>');
 <% if @details == true -%>
 	document.write(' <span class="oer_recommender_published_at">(' + format_date(r.published_at) + ')</span>');
 	document.write(' <span class="oer_recommender_relevance_score"><%= t('muck.services.relevance')%>: ' + Math.round(r.relevance*100)/100 + '</span>');
@@ -43,4 +44,5 @@ for(nRec = 0; nRec < recs.length; nRec++) {
 document.write('</div>');	
 <% if params[:more_link] %>document.write('<div class="oer_recommender_more_link"><a href="' + app + 'resources/<%= @entry.id %>"><%= t('muck.services.gm_more_prompt') %></a></div>');<% end %>
 document.write('</div>');	
+<% end %>
 <% end %>

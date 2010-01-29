@@ -214,5 +214,6 @@ en:
       previous: Previous
       facebook_notes: Facebook Notes
       opml_generated: Feeds for {{terms}}
+      url_not_in_index: The <a href='{{uri}}'>resource you requested recommendations for</a> has not been indexed. Please add a repository containing metadata for the resource to add it to the index.
     activity_templates: 
       entry_comment: Comment

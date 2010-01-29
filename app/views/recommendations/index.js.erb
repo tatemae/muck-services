@@ -1,0 +1,1 @@
+<% cache({:format => 'js', :details => @details, :limit => @limit, :order => @order, :id => + @entry.id}, :omit_feeds => @omit_feeds) do %>{"document":{"document_id":<%= @entry.id.to_s %>,"uri":"<%= @entry.permalink %>","recommendations":<%= @recommendations.to_json %>}}<% end %>
