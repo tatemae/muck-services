@@ -181,7 +181,12 @@ class Feed < ActiveRecord::Base
   
   # Looks for feeds from a given url
   def self.discover_feeds(uri)
-    Feedbag.find(uri)
+    begin
+      Feedbag.find(uri)
+    rescue URI::InvalidURIError
+      # if we aren't able to discover a feed then just return the original uri
+      [Struct.new(:url => uri, :title => '')]
+    end
   end
   
   # Finds or creates a feed based on the url.  Any give feed uri should only exist once in the system

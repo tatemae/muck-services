@@ -122,6 +122,9 @@ class FeedTest < ActiveSupport::TestCase
     should "Discover feeds from url" do
       Feed.discover_feeds(TEST_URI)
     end
+    should "Discover feeds from xml url" do
+      assert_equal TEST_XML_URI, Feed.discover_feeds(TEST_XML_URI)[0].url
+    end
   end
   
   context "Harvest feed" do
