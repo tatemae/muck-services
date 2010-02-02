@@ -16,6 +16,7 @@ class ActiveSupport::TestCase
   TEST_URI = 'http://www.engadget.com'
   TEST_RSS_URI = 'http://www.engadget.com/rss.xml'
   TEST_USERNAME_TEMPLATE = 'http://feeds.delicious.com/v2/rss/{username}?count=100'
+  TEST_XML_URI = 'http://ocw.mit.edu/OcwWeb/rss/all/mit-allcourses.xml'
   
 end
 
