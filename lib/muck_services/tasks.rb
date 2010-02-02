@@ -39,7 +39,7 @@ module MuckServices
               }
             end
 
-            desc "Loads some feeds oai endpoints to get things started"
+            desc "Loads some feeds and oai endpoints to get things started (this should be run before muck:services:db:create_global_aggregation_feeds)"
             task :bootstrap => :environment do
               require 'active_record/fixtures'
               ActiveRecord::Base.establish_connection(RAILS_ENV.to_sym)
@@ -76,6 +76,14 @@ module MuckServices
               yml = File.join(File.dirname(__FILE__), '..', '..', 'db', 'bootstrap',"services")
               Fixtures.new(Service.connection,"services",Service,yml).insert_fixtures
 
+            end
+
+            desc "Creates a global feeds aggregation"
+            task :create_global_feeds_aggregation => :environment do
+              if Aggregation.find_by_title('global_feeds') == nil
+                global_feeds_id = Aggregation.create(:title => 'global_feeds', :terms => 'global_feeds').id
+                Feed.find(:all).each { |feed| AggregationFeed.create(:feed_id => feed.id, :aggregation_id => global_feeds_id) }
+              end
             end
 
           end
