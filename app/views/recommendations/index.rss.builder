@@ -1,4 +1,4 @@
-cache({:format => 'rss', :details => @details, :limit => @limit, :order => @order, :id => + @entry.id}, :omit_feeds => @omit_feeds) do
+cache({:locale => Language.locale_id, :format => 'rss', :details => @details, :limit => @limit, :order => @order, :id => + @entry.id, :omit_feeds => @omit_feeds}) do
   headers["Content-Type"] = "application/rss+xml"
   xml.instruct!
 
