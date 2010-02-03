@@ -1,3 +1,4 @@
+<% cache({:locale => Language.locale_id, :format => 'html', :grain_size => @grain_size, :tag_filter => @tag_filter}) do %>
 <div id="tag-cloud">
   <fieldset>
     <legend><%= @tag_filter.nil? ? (@grain_size == 'course' ? t('muck.services.courses_tag_cloud_label') : t('muck.services.resources_tag_cloud_label')) : t('muck.services.narrow_further') %></legend>
@@ -16,3 +17,4 @@
     <% end -%>
   </fieldset>
 </div>
+<% end %>
