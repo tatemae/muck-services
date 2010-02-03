@@ -78,10 +78,11 @@ module MuckServices
 
             end
 
-            desc "Creates a global feeds aggregation"
+            desc "Creates a global feeds aggregation and adds all existing feeds to it"
             task :create_global_feeds_aggregation => :environment do
               if Aggregation.find_by_title('global_feeds') == nil
-                global_feeds_id = Aggregation.create(:title => 'global_feeds', :terms => 'global_feeds').id
+                global_feeds_id = Aggregation.create(:title => 'global_feeds', :terms => 'global_feeds',
+                          :description => 'Feeds included in the site indexes.').id
                 Feed.find(:all).each { |feed| AggregationFeed.create(:feed_id => feed.id, :aggregation_id => global_feeds_id) }
               end
             end
@@ -93,21 +94,6 @@ module MuckServices
             path = File.join(File.dirname(__FILE__), *%w[.. ..])
             system "rsync -ruv #{path}/db ."
             system "rsync -ruv #{path}/public ."
-          end
-
-          desc "Create global_feeds aggregation and add feeds to it"
-          task :create_global_feeds => :environment do
-            admin_id = User.find_by_login('admin').id
-                    global_aggregation = Aggregation.create(:title => 'global_feeds', :terms => 'global_feeds',
-                          :description => 'Feeds included in the site indexes.',
-                          :ownable_id => admin_id, :ownable_type => 'User')
-            global_aggregation = Aggregation.find_by_title('global_feeds')
-            global_aggregation.feeds << Feed.find(:all, :conditions => "uri LIKE 'http://www.oercommons.org%' OR id < 1047364815")
-            global_aggregation.save!
-            AggregationFeed.update_all("feed_type = 'Feed'")
-            OaiEndpoint.find(:all).each do |ep|
-              AggregationFeed.create(:aggregation_id => global_aggregation.id, :feed_type => 'OaiEndpoint', :feed_id => ep.id)
-            end
           end
 
           desc "Add attention types"
