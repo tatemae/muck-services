@@ -37,7 +37,7 @@ class Entry < ActiveRecord::Base
 
   has_many :related_to, :foreign_key => 'entry_id', :class_name => 'Recommendation'
   has_many :related_entries, :through => :related_to, :source => :dest_entry do
-    def top(details=false, limit=5, omit_feeds=nil, order='relevance')
+    def top(details=false, limit=5, omit_feeds=nil, order='relevance desc')
       select = 'recommendations.id recommendation_id, recommendations.relevance, ' +
                'entries.title, feeds.short_title collection, recommendations.dest_entry_id '
       select << ', entries.author, entries.published_at, recommendations.clicks, entries.permalink, ' +
