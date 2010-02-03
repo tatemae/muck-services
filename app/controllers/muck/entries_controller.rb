@@ -44,13 +44,12 @@ class Muck::EntriesController < ApplicationController
     end
     @entry_title = @entry.title + ' (' + @entry.feed.short_title + ')'
     @page_title = @entry_title + ' - ' + I18n.t('muck.services.related_resources_title')
-#    I18n.locale = @entry.language[0..1]
     @limit = params[:limit] ? params[:limit].to_i : 20
     @limit = 40 if @limit > 40
 
     respond_to do |format|
       format.html do
-        @recommendations = @entry.recommendations(@limit, 'relevance', params[:details] == 'true')
+        @recommendations = @entry.related_entries.top(true, @limit)
         if params[:details] == 'true'
           render :template => "entries/details"
         else
