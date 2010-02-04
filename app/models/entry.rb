@@ -37,12 +37,12 @@ class Entry < ActiveRecord::Base
 
   has_many :related_to, :foreign_key => 'entry_id', :class_name => 'Recommendation'
   has_many :related_entries, :through => :related_to, :source => :dest_entry do
-    def top(details=false, limit=5, omit_feeds=nil, order='relevance desc')
-      select = 'recommendations.id recommendation_id, recommendations.relevance, ' +
+    def top(details=false, limit=5, omit_feeds=nil, order='rank desc, relevance desc')
+      select = 'entries.feed_id, recommendations.id recommendation_id, recommendations.relevance, ' +
                'entries.title, feeds.short_title collection, recommendations.dest_entry_id '
       select << ', entries.author, entries.published_at, recommendations.clicks, entries.permalink, ' +
                 'entries.direct_link direct_uri, ' +
-                'recommendations.avg_time_at_dest average_time_at_est, entries.description' if details
+                'recommendations.avg_time_at_dest average_time_at_dest, entries.description' if details
       conditions = omit_feeds == nil ? '' : "entries.feed_id NOT IN (#{omit_feeds.gsub(/[^0-9,]/,'')})"
       joins = 'INNER JOIN feeds ON entries.feed_id = feeds.id'
       find(:all, :select => select, :joins => joins, :conditions => conditions, :limit => limit, :order => order)
@@ -59,16 +59,16 @@ class Entry < ActiveRecord::Base
   
   acts_as_solr({:if => false, :fields => [{:aggregation => :integer}, {:feed_id => :integer}, {:grain_size => :string}, {:tags => :string}]}, {:type_field => :type_s})
 
-  def resource_uri 
-    self.direct_link.nil? ? self.permalink : self.direct_link
-  end
-  
   def self.search(search_terms, grain_size = nil, language = "en", limit = 10, offset = 0, operator = :or)
     raise MuckServices::Exceptions::LanguageNotSupported, I18n.t('muck.services.language_not_supported') unless Recommender::Languages.supported_languages.include?(language)
     query = ((!grain_size.nil? && grain_size != 'all') ? (search_terms + ") AND (grain_size:#{grain_size}") : search_terms) + ") AND (aggregation:#{Aggregation.global_feeds_id}"
     return find_by_solr(query, :limit => limit, :offset => offset, :scores => true,
         :select => "entries.id, entries.title, entries.permalink, entries.direct_link, entries.published_at, entries.description, entries.feed_id, feeds.short_title AS collection",
         :joins => "INNER JOIN feeds ON feeds.id = entries.feed_id", :core => language, :operator => operator)
+  end
+
+  def resource_uri
+    self.direct_link.nil? ? self.permalink : self.direct_link
   end
 
   def self.normalized_uri(uri)
