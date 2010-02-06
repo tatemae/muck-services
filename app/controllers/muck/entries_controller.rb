@@ -42,8 +42,8 @@ class Muck::EntriesController < ApplicationController
       render_text "Unable to find the specified document"
       return
     end
-    @entry_title = @entry.title + ' (' + @entry.feed.short_title + ')'
-    @page_title = @entry_title + ' - ' + I18n.t('muck.services.related_resources_title')
+    @entry_title = "#{@entry.title} (#{@entry.feed.short_title})"
+    @page_title = "#{@entry_title} - #{I18n.t('muck.services.related_resources_title')}"
     @limit = params[:limit] ? params[:limit].to_i : 20
     @limit = 40 if @limit > 40
 
