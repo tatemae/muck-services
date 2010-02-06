@@ -1,6 +1,6 @@
 <%= output_errors('', {:class => 'help-box'}) %>
 <div class="block">
-  <% if @results.length > 0 %>
+  <% if !@results.blank? %>
     <%= render(:partial => 'entries/result_status') %>
     <div class="column span-15">
       <%= render(:partial => 'entries/results') %>
