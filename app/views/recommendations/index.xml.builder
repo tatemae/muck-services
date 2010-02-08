@@ -1,4 +1,4 @@
-cache({:locale => Language.locale_id, :format => 'xml', :details => @details, :limit => @limit, :order => @order, :id => + @entry.id, :omit_feeds => @omit_feeds}) do
+cache({:locale => Language.locale_id, :format => 'xml', :details => @details, :limit => @limit, :order => @order, :id => @entry.id, :omit_feeds => @omit_feeds}) do
   xml.instruct!
   xml.recommendations(:document_id => @entry.id, :uri => @entry.permalink, :title => t("muck.services.gm_title"),
           :more_prompt => t("muck.services.gm_more_prompt"), :direct_link_text => t("muck.services.direct_link")) do
