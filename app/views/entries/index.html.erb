@@ -1,4 +1,4 @@
-<% cache({:locale => Language.locale_id, :format => 'html', :grain_size => @grain_size) do %>
+<% cache(:locale => Language.locale_id, :format => 'html', :grain_size => @grain_size) do %>
 <div align="center">
   <%= render :partial => 'entries/tag_cloud' %>
 </div>
