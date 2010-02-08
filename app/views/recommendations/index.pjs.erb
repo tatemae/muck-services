@@ -1,4 +1,4 @@
-<% cache({:locale => Language.locale_id, :format => 'pjs', :details => @details, :limit => @limit, :order => @order, :id => + @entry.id, :omit_feeds => @omit_feeds}) do %>
+<% cache({:locale => Language.locale_id, :format => 'pjs', :details => @details, :limit => @limit, :order => @order, :id => @entry.id, :omit_feeds => @omit_feeds}) do %>
 <%
 @host = "http://#{URI.parse(@uri).host}"
 if !@recommendations.empty?
