@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-services}
-  s.version = "0.1.34"
+  s.version = "0.1.35"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2010-01-25}
+  s.date = %q{2010-02-08}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -114,7 +114,7 @@ Gem::Specification.new do |s|
      "app/views/parts/_add_feed.html.erb",
      "app/views/parts/_select_feed.html.erb",
      "app/views/recommendations/get_button.html.erb",
-     "app/views/recommendations/index.html.erb",
+     "app/views/recommendations/index.js.erb",
      "app/views/recommendations/index.pjs.erb",
      "app/views/recommendations/index.rss.builder",
      "app/views/recommendations/index.xml.builder",
@@ -505,6 +505,8 @@ Gem::Specification.new do |s|
      "test/rails_root/db/migrate/20091115011828_add_aggregations_for_personal_recs.rb",
      "test/rails_root/db/migrate/20091116094447_rename_action_table.rb",
      "test/rails_root/db/migrate/20091118203605_add_default_feed_type_to_aggregation_feed.rb",
+     "test/rails_root/db/migrate/20100123035450_create_access_codes.rb",
+     "test/rails_root/db/migrate/20100123233654_create_access_code_requests.rb",
      "test/rails_root/db/schema.rb",
      "test/rails_root/features/step_definitions/common_steps.rb",
      "test/rails_root/features/step_definitions/visit_steps.rb",
@@ -534,6 +536,7 @@ Gem::Specification.new do |s|
      "test/rails_root/test/unit/identity_feed_test.rb",
      "test/rails_root/test/unit/oai_endpoint_test.rb",
      "test/rails_root/test/unit/personal_recommendation_test.rb",
+     "test/rails_root/test/unit/recommendation_test.rb",
      "test/rails_root/test/unit/service_category_test.rb",
      "test/rails_root/test/unit/service_test.rb",
      "test/rails_root/test/unit/services_mailer_test.rb",
