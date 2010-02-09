@@ -15,14 +15,6 @@ module MuckServices
 
         namespace :services do
 
-          desc "Imports attention data for use in testing"
-          task :import_attention => :environment do
-            require 'active_record/fixtures'
-            ActiveRecord::Base.establish_connection(RAILS_ENV.to_sym)
-            yml = File.join(RAILS_ROOT, 'db', 'bootstrap', 'attention')
-            Fixtures.new(Attention.connection,"attention",Attention,yml).insert_fixtures
-          end
-
           namespace :db do
 
             desc "Flags the languages that the muck raker supports"
@@ -53,14 +45,7 @@ module MuckServices
               yml = File.join(File.dirname(__FILE__), '..', '..', 'db', 'bootstrap',"feeds")
               Fixtures.new(Feed.connection,"feeds",Feed,yml).insert_fixtures
 
-              ServiceCategory.delete_all
-              yml = File.join(File.dirname(__FILE__), '..', '..', 'db', 'bootstrap',"service_categories")
-              Fixtures.new(Service.connection,"service_categories",ServiceCategory,yml).insert_fixtures
-
-              Service.delete_all
-              yml = File.join(File.dirname(__FILE__), '..', '..', 'db', 'bootstrap',"services")
-              Fixtures.new(Service.connection,"services",Service,yml).insert_fixtures
-
+              puts "Added some feeds and oai endpoints to the database"
             end
 
             desc "Deletes and reloads all services and service categories"
@@ -75,7 +60,7 @@ module MuckServices
               Service.delete_all
               yml = File.join(File.dirname(__FILE__), '..', '..', 'db', 'bootstrap',"services")
               Fixtures.new(Service.connection,"services",Service,yml).insert_fixtures
-
+              puts "Added services and service categories"
             end
 
             desc "Creates a global feeds aggregation and adds all existing feeds to it"
@@ -84,6 +69,9 @@ module MuckServices
                 global_feeds_id = Aggregation.create(:title => 'global_feeds', :terms => 'global_feeds',
                           :description => 'Feeds included in the site indexes.').id
                 Feed.find(:all).each { |feed| AggregationFeed.create(:feed_id => feed.id, :aggregation_id => global_feeds_id) }
+                puts "Added a global feed aggregation and added all existing feeds to it"
+              else
+                puts "The global_feeds aggregation already exists. Delete the global aggregation and try again."
               end
             end
 
@@ -94,6 +82,7 @@ module MuckServices
             path = File.join(File.dirname(__FILE__), *%w[.. ..])
             system "rsync -ruv #{path}/db ."
             system "rsync -ruv #{path}/public ."
+            puts "Copied migrations and public files from muck-services"
           end
 
           desc "Add attention types"
@@ -104,6 +93,16 @@ module MuckServices
             AttentionType.create(:id => AttentionType::CLICK, :name => 'click', :default_weight => 4)
             AttentionType.create(:id => AttentionType::SHARE, :name => 'share', :default_weight => 6)
             AttentionType.create(:id => AttentionType::DISCUSS, :name => 'discuss', :default_weight => 7)
+            puts "Added attention types"
+          end
+
+          desc "Imports attention data for use in testing"
+          task :import_attention => :environment do
+            require 'active_record/fixtures'
+            ActiveRecord::Base.establish_connection(RAILS_ENV.to_sym)
+            yml = File.join(RAILS_ROOT, 'db', 'bootstrap', 'attention')
+            Fixtures.new(Attention.connection,"attention",Attention,yml).insert_fixtures
+            puts "Added attention data"
           end
 
         end
