@@ -66,8 +66,7 @@ There are a number of rake tasks meant to help you get your database setup:
   rake muck:services:import_attention       # Imports attention data for use in testing
 
 === Bring in required files - migrations etc:
-rake muck:services:sync                    # Sync files from muck services.
-
+  rake muck:services:sync                    # Sync files from muck services.
 
 === Identity Feeds
 Specific feeds can be attached to objects.  For example, a user might produce a blog or a flickr photo stream.  The identity feed system associated the resulting
