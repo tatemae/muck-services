@@ -52,6 +52,7 @@ class FeedTest < ActiveSupport::TestCase
     should_belong_to :service
     
     should_validate_presence_of :uri
+    should_validate_uniqueness_of :uri
     
     should_scope_by_title
     should_scope_recent
