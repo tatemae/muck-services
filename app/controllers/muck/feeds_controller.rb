@@ -15,7 +15,7 @@ class Muck::FeedsController < ApplicationController
 
   # pass layout=popup to remove most of the chrome
   def show
-    @feed = Feed.find(params[:id])
+    @feed = Feed.find(params[:id], :include => :contributor)
     @entries = @feed.entries.paginate(:page => @page, :per_page => @per_page)
     respond_to do |format|
       format.html { render :template => 'feeds/show', :layout => get_layout_by_params  }
