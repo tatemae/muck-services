@@ -47,16 +47,17 @@ Muck raker aggregates data feeds and analyzes the results to make recommendation
 === environment.rb
 Add the following to environment.rb to include all the required gems:
 
-config.gem "muck-feedbag", :lib => "feedbag", :source => "http://gems.github.com"
-config.gem "pauldix-feedzirra", :lib => 'feedzirra', :source => "http://gems.github.com"
-config.gem 'muck-engine', :lib => 'muck_engine'
-config.gem 'muck-users', :lib => 'muck_users'
-config.gem 'muck-solr', :lib => 'acts_as_solr'
-# The following are optional but almost always used so you may as well pull them in.
-config.gem 'muck-comments', :lib => 'muck_comments'
-config.gem 'muck-activities', :lib => 'muck_activities'
-config.gem 'muck-shares', :lib => 'muck_shares'
-config.gem 'muck-raker', :lib => 'muck_raker'
+  config.gem "muck-feedbag", :lib => "feedbag", :source => "http://gems.github.com"
+  config.gem "pauldix-feedzirra", :lib => 'feedzirra', :source => "http://gems.github.com"
+  config.gem 'muck-engine', :lib => 'muck_engine'
+  config.gem 'muck-users', :lib => 'muck_users'
+  config.gem 'muck-solr', :lib => 'acts_as_solr'
+
+The following are optional but almost always used so you may as well pull them in.
+  config.gem 'muck-comments', :lib => 'muck_comments'
+  config.gem 'muck-activities', :lib => 'muck_activities'
+  config.gem 'muck-shares', :lib => 'muck_shares'
+  config.gem 'muck-raker', :lib => 'muck_raker'
 
 === Database
 There are a number of rake tasks meant to help you get your database setup:
