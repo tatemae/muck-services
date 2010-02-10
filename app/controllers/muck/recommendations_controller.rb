@@ -21,7 +21,7 @@ class Muck::RecommendationsController < ApplicationController
     @limit = params[:limit] ? params[:limit].to_i : 5
     @limit = 25 if @limit > 25
     @omit_feeds = params[:omit_feeds]
-    @order = params[:order] || "rank"
+    @order = params[:order] == 'relevance' ? 'relevance desc' : (params[:order] || "rank desc, relevance desc")
 
     Entry.track_time_on_page(session, @uri)
     @entry = Entry.recommender_entry(@uri)
