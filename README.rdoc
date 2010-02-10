@@ -60,10 +60,10 @@ config.gem 'muck-raker', :lib => 'muck_raker'
 
 === Database
 There are a number of rake tasks meant to help you get your database setup:
-rake muck:services:db:bootstrap           # Loads some feeds oai endpoints to get things started
-rake muck:services:db:bootstrap_services  # Deletes and reloads all services and service categories
-rake muck:services:db:populate            # Flags the languages that the muck raker supports
-rake muck:services:import_attention       # Imports attention data for use in testing
+  rake muck:services:db:bootstrap           # Loads some feeds oai endpoints to get things started
+  rake muck:services:db:bootstrap_services  # Deletes and reloads all services and service categories
+  rake muck:services:db:populate            # Flags the languages that the muck raker supports
+  rake muck:services:import_attention       # Imports attention data for use in testing
 
 === Bring in required files - migrations etc:
 rake muck:services:sync                    # Sync files from muck services.
