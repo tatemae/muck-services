@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/feed_list', :controller => 'muck/feeds', :action => 'selection_list'
 
   map.connect 'resources/search', :controller => 'muck/entries', :action => 'search'
+  map.connect 'resources/search.:format', :controller => 'muck/entries', :action => 'search'
   map.connect 'resources/tags/*tags', :controller => 'muck/entries', :action => 'browse_by_tags'
   map.resources :resources, :controller => 'muck/entries'
 
