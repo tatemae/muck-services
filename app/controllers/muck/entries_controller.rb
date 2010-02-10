@@ -28,11 +28,15 @@ class Muck::EntriesController < ApplicationController
   end
   
   def search
-    @search = params[:q]
+    @search = params[:q] || params[:terms]
     @grain_size = params[:grain_size] || 'all'
     _search
     respond_to do |format|
       format.html { render :template => 'entries/search' }
+      format.pjs { render :template => 'entries/search', :layout => false }
+      format.rdf { render :template => 'entries/search', :layout => false }
+      format.rss { render :template => 'entries/search', :layout => false }
+      format.xml { render :template => 'entries/search', :layout => false }
     end
   end
   

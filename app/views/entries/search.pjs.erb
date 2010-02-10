@@ -1,0 +1,18 @@
+<% if !@results.blank? %>
+<% cache({:locale => Language.locale_id, :format => 'pjs', :limit => @limit, :q => @query, :omit_feeds => @omit_feeds}) do %>
+var recs = <%= @results.to_json %>;
+var app = "<%= request.protocol + request.host_with_port + '/' %>";
+document.write('<div class="oer_recommender_container">');
+document.write('<div class="oer_recommender_list">');
+for(nRec = 0; nRec < recs.length; nRec++) {
+	r = recs[nRec].entry;
+    if (r == null) r = recs[nRec].attributes;
+    if (r == null) r = recs[nRec];
+	document.write('<p class="oer_recommender_item">');
+	document.write('<a class="oer_recommender_recommendation_link" href="' + app + 'visits/' + r.id + '">' + r.title + ' (' + r.collection + ')</a>');
+	document.write('</p>');
+}
+document.write('</div>');
+document.write('</div>');
+<% end %>
+<% end %>
