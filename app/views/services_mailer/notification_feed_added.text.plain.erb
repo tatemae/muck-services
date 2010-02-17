@@ -4,4 +4,4 @@ Title: <%= @feed.title %>
 
 Uri: <%= @feed.uri %>
 
-Manage feeds: <
+Manage feeds: <%= feeds_url(:order => 'created_at', :asc => 'false') %>

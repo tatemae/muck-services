@@ -1,4 +1,4 @@
 <h2>A new feed has been added to <%= @application_name %></h2>
 <p>Title: <%= @feed.title %></p>
 <p>Uri: <%= @feed.uri %></p>
-<p>Manage feeds: <%= link_to feeds_path(:order => 'created_at', :asc => 'false'), feeds_path(:order => 'created_at', :asc => 'false') %></p>
+<p>Manage feeds: <%= link_to feeds_url(:order => 'created_at', :asc => 'false'), feeds_url(:order => 'created_at', :asc => 'false') %></p>
