@@ -72,6 +72,7 @@ hr:
       entries_count: Ulaz
       entry_commment_contents: "komentirao {{resource}}"
       explore: "Traži {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Na stranici Moj Links, desni klik na &#39;My Links &quot;i kopirajte link. Mi će automatski uključiti, status, veze i note."
       facebook_link: "Možete pronaći svoj URL na Facebook Moji Linkovi stranici. {{link}} A zatim kliknite na &#39;Moj Links&#39;"
       facebook_notes: "Facebook Bilješke"
@@ -209,6 +210,7 @@ hr:
       topic_generated: "Rezultati za `{{terms}}`."
       type_of_metadata: "Vrsta Metadata:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Resursa koju ste tražili preporuke za</a> nije indeksiran. Molimo dodajte repozitorij koji sadrži metapodatke za resurs da biste ga dodali u indeks."
       validate_feed: "Označi feed kao valjan"
       videos: Videos
       visit: posjetite

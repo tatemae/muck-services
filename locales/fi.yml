@@ -72,6 +72,7 @@ fi:
       entries_count: Viestit
       entry_commment_contents: "kommentoi {{resource}}"
       explore: "Etsi {{topic}}"
+      facebook: Facebookia
       facebook_instructions: "Oma Linkit sivun, klikkaa hiiren oikealla Oma Linkit &quot;ja kopioi linkin. Me automaattisesti kuuluu, tila, linkkejä ja huomautuksia."
       facebook_link: "Löydät URL-Facebook Omat linkit sivulla. {{link}} Ja valitse sitten &quot;Omat linkit&quot;"
       facebook_notes: "Facebookia huomauttaa"
@@ -209,6 +210,7 @@ fi:
       topic_generated: "Tulokset `{{terms}}`."
       type_of_metadata: "Tyyppisiä Metadata:"
       uri: URL
+      url_not_in_index: "<a href='{{uri}}'>Resursseihin Pyytämäsi suosituksia</a> ei ole indeksoitu. Please add arkisto sisältää metatiedot resurssi lisää se hakemistoon."
       validate_feed: "Merkitse rehujen voimassa"
       videos: Videto
       visit: Visit

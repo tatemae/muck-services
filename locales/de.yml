@@ -72,6 +72,7 @@ de:
       entries_count: Einträge
       entry_commment_contents: "kommentierte {{resource}}"
       explore: "Suche nach {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Auf der Seite Meine Links mit der rechten Maustaste klicken Sie auf &quot;Meine Links&quot; und kopieren Sie den Link. Wir werden automatisch auch, Status, Links und Notizen."
       facebook_link: "Sie können Ihre URL finden Sie auf Ihrem Facebook Meine Links Seite. {{link}} Und klicken Sie dann auf &quot;Meine Links&quot;"
       facebook_notes: "Facebook stellt fest,"
@@ -209,6 +210,7 @@ de:
       topic_generated: "Ergebnisse für `{{terms}}`."
       type_of_metadata: "Art der Metadaten:"
       uri: URL
+      url_not_in_index: "Die <a href='{{uri}}'>angeforderte Ressource Empfehlungen für die</a> noch nicht indiziert. Bitte fügen Sie ein Repository mit Metadaten für die Ressource, die es in den Index aufnehmen zu können."
       validate_feed: "Mark-Feed als gültig"
       videos: Videos
       visit: Besuch

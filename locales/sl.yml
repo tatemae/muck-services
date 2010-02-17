@@ -72,6 +72,7 @@ sl:
       entries_count: Entries
       entry_commment_contents: "komentiral {{resource}}"
       explore: "Iskanje {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Na strani Moje povezave, desni klik na &quot;Moje povezave&quot; in kopirati povezavo. Bomo samodejno vključi, status, povezave in opombe."
       facebook_link: "Lahko najdete svoj URL na vaši strani Facebook Moje povezave. {{link}} In nato kliknite na &quot;Moje povezave&quot;"
       facebook_notes: "Facebook Opombe"
@@ -209,6 +210,7 @@ sl:
       topic_generated: "Rezultati za `{{terms}}`."
       type_of_metadata: "Vrsta Metapodatki:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Ki jo zahtevate priporočila za</a> še niso bile indeksirane. Dodajte odlagališče vsebuje metapodatkov za vir, ki jo dodate na indeks."
       validate_feed: "Mark krmo kot veljavne"
       videos: "Video posnetki"
       visit: Obisk

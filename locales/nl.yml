@@ -72,6 +72,7 @@ nl:
       entries_count: Entries
       entry_commment_contents: "becommentarieerd {{resource}}"
       explore: "Zoek {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Op de pagina Mijn links, rechts-klik op &#39;Mijn Links&#39; en kopieer de link. We zullen automatisch omvatten, status, links en notities."
       facebook_link: "U kunt uw URL op je Facebook Mijn Links pagina. {{link}} En klik dan op &#39;Mijn Links&#39;"
       facebook_notes: "Facebook Notes"
@@ -209,6 +210,7 @@ nl:
       topic_generated: "Resultaten voor `{{terms}}`."
       type_of_metadata: "Type Metadata:"
       uri: Url
+      url_not_in_index: "De <a href='{{uri}}'>bron die u hebt aangevraagd aanbevelingen voor</a> niet is geïndexeerd. Voeg een repository met metadata voor de bron toe te voegen aan de index."
       validate_feed: "Mark feed als geldig"
       videos: Video
       visit: bezoek

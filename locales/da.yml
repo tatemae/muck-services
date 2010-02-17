@@ -28,7 +28,7 @@ da:
       all_resources: "Alle ressourcer"
       already_added_uri_feed: "Du har allerede tilføjet den url {{uri}}"
       already_added_username_feed: "Du har allerede tilføjet en {{service}} konto med brugernavnet {{username}}"
-      already_shared: "Du har tidligere delte denne side."
+      already_shared: "Du tidligere har delt denne side."
       amazon_prompt: "Indtast den e-mail, du bruger med Amazon.com"
       approval_status: Godkendt
       atom: Atom
@@ -72,6 +72,7 @@ da:
       entries_count: Entries
       entry_commment_contents: "kommenterede {{resource}}"
       explore: "Søg efter {{topic}}"
+      facebook: Facebook
       facebook_instructions: "På Mine Links side, højre-klik på &#39;Mine Links&#39; og kopiere linket. Vi vil automatisk omfatte, status, links og noter."
       facebook_link: "Du kan finde din webadresse på din Facebook Mine links side. {{link}} Og derefter klikke på &#39;My Links&#39;"
       facebook_notes: "Facebook Noter"
@@ -122,7 +123,7 @@ da:
       login_to_comment: "Log ind for at tilføje en kommentar"
       metadata: metadata
       metadata_prefix: "Metadata Præfiks"
-      my_identity: "Min Identity"
+      my_identity: "Min identitet"
       my_services: "Min Service"
       narrow_further: "indsnævre resultaterne yderligere"
       netflix_prompt: "Netflix Kø RSS URL"
@@ -209,6 +210,7 @@ da:
       topic_generated: "Resultater for `{{terms}}`."
       type_of_metadata: "Type Metadata:"
       uri: Url
+      url_not_in_index: "Den <a href='{{uri}}'>ressource, du anmodede om anbefalinger om</a> ikke er blevet indekseret. Please add et arkiv, som indeholder metadata for den ressource for at føje den til indekset."
       validate_feed: "Mark foder som gyldige"
       videos: Videoer
       visit: visit

@@ -72,6 +72,7 @@ et:
       entries_count: Entries
       entry_commment_contents: "kommenteeris {{resource}}"
       explore: "Otsi {{topic}}"
+      facebook: Facebook
       facebook_instructions: "On My Links Page paremklõpsake teemal &quot;Minu lingid&quot; ja kopeerida link. Me automaatselt lisada, staatuse, linke ja märkusi."
       facebook_link: "Leiad URL-i Facebook My Links Page. {{link}} Ja kliki &quot;Minu lingid&quot;"
       facebook_notes: "Facebook Märkused"
@@ -209,6 +210,7 @@ et:
       topic_generated: "Tulemused `{{terms}}`."
       type_of_metadata: "Tüüp Vaheandmed:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Sinu soovitud allikas soovitused</a> ei ole indekseeritud. Lisage hoidla, mis sisaldab metaandmeid ressurssi, et lisada see indeks."
       validate_feed: "Mark sööda kehtiv"
       videos: Videod
       visit: Külasta

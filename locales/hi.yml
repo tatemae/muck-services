@@ -72,6 +72,7 @@ hi:
       entries_count: प्रविष्टियां
       entry_commment_contents: "{{resource}} पर टिप्पणी"
       explore: "{{topic}} के लिए खोजें"
+      facebook: Facebook
       facebook_instructions: "मेरी लिंक पृष्ठ पर, सही &#39;मेरा&#39; कड़ियाँ और लिंक की प्रतिलिपि पर क्लिक करें. हम स्वचालित रूप से शामिल हैं, स्थिति, संपर्क और नोट्स होगा."
       facebook_link: "आप अपने Facebook मेरी लिंक पृष्ठ पर अपनी यूआरएल ढूँढ सकते हैं. &#39;पर क्लिक करें और फिर {{link}} मेरा कड़ियाँ"
       facebook_notes: "Facebook नोट्स"
@@ -209,6 +210,7 @@ hi:
       topic_generated: "`{{terms}}`. के लिए परिणाम"
       type_of_metadata: "Metadata का प्रकार:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>संसाधन तुम्हारे लिए सिफारिशों का अनुरोध</a> सूचीबद्ध नहीं किया गया है. कृपया एक संसाधन के लिए Metadata युक्त भंडार जोड़ने के लिए यह सूची में जोड़ें."
       validate_feed: "मान्य के रूप में मार्क फ़ीड"
       videos: वीडियो
       visit: यात्रा

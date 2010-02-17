@@ -13,7 +13,7 @@ it:
       add_feed_advanced: "Aggiungi Feed (Advanced)"
       add_feed_title: "Aggiungi un nuovo feed"
       add_feed_url: "URL:"
-      add_feeds_to_aggregation: "Aggiungere feed a {{title}}"
+      add_feeds_to_aggregation: "Aggiungi ai {{title}} feed"
       add_more_sources: "Aggiungi Fonti"
       add_new_feed_title: "Aggiungi un nuovo feed"
       add_oai: "Aggiungi OAI"
@@ -72,6 +72,7 @@ it:
       entries_count: Entries
       entry_commment_contents: "commento su {{resource}}"
       explore: "Ricerca di {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Nella pagina My Links, fate clic destro su &#39;My Links&#39; e copia il link. Ci include automaticamente, lo status, i collegamenti e le note."
       facebook_link: "Puoi trovare il tuo URL sulla tua pagina Facebook My Links. {{link}} E poi cliccare su &#39;My Links&#39;"
       facebook_notes: "Facebook Note"
@@ -209,6 +210,7 @@ it:
       topic_generated: "Risultati per `{{terms}}`."
       type_of_metadata: "Tipo di metadati:"
       uri: Url
+      url_not_in_index: "La <a href='{{uri}}'>risorsa richiesta consigli per</a> non è stato indicizzato. Si prega di aggiungere un repository contenente i metadati per la risorsa per aggiungere al indice."
       validate_feed: "Feed Segna come valido"
       videos: Video
       visit: visita

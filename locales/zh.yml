@@ -72,6 +72,7 @@ zh:
       entries_count: 参赛作品
       entry_commment_contents: "评论{{resource}}"
       explore: "搜寻{{topic}}"
+      facebook: 脸谱
       facebook_instructions: "在我的链接页面，右键点击&#39;我的链接，然后复制该链接。我们会自动包括地位，链接和说明。"
       facebook_link: "你可以找到你的Facebook我的链接页面上的网址。 {{link}}，然后点击&#39;我的链接&#39;"
       facebook_notes: Facebook的注释
@@ -112,7 +113,7 @@ zh:
       import_service: "进口{{service}}"
       language_not_supported: 所要求的语言不支持
       latest_aggregations: 最新的聚合
-      linkedin_prompt: 百度公开个人资料的网址
+      linkedin_prompt: LinkedIn公开个人资料的网址
       linkedin_rss: "您可以在您的{{link}}.底部您的网址"
       loading_content_image: "“％=吨（&#39;muck.services.loading_image&#39;）％”"
       loading_image: 加载图像
@@ -209,6 +210,7 @@ zh:
       topic_generated: "结果`{{terms}}`."
       type_of_metadata: 元数据类型：
       uri: 网址
+      url_not_in_index: "在<a href='{{uri}}'>您要求的资源提出建议</a>并没有被索引。请新增一个存放设施，为资源的元数据，将其添加到索引中。"
       validate_feed: 马克饲料有效
       videos: 视频
       visit: 访问

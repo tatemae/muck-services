@@ -12,7 +12,17 @@ module MuckServices
     def define
 
       namespace :muck do
-
+        
+        desc "Sync files from muck services."
+        namespace :sync do
+          task :services do
+            path = File.join(File.dirname(__FILE__), *%w[.. ..])
+            system "rsync -ruv #{path}/db ."
+            system "rsync -ruv #{path}/public ."
+            puts "Copied migrations and public files from muck-services"
+          end
+        end
+        
         namespace :services do
 
           namespace :db do
@@ -75,14 +85,6 @@ module MuckServices
               end
             end
 
-          end
-
-          desc "Sync files from muck services."
-          task :sync do
-            path = File.join(File.dirname(__FILE__), *%w[.. ..])
-            system "rsync -ruv #{path}/db ."
-            system "rsync -ruv #{path}/public ."
-            puts "Copied migrations and public files from muck-services"
           end
 
           desc "Add attention types"

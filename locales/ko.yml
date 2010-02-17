@@ -72,6 +72,7 @@ ko:
       entries_count: 등록
       entry_commment_contents: "{{resource}}에 대한 논평"
       explore: "검색 {{topic}}에 대한"
+      facebook: "페이 스북"
       facebook_instructions: "내 링크 페이지에서 &#39;내 링크&#39;와 링크를 복사를 마우스 오른쪽 단추로 누릅니다. 자동으로, 상태, 링크 및 메모가 포함됩니다."
       facebook_link: "귀하의 페이 스북 내 링크 페이지에서 귀하의 URL을 찾을 수있습니다. &#39;에 대한 {{link}}을 누른 다음 내 링크&#39;"
       facebook_notes: "페이스 북의 노트"
@@ -209,6 +210,7 @@ ko:
       topic_generated: "`{{terms}}`.에 대한 검색 결과"
       type_of_metadata: "메타 데이터의 유형 :"
       uri: 홈페이지
+      url_not_in_index: "<a href='{{uri}}'>당신을위한 권장 사항 요청한 리소스를</a> 색인이 생성되지 않았습니다. 제발 색인에 추가할 저장소 리소스에 대한 메타 데이터가 포함된 추가할 수있습니다."
       validate_feed: "유효 기간 : 마크 피드"
       videos: 영화
       visit: 방문

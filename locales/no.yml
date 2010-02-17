@@ -73,6 +73,7 @@
       entries_count: Oppføringer
       entry_commment_contents: "kommentert {{resource}}"
       explore: "Søk etter {{topic}}"
+      facebook: Facebook
       facebook_instructions: "På My Links side, høyreklikk på &quot;Mine linker&quot; og kopier linken. Vi vil automatisk omfatte, status, lenker og notater."
       facebook_link: "Du kan finne din URL på Facebook My Links side. {{link}} Og klikk deretter på &#39;Min Linker&#39;"
       facebook_notes: "Facebook Notes"
@@ -210,6 +211,7 @@
       topic_generated: "Resultater for `{{terms}}`."
       type_of_metadata: "Type Metadata:"
       uri: Url
+      url_not_in_index: "Den <a href='{{uri}}'>ressursen du ba om anbefalinger om</a> ikke har blitt indeksert. Vennligst legg et oppbevaringssted inneholder metadata for ressursen å legge den til indeksen."
       validate_feed: "Mark feed som gyldig"
       videos: Videoer
       visit: besøk

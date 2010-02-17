@@ -72,6 +72,7 @@ pt-PT:
       entries_count: Entradas
       entry_commment_contents: "comentou sobre {{resource}}"
       explore: "Busca por {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Na página As Minhas Hiperligações, clique-direito em &quot;My Links&quot; e copie o link. Nós vamos incluir automaticamente, estatuto, links e notas."
       facebook_link: "Você pode encontrar o seu URL no seu Facebook página Meus Links. {{link}} E, em seguida, clique em &quot;My Links&quot;"
       facebook_notes: "Facebook Notes"
@@ -209,6 +210,7 @@ pt-PT:
       topic_generated: "Resultados para `{{terms}}`."
       type_of_metadata: "Tipo de Metadados:"
       uri: Url
+      url_not_in_index: "O <a href='{{uri}}'>recurso solicitado recomendações para</a> não tenha sido indexado. Por favor, adicione um repositório que contém os metadados para o recurso para adicioná-lo ao índice."
       validate_feed: "Mark alimentos como válidos"
       videos: Vídeos
       visit: visite

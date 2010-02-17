@@ -72,6 +72,7 @@ sk:
       entries_count: Príspevky
       entry_commment_contents: "skomentoval {{resource}}"
       explore: "Hľadať {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Na stránke Moje odkazy, pravým-kliknite na &#39;My Links&#39; a skopírovať odkaz. Budeme automaticky zahŕňajú stav, odkazy a poznámky."
       facebook_link: "Môžete nájsť URL na vašej stránke Facebook My Links. {{link}} A potom kliknite na &#39;My Links&#39;"
       facebook_notes: "Facebook Notes"
@@ -209,6 +210,7 @@ sk:
       topic_generated: "Výsledky za `{{terms}}`."
       type_of_metadata: "Typ Metadata:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Vami požadovaný zdroj odporúčaní</a> nebola indexovaná. Prosím, pridajte úložisko obsahuje metaúdaje zdroj pridať do indexu."
       validate_feed: "Mark krmivo ako platný"
       videos: Videá
       visit: navštívte

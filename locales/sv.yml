@@ -72,6 +72,7 @@ sv:
       entries_count: Inlägg
       entry_commment_contents: "kommenterade {{resource}}"
       explore: "Sök efter {{topic}}"
+      facebook: Facebook
       facebook_instructions: "På Min länksida, högerklicka på &quot;Mina länkar&quot; och kopiera länken. Vi kommer automatiskt att inkludera, status, kontakter och anteckningar."
       facebook_link: "Du kan hitta din webbadress på din Facebook Min länksida. {{link}} Och klicka på &quot;Mina länkar&quot;"
       facebook_notes: "Facebook Notes"
@@ -209,6 +210,7 @@ sv:
       topic_generated: "Resultat för `{{terms}}`."
       type_of_metadata: "Typ av metadata:"
       uri: Url
+      url_not_in_index: "Den <a href='{{uri}}'>resurs du begärde rekommendationer</a> har inte indexerats. Lägg till en förvaringsplats som innehåller metadata för resursen att lägga till det i indexet."
       validate_feed: "Mark foder som giltiga"
       videos: Videos
       visit: visit

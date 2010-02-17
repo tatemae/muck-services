@@ -72,6 +72,7 @@ ca:
       entries_count: Entrades
       entry_commment_contents: "va escriure sobre {{resource}}"
       explore: "Cerca {{topic}}"
+      facebook: Facebook
       facebook_instructions: "A la pàgina Els meus vincles, feu clic als &quot;Enllaços&quot; i copia l&#39;enllaç. Ens inclourà automàticament, l&#39;estat, enllaços i notes."
       facebook_link: "Vostè pot trobar la seva adreça a la seva pàgina de Facebook, My Links. {{link}} I després feu clic als &quot;Enllaços&quot;"
       facebook_notes: "Pren nota de Facebook"
@@ -209,9 +210,10 @@ ca:
       topic_generated: "Resultats de `{{terms}}`."
       type_of_metadata: "Tipus de Metadades:"
       uri: Url
+      url_not_in_index: "El <a href='{{uri}}'>recurs sol.licitat recomanacions per</a> que no s&#39;ha indexat. Si us plau, afegir un dipòsit que conté les metadades dels recursos per afegir-lo a l&#39;índex."
       validate_feed: "Marcar com a vàlids els pinsos"
       videos: Videos
       visit: visita
       xml: XML
       zotero_group_prompt: "Grup Zotero URL"
-      zotero_group_rss: "Seva grup Zotero URL és així: http://www.zotero.org/groups/adventures_in_library_instruction/items"
+      zotero_group_rss: "El seu grup Zotero URL és així: http://www.zotero.org/groups/adventures_in_library_instruction/items"

@@ -72,6 +72,7 @@ ru:
       entries_count: Записи
       entry_commment_contents: "прокомментировал {{resource}}"
       explore: "Поиск по {{topic}}"
+      facebook: Facebook
       facebook_instructions: "На странице &quot;Мои ссылки&quot;, правой кнопкой мыши на &quot;Мои ссылки&quot; и скопировать ссылку. Мы автоматически включать, статус, ссылки и заметки."
       facebook_link: "Вы можете найти URL Facebook на вашей странице &quot;Мои ссылки. {{link}} И нажмите на &quot;Мои ссылки&quot;"
       facebook_notes: "Facebook Notes"
@@ -209,6 +210,7 @@ ru:
       topic_generated: "Результаты поиска по запросу `{{terms}}`."
       type_of_metadata: "Тип Метаданные:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Запрашиваемый Вами ресурс рекомендаций</a> еще не были проиндексированы. Пожалуйста, добавьте репозитории метаданных, содержащие рекламу для своего ресурса, чтобы добавить его в индекс."
       validate_feed: "Марк кормить действительны"
       videos: Видео
       visit: Визит

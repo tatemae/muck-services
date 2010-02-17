@@ -72,6 +72,7 @@ ro:
       entries_count: Intrări
       entry_commment_contents: "a comentat pe {{resource}}"
       explore: "Căutaţi {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Pe pagina mea Link-uri, faceţi clic dreapta pe &quot;Link-uri Meu&quot; şi să copiaţi link-ul. Noi vom include în mod automat, statutul, link-uri şi note."
       facebook_link: "Puteţi găsi URL-ul dvs. de pe Facebook My pagina Link-uri. Link-uri mea {{link}} şi apoi faceţi clic pe &quot;&quot;"
       facebook_notes: "Note Facebook"
@@ -209,6 +210,7 @@ ro:
       topic_generated: "Rezultate pentru `{{terms}}`."
       type_of_metadata: "Tip de metadate:"
       uri: Url-ul
+      url_not_in_index: "<a href='{{uri}}'>Resursa pe care aţi solicitat recomandări pentru</a> nu a fost indexat. Vă rugăm să adăugaţi un depozit care conţine metadate pentru resursa pentru ao adăuga la index."
       validate_feed: "Mark Feed ca valabile"
       videos: Filme
       visit: Visit

@@ -72,6 +72,7 @@ hu:
       entries_count: Szövegrészek
       entry_commment_contents: "kommentálta {{resource}}"
       explore: "{{topic}} Keresése a"
+      facebook: Facebook
       facebook_instructions: "A Saját Linkek lapon kattintson a jobb gombbal a &quot;Saját linkek&quot; és másolja a linket. Automatikusan közé, állapotát, linkeket és jegyzeteket."
       facebook_link: "Megtalálhatja az Ön URL-je Facebook Saját linkek oldalt. {{link}}, Majd kattints a &quot;Saját linkek&quot;"
       facebook_notes: "Facebook Megjegyzés"
@@ -209,6 +210,7 @@ hu:
       topic_generated: "Eredmények a `{{terms}}`."
       type_of_metadata: "Metadata típusa:"
       uri: URL
+      url_not_in_index: "A <a href='{{uri}}'>kért forrás ajánlások</a> nem indexelt. Kérjük, adjon hozzá az adattár, amely a metaadatokat az erőforrás, ha hozzá az index."
       validate_feed: "Mark feed érvényes"
       videos: Video
       visit: keresse

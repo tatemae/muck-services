@@ -72,6 +72,7 @@ pl:
       entries_count: Wpisy
       entry_commment_contents: "skomentował {{resource}}"
       explore: "Szukaj {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Na stronie Linki My, kliknij prawym przyciskiem myszy na &quot;Moje linki&quot; i skopiować link. Automatycznie to, statusu, linki i notatki."
       facebook_link: "Możesz znaleźć adres URL na stronie Mój Facebook stronie łącza. {{link}} A następnie kliknij na &quot;Moje linki &#39;"
       facebook_notes: "Facebook Notes"
@@ -209,6 +210,7 @@ pl:
       topic_generated: "Wyniki dla `{{terms}}`."
       type_of_metadata: "Rodzaj metadanych:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Zasobów żądane zalecenia</a> nie zostały zindeksowane. Należy dodać repozytorium zawierające metadane zasobów, aby dodać ją do indeksu."
       validate_feed: "RSS Oznacz jako ważny"
       videos: Filmy
       visit: wizyta

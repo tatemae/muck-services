@@ -72,8 +72,9 @@ gl:
       entries_count: Entradas
       entry_commment_contents: "comentar sobre {{resource}}"
       explore: "Busca por {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Na páxina Mis Enlaces, click dereito en &quot;My Links&quot; e copiar o enlace. Nós imos incluír automaticamente, estatuto, ligazóns e notas."
-      facebook_link: "Podes atopar o teu URL no seu Facebook páxina Meus Links. {{link}} E, en continuación, prema en &quot;My Links&quot;"
+      facebook_link: "Podes atopar o teu URL no seu Facebook páxina Meus Links. {{link}} E, a continuación, prema en &quot;My Links&quot;"
       facebook_notes: "Facebook Notes"
       facebook_notifications: "Notificacións Facebook"
       facebook_prompt: "Seu Facebook My Links URL"
@@ -137,7 +138,7 @@ gl:
       no_feeds_at_uri: "Non atopamos a URL que aparece"
       no_feeds_found: "Non se atoparon feeds"
       no_feeds_from_username: "Non atopamos o dado conta"
-      no_hits: "A súa procura - <b>{{search}}</b> - non atopou <b>{{resource_type}}.</b> Por favor, ténteo unha busca ou selección un idioma diferente."
+      no_hits: "A súa procura - <b>{{search}}</b> - non atopou <b>{{resource_type}}.</b> Por favor, inténteo unha busca ou selección un idioma diferente."
       no_recommendations: "Ningunha recomendación se atopou."
       no_tagged_courses: "Ningún <b>curso</b> atopado &quot;tag <b>{{tags}}.</b> <a href='/resources'>Start over</a> ou amosar <a href='/resources/tags/{{tags}}'>todos os recursos tagged {{tags}}.</a>"
       no_tagged_resources: "Os <b>recursos</b> non se atopou a tag <b>{{tags}}.</b> <a href='/resources'>Start over.</a>"
@@ -209,6 +210,7 @@ gl:
       topic_generated: "Resultados para `{{terms}}`."
       type_of_metadata: "Tipo de metadatos:"
       uri: Url
+      url_not_in_index: "O <a href='{{uri}}'>recurso solicitado recomendacións para</a> non foi indexado. Por favor, engade un depósito que contén os metadatos para o recurso para engadir lo ó índice."
       validate_feed: "Mark alimentos como válidos"
       videos: Vídeos
       visit: visita

@@ -2,216 +2,218 @@
 th: 
   muck: 
     activity_templates: 
-      entry_comment: ความคิดเห็น
+      entry_comment: "ความ คิดเห็น"
     services: 
-      add_aggregation: เพิ่มการสรุปรวม
-      add_aggregation_title: "ชื่อสรุปรวม:"
-      add_edit_feeds: "เพิ่ม / แก้ไขข้อมูล"
-      add_extended_feed_sub_title: ร่วมแหล่งข้อมูลใหม่
-      add_extended_feed_title: เพิ่มฟีดใหม่
-      add_feed: เพิ่มฟีด
-      add_feed_advanced: "เพิ่มฟีด (Advanced)"
-      add_feed_title: เพิ่มฟีดใหม่
+      add_aggregation: "เพิ่ม การ สรุป รวม"
+      add_aggregation_title: "ชื่อ สรุป รวม:"
+      add_edit_feeds: "เพิ่ม / แก้ไข ข้อมูล"
+      add_extended_feed_sub_title: "ร่วม แหล่ง ข้อมูล ใหม่"
+      add_extended_feed_title: "เพิ่ม ฟี ด ใหม่"
+      add_feed: "เพิ่ม ฟี ด"
+      add_feed_advanced: "เพิ่ม ฟี ด (Advanced)"
+      add_feed_title: "เพิ่ม ฟี ด ใหม่"
       add_feed_url: "Url:"
-      add_feeds_to_aggregation: "เพิ่มฟีดที่ {{title}}"
-      add_more_sources: เพิ่มมา
-      add_new_feed_title: เพิ่มฟีดใหม่
+      add_feeds_to_aggregation: "เพิ่ม ฟี ด ที่ {{title}}"
+      add_more_sources: "เพิ่ม มา"
+      add_new_feed_title: "เพิ่ม ฟี ด ใหม่"
       add_oai: "เพิ่ม OAI"
       add_oai_feed: "เพิ่ม OAI Endpoint"
-      add_opml_to_aggregation: "เพิ่มไฟล์ OPML"
+      add_opml_to_aggregation: "เพิ่ม ไฟล์ OPML"
       add_rss: "เพิ่ม RSS"
       add_rss_feed: "เพิ่ม RSS Feed"
-      add_sources_by_tag: เพิ่มฟีดจากแท็ก.
-      added_date: การเพิ่ม
+      add_sources_by_tag: "เพิ่ม ฟี ด จาก แท็ ก."
+      added_date: "การ เพิ่ม"
       aggregation_deleted: "{{title}} ลบ"
-      aggregation_updated: ปรับปรุงการสรุปรวม
-      all_resources: ทรัพยากรทั้งหมด
-      already_added_uri_feed: "คุณได้แล้วเพิ่ม {{uri}} url"
-      already_added_username_feed: "คุณได้แล้วเพิ่มบัญชี {{service}} กับ {{username}} ชื่อผู้ใช้"
-      already_shared: คุณได้ใช้ก่อนหน้านี้.
-      amazon_prompt: "กรุณาใส่อีเมล์ที่คุณใช้กับ Amazon.com"
-      approval_status: การอนุมัติ
+      aggregation_updated: "ปรับปรุง การ สรุป รวม"
+      all_resources: "ทรัพยากร ทั้งหมด"
+      already_added_uri_feed: "คุณ ได้ แล้ว เพิ่ม {{uri}} url"
+      already_added_username_feed: "คุณ ได้ แล้ว เพิ่ม บัญชี {{service}} กับ {{username}} ชื่อ ผู้ ใช้"
+      already_shared: "คุณ ได้ ใช้ ก่อน หน้า นี้."
+      amazon_prompt: "กรุณา ใส่ อีเมล์ ที่ คุณ ใช้ กับ Amazon.com"
+      approval_status: "การ อนุมัติ"
       atom: Atom
       available_services: "บริการ Available"
       available_sources: "แหล่ง Available"
       back: หลัง
-      ban_feed: ฟีดทำเครื่องหมายว่าไม่ถูกต้อง
+      ban_feed: "ฟี ด ทำ เครื่องหมาย ว่า ไม่ ถูก ต้อง"
       banned: ห้าม
-      blogger_prompt: "URL ของ Blog ของคุณ"
+      blogger_prompt: "URL ของ Blog ของ คุณ"
       build_topic: "ค้นหา Live"
       calculated: คำนวณ
-      cant_modify_aggregation: คุณไม่ได้รับอนุญาตให้เข้าถึงการสรุปรวมที่ระบุ.
-      cant_modify_identity_feed: คุณไม่ได้รับสิทธิ์ในการเข้าถึงข้อมูลที่ระบุ.
-      choose_service: "เลือกบริการ:"
+      cant_modify_aggregation: "คุณ ไม่ ได้ รับ อนุญาต ให้ เข้าถึง การ สรุป รวม ที่ ระบุ."
+      cant_modify_identity_feed: "คุณ ไม่ ได้ รับ สิทธิ์ ใน การ เข้าถึง ข้อมูล ที่ ระบุ."
+      choose_service: "เลือก บริการ:"
       close: ปิด
-      collection_description: "คำอธิบาย Collection:"
-      collection_home_uri: "ที่อยู่ของ Collection หน้าแรก"
-      collection_uri: "ที่อยู่ของเมตาดาต้า Collection:"
-      collections: เรียกเก็บ
-      collections_long: กลุ่มสร้างดัชนี
+      collection_description: "คำ อธิบาย Collection:"
+      collection_home_uri: "ที่ อยู่ ของ Collection หน้า แรก"
+      collection_uri: "ที่ อยู่ ของ เม ตา ดาต้า Collection:"
+      collections: "เรียก เก็บ"
+      collections_long: "กลุ่ม สร้าง ดัชนี"
       comment_entries_count: 
-        one: "1 ความคิดเห็น"
-        other: "ความคิดเห็น {{count}}"
-      contributor: ผู้ให้ข้อมูล
+        one: "1 ความ คิดเห็น"
+        other: "ความ คิดเห็น {{count}}"
+      contributor: "ผู้ ให้ ข้อมูล"
       course_search_results: "หลักสูตร <b>{{first}} - {{last}}</b> ของ <b>{{total}}</b> สำหรับ <b>{{terms}}</b> ค้นหา"
-      course_tag_results: "หลักสูตร <b>{{first}} - {{last}}</b> ของ <b>{{total}}</b> ติดแท็ก <b>{{terms}}</b>"
-      courses_tag_cloud_label: "รายวิชาการใช้แท็ก <a href=\"/resources\">[ดูทรัพยากรทั้งหมด]</a>"
+      course_tag_results: "หลักสูตร <b>{{first}} - {{last}}</b> ของ <b>{{total}}</b> ติด แท็ ก <b>{{terms}}</b>"
+      courses_tag_cloud_label: "รายวิชา การ ใช้ แท็ ก <a href=\"/resources\">[ดู ทรัพยากร ทั้งหมด]</a>"
       default_language: ภาษา
-      demo: การสาธิต
-      description: รายละเอียด
-      details: รายละเอียด
-      developers_long: ข้อมูลสำหรับนักพัฒนา
-      direct_link: "[ลิงค์โดยตรง]"
-      discover_feed: อาหารเชิญ
-      discover_feed_message: "ค้นหาข้อมูลเกี่ยวกับ url ที่คุณระบุ. โปรดรอ."
-      display_address: ที่แสดง
-      display_url: "Url ที่จะแสดง:"
-      download_opml: "ดาวน์โหลดไฟล์ OPML สำหรับ {{terms}}"
-      edit_aggregation: สรุปรวมแก้ไข
+      demo: "การ สาธิต"
+      description: "ราย ละเอียด"
+      details: "ราย ละเอียด"
+      developers_long: "ข้อมูล สำหรับ นัก พัฒนา"
+      direct_link: "[ลิงค์ โดยตรง]"
+      discover_feed: "อาหาร เชิญ"
+      discover_feed_message: "ค้นหา ข้อมูล เกี่ยว กับ url ที่ คุณ ระบุ. โปรด รอ."
+      display_address: "ที่ แสดง"
+      display_url: "Url ที่ จะ แสดง:"
+      download_opml: "ดาวน์โหลด ไฟล์ OPML สำหรับ {{terms}}"
+      edit_aggregation: "สรุป รวม แก้ไข"
       edit_aggregation_title: "{{title}} แก้ไข"
       entries_count: Entries
-      entry_commment_contents: "ความเห็นเกี่ยวกับ {{resource}}"
+      entry_commment_contents: "ความ เห็น เกี่ยว กับ {{resource}}"
       explore: "ค้นหา {{topic}}"
-      facebook_instructions: "ในหน้า My Links ขวาคลิกที่ &#39;ลิงค์ของฉันและคัดลอกลิงค์. เราจะรวมถึงสถานะการเชื่อมโยงและบันทึก."
-      facebook_link: "คุณสามารถหา URL ของคุณใน Facebook หน้า My Links. คลิก {{link}} แล้วที่ &#39;ลิงค์ของฉัน"
+      facebook: Facebook
+      facebook_instructions: "ใน หน้า My Links ขวา คลิก ที่ &#39;ลิงค์ ของ ฉัน และ คัด ลอก ลิงค์. เรา จะ รวม ถึง สถานะ การ เชื่อม โยง และ บันทึก."
+      facebook_link: "คุณ สามารถ หา URL ของ คุณ ใน Facebook หน้า My Links. คลิก {{link}} แล้ว ที่ &#39;ลิงค์ ของ ฉัน"
       facebook_notes: "บันทึก Facebook"
       facebook_notifications: "แจ้ง Facebook"
-      facebook_prompt: "Facebook ของฉันลิงค์ URL ของคุณ"
-      facebook_shares: "Links Facebook ร่วมกัน"
-      failed_harvests: "Harvests ล้มเหลว"
-      failed_last_request: "คำขอล้มเหลวล่าสุด: {{error}}"
-      feed: ให้อาหาร
-      feed_banned_message: อาหารถูกห้าม.
-      feed_display_address: "URL ของฟีด"
+      facebook_prompt: "Facebook ของ ฉัน ลิงค์ URL ของ คุณ"
+      facebook_shares: "Links Facebook ร่วม กัน"
+      failed_harvests: "Harvests ล้ม เหลว"
+      failed_last_request: "คำขอ ล้ม เหลว ล่าสุด: {{error}}"
+      feed: "ให้ อาหาร"
+      feed_banned_message: "อาหาร ถูก ห้าม."
+      feed_display_address: "URL ของ ฟี ด"
       feed_id: ID
-      feed_metadata_address: ที่อยู่เมตาดาต้า
-      feed_remove: ฟีดลบ
-      feed_successfully_created: อาหารสร้างสำเร็จ.
-      feed_successfully_updated: ฟีดแล้วสำเร็จ.
-      feed_type: ประเภทฟีด
-      feed_type_prompt: "RSS เป็นประเภทอาหารที่พบบ่อย. เพียงเลือก OAI ถ้าคุณทราบที่รับการสนับสนุนและคุณได้ระบุ endpoint OAI."
-      feed_validated_message: อาหารถูกอนุมัติ.
-      feeds_for_aggregation: ฟีดสำหรับการรวบรวมนี้
-      feeds_title: ชุดลงทะเบียน
-      finding_topics: "ค้นหาเรื่องที่เกี่ยวข้อง ..."
+      feed_metadata_address: "ที่ อยู่ เม ตา ดาต้า"
+      feed_remove: "ฟี ด ลบ"
+      feed_successfully_created: "อาหาร สร้าง สำเร็จ."
+      feed_successfully_updated: "ฟี ด แล้ว สำเร็จ."
+      feed_type: "ประเภท ฟี ด"
+      feed_type_prompt: "RSS เป็น ประเภท อาหาร ที่ พบ บ่อย. เพียง เลือก OAI ถ้า คุณ ทราบ ที่ รับ การ สนับสนุน และ คุณ ได้ ระบุ endpoint OAI."
+      feed_validated_message: "อาหาร ถูก อนุมัติ."
+      feeds_for_aggregation: "ฟี ด สำหรับ การ รวบรวม นี้"
+      feeds_title: "ชุด ลง ทะเบียน"
+      finding_topics: "ค้นหา เรื่อง ที่ เกี่ยวข้อง ..."
       for: สำหรับ
       friendfeed_prompt: "URL FriendFeed RSS"
-      friendfeed_rss: "คุณสามารถหา URL ของคุณที่ด้านล่างของ {{link}}. ของคุณ"
-      generate_new_topic: สร้างหัวข้อใหม่
-      generating_topic_message: "ค้นหา. นี้อาจใช้เวลาสักครู่เพื่อ ...."
-      get_recommendations: ขอคำแนะนำ
-      gm_more_prompt: "ที่เกี่ยวข้องเพิ่มเติม Resources"
-      gm_title: ข้อมูลที่เกี่ยวข้อง
+      friendfeed_rss: "คุณ สามารถ หา URL ของ คุณ ที่ ด้าน ล่าง ของ {{link}}. ของ คุณ"
+      generate_new_topic: "สร้าง หัวข้อ ใหม่"
+      generating_topic_message: "ค้นหา. นี้ อาจ ใช้ เวลา สัก ครู่ เพื่อ ...."
+      get_recommendations: "ขอ คำ แนะนำ"
+      gm_more_prompt: "ที่ เกี่ยวข้อง เพิ่มเติม Resources"
+      gm_title: "ข้อมูล ที่ เกี่ยวข้อง"
       goodreads_prompt: "Goodreads URL โปรไฟล์"
       goodreads_rss: "เช่น http://www.goodreads.com/user/show/1111"
-      harvest_interval: "ช่วงเก็บเกี่ยว (น.)"
+      harvest_interval: "ช่วง เก็บเกี่ยว (น.)"
       harvested_at: เก็บเกี่ยว
       hide: ซ่อน
-      identity_feed_removed: ออกบริการ
-      identity_feeds: "ฟีด Identity"
-      import_service: "{{service}} นำเข้า"
-      language_not_supported: ภาษาขอไม่สนับสนุน
+      identity_feed_removed: "ออก บริการ"
+      identity_feeds: "ฟี ด Identity"
+      import_service: "{{service}} นำ เข้า"
+      language_not_supported: "ภาษา ขอ ไม่ สนับสนุน"
       latest_aggregations: "Aggregations ล่าสุด"
-      linkedin_prompt: "LinkedIn โปรไฟล์สาธารณะ URL"
-      linkedin_rss: "คุณสามารถหา URL ของคุณที่ด้านล่างของ {{link}}. ของคุณ"
+      linkedin_prompt: "LinkedIn โปรไฟล์ สาธารณะ URL"
+      linkedin_rss: "คุณ สามารถ หา URL ของ คุณ ที่ ด้าน ล่าง ของ {{link}}. ของ คุณ"
       loading_content_image: "% &lt;= T ( &#39;muck.services.loading_image&#39;%)&gt;"
-      loading_image: โหลดรูปภาพ
+      loading_image: "โหลด รูปภาพ"
       loading_message: "โหลด ..."
       login: ล็อกอิน
-      login_or_signup_prompt: "{{signup}} หรือ {{login}} หารือและทรัพยากรร่วมกัน."
-      login_to_comment: เข้าสู่ระบบเพื่อเพิ่มความคิดเห็น
-      metadata: เมตาดาต้า
-      metadata_prefix: คำนำหน้าเมตาดาต้า
-      my_identity: ตัวของฉัน
-      my_services: บริการของฉัน
-      narrow_further: ผลแคบเพิ่มเติม
+      login_or_signup_prompt: "{{signup}} หรือ {{login}} หารือ และ ทรัพยากร ร่วม กัน."
+      login_to_comment: "เข้า สู่ ระบบ เพื่อ เพิ่ม ความ คิดเห็น"
+      metadata: "เม ตา ดาต้า"
+      metadata_prefix: "คำนำ หน้า เม ตา ดาต้า"
+      my_identity: "ตัว ของ ฉัน"
+      my_services: "บริการ ของ ฉัน"
+      narrow_further: "ผล แคบ เพิ่มเติม"
       netflix_prompt: "URL Netflix คิว RSS"
-      netflix_rss: "คุณสามารถหา URL ของคุณใน {{link}}. ของคุณทราบว่ามีหลายข้อมูลที่มีอยู่ใน Netflix หน้าคิว (คิว, คำแนะนำ, คำวิจารณ์ภาพยนตร์ฯลฯ). เพิ่มเป็นจำนวนมากเท่าที่คุณต้องการ!"
-      new_aggregation: สรุปรวมใหม่
-      new_global_feed: "ฟีดใหม่ได้ถูกเพิ่มลง {{application_name}}"
-      new_search: ค้นหาใหม่
-      new_topic_title: ค้นหาหัวข้อใหม่และสร้างหน้าผลลัพธ์.
-      next: ถัดไป
-      next_label: ถัดไป
-      no_entries_found: รายการไม่พบ
-      no_feeds_at_uri: "เราไม่พบ URL ที่กำหนด"
-      no_feeds_found: ไม่พบข้อมูล
-      no_feeds_from_username: เราไม่พบบัญชีรับ
-      no_hits: "ค้นหา - <b>{{search}}</b> - ไม่ตรงกับ <b>{{resource_type}}</b> ใด. กรุณาลองค้นหาแบบอื่นหรือเลือกภาษาอื่น."
-      no_recommendations: คำแนะนำไม่พบ.
-      no_tagged_courses: "<b>หลักสูตร</b> ไม่พบติดแท็กด้วย <b>{{tags}}.</b> <a href='/resources'>เริ่มต้นใหม่</a> หรือแสดง <a href='/resources/tags/{{tags}}'>ทรัพยากรทั้งหมดติดแท็ก {{tags}}.</a>"
-      no_tagged_resources: "<b>ทรัพยากร</b> ไม่พบติดแท็กด้วย <b>{{tags}}.</b> <a href='/resources'>เริ่มต้นใหม่.</a>"
-      no_tags: ยังไม่มีแท็ก
-      no_terms_error: โปรดระบุคำหรือรายการคำ.
-      oai_endpoint_successfully_created: "สำเร็จเพิ่ม endpoint OAI"
-      oai_prompt: "หากคุณระบุ OAI คุณต้องระบุ URL แบบเต็มไปขอ ListRecords (ไม่เพียง endpoint OAI)"
+      netflix_rss: "คุณ สามารถ หา URL ของ คุณ ใน {{link}}. ของ คุณ ทราบ ว่า มี หลาย ข้อมูล ที่ มี อยู่ ใน Netflix หน้า คิว (คิว, คำ แนะนำ, คำ วิจารณ์ ภาพยนตร์ ฯลฯ). เพิ่ม เป็น จำนวน มาก เท่า ที่ คุณ ต้องการ!"
+      new_aggregation: "สรุป รวม ใหม่"
+      new_global_feed: "ฟี ด ใหม่ ได้ ถูก เพิ่ม ลง {{application_name}}"
+      new_search: "ค้นหา ใหม่"
+      new_topic_title: "ค้นหา หัวข้อ ใหม่ และ สร้าง หน้า ผลลัพธ์."
+      next: "ถัด ไป"
+      next_label: "ถัด ไป"
+      no_entries_found: "รายการ ไม่ พบ"
+      no_feeds_at_uri: "เรา ไม่ พบ URL ที่ กำหนด"
+      no_feeds_found: "ไม่ พบ ข้อมูล"
+      no_feeds_from_username: "เรา ไม่ พบ บัญชี รับ"
+      no_hits: "ค้นหา - <b>{{search}}</b> - ไม่ ตรง กับ <b>{{resource_type}}</b> ใด. กรุณา ลอง ค้นหา แบบ อื่น หรือ เลือก ภาษา อื่น."
+      no_recommendations: "คำ แนะนำ ไม่ พบ."
+      no_tagged_courses: "<b>หลักสูตร</b> ไม่ พบ ติด แท็ ก ด้วย <b>{{tags}}.</b> <a href='/resources'>เริ่ม ต้น ใหม่</a> หรือ แสดง <a href='/resources/tags/{{tags}}'>ทรัพยากร ทั้งหมด ติด แท็ ก {{tags}}.</a>"
+      no_tagged_resources: "<b>ทรัพยากร</b> ไม่ พบ ติด แท็ ก ด้วย <b>{{tags}}.</b> <a href='/resources'>เริ่ม ต้น ใหม่.</a>"
+      no_tags: "ยัง ไม่มี แท็ ก"
+      no_terms_error: "โปรด ระบุ คำ หรือ รายการ คำ."
+      oai_endpoint_successfully_created: "สำเร็จ เพิ่ม endpoint OAI"
+      oai_prompt: "หาก คุณ ระบุ OAI คุณ ต้อง ระบุ URL แบบ เต็ม ไป ขอ ListRecords (ไม่ เพียง endpoint OAI)"
       of: ของ
       ok: OK
-      only_courses: เฉพาะหลักสูตร
-      opml_feeds_for: "ฟีดสำหรับ {{terms}}"
-      opml_generated: "ฟีดสำหรับ {{terms}}"
-      personal_recommendations: ข้อเสนอแนะ
+      only_courses: "เฉพาะ หลักสูตร"
+      opml_feeds_for: "ฟี ด สำหรับ {{terms}}"
+      opml_generated: "ฟี ด สำหรับ {{terms}}"
+      personal_recommendations: "ข้อ เสนอ แนะ"
       photos: Photos
-      please_specify_url: "โปรดระบุ url"
+      please_specify_url: "โปรด ระบุ url"
       polyvore_prompt: "Polyvore URL โปรไฟล์"
-      polyvore_rss: "โปรไฟล์ Polyvore URL ของคุณดูเหมือนว่า http://www.polyvore.com/cgi/profile?id=00000"
-      powered_by: ขับเคลื่อนโดย
-      previous: ก่อนหน้านี้
-      previous_label: ก่อนหน้านี้
-      problem_adding_feed: "มีปัญหาการเพิ่มฟีดคือ:"
+      polyvore_rss: "โปรไฟล์ Polyvore URL ของ คุณ ดูเหมือน ว่า http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "ขับเคลื่อน โดย"
+      previous: "ก่อน หน้า นี้"
+      previous_label: "ก่อน หน้า นี้"
+      problem_adding_feed: "มี ปัญหา การ เพิ่ม ฟี ด คือ:"
       rdf: RDF
-      read_more: อ่านข้อมูลเพิ่มเติม
-      related_feeds: ฟีดข้อมูลที่เกี่ยวข้อง
-      related_resources: ที่เกี่ยวข้อง
-      related_resources_title: ข้อมูลที่เกี่ยวข้อง
+      read_more: "อ่าน ข้อมูล เพิ่มเติม"
+      related_feeds: "ฟี ด ข้อมูล ที่ เกี่ยวข้อง"
+      related_resources: "ที่ เกี่ยวข้อง"
+      related_resources_title: "ข้อมูล ที่ เกี่ยวข้อง"
       relevance: เกี่ยวข้อง
       remix: Remix
-      remove: นำออกไป
-      repository: เมตาดาต้า
+      remove: "นำ ออก ไป"
+      repository: "เม ตา ดาต้า"
       repository_short_title: "ชื่อ Repository ย่อ:"
       repository_title: "ชื่อ Repository:"
       resource_search_results: "ทรัพยากร <b>{{first}} - {{last}}</b> ของ <b>{{total}}</b> สำหรับ <b>{{terms}}</b> ค้นหา"
-      resource_tag_results: "ทรัพยากร <b>{{first}} - {{last}}</b> ของ <b>{{total}}</b> ติดแท็ก <b>{{terms}}</b>"
-      resources_tag_cloud_label: "ทรัพยากรดูการใช้แท็ก <a href=\"/resources?grain_size=course\">[รายวิชาเฉพาะ]</a>"
-      results: ผลการค้นหา
+      resource_tag_results: "ทรัพยากร <b>{{first}} - {{last}}</b> ของ <b>{{total}}</b> ติด แท็ ก <b>{{terms}}</b>"
+      resources_tag_cloud_label: "ทรัพยากร ดู การ ใช้ แท็ ก <a href=\"/resources?grain_size=course\">[รายวิชา เฉพาะ]</a>"
+      results: "ผล การ ค้นหา"
       rss: RSS
-      rss_url: "URL สำหรับ RSS ฟีดของคุณ"
-      save_aggreation: นอกจากนี้การสรุปรวม
-      save_aggreation_instructions: "ลบที่ไม่ต้องการข้อมูลใดโดยคลิกที่ &#39;ลบ&#39;. คุณจะสามารถเพิ่มฟีดใหม่ในขั้นตอนถัดไป."
+      rss_url: "URL สำหรับ RSS ฟี ด ของ คุณ"
+      save_aggreation: "นอกจาก นี้ การ สรุป รวม"
+      save_aggreation_instructions: "ลบ ที่ ไม่ ต้องการ ข้อมูล ใด โดย คลิก ที่ &#39;ลบ&#39;. คุณ จะ สามารถ เพิ่ม ฟี ด ใหม่ ใน ขั้น ตอน ถัด ไป."
       search: ค้นหา
       search_button: ไป
       search_for: "ค้นหา:"
-      search_link: หาข้อมูล!
-      search_problem: "มีปัญหากับการค้นหาของคุณถูก. โปรดอ่านเกณฑ์การค้นหาและลองอีกครั้ง."
-      searching_for_feed: "ค้นหาฟีด ..."
-      select_feeds_prompt: "เลือกข้อมูลที่คุณต้องการเพิ่ม:"
-      select_service_prompt: กรุณาเลือกบริการ
+      search_link: "หา ข้อมูล!"
+      search_problem: "มี ปัญหา กับ การ ค้นหา ของ คุณ ถูก. โปรด อ่าน เกณฑ์ การ ค้นหา และ ลอง อีก ครั้ง."
+      searching_for_feed: "ค้นหา ฟี ด ..."
+      select_feeds_prompt: "เลือก ข้อมูล ที่ คุณ ต้องการ เพิ่ม:"
+      select_service_prompt: "กรุณา เลือก บริการ"
       service_feed_name: "{{term}} ใน {{service}}"
-      service_username: "ชื่อผู้ใช้ {{service}}"
-      setup_aggregation: สรุปรวมการติดตั้ง
+      service_username: "ชื่อ ผู้ ใช้ {{service}}"
+      setup_aggregation: "สรุป รวม การ ติด ตั้ง"
       share: แบ่งปัน
-      short_title: "ชื่อย่อ:"
-      show_related_resources: แสดงทรัพยากรที่เกี่ยวข้อง
-      show_tagged_courses: แสดงหลักสูตรเฉพาะ
-      show_tagged_resources: แสดงประเภททรัพยากรใดๆ
-      signup: สมัครสมาชิก
-      signup_to_save_aggreation: "{{login}} หรือ {{signup}} เพื่อบันทึกการค้นหานี้"
-      spinner_image: รอภาพ
-      start_over: เริ่มต้น
+      short_title: "ชื่อ ย่อ:"
+      show_related_resources: "แสดง ทรัพยากร ที่ เกี่ยวข้อง"
+      show_tagged_courses: "แสดง หลักสูตร เฉพาะ"
+      show_tagged_resources: "แสดง ประเภท ทรัพยากร ใด ๆ"
+      signup: "สมัคร สมาชิก"
+      signup_to_save_aggreation: "{{login}} หรือ {{signup}} เพื่อ บันทึก การ ค้นหา นี้"
+      spinner_image: "รอ ภาพ"
+      start_over: "เริ่ม ต้น"
       status: สถานะ
-      submitting_feed_message: "ส่งฟีดของคุณ ..."
-      successfully_added_uri_feed: "สำเร็จเพิ่ม {{uri}}"
-      successfully_added_username_feed: "สำเร็จเพิ่ม {{service}}"
-      tags: แท็ก
-      terms_instructions: "เพิ่มแท็กหลายหรือวลีที่คุณต้องการ. แยกกันด้วยจุลภาค. อาหารคือสูตรสถานที่ที่ดีที่สุดกิน, อินทรีย์"
-      title: ชื่อเรื่อง
-      topic_feeds_for: "ฟีดสำหรับ {{terms}}"
-      topic_generated: "ผลลัพธ์สำหรับ `{{terms}}`."
-      type_of_metadata: "ประเภทของเมตาดาต้า:"
+      submitting_feed_message: "ส่ง ฟี ด ของ คุณ ..."
+      successfully_added_uri_feed: "สำเร็จ เพิ่ม {{uri}}"
+      successfully_added_username_feed: "สำเร็จ เพิ่ม {{service}}"
+      tags: "แท็ ก"
+      terms_instructions: "เพิ่ม แท็ ก หลาย หรือ วลี ที่ คุณ ต้องการ. แยก กัน ด้วย จุลภาค. อาหาร คือ สูตร สถาน ที่ ที่ ดี ที่สุด กิน, อินทรีย์"
+      title: "ชื่อ เรื่อง"
+      topic_feeds_for: "ฟี ด สำหรับ {{terms}}"
+      topic_generated: "ผลลัพธ์ สำหรับ `{{terms}}`."
+      type_of_metadata: "ประเภท ของ เม ตา ดาต้า:"
       uri: Url
-      validate_feed: ฟีดทำเครื่องหมายถูกต้อง
+      url_not_in_index: "<a href='{{uri}}'>ทรัพยากร ที่ คุณ ขอ คำ แนะนำ สำหรับ การ</a> ไม่ ได้ รับ การ สร้าง ดัชนี. กรุณา เพิ่ม พื้นที่ เก็บ ข้อมูล ที่ มี เม ตา ดาต้า สำหรับ ทรัพยากร เพื่อ เพิ่ม ดัชนี."
+      validate_feed: "ฟี ด ทำ เครื่องหมาย ถูก ต้อง"
       videos: วิดีโอ
-      visit: ไปที่
+      visit: "ไป ที่"
       xml: XML
       zotero_group_prompt: "กลุ่ม Zotero URL"
-      zotero_group_rss: "กลุ่ม Zotero URL ของคุณดูเหมือนว่า: http://www.zotero.org/groups/adventures_in_library_instruction/items"
+      zotero_group_rss: "กลุ่ม Zotero URL ของ คุณ ดูเหมือน ว่า: http://www.zotero.org/groups/adventures_in_library_instruction/items"

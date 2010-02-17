@@ -72,6 +72,7 @@ tl:
       entries_count: Entries
       entry_commment_contents: "commented sa {{resource}}"
       explore: "Maghanap para sa {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Sa pahina ng Aking Links, i-right click sa &#39;My Links&#39; at kopyahin ang mga link. Awtomatiko naming kasama, kalagayan, mga link at mga tala."
       facebook_link: "Maaari mong mahanap ang iyong URL sa iyong pahina ng Facebook My Links. {{link}} At pagkatapos ay i-click sa &#39;My Links&#39;"
       facebook_notes: "Facebook Notes"
@@ -209,6 +210,7 @@ tl:
       topic_generated: "Mga Resulta para `{{terms}}`."
       type_of_metadata: "Uri ng Metadata:"
       uri: Url
+      url_not_in_index: "Ang <a href='{{uri}}'>yaman mo hiniling na mga mungkahi para sa</a> ay hindi na-index. Mangyaring magdagdag ng isang sisidlan na naglalaman ng metadata para sa mga mapagkukunan upang idagdag ito sa index."
       validate_feed: "Markahan ang feed na may-bisang"
       videos: Videos
       visit: "bisitahin ang"

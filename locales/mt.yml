@@ -72,6 +72,7 @@ mt:
       entries_count: Entries
       entry_commment_contents: "kkummentaw dwar {{resource}}"
       explore: "Tiftix għal {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Fuq il-paġna Links My, dritt ikklikkja fuq &quot;Links Tiegħi&quot; u kopja tar-rabta. Aħna se awtomatikament jinkludu, l-istatus, rabtiet u n-noti."
       facebook_link: "Tista &#39;ssib URL tiegħek fuq il-paġna tiegħek Facebook Links tiegħi. {{link}} U mbagħad ikklikkja fuq &quot;Links Tiegħi&quot;"
       facebook_notes: "Jinnota Facebook"
@@ -209,6 +210,7 @@ mt:
       topic_generated: "Riżultati għal `{{terms}}`."
       type_of_metadata: "Tip ta &#39;Metadata:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Il-riżors inti mitlub rakkomandazzjonijiet għal</a> ma ġew indiċjati. Jekk jogħġbok żid repożitorju li jkun fih l-metadata għaċ-riżorsa jew iżżidhiex mal-indiċi."
       validate_feed: "Għalf Mark bħala valida"
       videos: Videos
       visit: żjara

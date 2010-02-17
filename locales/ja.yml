@@ -72,6 +72,7 @@ ja:
       entries_count: エントリー
       entry_commment_contents: "{{resource}}コメント"
       explore: "検索{{topic}}の"
+      facebook: Facebookに登録する
       facebook_instructions: "マイリンクのページでは、&#39;マイリンク&#39;とのリンクをコピー上で右クリックします。我々は自動的に、ステータス、リンク、およびメモが含まれます。"
       facebook_link: "あなたのFacebookの私のリンクページ上のURLを見つけることができます。 &#39;に{{link}}し、[マイリンク&#39;"
       facebook_notes: Facebookの注意事項
@@ -209,6 +210,7 @@ ja:
       topic_generated: "`{{terms}}`.の検索結果"
       type_of_metadata: メタデータのタイプ：
       uri: URLを
+      url_not_in_index: "<a href='{{uri}}'>あなたの提言を要求されたリソースを</a>インデックスに登録されていない。してくださいインデックスに追加するには、リポジトリは、リソースのメタデータを含むを追加します。"
       validate_feed: 有効なものとしてマークフィード
       videos: 動画
       visit: 参照してください

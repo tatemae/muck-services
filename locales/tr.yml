@@ -72,6 +72,7 @@ tr:
       entries_count: Girişler
       entry_commment_contents: "{{resource}} yorumladı"
       explore: "Arama {{topic}} için"
+      facebook: Facebook
       facebook_instructions: "My Links sayfasında, &#39;My Links&#39; ve bağlantıyı kopyalayın sağ tıklayın. Otomatik olarak, durum, bağlantılar ve notları yer alacak."
       facebook_link: "Size Facebook My Links sayfasında URL bulabilirsiniz. &#39;Doğum {{link}} ve sonra tıklatın Bağlantılar&#39;"
       facebook_notes: "Facebook Notlar"
@@ -209,6 +210,7 @@ tr:
       topic_generated: "`{{terms}}`. Için sonuçlar"
       type_of_metadata: "Metadata Tipi:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Sizin için öneriler istenen kaynak</a> dizine olmamıştır. Lütfen dizin eklemek için bir depo kaynak için meta veri içeren bakın."
       validate_feed: "Geçerli olarak işaretleme yem"
       videos: Videos
       visit: ziyaret

@@ -72,6 +72,7 @@ lt:
       entries_count: Įrašai
       entry_commment_contents: "komentavo {{resource}}"
       explore: "Ieškoti {{topic}}"
+      facebook: Facebook
       facebook_instructions: "On My Links Page dešiniuoju pelės mygtuku ant &quot;Mano nuorodos&quot; ir nukopijuokite nuorodą. Mes automatiškai įtraukti, statusas, nuorodas ir pastabas."
       facebook_link: "Jūs galite rasti nuorodą į savo Facebook My Links Page. {{link}} Ir spauskite &quot;Mano nuorodos&quot;"
       facebook_notes: "Facebook Pastabos"
@@ -209,6 +210,7 @@ lt:
       topic_generated: "Rezultatai `{{terms}}`."
       type_of_metadata: "Tipo Duomenys:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Jūsų prašomas resursas rekomendacijos</a> nebuvo indeksuojami. Pridėkite saugykloje yra metaduomenys išteklių įtraukti jį į rodyklę."
       validate_feed: "Pažymėti pašarų kaip galiojantį"
       videos: Vaizdo
       visit: apsilankykite

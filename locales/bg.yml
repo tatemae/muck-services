@@ -72,6 +72,7 @@ bg:
       entries_count: Влизания
       entry_commment_contents: "коментира {{resource}}"
       explore: "Търсене на {{topic}}"
+      facebook: Facebook
       facebook_instructions: "На страницата,, Моят Връзки, щракнете с десния бутон върху &quot;Моите връзки&quot; и копие на връзката. Ние автоматично ще включва, статус, линкове и бележки."
       facebook_link: "Можете да намерите вашия URL на вашия Facebook Моята страница Връзки. {{link}} И след това кликнете на &quot;Моите връзки&quot;"
       facebook_notes: "Facebook отбелязва,"
@@ -209,6 +210,7 @@ bg:
       topic_generated: "Резултати за `{{terms}}`."
       type_of_metadata: "Вид на метаданни:"
       uri: Url
+      url_not_in_index: "В <a href='{{uri}}'>ресурс, който заявихте препоръки</a> не са индексирани. Моля, добавете хранилище, съдържащи метаданни за ресурса да го добавите към индекса."
       validate_feed: "Марк фуражи, както е валиден"
       videos: Видео
       visit: посещение

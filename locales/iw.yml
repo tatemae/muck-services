@@ -72,6 +72,7 @@ iw:
       entries_count: רשומות
       entry_commment_contents: "תגובות על {{resource}}"
       explore: "חפש {{topic}}"
+      facebook: פייסבוק
       facebook_instructions: "בדף הקישורים שלי, לחץ לחיצה ימנית על &#39;קשר&#39; שלי, להעתיק את הקישור. אנחנו באופן אוטומטי כוללים, מעמד, קישורים והערות."
       facebook_link: "אתה יכול למצוא את כתובת האתר שלך בעמוד פייסבוק שלי שלך קשר. {{link}} ולאחר מכן לחץ על &quot;קישורים שלי&quot;"
       facebook_notes: "הערות פייסבוק"
@@ -209,6 +210,7 @@ iw:
       topic_generated: "תוצאות עבור `{{terms}}`."
       type_of_metadata: "סוג Metadata:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>המשאב שביקשת המלצות</a> טרם באינדקס. נא להוסיף מאגר המכיל מטה עבור המשאב כדי להוסיף אותו מדד."
       validate_feed: "להאכיל מארק תקפה"
       videos: וידאו
       visit: בקר

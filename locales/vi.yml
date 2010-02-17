@@ -72,6 +72,7 @@ vi:
       entries_count: Entries
       entry_commment_contents: "nhận xét về {{resource}}"
       explore: "Tìm {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Trên trang Liên kết của tôi, nhấp chuột phải vào &#39;Liên kết của tôi&#39; và sao chép liên kết. Chúng tôi tự động sẽ bao gồm, tình trạng, liên kết và ghi chú."
       facebook_link: "Bạn có thể tìm thấy URL của bạn trên Facebook Sửa Liên kết của tôi của bạn. {{link}} Và sau đó nhấp vào &#39;Liên kết của tôi&#39;"
       facebook_notes: "Facebook Notes"
@@ -209,6 +210,7 @@ vi:
       topic_generated: "Kết quả cho `{{terms}}`."
       type_of_metadata: "Loại Metadata:"
       uri: Url
+      url_not_in_index: "Các <a href='{{uri}}'>nguồn tài nguyên mà bạn yêu cầu khuyến nghị cho</a> chưa được lập chỉ mục. Hãy thêm một kho chứa siêu dữ liệu cho các nguồn lực để thêm vào chỉ mục."
       validate_feed: "Mark cấp dữ liệu như là hợp lệ"
       videos: Video
       visit: thăm

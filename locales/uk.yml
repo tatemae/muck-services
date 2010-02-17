@@ -72,6 +72,7 @@ uk:
       entries_count: Записи
       entry_commment_contents: "прокоментував {{resource}}"
       explore: "Пошук по {{topic}}"
+      facebook: Facebook
       facebook_instructions: "На сторінці &quot;Мої посилання&quot;, правою кнопкою миші на &quot;Мої посилання&quot; і скопіювати посилання. Ми автоматично включати, статус, посилання і поради."
       facebook_link: "Ви можете знайти URL Facebook на вашій сторінці &quot;Мої посилання. {{link}} І натисніть на &quot;Мої посилання&quot;"
       facebook_notes: "Facebook Notes"
@@ -209,6 +210,7 @@ uk:
       topic_generated: "Результати пошуку за запитом `{{terms}}`."
       type_of_metadata: "Тип Метадані:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Запитуваний Вами ресурс рекомендацій</a> ще не були проіндексовані. Будь ласка, додайте репозиторії метаданих, що містять рекламу для свого ресурсу, щоб додати його в індекс."
       validate_feed: "Марк годувати дійсні"
       videos: Відео
       visit: Візит

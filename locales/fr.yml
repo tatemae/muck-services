@@ -72,6 +72,7 @@ fr:
       entries_count: Entrées
       entry_commment_contents: "a commenté sur {{resource}}"
       explore: "Recherche de {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Sur la page Liens Mon, cliquez à droite sur «Mes liens» et copier le lien. Nous allons inclure automatiquement, l&#39;état, des liens et des notes."
       facebook_link: "Vous pouvez trouver votre URL sur votre page Facebook Liens My. {{link}} Puis cliquez sur «Mes liens»"
       facebook_notes: "Facebook Notes"
@@ -209,6 +210,7 @@ fr:
       topic_generated: "Résultats pour `{{terms}}`."
       type_of_metadata: "Type de métadonnées:"
       uri: Url
+      url_not_in_index: "La <a href='{{uri}}'>ressource que vous avez demandé des recommandations pour</a> n&#39;a pas été indexé. S&#39;il vous plaît ajouter un référentiel contenant des métadonnées pour la ressource pour l&#39;ajouter à l&#39;index."
       validate_feed: "Mark aliments comme valable"
       videos: Vidéos
       visit: Visite

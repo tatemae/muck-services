@@ -72,6 +72,7 @@ es:
       entries_count: Entradas
       entry_commment_contents: "escribió sobre {{resource}}"
       explore: "Buscar {{topic}}"
+      facebook: Facebook
       facebook_instructions: "En la página Mis vínculos, haga clic en &quot;Mis Enlaces&quot; y copia el enlace. Nos incluirá automáticamente, el estado, enlaces y notas."
       facebook_link: "Usted puede encontrar su dirección en su página de Facebook, My Links. {{link}} Y luego haga clic en &quot;Mis Enlaces&quot;"
       facebook_notes: "Toma nota de Facebook"
@@ -209,6 +210,7 @@ es:
       topic_generated: "Resultados de `{{terms}}`."
       type_of_metadata: "Tipo de Metadatos:"
       uri: Url
+      url_not_in_index: "El <a href='{{uri}}'>recurso solicitado recomendaciones para</a> que no se ha indexado. Por favor, añadir un depósito que contiene los metadatos de los recursos para añadirlo al índice."
       validate_feed: "Marcar como válidos los piensos"
       videos: Videos
       visit: visita

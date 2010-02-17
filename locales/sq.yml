@@ -72,6 +72,7 @@ sq:
       entries_count: Hyrje
       entry_commment_contents: "komentoi {{resource}}"
       explore: "Search for {{topic}}"
+      facebook: Facebook
       facebook_instructions: "Në faqen Lidhjet e mia, right-click on &#39;Lidhje e mia &quot;dhe kopje link. Ne do të përfshijë automatikisht, statusi, lidhjet dhe shënime."
       facebook_link: "Ju mund të gjeni URL-në tuaj në faqen Facebook tuaj My Links. {{link}} Dhe pastaj klikoni &#39;Lidhje e mia&#39;"
       facebook_notes: "Facebook Shenimet"
@@ -209,6 +210,7 @@ sq:
       topic_generated: "Rezultatet për `{{terms}}`."
       type_of_metadata: "Lloji i Metadata:"
       uri: Url
+      url_not_in_index: "<a href='{{uri}}'>Burimeve ju kërkuar rekomandime për</a> nuk është indeksuar. Ju lutem shtoni një depo që përmban metadata për të burimeve për të shtuar se indeksi."
       validate_feed: "Feed Sheno si te vlefshme"
       videos: Videos
       visit: Vizita
