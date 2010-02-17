@@ -39,7 +39,7 @@ for(nRec = 0; nRec < recs.length; nRec++) {
 	document.write('<br/><span class="oer_recommender_description">' + truncate(r.description) + '</span>');
 	document.write('<br/><span class="oer_recommender_uri">' + r.permalink + '</span>');
 <% end -%>	
-	document.write('</a></p>');
+	document.write('</p>');
 }
 document.write('</div>');	
 <% if params[:more_link] %>document.write('<div class="oer_recommender_more_link"><a href="' + app + 'resources/<%= @entry.id %>"><%= t('muck.services.gm_more_prompt') %></a></div>');<% end %>

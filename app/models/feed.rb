@@ -39,6 +39,7 @@ class Feed < ActiveRecord::Base
   format :xml
 
   validates_presence_of :uri
+  validates_uniqueness_of :uri
 
   has_many :feed_parents
   has_many :identity_feeds
