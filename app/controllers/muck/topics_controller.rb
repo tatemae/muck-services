@@ -81,17 +81,17 @@ class Muck::TopicsController < ApplicationController
       @terms = CGI.unescape(params[:id])
       @page_title = @title = @terms.titleize
     
-      @photo_feeds = Service.build_photo_feeds(@terms, current_user, params[:service_ids])
-      @video_feeds = Service.build_video_feeds(@terms, current_user, params[:service_ids])
-      @bookmark_feeds = Service.build_bookmark_feeds(@terms, current_user, params[:service_ids])
-      @music_feeds = Service.build_music_feeds(@terms, current_user, params[:service_ids])
-      @news_feeds = Service.build_news_feeds(@terms, current_user, params[:service_ids])
-      @blog_feeds = Service.build_blog_feeds(@terms, current_user, params[:service_ids])
-      @search_feeds = Service.build_search_feeds(@terms, current_user, params[:service_ids])
+      @photo_feeds = Service.build_photo_feeds(@terms, current_user, params[:service_ids]) || []
+      @video_feeds = Service.build_video_feeds(@terms, current_user, params[:service_ids]) || []
+      @bookmark_feeds = Service.build_bookmark_feeds(@terms, current_user, params[:service_ids]) || []
+      @music_feeds = Service.build_music_feeds(@terms, current_user, params[:service_ids]) || []
+      @news_feeds = Service.build_news_feeds(@terms, current_user, params[:service_ids]) || []
+      @blog_feeds = Service.build_blog_feeds(@terms, current_user, params[:service_ids]) || []
+      @search_feeds = Service.build_search_feeds(@terms, current_user, params[:service_ids]) || []
       
-      @general_feeds = Service.build_general_feeds(@terms, current_user, params[:service_ids])
+      @general_feeds = Service.build_general_feeds(@terms, current_user, params[:service_ids]) || []
 
-      @discovered_feeds = Overlord::GoogleFeedRequest.find_feeds(@terms)
+      @discovered_feeds = Overlord::GoogleFeedRequest.find_feeds(@terms) || []
 
       @feeds = @photo_feeds + @video_feeds + @bookmark_feeds + @music_feeds + @news_feeds + @blog_feeds + @search_feeds + @general_feeds + @discovered_feeds
     
