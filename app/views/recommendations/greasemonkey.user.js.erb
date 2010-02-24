@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name           RecommenderExtension
-// @namespace      folksemanticsemanticFrames.com
+// @name           Folksemantic Recommender
+// @namespace      folksemantic.com
 // @description    Folksemantic Recommender GM Script - Recommends resources to a user based upon their current url.
 // @include        *
 // ==/UserScript==
@@ -366,8 +366,7 @@ function getRecs(sUrl) {
     });
 }
 
-var sBaseUrl = 'http://www.folksemantic.com/';
-//var sBaseUrl = 'http://localhost:3000/';
+var sBaseUrl = '<%= request.protocol + request.host_with_port + '/' %>';
 var sServiceUrl = sBaseUrl + 'recommendations.xml?';
 var sShowDocUrl = sBaseUrl + 'resources/';
 var squatParent = null;
