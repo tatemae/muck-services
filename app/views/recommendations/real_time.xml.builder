@@ -1,3 +1,4 @@
+# TODO: Update this (see real_time.html.erb)
 xml.instruct!
 
 if @entry.nil?

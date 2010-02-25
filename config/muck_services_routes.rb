@@ -29,6 +29,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect 'recommendations/real_time', :controller => 'muck/recommendations', :action => 'real_time'
   map.connect 'recommendations/get_button', :controller => 'muck/recommendations', :action => 'get_button'
+  map.connect 'recommendations/greasemonkey.user.js', :controller => 'muck/recommendations', :action => 'greasemonkey_script'
   map.resources :recommendations, :controller => 'muck/recommendations'
 
   map.resources :identity_feeds, :controller => 'muck/identity_feeds'

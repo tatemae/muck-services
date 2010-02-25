@@ -10,7 +10,7 @@
       <%= link_to('[' + t('muck.services.show_tagged_courses') + ']',  @tag_filter.nil? ? {:q => @search, :grain_size => 'course'} : {:grain_size => 'course'}) %>
       <% end %>
       &nbsp;&nbsp;
-      <%= link_to('[' + t('muck.services.explore', :topic => @search.titleize) + ']', topic_path(safe_id(@search))) rescue '' %>
+      <%= link_to('[' + t('muck.services.explore') + ']', topic_path(safe_id(@search))) rescue '' %>
     </span>
   </div>
 </div>

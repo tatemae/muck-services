@@ -1,4 +1,5 @@
 <%
+# TODO: Update this (see real_time.html.erb)
 @json_recommendations = @entry.json_recommendations(@limit, params[:order] || "mixed", true, params[:omit_feeds] || nil) 
 if !@json_recommendations.nil? 
 @direct_link_text = params[:direct_link_text] || t('muck.services.direct_link')
