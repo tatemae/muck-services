@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Folksemantic Recommender
 // @namespace      folksemantic.com
-// @description    Folksemantic Recommender GM Script - Recommends resources to a user based upon their current url.
+// @description    Displays links to resources related to the web page a user is looking at.
 // @include        *
 // ==/UserScript==
 
@@ -324,7 +324,7 @@ function positionSquatter(recommendersquat, bRealTime) {
 
 function squatterHeader(sTitle, bFrame) {
  border = bFrame ? "border-top:1px solid black;border-right:1px solid black;border-left:1px solid black;width:240px;" : "border:none;";
- return '<div id="recommendertop" style="color:#777;background-color:white;font-weight:bold;font-size:14px;font-family:Arial,Helvetica,sans-serif;margin: 2px 3px 0 3px; padding: 2px;' + border + '"><img src="' + sBaseUrl + '/images/folksemantic/logo-folksemantic-gm.gif" style="vertical-align:middle;"/>&nbsp;&nbsp;' + sTitle + '</div>';
+ return '<div id="recommendertop" style="text-align:left;color:#777;background-color:white;font-weight:bold;font-size:14px;font-family:Arial,Helvetica,sans-serif;margin: 2px 3px 0 3px; padding: 2px;' + border + '"><img src="' + sBaseUrl + '/images/folksemantic/logo-folksemantic-gm.gif" style="margin-left:2px;vertical-align:middle;"/>&nbsp;&nbsp;' + sTitle + '</div>';
 }
 
 function squatterContent(root, recommendations) {
@@ -395,3 +395,6 @@ if (sUrlToGetRecsFor.indexOf('http') == 0 && bodyTags && bodyTags.length > 0)
             getRecs(sServiceUrl + "u=" + sUrlToGetRecsFor);
     }
 }
+
+
+
