@@ -11,6 +11,6 @@
     </div>
   <% else %>
     <p><%= @grain_size == 'all' ? t('muck.services.no_tagged_resources', :tags => @search) : t('muck.services.no_tagged_courses', :tags => @tag_filter.split('/').join(', ')) %></p>
-    <p><%= link_to('[' + t('muck.services.explore', :topic => @search.titleize) + ']', topic_path(safe_id(@search))) %></p>
+    <p><%= link_to('[' + t('muck.services.explore', :topic => @search.titleize) + ']', topic_path(safe_id(@search))) if @search %></p>
   <% end %>
 </div>
