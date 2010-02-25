@@ -83,7 +83,7 @@ en:
       add_rss: Add Rss
       already_added_username_feed: You've already added a {{service}} account with the username {{username}}
       topic_feeds_for: Feeds for {{terms}}
-      explore: Search for {{topic}}
+      explore: Search the Web
       videos: Videos
       terms_instructions: Add as many tags or phrases as you'd like.  Separate each with a comma.  ie food, recipes, best places to eat, organic
       failed_harvests: Failed harvests
