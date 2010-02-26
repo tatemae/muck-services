@@ -233,29 +233,21 @@ function recList(recommendations, sDirectLinkText) {
     {
         // get info for the recommendation
         rec_title = recommendations[i].getElementsByTagName('title')[0].textContent;
-        link_uri = recommendations[i].getElementsByTagName('link')[0].textContent;
+        rec_link = recommendations[i].getElementsByTagName('link')[0].textContent;
         collection = recommendations[i].getElementsByTagName('collection')[0].textContent;
-        //has_direct_link = recommendations[i].getElementsByTagName('has_direct_link')[0];
-        rec_link = link_uri;
-        rec_description = recommendations[i].getElementsByTagName('description')[0].textContent;
         rec_tag = '<a href="' + rec_link + '" style="color:#3987DC !important; text-decoration:none !important; " target="_top">' + rec_title + ' (' + collection + ')</a>';
-        //direct_link_tag = has_direct_link ? ' <a href="' + rec_link + '&target=direct_link" style="color:#556664 !important; text-decoration:none !important; " target="_top">' + sDirectLinkText + '</a>' : "";
-        direct_link_tag = "";
 
         // our lists are different in educommons and on MIT's websites
-        if (bSpecialSite == true)
-        {
+        if (bSpecialSite == true)         {
             sRecList += "<p style='font-size:12px;padding-left:4px;'>";
-            sRecList += rec_tag + direct_link_tag;
+            sRecList += rec_tag;
             sRecList += "</p>";
-        }
-        // default list styles
-        else
-        {
+        } else {
+            // default list styles
             sRecList += '<li style="margin-left: 0px; padding: 3px; list-style-type: none; font-size: 12px; ';
             if (i % 2 == 0) sRecList += 'background-color:#E6E6E6;';
             sRecList += '">';
-            sRecList += rec_tag + direct_link_tag;
+            sRecList += rec_tag;
             sRecList += '</li>';
         }
     }
@@ -395,6 +387,3 @@ if (sUrlToGetRecsFor.indexOf('http') == 0 && bodyTags && bodyTags.length > 0)
             getRecs(sServiceUrl + "u=" + sUrlToGetRecsFor);
     }
 }
-
-
-

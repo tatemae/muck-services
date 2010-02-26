@@ -48,6 +48,10 @@ class Muck::RecommendationsController < ApplicationController
     render 'recommendations/get_button', :layout => false
   end
 
+  def greasemonkey_script
+    render :template => '/recommendations/greasemonkey.user.js.erb', :layout => false
+  end
+
   def real_time
     respond_to do |format|
       format.html do
