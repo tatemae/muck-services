@@ -14,10 +14,10 @@ function truncate(text, length) {
 	if (nEnd < 200) return text;
 	else return text.substring(0, nEnd) + " ...";
 }
+            var once = true;
 var asMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function format_date(published_at) {
-	date = new Date();
-	date.setTime(Date.parse(published_at));
+    date = new Date(Date.parse(published_at.substring(0,10).replace(/-/g,"/")));
 	return date.getDate() + " " + asMonths[date.getMonth()] + " " + date.getUTCFullYear();
 }
 <% end %>
