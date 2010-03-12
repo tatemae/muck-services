@@ -1,4 +1,4 @@
-<%= link_to related_entry.title + " (" + related_entry.collection + ")", "/r?id=#{related_entry.id}", :class => "title_link", :rel => "nofollow" %>
+<%= link_to "#{related_entry.title} (#{related_entry.collection})", "/r?id=#{related_entry.recommendation_id}", :class => "title_link", :rel => "nofollow" %>
 - <%= link_to t('muck.services.related_resources'), resource_path(related_entry.dest_entry_id), :class => "related_resources_link", :rel => "nofollow" %>
-<% if !related_entry.direct_uri.nil? %> - <%= link_to t('muck.services.metadata'), "/r?id=#{related_entry.id}&target=metadata", :class => "catalog_link" %><% end %>
+<% if !related_entry.direct_uri.nil? %> - <%= link_to t('muck.services.metadata'), "/r?id=#{related_entry.recommendation_id}&target=metadata", :class => "catalog_link" %><% end %>
 <% if related_entry.description.length > 0 %><br/><span class="description"><%= truncate_words(related_entry.description) %></span><% end %>
