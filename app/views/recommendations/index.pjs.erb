@@ -14,10 +14,10 @@ function truncate(text, length) {
 	if (nEnd < 200) return text;
 	else return text.substring(0, nEnd) + " ...";
 }
+            var once = true;
 var asMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function format_date(published_at) {
-	date = new Date();
-	date.setTime(Date.parse(published_at));
+    date = new Date(Date.parse(published_at.substring(0,10).replace(/-/g,"/")));
 	return date.getDate() + " " + asMonths[date.getMonth()] + " " + date.getUTCFullYear();
 }
 <% end %>
@@ -36,7 +36,7 @@ for(nRec = 0; nRec < recs.length; nRec++) {
 <% if @details == true -%>
 	document.write(' <span class="oer_recommender_published_at">(' + format_date(r.published_at) + ')</span>');
 	document.write(' <span class="oer_recommender_relevance_score"><%= t('muck.services.relevance')%>: ' + Math.round(r.relevance*100)/100 + '</span>');
-	document.write('<br/><span class="oer_recommender_description">' + truncate(r.description) + '</span>');
+	if (r.description) document.write('<br/><span class="oer_recommender_description">' + truncate(r.description) + '</span>');
 	document.write('<br/><span class="oer_recommender_uri">' + r.permalink + '</span>');
 <% end -%>	
 	document.write('</p>');
