@@ -55,7 +55,7 @@ jQuery(document).ready(function() {
         if(json.success && json.feeds.length > 0){
           jQuery('#aggregation-feeds').prepend(json.html);
         } else {
-          <%= jquery_message('#ajax-messages') %>
+          <%= jquery_json_message('#ajax-messages') %>
         }
         jQuery('#add-feed-waiting').hide();
       });

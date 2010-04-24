@@ -98,7 +98,7 @@ class Muck::IdentityFeedsController < ApplicationController
   protected
     
     def get_owner
-      setup_parent('service')
+      setup_parent(:ignore => ['service'])
     end
     
     def get_identity_feed
