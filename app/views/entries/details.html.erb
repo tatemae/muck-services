@@ -12,7 +12,7 @@
     <td><%= render :partial => 'entries/related_entry', :locals => {:related_entry => r} %></td>
     <td class="centered"><%= round(r["relevance"]) %></td>
     <td class="centered"><%= r["clicks"] %></td>
-    <td class="centered"><%= r["avg_time_on_target"] %></td>
+    <td class="centered"><%= r["average_time_at_dest"] %></td>
   </tr>
   <% end%>
 </table>
