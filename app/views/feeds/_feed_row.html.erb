@@ -15,15 +15,16 @@
       <% end -%>
     </td>
   <% end -%>
-  <td><%= feed_row.error_message ? t('muck.services.failed_last_request', :error => feed_row.error_message) : feed_row.banned? ? t('muck.services.banned') : feed_row.pending? ? ('muck.services.pending') : t('muck.services.ok') %></td>
-  <td><%= feed_row.default_language.english_name unless feed_row.default_language.nil? %></td>
   <td><%= feed_row.entries_count.nil? ? "0" : feed_row.entries_count.to_s %></td>
-  <td><%= feed_row.harvested_from_short_title %></td>
   <td>
     <%= link_to image_tag('icons/feed.png'), feed_row.uri, :target => '_blank' %>
-    <%= link_to h(feed_row.title || feed_row.display_uri), feed_path(feed_row) %>
-    <% if feed_row.display_uri != feed_row.uri %><%= link_to image_tag('icons/external.png'), feed_row.display_uri, :target => '_blank' %><% end %>
+    <%= link_to h(feed_row.title.empty? ? (feed_row.display_uri.nil? ? feed_row.uri : feed_row.display_uri) : feed_row.title), feed_path(feed_row) %>
+    <% if (!feed_row.display_uri.nil? && feed_row.display_uri != feed_row.uri) %><%= link_to image_tag('icons/external.png'), feed_row.display_uri, :target => '_blank' %><% end %>
   </td>
-  <td><%= feed_row.last_harvested_at.strftime('%d %b at %H:%M') if feed_row.last_harvested_at %></td>
-  <td><%= feed_row.created_at.strftime('%d %b %y') if feed_row.created_at %></td>
+  <td><%= link_to(feed_row.feed_contributor, profile_path(feed_row.feed_contributor_id)) if feed_row.feed_contributor %></td>
+  <td><%= feed_row.created_at.strftime('%d %b %Y') if feed_row.created_at %></td>
+  <td><%= feed_row.last_harvested_at.strftime('%d %b %Y at %H:%M') if feed_row.last_harvested_at %></td>
+  <td><%= feed_row.default_language_name %></td>
+  <td><%= feed_row.harvested_from_short_title %></td>
+  <td><%= feed_row.error_message ? t('muck.services.failed_last_request', :error => feed_row.error_message) : feed_row.banned? ? t('muck.services.banned') : feed_row.pending? ? ('muck.services.pending') : t('muck.services.ok') %></td>
 </tr>

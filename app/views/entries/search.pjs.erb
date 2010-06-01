@@ -1,4 +1,6 @@
-<% cache({:locale => Language.locale_id, :format => 'pjs', :grain_size => @grain_size, :q => @search, :omit_feeds => @omit_feeds, :page => @page, :per_page => @per_page}) do %>
+<% cache({:locale => Language.locale_id, :format => 'pjs', :details => @details,
+          :grain_size => @grain_size, :q => @search, :omit_feeds => @omit_feeds,
+          :page => @page, :per_page => @per_page}) do %>
 <% if !@results.blank? %>
 function truncate(text, length) {
     nEnd = text.indexOf(" ", 200);
@@ -15,9 +17,11 @@ for(nRec = 0; nRec < recs.length; nRec++) {
     if (r == null) r = recs[nRec];
 	document.write('<p class="oer_recommender_item">');
 	document.write('<a class="oer_recommender_recommendation_link" href="' + app + 'visits/' + r.id + '">' + r.title + ' (' + r.collection + ')</a>');
+<% if @details == 'true' %>
     if (r.description) document.write('<br/><span class="oer_recommender_description">' + truncate(r.description) + '</span>');
     document.write('<br/><span class="oer_recommender_uri">' + r.permalink + '</span>');
 	document.write('</p>');
+<% end %>
 }
 document.write('</div>');
 document.write('</div>');
