@@ -100,5 +100,5 @@ function initRecsPanel() {
     panel.append("<div id='rec_close_box' title='Close'>x</div>");
     jQuery("#rec_close_box").click(function() {jQuery("#recs_panel").hide();jQuery("#show_recommendations_link").show();return false;});
     panel.css("left", jQuery("#toolbar").width() - 250);
-    panel.draggable();
+    if (panel.draggable) panel.draggable();
 }
