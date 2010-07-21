@@ -176,7 +176,7 @@ function identifySquatParent() {
         sRightMargin = "0px";
     } else {
         // MIT
-        squatParent = getElementByClassName("div", "left-nav");
+        squatParent = document.getElementById("local_navigation");
         if (bMIT && squatParent) {
             ulTags = squatParent.getElementsByTagName("ul");
             if (ulTags)
