@@ -134,6 +134,7 @@ Gem::Specification.new do |s|
     "app/views/service_templates/_zotero_group.html.erb",
     "app/views/services/_edit_service.html.erb",
     "app/views/services/_new_service.html.erb",
+    "app/views/services/_personal_recommendations.html.erb",
     "app/views/services/_summary.html.erb",
     "app/views/services/_view_service.html.erb",
     "app/views/services_mailer/notification_feed_added.text.ar.html.erb",
