@@ -1,13 +1,20 @@
 <% cache(@cache_key) do %>
 <html>
 <body style="margin:0;padding:0;">
-  <div style="padding-bottom:5px;margin:0 1px 0 3px;background-color:white;border-left:1px solid black;border-right:1px solid black;border-bottom:1px solid black;">
+  <div style="padding-bottom:5px;margin:0 1px 0 3px;background-color:white;border-left:1px solid black;border-right:1px solid black;border-bottom:1px solid black;<%= @show_header == true ? "border-top:1px solid black;" : ""%>">
+<% if @show_header == true %>
+    <div style="color:#777;font-weight:bold;font-size:14px;font-family:Arial,Helvetica,sans-serif;margin: 2px 3px 0 3px; padding: 2px;"><img src="/images/folksemantic/logo-folksemantic-gm.gif" style="margin-left:2px;vertical-align:middle;"/>Related Resources</div>
+<% end %>
+<% if !@recommendations.nil? && @recommendations.results.size > 0%>
     <ul style="margin:0 2px 2px;padding:0px;font-family:Arial,Helvetica,sans-serif;">
     <% @recommendations.results.each_with_index do |r, i| %>
     <li style="margin-left: 0px; padding: 3px; list-style-type: none; font-size: 12px; <%= (i % 2 == 0) ? 'background-color:#E6E6E6;' : '' %>">
       <%= link_to "#{r.title} (#{r.collection})", visit_path(r), :target => '_top' %></li>
     <% end %>
     </ul>
+<% else %>
+    <p style="color:red;padding:6px 10px;">Unable to generate recommendations for the resource. Please try a different resource.</p>
+<% end %>
   </div>
 </body>
 </html>

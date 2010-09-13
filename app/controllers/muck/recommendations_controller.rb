@@ -56,15 +56,16 @@ class Muck::RecommendationsController < ApplicationController
     respond_to do |format|
       format.html do
         @uri = params[:u]
-        @cache_key = "recommendations/real_time?u=#{CGI.escape(@uri)}"
+        @show_header = params[:show_header] == 'true'
+        @cache_key = "recommendations/real_time?show_header=#{@show_header}&u=#{CGI.escape(@uri)}"
         if !fragment_exist?(@cache_key)
-          @recommendations = Entry.real_time_recommendations(@uri, I18n.locale.to_s, 5)
+          @recommendations = Entry.real_time_recommendations(@uri, I18n.locale.to_s, 5) rescue nil
         end
         render 'recommendations/real_time', :layout => false
       end
     end
   end
-  
+
   protected
   
   def allowed_uri(uri)
