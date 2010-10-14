@@ -77,7 +77,7 @@ en:
       only_courses: Only Courses
       no_hits: Your search - <b>%{search}}</b> - did not match any <b>%{resource_type}</b>. Please try a different search or choose a different language.
       no_recommendations: No recommendations were found.
-      feed_successfully_created: Feed was successfully created.
+      feed_successfully_created: Thank you for submitting a feed. You will be emailed when the feed is approved.
       login: Login
       next_label: Next
       add_rss: Add Rss
