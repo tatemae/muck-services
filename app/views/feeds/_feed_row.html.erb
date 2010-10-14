@@ -1,7 +1,7 @@
 <tr>
   <% if defined?(show_admin) && show_admin -%>
     <td>
-      <% form_for(feed_row, :url => admin_feed_path(feed_row), :html => { :method => :put }) do |f| -%>
+      <%= form_for(feed_row, :url => admin_feed_path(feed_row), :html => { :method => :put }) do |f| -%>
         <% if feed_row.banned? -%>
           <%= hidden_field_tag :status, 'approve' %>
           <%= image_submit_tag '/images/icons/exclaim.png', {:width => '16', :height => '16', :alt => t('muck.services.validate_feed') } %>

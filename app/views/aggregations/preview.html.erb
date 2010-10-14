@@ -1,6 +1,6 @@
 <%= output_errors('', {:class => 'help-box'}) %>
 
-<% custom_form_for(:aggregation, :url => polymorphic_url([@parent, :aggregations])) do |f| -%>
+<%= muck_form_for(:aggregation, :url => polymorphic_url([@parent, :aggregations])) do |f| -%>
   
   <div class="span-24">
     <h2><%= @title %></h2>

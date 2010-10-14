@@ -4,11 +4,7 @@ class Muck::FeedPreviewsController < ApplicationController
 
   def new
     respond_to do |format|
-      format.pjs do
-        render_as_html do
-          render :template => 'feed_previews/new', :layout => false
-        end
-      end
+      format.pjs { render :template => 'feed_previews/new', :layout => false }
       format.html { render :template => 'feed_previews/new' }
     end
   end
@@ -17,11 +13,7 @@ class Muck::FeedPreviewsController < ApplicationController
     @feed = Feed.new(params[:feed])
     @feeds = Feed.gather_information(@feed.uri).compact
     respond_to do |format|
-      format.pjs do
-        render_as_html do
-          render :template => 'feed_previews/select_feeds', :layout => false
-        end
-      end
+      format.pjs { render :template => 'feed_previews/select_feeds', :layout => false }
       format.html { render :template => 'feed_previews/select_feeds' }
     end
   end

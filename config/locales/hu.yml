@@ -1,0 +1,219 @@
+--- 
+hu: 
+  muck: 
+    activity_templates: 
+      entry_comment: Megjegyzést
+    services: 
+      add_aggregation: "Add összesítése"
+      add_aggregation_title: "Név összesítést:"
+      add_edit_feeds: "Hozzáadása / szerkesztése Feeds"
+      add_extended_feed_sub_title: "Hozzájárulhat egy új adatforrás"
+      add_extended_feed_title: "Add new feed"
+      add_feed: "Add Feed"
+      add_feed_advanced: "Add Feed (Advanced)"
+      add_feed_title: "Új feed"
+      add_feed_url: "Url:"
+      add_feeds_to_aggregation: "Add hírcsatornák %{title}"
+      add_more_sources: "Add Források"
+      add_new_feed_title: "Új feed"
+      add_oai: "Add OAI -"
+      add_oai_feed: "Add OAI Végpont"
+      add_opml_to_aggregation: "Add OPML-fájl"
+      add_rss: "Add RSS"
+      add_rss_feed: "Add RSS Feed"
+      add_sources_by_tag: "Add tovább táplálja a címkéket."
+      added_date: Hozzá
+      aggregation_deleted: "%{title} Törölve"
+      aggregation_updated: "Frissítve összesítés"
+      all_resources: "Minden Resources"
+      already_added_uri_feed: "Már felvette a url %{uri}"
+      already_added_username_feed: "Már ki egy %{service}} számlát a felhasználónév %{username}"
+      already_shared: "Már korábban is osztotta ezt az oldalt."
+      amazon_prompt: "Kérjük, adja meg az e-mail használata with Amazon.com"
+      approval_status: Jóváhagyta
+      atom: Atomnak
+      available_services: "Rendelkezésre álló szolgáltatások"
+      available_sources: "A rendelkezésre álló források"
+      back: Vissza
+      ban_feed: "Mark feed érvénytelennek"
+      banned: betiltottak
+      blogger_prompt: "URL of your Blog"
+      build_topic: "Live Search"
+      calculated: számítani
+      cant_modify_aggregation: "Önnek nincs jogosultsága a megadott összesítés."
+      cant_modify_identity_feed: "Önnek nincs jogosultsága a megadott feed."
+      choose_service: "Válassza ki a szolgálat:"
+      close: Bezár
+      collection_description: "Collection Leírás:"
+      collection_home_uri: "Címe Gyűjtemény Home Page"
+      collection_uri: "Címe Collection Metadata:"
+      collections: Gyűjteményeket
+      collections_long: "Indexált Collections"
+      comment_entries_count: 
+        one: "1 Hozzászólás"
+        other: "%{count} Hozzászólások"
+      contributor: Befizetője
+      course_search_results: "Tanfolyamok <b>%{first}} - %{last}}</b> a <b>%{total}}</b> keresési <b>%{terms}</b>"
+      course_tag_results: "Tanfolyamok <b>%{first}} - %{last}}</b> a <b>%{total}}</b> tagged <b>%{terms}</b>"
+      courses_tag_cloud_label: "Böngészd a kurzusok segítségével címke <a href=\"/resources\">[browse összes erőforrás]</a>"
+      default_language: Nyelv
+      demo: Demót
+      description: Leírást
+      details: Részleteket
+      developers_long: "Információ fejlesztők számára"
+      direct_link: "[Direct link]"
+      discover_feed: "Fedezze fel Feed"
+      discover_feed_message: "Keres információt a megadott URL. Kérem, várjon."
+      display_address: "Display Cím"
+      display_url: "Url megjelenjen:"
+      download_opml: "Letöltés OPML fájl %{terms}"
+      edit_aggregation: "Edit összesítése"
+      edit_aggregation_title: "Szerkesztési %{title}"
+      entries_count: Szövegrészek
+      entry_commment_contents: "kommentálta %{resource}"
+      explore: "%{topic} Keresése a"
+      facebook: Facebook
+      facebook_instructions: "A Saját Linkek lapon kattintson a jobb gombbal a &quot;Saját linkek&quot; és másolja a linket. Automatikusan közé, állapotát, linkeket és jegyzeteket."
+      facebook_link: "Megtalálhatja az Ön URL-je Facebook Saját linkek oldalt. %{link}, Majd kattints a &quot;Saját linkek&quot;"
+      facebook_notes: "Facebook Megjegyzés"
+      facebook_notifications: "Facebook Értesítések"
+      facebook_prompt: "Ön Facebook Saját linkek URL"
+      facebook_shares: "Facebook Közös linkek"
+      failed_harvests: "Nem sikerült a termés"
+      failed_last_request: "Sikertelen utolsó kérése: %{error}"
+      feed: Etet
+      feed_banned_message: "Feed betiltották."
+      feed_display_address: "Feed URL"
+      feed_id: Azonosítót
+      feed_metadata_address: "Metadata Cím"
+      feed_remove: "Feed Removed"
+      feed_successfully_created: "Feed sikeresen létrejött."
+      feed_successfully_updated: "Feed sikeresen frissítve."
+      feed_type: "Feed típus"
+      feed_type_prompt: "RSS feed a leggyakoribb típus. Csak akkor válassza OAI, ha tudod, hogy a tárolót támogatja, és megadta az OAI végpont."
+      feed_validated_message: "Feed jóváhagyták."
+      feeds_for_aggregation: "Feedek ezen összesítés"
+      feeds_title: "Regisztrált Collections"
+      finding_topics: "Searching for érintett történetek ..."
+      for: miatt
+      friendfeed_prompt: "FriendFeed RSS URL -"
+      friendfeed_rss: "Megtalálhatja az URL alján a %{link}."
+      generate_new_topic: "Létrehoz egy új témát"
+      generating_topic_message: "Keresést. Ez eltarthat egy perc múlva ...."
+      get_recommendations: "Get Ajánlások"
+      gm_more_prompt: "További Kapcsolódó anyagok"
+      gm_title: "Kapcsolódó anyagok"
+      goodreads_prompt: "Goodreads Profil URL"
+      goodreads_rss: "pl http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Szüreti intervallum (óra)"
+      harvested_at: Szüretelték
+      hide: Elrejt
+      identity_feed_removed: "Megszüntették a szolgáltatási"
+      identity_feeds: "Identity Feeds"
+      import_service: "Import %{service}"
+      language_not_supported: "A kért nyelv nem támogatott"
+      latest_aggregations: "Legújabb csoportok,"
+      linkedin_prompt: "LinkedIn nyilvános bemutatkozása URL"
+      linkedin_rss: "Megtalálhatja az URL alján a %{link}."
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image &quot;)%&gt;"
+      loading_image: "Loading Image"
+      loading_message: "Loading ..."
+      login: Bejelentkezés
+      login_or_signup_prompt: "%{signup}} Vagy %{login} megvitatására és a források megosztása."
+      login_to_comment: "Login to add a comment"
+      metadata: metaadatokat
+      metadata_prefix: "Metadata Prefix"
+      my_identity: "My Identity"
+      my_services: Szolgáltatásaim
+      narrow_further: "keskeny további eredmények"
+      netflix_prompt: "Netflix Queue RSS URL-je"
+      netflix_rss: "Megtalálhatja az Ön URL-%{link}. Ne feledjük, hogy számos feedek érhetõ el Netflix Queue oldal (Queue, ajánlások, Movie Reviews, stb.) Adjunk hozzá annyi, amennyit csak akar!"
+      new_aggregation: "Új összesítése"
+      new_global_feed: "Egy új takarmány egészült ki %{application_name}"
+      new_search: "Új keresés"
+      new_topic_title: "Keressen egy új témát, és kiépíteni a találati oldalon."
+      next: Következő
+      next_label: Következő
+      no_entries_found: "No entries found"
+      no_feeds_at_uri: "Nem találtunk a megadott URL"
+      no_feeds_found: "No feeds találtak"
+      no_feeds_from_username: "Nem tudtuk megtalálni a megadott számlára"
+      no_hits: "A keresés - <b>%{search}}</b> - nem talált semmilyen <b>%{resource_type}.</b> Próbáld egy másik keresést, vagy válasszon másik nyelvet."
+      no_recommendations: "Nincs ajánlás találtak."
+      no_tagged_courses: "Nincs <b>tanfolyamok</b> találtak tagged with <b>%{tags}}.</b> <a href='/resources'>Újrakezdés,</a> vagy ki <a href='/resources/tags/%{tags}}'>az összes erőforrás tagged %{tags}.</a>"
+      no_tagged_resources: "Nincs <b>források</b> találtak tagged with <b>%{tags}.</b> <a href='/resources'>Újrakezdés.</a>"
+      no_tags: "No tags elérhető még"
+      no_terms_error: "Kérjük, adja meg a kifejezés vagy kifejezések listáját."
+      oai_endpoint_successfully_created: "Sikeresen ki OAI végpont"
+      oai_prompt: "Ha megadod OAI, meg kell adnia a teljes URL-t a ListRecords kérés (nem csak az OAI végpont)"
+      of: "-től"
+      ok: Rendben
+      only_courses: "Csak Tanfolyamok"
+      opml_feeds_for: "Feedek %{terms}"
+      opml_generated: "Feedek %{terms}"
+      personal_recommendations: Ajánlásokkal
+      photos: Photos
+      please_specify_url: "Kérem adjon meg egy URL-t"
+      polyvore_prompt: "Polyvore Profil URL"
+      polyvore_rss: "Ön Polyvore Profil URL néz http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "powered by"
+      previous: Eddigi
+      previous_label: Eddigi
+      problem_adding_feed: "Probléma merült fel hozzá a takarmány:"
+      rdf: Kemencehulladékot
+      read_more: "olvas több"
+      related_feeds: "Related Feeds"
+      related_resources: vonatkozó
+      related_resources_title: "Kapcsolódó anyagok"
+      relevance: relevanciáját
+      remix: Remix
+      remove: Eltávolít
+      repository: Metaadatokat
+      repository_short_title: "Adattár Rövid cím:"
+      repository_title: "Adattár Cím:"
+      resource_search_results: "Resources <b>%{first}} - %{last}}</b> a <b>%{total}}</b> keresési <b>%{terms}</b>"
+      resource_tag_results: "Resources <b>%{first}} - %{last}}</b> a <b>%{total}}</b> tagged <b>%{terms}</b>"
+      resources_tag_cloud_label: "böngészés források révén címke <a href=\"/resources?grain_size=course\">[browse csak a tanfolyamok]</a>"
+      results: Eredményt
+      rss: "RSS -"
+      rss_url: "URL-címét rss feed"
+      save_aggreation: "Mentés Ez az összesítés"
+      save_aggreation_instructions: "Távolítsa el a nem kívánt eszik kattintva &quot;Eltávolítás&quot;. Ön képes lesz új infók a következő lépés."
+      search: keres
+      search_button: Jár
+      search_for: "Keresés:"
+      search_link: "Forrásokat találni!"
+      search_problem: "Volt egy probléma a keresést. Kérjük, nézze meg a keresési feltételeknek, és próbálja újra."
+      searching_for_feed: "Searching for feeds ..."
+      select_feeds_prompt: "Válassza ki a feedeket szeretne hozzáadni:"
+      select_service_prompt: "Kérjük, válasszon egy szolgáltatást"
+      service_feed_name: "%{term}} A %{service}"
+      service_username: "%{service} Felhasználónév"
+      setup_aggregation: "Aggregation Setup"
+      share: Megoszt
+      short_title: "Rövid cím:"
+      show_related_resources: "Show Kapcsolódó anyagok"
+      show_tagged_courses: "Csak tanfolyamok"
+      show_tagged_resources: "mutatnak semmiféle forrás"
+      signup: "Sign Up"
+      signup_to_save_aggreation: "%{login}} Vagy %{signup} menteni a kereséshez"
+      spinner_image: "Kép várakozás"
+      start_over: "kezdete át"
+      status: Állapot
+      submitting_feed_message: "Benyújtásának feed ..."
+      successfully_added_uri_feed: "Sikeresen ki %{uri}"
+      successfully_added_username_feed: "Sikeresen ki %{service}"
+      tags: címkéket
+      terms_instructions: "Adjunk hozzá annyi címke vagy kifejezést, amennyit szeretett volna. Külön mindegyik vessző. azaz étel, receptek, a legjobb helyen enni, szerves"
+      title: Címben
+      topic_feeds_for: "Feedek %{terms}"
+      topic_generated: "Eredmények a `%{terms}`."
+      type_of_metadata: "Metadata típusa:"
+      uri: URL
+      url_not_in_index: "A <a href='%{uri}'>kért forrás ajánlások</a> nem indexelt. Kérjük, adjon hozzá az adattár, amely a metaadatokat az erőforrás, ha hozzá az index."
+      validate_feed: "Mark feed érvényes"
+      videos: Video
+      visit: keresse
+      xml: XML
+      zotero_group_prompt: "Zotero csoport URL"
+      zotero_group_rss: "Az Ön Zotero csoport URL-je így néz ki: http://www.zotero.org/groups/adventures_in_library_instruction/items"

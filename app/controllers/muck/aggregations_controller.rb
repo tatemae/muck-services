@@ -16,7 +16,7 @@ class Muck::AggregationsController < ApplicationController
     if @parent
       @aggregations = @parent.aggregations.by_title
     else
-      @aggregations = Aggregation.newest
+      @aggregations = Aggregation.by_newest
     end
     render(:template => 'aggregations/index')
     # respond_to do |format|
@@ -227,9 +227,7 @@ class Muck::AggregationsController < ApplicationController
     end
     
     def get_google_feed_html
-      render_as_html do
-        render_to_string(:partial => 'aggregations/feeds')
-      end
+      render_to_string(:partial => 'aggregations/feeds')
     end
     
 end

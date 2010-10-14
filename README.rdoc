@@ -4,35 +4,19 @@ Muck Raker gem to handle aggregation, recommendations and search.  It is recomme
 
 == Installation
 
-Be sure to add github as a gem source before proceeding as acts-as-taggable-on, mislav-will_paginate (and many other gems) live there.
-  gem sources -a http://gems.github.com
+Add muck services to your Gemfile:
+  gem 'muck-services'
 
-Install muck services:
-  sudo gem install muck-services
 
-Install muck raker:
-sudo gem install muck-raker
-  
-Installing muck services should install all of it's dependancies.  You can also install them manually:
-  sudo gem install httparty
-  sudo gem install mbleigh-acts-as-taggable-on
-  sudo gem install mislav-will_paginate
-  sudo gem install muck-feedbag
-  sudo gem install pauldix-feedzirra
-
-After install acts-as-taggable-on be sure to include the helper in application_helper.rb:
+After installing acts-as-taggable-on be sure to include the helper in application_helper.rb:
 
   module ApplicationHelper
     include TagsHelper
   end
 
-Add rake tasks to your Rakefile
-
-  require 'muck_services/tasks'
-
 Add routes
 Depending on which features you use from muck raker you may need to add additional routes to your application.  For example, 
-a user with has_muck_feeds and acts_as_muck_feed_owner the following routes would be required:
+a user with include MuckServices::Models::MuckFeedParent and include MuckServices::Models::MuckFeedOwner the following routes would be required:
 
   map.resources :users, :controller => 'muck/users' do |users|
     # have to map into the muck/identity_feeds controller or rails can't find the identity_feeds
@@ -44,20 +28,20 @@ a user with has_muck_feeds and acts_as_muck_feed_owner the following routes woul
 == Usage
 Muck raker aggregates data feeds and analyzes the results to make recommendations.
 
-=== environment.rb
-Add the following to environment.rb to include all the required gems:
+=== Gemfile
+Add the following to your Gemfile:
 
-  config.gem "muck-feedbag", :lib => "feedbag", :source => "http://gems.github.com"
-  config.gem "pauldix-feedzirra", :lib => 'feedzirra', :source => "http://gems.github.com"
-  config.gem 'muck-engine', :lib => 'muck_engine'
-  config.gem 'muck-users', :lib => 'muck_users'
-  config.gem 'muck-solr', :lib => 'acts_as_solr'
+  gem "muck-feedbag", :require => "feedbag"
+  gem "feedzirra"
+  gem 'muck-engine'
+  gem 'muck-users'
+  gem 'muck-solr', :require => 'acts_as_solr'
 
 The following are optional but almost always used so you may as well pull them in.
-  config.gem 'muck-comments', :lib => 'muck_comments'
-  config.gem 'muck-activities', :lib => 'muck_activities'
-  config.gem 'muck-shares', :lib => 'muck_shares'
-  config.gem 'muck-raker', :lib => 'muck_raker'
+  gem 'muck-comments'
+  gem 'muck-activities'
+  gem 'muck-shares'
+  gem 'muck-raker'
 
 === Database
 There are a number of rake tasks meant to help you get your database setup:
@@ -83,16 +67,11 @@ To turn on this functionality add these lines to your global_config.yml file:
   enable_services_comments: true      # Enables or disables comments in the frame that wraps content as a user browses recommendation results
   enable_services_shares: true        # Enables or disables sharing in the frame that wraps content as a user browses recommendation results
 
-To install these gems:
-  sudo gem install muck-comments
-  sudo gem install muck-activities
-  sudo gem install muck-shares
-
-If you enable comments you will need a comment model with 'acts_as_muck_services_comment':
+If you enable comments you will need a comment model with 'include MuckServices::Models::MuckServicesComment':
 
 class Comment < ActiveRecord::Base
-  acts_as_muck_comment
-  acts_as_muck_services_comment
+  include MuckComments::Models::MuckComment
+  include MuckServices::Models::MuckServicesComment
 end
 
 === CSS
@@ -108,4 +87,4 @@ You will need to have mysql setup to run the migrations for the test database.  
 
 
 
-Copyright (c) 2009 Tatemae.com, released under the MIT license
+Copyright (c) 2009-2010 Tatemae.com, released under the MIT license

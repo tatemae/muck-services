@@ -1,0 +1,219 @@
+--- 
+tl: 
+  muck: 
+    activity_templates: 
+      entry_comment: Comment
+    services: 
+      add_aggregation: "Magdagdag ng pagsasama-sama"
+      add_aggregation_title: "Pangalan para sa pagsasama-sama:"
+      add_edit_feeds: "Magdagdag / Baguhin Feeds"
+      add_extended_feed_sub_title: "Contribute ng isang bagong source ng data"
+      add_extended_feed_title: "Magdagdag ng bagong feed"
+      add_feed: "Magdagdag ng Feed"
+      add_feed_advanced: "Magdagdag ng Feed (Advanced)"
+      add_feed_title: "Magdagdag ng isang bagong feed"
+      add_feed_url: "Url:"
+      add_feeds_to_aggregation: "Magdagdag ng mga feed sa %{title}"
+      add_more_sources: "Magdagdag ng mga Pinagmumulan ng"
+      add_new_feed_title: "Magdagdag ng isang bagong feed"
+      add_oai: "Magdagdag ng OAI"
+      add_oai_feed: "Magdagdag ng OAI Endpoint"
+      add_opml_to_aggregation: "Magdagdag ng OPML file"
+      add_rss: "Magdagdag ng RSS"
+      add_rss_feed: "Magdagdag ng mga RSS Feed"
+      add_sources_by_tag: "Magdagdag pa ng mga feed sa pamamagitan ng mga tag."
+      added_date: Added
+      aggregation_deleted: "%{title} Tinanggal"
+      aggregation_updated: Pagsasama-sama-update
+      all_resources: "Lahat ng Mapagkukunan"
+      already_added_uri_feed: "Kayo ay nakagawa idinagdag ang url %{uri}"
+      already_added_username_feed: "Kayo ay nagdagdag ng isang %{service}} account gamit ang username %{username}"
+      already_shared: "Dati mo Nakibahagi ang pahina na ito."
+      amazon_prompt: "Mangyaring ipasok ang email na ginagamit mo sa Amazon.com"
+      approval_status: Approved
+      atom: Atom
+      available_services: "Magagamit na mga Serbisyo"
+      available_sources: "Magagamit na mga Pinagmumulan"
+      back: Balik
+      ban_feed: "Markahan ang feed bilang hindi wasto"
+      banned: pinagbawalan
+      blogger_prompt: "Url ng iyong Blog"
+      build_topic: "Live Search"
+      calculated: kinakalkula
+      cant_modify_aggregation: "Ikaw ay walang pahintulot na ma-access ang mga tinukoy na pagsasama-sama."
+      cant_modify_identity_feed: "Ikaw ay walang pahintulot na ma-access ang mga tinukoy na feed."
+      choose_service: "Pumili ng serbisyo:"
+      close: "Isara / malapit"
+      collection_description: "Collection Description:"
+      collection_home_uri: "Address ng Collection Home Page"
+      collection_uri: "Address ng Collection Metadata:"
+      collections: Collections
+      collections_long: "Index Collections"
+      comment_entries_count: 
+        one: "1 Comment"
+        other: "%{count} Comments"
+      contributor: Contributor
+      course_search_results: "Sangay <b>%{first}} - %{last}}</b> ng <b>%{total}}</b> para sa <b>%{terms}</b> paghahanap"
+      course_tag_results: "Sangay <b>%{first}} - %{last}}</b> ng <b>%{total}}</b> tag <b>%{terms}</b>"
+      courses_tag_cloud_label: "i-browse ang mga kurso sa paggamit ng tags <a href=\"/resources\">[-browse sa lahat ng mga resources]</a>"
+      default_language: Wika
+      demo: Demo
+      description: Paglalarawan
+      details: "Mga Detalye"
+      developers_long: "Impormasyon para sa mga Developer"
+      direct_link: "[direktang link]"
+      discover_feed: "Discover Feed"
+      discover_feed_message: "Naghahanap ng mga impormasyon tungkol sa url na ibinigay mo. Mangyaring maghintay."
+      display_address: "Ipakita ang Address"
+      display_url: "Url na ipapakita:"
+      download_opml: "I-download ang OPML file para sa %{terms}"
+      edit_aggregation: "I-edit ang pagsasama-sama"
+      edit_aggregation_title: "Pag-edit ng %{title}"
+      entries_count: Entries
+      entry_commment_contents: "commented sa %{resource}"
+      explore: "Maghanap para sa %{topic}"
+      facebook: Facebook
+      facebook_instructions: "Sa pahina ng Aking Links, i-right click sa &#39;My Links&#39; at kopyahin ang mga link. Awtomatiko naming kasama, kalagayan, mga link at mga tala."
+      facebook_link: "Maaari mong mahanap ang iyong URL sa iyong pahina ng Facebook My Links. %{link} At pagkatapos ay i-click sa &#39;My Links&#39;"
+      facebook_notes: "Facebook Notes"
+      facebook_notifications: "Facebook Notifications"
+      facebook_prompt: "Ang iyong Facebook My Links URL"
+      facebook_shares: "Facebook Naibahaging Links"
+      failed_harvests: "Nabigong harvests"
+      failed_last_request: "Nabigo ang huling hiling: %{error}"
+      feed: Feed
+      feed_banned_message: "Feed ay pinagbawalan."
+      feed_display_address: "Feed Url"
+      feed_id: ID
+      feed_metadata_address: "Metadata Address"
+      feed_remove: "Tinanggal Feed"
+      feed_successfully_created: "Feed ay matagumpay na nalikha."
+      feed_successfully_updated: "Feed ay matagumpay na na-update."
+      feed_type: "Feed Type"
+      feed_type_prompt: "RSS ay ang pinaka-karaniwang uri ng feed. Piliin lamang ang OAI kung alam mo ang mga sisidlan ay sumusuporta sa ito at na tinukoy mo ang OAI endpoint."
+      feed_validated_message: "Feed ay na-aprubahan."
+      feeds_for_aggregation: "Feeds para sa pagsasama-sama"
+      feeds_title: "Registered Collections"
+      finding_topics: "Naghahanap ng mga kaugnay na istorya ..."
+      for: "para sa"
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Maaari mong mahanap ang iyong URL sa ibaba ng iyong %{link}."
+      generate_new_topic: "Gumawa ng isang bagong paksa"
+      generating_topic_message: "Searching. Ito ay maaaring tumagal ng isang minuto o kaya ...."
+      get_recommendations: "Kumuha ng mga rekomendasyon"
+      gm_more_prompt: "Higit pang mga kaugnay na Resources"
+      gm_title: "Related Resources"
+      goodreads_prompt: "Goodreads profile URL"
+      goodreads_rss: "halimbawa, http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Harvest na pagitan (oras)"
+      harvested_at: Ani
+      hide: Itago
+      identity_feed_removed: "Tinanggal na serbisyo"
+      identity_feeds: "Identity Feeds"
+      import_service: "Angkat %{service}"
+      language_not_supported: "Ang hiniling na wika ay hindi suportado"
+      latest_aggregations: "Latest aggregations"
+      linkedin_prompt: "LinkedIn pampublikong profile URL"
+      linkedin_rss: "Maaari mong mahanap ang iyong URL sa ibaba ng iyong %{link}."
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image&#39;)%&gt;"
+      loading_image: "Nag-load ng Imahe"
+      loading_message: "Naglo-load ..."
+      login: Login
+      login_or_signup_prompt: "%{signup}} O %{login} upang talakayin at mga mapagkukunan ibahagi."
+      login_to_comment: "Mag-login sa magdagdag ng isang puna"
+      metadata: metadata
+      metadata_prefix: "Metadata Prefix"
+      my_identity: "Aking Identity"
+      my_services: "Aking Serbisyo"
+      narrow_further: "paliitin ang karagdagang mga resulta"
+      netflix_prompt: "Netflix Queue RSS URL"
+      netflix_rss: "Maaari mong mahanap ang iyong URL sa iyong %{link}. Tandaan na may ilang mga feed na makukuha sa inyong pahina Netflix queue (queue, rekomendasyon, Movie Reviews, atbp). Magdagdag ng maraming bilang na gusto mo!"
+      new_aggregation: "Bagong pagsasama-sama"
+      new_global_feed: "Isang bagong feed ay naidagdag na sa %{application_name}"
+      new_search: "New Search"
+      new_topic_title: "Maghanap para sa isang bagong paksa at magtayo ng mga pahina ng mga resulta."
+      next: Susunod
+      next_label: Susunod
+      no_entries_found: "Walang mga entries na natagpuan"
+      no_feeds_at_uri: "Hindi namin mahanap ang url na ibinigay"
+      no_feeds_found: "Walang feed ang natagpuan"
+      no_feeds_from_username: "Hindi namin mahanap ang ibinigay account"
+      no_hits: "Ang iyong paghahanap - <b>%{search}}</b> - ay hindi tumugma sa anumang mga <b>%{resource_type}.</b> Mangyaring subukan ang isang naiibang paghahanap o pumili ng ibang lengguahe sa ngayon."
+      no_recommendations: "Walang mga rekomendasyon ang natagpuan."
+      no_tagged_courses: "Walang <b>mga kurso</b> ay natagpuan na-tag na may <b>%{tags}}.</b> <a href='/resources'>Simulan sa paglipas</a> o ipakita <a href='/resources/tags/%{tags}}'>ang lahat ng mga resources na-tag na %{tags}.</a>"
+      no_tagged_resources: "Walang <b>mapagkukunan</b> ang natagpuan nai-tag sa <b>%{tags}.</b> <a href='/resources'>Simulan sa.</a>"
+      no_tags: "Walang mga tag magagamit pa"
+      no_terms_error: "Mangyaring tukuyin ang isang salita o listahan ng mga salita."
+      oai_endpoint_successfully_created: "Matagumpay na naidagdag OAI endpoint"
+      oai_prompt: "Kung kayo ay tukuyin OAI, kailangan mong tukuyin ang buong url sa ListRecords kahilingan (hindi lamang ang OAI endpoint)"
+      of: ng
+      ok: OK
+      only_courses: "Tanging mga sangay"
+      opml_feeds_for: "Feeds para sa %{terms}"
+      opml_generated: "Feeds para sa %{terms}"
+      personal_recommendations: "Mga rekomendasyon"
+      photos: Photos
+      please_specify_url: "Mangyaring tukuyin ang isang url"
+      polyvore_prompt: "Polyvore profile URL"
+      polyvore_rss: "Ang iyong Polyvore profile URL Mukhang http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "pinapatakbo ng"
+      previous: Nakaraan
+      previous_label: Nakaraan
+      problem_adding_feed: "Nagkaroon ng problema ang pagdaragdag ng feed:"
+      rdf: RDF
+      read_more: "read more"
+      related_feeds: "Related Feeds"
+      related_resources: "mga kaugnay na"
+      related_resources_title: "Related Resources"
+      relevance: kaugnayan
+      remix: Remix
+      remove: Alisin
+      repository: Metadata
+      repository_short_title: "Taguan Maikling Title:"
+      repository_title: "Lalagyan Title:"
+      resource_search_results: "Resources <b>%{first}} - %{last}}</b> ng <b>%{total}}</b> para sa <b>%{terms}</b> paghahanap"
+      resource_tag_results: "Resources <b>%{first}} - %{last}}</b> ng <b>%{total}}</b> tag <b>%{terms}</b>"
+      resources_tag_cloud_label: "i-browse ang mga resources gamit ang tag na <a href=\"/resources?grain_size=course\">[i-browse ang mga kurso lamang]</a>"
+      results: "Mga Resulta"
+      rss: RSS
+      rss_url: "Url para sa iyong rss feed"
+      save_aggreation: "I-save ang pagsasama-sama"
+      save_aggreation_instructions: "Alisin ang anumang di-ninanais na mga feed sa pamamagitan ng pag-click sa &#39;Tanggalin&#39;. Ikaw ay maaaring magdagdag ng mga bagong feeds sa susunod na hakbang."
+      search: maghanap
+      search_button: Go
+      search_for: "Maghanap para sa:"
+      search_link: "Hanapin Resources!"
+      search_problem: "Nagkaroon ng problema sa iyong paghahanap. Mangyaring repasuhin ang iyong mga batayan sa paghanap at subukan muli."
+      searching_for_feed: "Naghahanap para sa mga feed ..."
+      select_feeds_prompt: "Piliin ang feed na gusto mong idagdag:"
+      select_service_prompt: "Mangyaring pumili ng isang serbisyo ng"
+      service_feed_name: "%{term}} Sa %{service}"
+      service_username: "%{service} Username"
+      setup_aggregation: "Setup ng pagsasama-sama"
+      share: Ibahagi
+      short_title: "Maikling pamagat:"
+      show_related_resources: "Ipakita ang mga Kaugnay na Gamit-yaman"
+      show_tagged_courses: "ipakita lamang ang mga kurso"
+      show_tagged_resources: "ipakita ang anumang mga uri ng yaman"
+      signup: "Mag-sign Up"
+      signup_to_save_aggreation: "%{login}} O %{signup} upang i-save ang paghahanap na ito"
+      spinner_image: "Naghihintay na imahe"
+      start_over: "simulan sa paglipas ng"
+      status: Katayuan
+      submitting_feed_message: "Ang pagpadala nang inyong feed ..."
+      successfully_added_uri_feed: "Matagumpay na naidagdag %{uri}"
+      successfully_added_username_feed: "Matagumpay na naidagdag %{service}"
+      tags: tags
+      terms_instructions: "Magdagdag ng maraming tags o parirala ayon sa gusto mo. Paghiwalayin ang bawat isa ay may isang kuwit. ibig sabihin, pagkain, recipe, pinakamainam na lugar upang kumain, organic"
+      title: Title
+      topic_feeds_for: "Feeds para sa %{terms}"
+      topic_generated: "Mga Resulta para `%{terms}`."
+      type_of_metadata: "Uri ng Metadata:"
+      uri: Url
+      url_not_in_index: "Ang <a href='%{uri}'>yaman mo hiniling na mga mungkahi para sa</a> ay hindi na-index. Mangyaring magdagdag ng isang sisidlan na naglalaman ng metadata para sa mga mapagkukunan upang idagdag ito sa index."
+      validate_feed: "Markahan ang feed na may-bisang"
+      videos: Videos
+      visit: "bisitahin ang"
+      xml: XML
+      zotero_group_prompt: "Zotero grupo ng URL"
+      zotero_group_rss: "Ang inyong grupo Zotero URL ganito ang hitsura: http://www.zotero.org/groups/adventures_in_library_instruction/items"

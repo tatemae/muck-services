@@ -1,0 +1,219 @@
+--- 
+cs: 
+  muck: 
+    activity_templates: 
+      entry_comment: Komentář
+    services: 
+      add_aggregation: "Přidat Agregace"
+      add_aggregation_title: "Jméno pro sčítání:"
+      add_edit_feeds: "Přidat / Upravit RSS"
+      add_extended_feed_sub_title: "Přispět nový zdroj dat"
+      add_extended_feed_title: "Přidat nový feed"
+      add_feed: "Přidat kanál"
+      add_feed_advanced: "Přidat kanál (Advanced)"
+      add_feed_title: "Přidat nový krmivo"
+      add_feed_url: "Url:"
+      add_feeds_to_aggregation: "Přidat kanály do %{title}"
+      add_more_sources: "Přidat Zdroje"
+      add_new_feed_title: "Přidat nový krmivo"
+      add_oai: "Přidat OAI"
+      add_oai_feed: "Přidat OAI Endpoint"
+      add_opml_to_aggregation: "Přidat soubor OPML"
+      add_rss: "Přidat RSS"
+      add_rss_feed: "Přidat RSS feed"
+      add_sources_by_tag: "Přidat další kanály podle značek."
+      added_date: Added
+      aggregation_deleted: "%{title} Vypouští"
+      aggregation_updated: "Aktualizováno agregace"
+      all_resources: "Všechny zdroje"
+      already_added_uri_feed: "Jste již přidali url %{uri}"
+      already_added_username_feed: "Jste již přidali %{service}} účet s uživatelským jménem %{username}"
+      already_shared: "Jste dříve do této stránce."
+      amazon_prompt: "Prosím, zadejte e-mailu můžete použít s Amazon.com"
+      approval_status: Schválené
+      atom: Atom
+      available_services: "Dostupné služby"
+      available_sources: "Dostupné zdroje"
+      back: Zpět
+      ban_feed: "Označit krmivo jako neplatná"
+      banned: zakázána
+      blogger_prompt: "URL vašeho blogu"
+      build_topic: "Live Search"
+      calculated: vypočtené
+      cant_modify_aggregation: "Nemáte oprávnění pro přístup k uvedené agregace."
+      cant_modify_identity_feed: "Nemáte oprávnění pro přístup k uvedené krmiva."
+      choose_service: "Vyberte službu:"
+      close: Zavřít
+      collection_description: "Kolekce Popis:"
+      collection_home_uri: "Adresa Collection Domovská stránka"
+      collection_uri: "Adresa Collection Metadata:"
+      collections: Sbírky
+      collections_long: "Indexovány Collections"
+      comment_entries_count: 
+        one: "1 Comment"
+        other: "%{count} Komentáře"
+      contributor: Přispěvatel
+      course_search_results: "Předměty <b>%{first}} - %{last}}</b> z <b>%{total}}</b> pro vyhledávání <b>%{terms}</b>"
+      course_tag_results: "Předměty <b>%{first}} - %{last}}</b> z <b>%{total}}</b> označené <b>%{terms}</b>"
+      courses_tag_cloud_label: "procházet kurzy pomocí značek <a href=\"/resources\">[procházet všechny zdroje]</a>"
+      default_language: Jazyk
+      demo: Demo
+      description: Popis
+      details: Detaily
+      developers_long: "Informace pro vývojáře"
+      direct_link: "[přímý odkaz]"
+      discover_feed: "Objevte Feed"
+      discover_feed_message: "Vyhledávání informací o URL, které jste poskytli. Prosím čekejte."
+      display_address: "Displej Adresa"
+      display_url: "Url k zobrazení:"
+      download_opml: "Stáhnout OPML soubor pro %{terms}"
+      edit_aggregation: "Upravit Agregace"
+      edit_aggregation_title: "Editace %{title}"
+      entries_count: Příspěvky
+      entry_commment_contents: "komentoval %{resource}"
+      explore: "Hledat %{topic}"
+      facebook: Facebook
+      facebook_instructions: "Na stránce Mé odkazy, pravým-klikněte na &#39;My Links&#39; a zkopírovat odkaz. Budeme automaticky zahrnují stav, odkazy a poznámky."
+      facebook_link: "Můžete najít URL na vaší stránce Facebook My Links. %{link} A poté klikněte na &#39;My Links&#39;"
+      facebook_notes: "Facebook Notes"
+      facebook_notifications: "Facebook Oznámení"
+      facebook_prompt: "Vaše Facebook My Links URL"
+      facebook_shares: "Facebook Sdílené Odkazy"
+      failed_harvests: "Výpadky sklizní"
+      failed_last_request: "Neúspěšný poslední dotaz: %{error}"
+      feed: Krmit
+      feed_banned_message: "Krmivo byl zakázán."
+      feed_display_address: "Feed URL"
+      feed_id: ID
+      feed_metadata_address: "Metadata Adresa"
+      feed_remove: "Feed Removed"
+      feed_successfully_created: "Krmivo byl úspěšně vytvořen."
+      feed_successfully_updated: "Krmivo byl úspěšně aktualizován."
+      feed_type: "Feed Typ"
+      feed_type_prompt: "RSS je nejběžnější typ kanálu. OAI vybrat pouze tehdy, pokud znáte úložiště podporuje tuto funkci, které jste zadali koncový bod OAI."
+      feed_validated_message: "Krmivo byl schválen."
+      feeds_for_aggregation: "Krmiva pro tuto agregaci"
+      feeds_title: "Registrovaných Collections"
+      finding_topics: "Vyhledávání relevantních příběhy ..."
+      for: pro
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Můžete najít adresu URL ve spodní části %{link}."
+      generate_new_topic: "Vygenerovat nové téma"
+      generating_topic_message: "Vyhledávání. To může trvat minutu nebo tak ...."
+      get_recommendations: "Get Doporučení"
+      gm_more_prompt: "Více Související zdroje informací"
+      gm_title: "Související zdroje informací"
+      goodreads_prompt: "Goodreads profil URL"
+      goodreads_rss: "např. http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Harvest interval (hod)"
+      harvested_at: Sklizené
+      hide: Skrýt
+      identity_feed_removed: "Removed servis"
+      identity_feeds: "Identita RSS"
+      import_service: "Import %{service}"
+      language_not_supported: "Požadovaném jazyce není podporován"
+      latest_aggregations: "Nejnovější agregace"
+      linkedin_prompt: "LinkedIn veřejný profil URL"
+      linkedin_rss: "Můžete najít adresu URL ve spodní části %{link}."
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image&#39;)%&gt;"
+      loading_image: "Načítání obrázků"
+      loading_message: "Loading ..."
+      login: Přihlásit
+      login_or_signup_prompt: "%{signup}} Nebo %{login} k diskusi a sdílení zdrojů."
+      login_to_comment: "Přihlásit se přidat komentář"
+      metadata: metadata
+      metadata_prefix: "Metadata Prefix"
+      my_identity: "Mé identity"
+      my_services: "Moje služby"
+      narrow_further: "úzký výsledků dalšího"
+      netflix_prompt: "Netflix Fronta RSS URL"
+      netflix_rss: "Můžete najít URL na vašich %{link}. Všimněte si, že existuje několik kanály k dispozici na vaší stránce Netflix Queue (Fronta, doporučení, recenze filmů, atd.). Přidat tolik, kolik chcete!"
+      new_aggregation: "New Agregace"
+      new_global_feed: "Nový zdroj byl přidán %{application_name}"
+      new_search: "Nové hledání"
+      new_topic_title: "Vyhledat nová témata a vytvořit stránky s výsledky."
+      next: Příští
+      next_label: Příští
+      no_entries_found: "Nebyly nalezeny žádné záznamy"
+      no_feeds_at_uri: "Nepodařilo se nám nalézt danou url"
+      no_feeds_found: "Žádné kanály byly nalezeny"
+      no_feeds_from_username: "Nepodařilo se nám najít daný účet"
+      no_hits: "Vaše hledání - <b>%{search}}</b> - neodpovídají žádné <b>%{resource_type}.</b> Prosím, zkuste hledat jiné nebo vyberte jiný jazyk."
+      no_recommendations: "Žádná doporučení nebyly nalezeny."
+      no_tagged_courses: "Nebyly nalezeny žádné <b>kurzy</b> označili <b>%{tags}}.</b> <a href='/resources'>Začít znovu</a> nebo zobrazit <a href='/resources/tags/%{tags}}'>všechny zdroje označené %{tags}.</a>"
+      no_tagged_resources: "Žádné <b>prostředky</b> nebyly nalezeny označili <b>%{tags}.</b> <a href='/resources'>Začít znovu.</a>"
+      no_tags: "No tags zatím k dispozici"
+      no_terms_error: "Prosím, zadejte termín nebo seznam pojmů."
+      oai_endpoint_successfully_created: "Úspěšně přidán OAI koncový bod"
+      oai_prompt: "Pokud zadáte OAI, musíte zadat úplnou adresu URL na žádost ListRecords (nejen koncový bod OAI)"
+      of: z
+      ok: OK
+      only_courses: "Pouze Kurzy"
+      opml_feeds_for: "Krmiva pro %{terms}"
+      opml_generated: "Krmiva pro %{terms}"
+      personal_recommendations: Doporučení
+      photos: Fotografie
+      please_specify_url: "Prosím, zadejte adresu URL"
+      polyvore_prompt: "Polyvore profil URL"
+      polyvore_rss: "Vaše Polyvore profil URL vypadá http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "powered by"
+      previous: Předchozí
+      previous_label: Předchozí
+      problem_adding_feed: "Tam byl problém přidat krmiva:"
+      rdf: RDF
+      read_more: více
+      related_feeds: "Related Feeds"
+      related_resources: související
+      related_resources_title: "Související zdroje informací"
+      relevance: relevance
+      remix: Remix
+      remove: Odebrat
+      repository: Metadata
+      repository_short_title: "Úložiště Short Název:"
+      repository_title: "Repository Název:"
+      resource_search_results: "Zdroje <b>%{first}} - %{last}}</b> z <b>%{total}}</b> pro vyhledávání <b>%{terms}</b>"
+      resource_tag_results: "Zdroje <b>%{first}} - %{last}}</b> z <b>%{total}}</b> označené <b>%{terms}</b>"
+      resources_tag_cloud_label: "procházet zdrojů pomocí značek <a href=\"/resources?grain_size=course\">[procházet pouze kurzy]</a>"
+      results: Výsledky
+      rss: RSS
+      rss_url: "Url pro RSS feed"
+      save_aggreation: "Uložit toto Agregace"
+      save_aggreation_instructions: "Odstraňte veškerý nežádoucí kanály kliknutím na &#39;Odstranit&#39;. Budete mít možnost přidat nové kanály v dalším kroku."
+      search: hledat
+      search_button: Jít
+      search_for: "Hledat:"
+      search_link: "Najít zdroje!"
+      search_problem: "Došlo k problému s výsledky vašeho hledání. Projděte si prosím kritéria vyhledávání a zkuste to znovu."
+      searching_for_feed: "Vyhledávání kanálů ..."
+      select_feeds_prompt: "Vyberte kanály, který chcete přidat:"
+      select_service_prompt: "Prosím vyberte službu"
+      service_feed_name: "%{term}} Na %{service}"
+      service_username: "%{service} Jméno"
+      setup_aggregation: "Nastavení Agregace"
+      share: Sdílet
+      short_title: "Zkrácený název:"
+      show_related_resources: "Show Související zdroje informací"
+      show_tagged_courses: "zobrazit pouze kurzy"
+      show_tagged_resources: "show jakéhokoli zdroje"
+      signup: "Sign Up"
+      signup_to_save_aggreation: "%{login}} Nebo %{signup} uložit toto vyhledávání"
+      spinner_image: "Čekání image"
+      start_over: "začít znovu"
+      status: Stav
+      submitting_feed_message: "Pošlete nám svůj zdroj ..."
+      successfully_added_uri_feed: "Úspěšně přidán %{uri}"
+      successfully_added_username_feed: "Úspěšně přidán %{service}"
+      tags: Štítky
+      terms_instructions: "Přidejte tolik tagy nebo fráze, jak chcete. Oddělte každý s čárkou. např. potraviny, recepty, nejlepší místa k jídlu, organické"
+      title: Název
+      topic_feeds_for: "Krmiva pro %{terms}"
+      topic_generated: "Výsledky za `%{terms}`."
+      type_of_metadata: "Typ Metadata:"
+      uri: Url
+      url_not_in_index: "<a href='%{uri}'>Vámi požadovaný zdroj doporučení</a> nebyla indexována. Prosím, přidejte úložiště obsahuje metadata pro zdroj přidat do indexu."
+      validate_feed: "Mark krmivo jako platný"
+      videos: Videa
+      visit: navštivte
+      xml: XML
+      zotero_group_prompt: "Zotero skupiny URL"
+      zotero_group_rss: "Vaše Zotero skupiny URL vypadá takto: http://www.zotero.org/groups/adventures_in_library_instruction/items"

@@ -1,6 +1,6 @@
 module MuckServicesServiceHelper
   
-  # Render a summary of all services for the given parent.  The parent should 'acts_as_muck_feed_owner' 
+  # Render a summary of all services for the given parent.  The parent should 'include MuckServices::Models::MuckFeedOwner' 
   def services_summary(parent)
     identity_feeds = parent.identity_feeds.find(:all, :include => [{:feed => :service}])
     render :partial => 'services/summary', :locals => { :identity_feeds => identity_feeds }
@@ -49,7 +49,7 @@ module MuckServicesServiceHelper
   # to look for a translation at muck.services.blog_url and will pass the name of the service
   # using 'service' so your translation might look like:
   # muck.services.blog_url: "Blog Url" or
-  # muck.services.facebook_prompt: "{{service}} Feeds"
+  # muck.services.facebook_prompt: "%{service} Feeds"
   def service_prompt(service)
     if @service.prompt.blank?
       I18n.t('muck.services.service_username', :service => @service.name)

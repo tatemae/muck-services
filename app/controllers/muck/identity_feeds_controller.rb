@@ -123,15 +123,11 @@ class Muck::IdentityFeedsController < ApplicationController
     end
     
     def get_new_html(service, parent, feed)
-      render_as_html do
-        render_to_string(:partial => 'identity_feeds/form', :locals => { :service => service, :parent => parent, :feed => feed })
-      end
+      render_to_string(:partial => 'identity_feeds/form', :locals => { :service => service, :parent => parent, :feed => feed })
     end
     
     def get_edit_html(identity_feed)
-      render_as_html do
-        render_to_string(:partial => 'identity_feeds/form', :locals => { :service => identity_feed.feed.service, :parent => identity_feed.ownable, :feed => identity_feed.feed })
-      end
+      render_to_string(:partial => 'identity_feeds/form', :locals => { :service => identity_feed.feed.service, :parent => identity_feed.ownable, :feed => identity_feed.feed })
     end
     
     def add_feeds_to_parent(parent, feeds)

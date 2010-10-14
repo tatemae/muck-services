@@ -1,0 +1,219 @@
+--- 
+ru: 
+  muck: 
+    activity_templates: 
+      entry_comment: Комментарии
+    services: 
+      add_aggregation: "Добавить Агрегация"
+      add_aggregation_title: "Имя для агрегирования:"
+      add_edit_feeds: "Добавить / Изменить каналы"
+      add_extended_feed_sub_title: "Добавить новый источник данных"
+      add_extended_feed_title: "Добавить новый канал"
+      add_feed: "Добавить канал"
+      add_feed_advanced: "Добавить канал (Advanced)"
+      add_feed_title: "Добавить новый канал"
+      add_feed_url: "URL:"
+      add_feeds_to_aggregation: "Добавить каналы для %{title}"
+      add_more_sources: "Добавить источники"
+      add_new_feed_title: "Добавить новый канал"
+      add_oai: "Добавить ИОА"
+      add_oai_feed: "Добавить ИОА Endpoint"
+      add_opml_to_aggregation: "Добавить файла OPML"
+      add_rss: "Добавить RSS"
+      add_rss_feed: "Добавить RSS-канал"
+      add_sources_by_tag: "Добавить больше каналов, теги."
+      added_date: Добавлен
+      aggregation_deleted: "%{title} Удалено"
+      aggregation_updated: "Агрегация Обновлено"
+      all_resources: "Все ресурсы"
+      already_added_uri_feed: "Вы уже добавили URL %{uri}"
+      already_added_username_feed: "Вы уже добавили %{service}} счет с помощью имени пользователя %{username}"
+      already_shared: "Вы ранее разделял эту страницу."
+      amazon_prompt: "Пожалуйста, введите адрес электронной почты вы используете с Amazon.com"
+      approval_status: Утвержденный
+      atom: Атом
+      available_services: "Доступные услуги"
+      available_sources: "Имеющихся источников"
+      back: Назад
+      ban_feed: "Марк кормить недействительными"
+      banned: Запрещена
+      blogger_prompt: "Адрес блога"
+      build_topic: "Live Search"
+      calculated: рассчитанные
+      cant_modify_aggregation: "Вы не имеете доступа к указанным агрегации."
+      cant_modify_identity_feed: "Вы не имеете доступа к указанной подачи."
+      choose_service: "Выберите услугу:"
+      close: Закрыть
+      collection_description: "Описание коллекции:"
+      collection_home_uri: "Адрес Collection Главная страница"
+      collection_uri: "Адрес мета-данных:"
+      collections: Коллекция
+      collections_long: "Индексированных коллекций"
+      comment_entries_count: 
+        one: "1 комментарий"
+        other: "%{count} Комментариев"
+      contributor: Contributor
+      course_search_results: "Курсы <b>%{first}} - %{last}}</b> из <b>%{total}}</b> для поиска <b>%{terms}</b>"
+      course_tag_results: "Курсы <b>%{first}} - %{last}}</b> из <b>%{total}}</b> отметил <b>%{terms}</b>"
+      courses_tag_cloud_label: "Обзор курсов с использованием тегов <a href=\"/resources\">[просмотреть все ресурсы]</a>"
+      default_language: Язык
+      demo: Демо
+      description: Описание
+      details: Подробности
+      developers_long: "Информация для разработчиков"
+      direct_link: "[Прямая ссылка]"
+      discover_feed: "Откройте для себя канал"
+      discover_feed_message: "Поиск информации о URL вы указали. Пожалуйста, подождите."
+      display_address: "Адрес дисплея"
+      display_url: "Url для отображения:"
+      download_opml: "Скачать OPML файл %{terms}"
+      edit_aggregation: "Изменить Агрегация"
+      edit_aggregation_title: "Редактирование %{title}"
+      entries_count: Записи
+      entry_commment_contents: "прокомментировал %{resource}"
+      explore: "Поиск по %{topic}"
+      facebook: Facebook
+      facebook_instructions: "На странице &quot;Мои ссылки&quot;, правой кнопкой мыши на &quot;Мои ссылки&quot; и скопировать ссылку. Мы автоматически включать, статус, ссылки и заметки."
+      facebook_link: "Вы можете найти URL Facebook на вашей странице &quot;Мои ссылки. %{link} И нажмите на &quot;Мои ссылки&quot;"
+      facebook_notes: "Facebook Notes"
+      facebook_notifications: "Facebook Notifications"
+      facebook_prompt: "Ваш Facebook Мои ссылки URL"
+      facebook_shares: "Facebook Общие ссылки"
+      failed_harvests: "Сбой урожая"
+      failed_last_request: "Ошибка Последний запрос: %{error}"
+      feed: Кормить
+      feed_banned_message: "Было запрещено канал."
+      feed_display_address: "URL канала"
+      feed_id: ID
+      feed_metadata_address: "Адрес Метаданные"
+      feed_remove: "Feed Удален"
+      feed_successfully_created: "Канал был успешно создан."
+      feed_successfully_updated: "Feed были успешно обновлены."
+      feed_type: "Тип канала"
+      feed_type_prompt: "RSS является наиболее распространенным типом кормов. Только выберите ИОА, если вы знаете хранилище поддерживает его, и вы указали конечную точку ИОА."
+      feed_validated_message: "Была утверждена канал."
+      feeds_for_aggregation: "Корма для блоггеров"
+      feeds_title: "Зарегистрированные коллекций"
+      finding_topics: "Поиск соответствующие историй ..."
+      for: для
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Вы можете найти нужный URL в нижней части вашей %{link}."
+      generate_new_topic: "Создать новую тему"
+      generating_topic_message: "Поиск. Это может занять минуту или около того ...."
+      get_recommendations: "Получите рекомендации"
+      gm_more_prompt: "Дополнительные ресурсы, относящиеся"
+      gm_title: "Связанные ресурсы"
+      goodreads_prompt: "Goodreads профиль URL"
+      goodreads_rss: "например, http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Урожай интервала (HRS)"
+      harvested_at: Убранная
+      hide: Прятать
+      identity_feed_removed: "Удаленные услуги"
+      identity_feeds: "Identity каналы"
+      import_service: "Импорт %{service}"
+      language_not_supported: "Просил язык не поддерживается"
+      latest_aggregations: "Последний агрегатов"
+      linkedin_prompt: "LinkedIn профиль URL"
+      linkedin_rss: "Вы можете найти нужный URL в нижней части вашей %{link}."
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image&#39;)%&gt;"
+      loading_image: "Идет загрузка изображения"
+      loading_message: "Загрузка ..."
+      login: Войти
+      login_or_signup_prompt: "%{signup}} Или %{login} для обсуждения и обмена ресурсами."
+      login_to_comment: "Войти добавить комментарий"
+      metadata: метаданных
+      metadata_prefix: "Метаданные префикса"
+      my_identity: "Моя идентичность"
+      my_services: "Мои услуги"
+      narrow_further: "Результаты дальнейших узких"
+      netflix_prompt: "Netflix Очередь RSS URL"
+      netflix_rss: "Вы можете найти ваш URL на вашем %{link}. Обратите внимание, что существует несколько каналов доступен на странице Netflix Очередь (Queue, рекомендации, обзоры фильмов и т.д.). Добавьте столько, сколько захотите!"
+      new_aggregation: "Новые Агрегация"
+      new_global_feed: "Новый канал был добавлен в %{application_name}"
+      new_search: "Новый поиск"
+      new_topic_title: "Поиск по новой теме, и построить на странице результатов."
+      next: Следующий
+      next_label: Следующий
+      no_entries_found: "Нет записей"
+      no_feeds_at_uri: "Мы не смогли найти данный URL"
+      no_feeds_found: "Нет каналов были найдены"
+      no_feeds_from_username: "Мы не смогли найти данном счете"
+      no_hits: "По вашему запросу - <b>%{search}}</b> - не соответствует ни <b>%{resource_type}.</b> Попробуйте другой запрос или выберите другой язык."
+      no_recommendations: "Не найдено ни одной рекомендации."
+      no_tagged_courses: "Нет <b>курсов</b> были найдены отметил с <b>%{tags}}.</b> <a href='/resources'>Начать заново</a> или показать <a href='/resources/tags/%{tags}}'>все ресурсы, отметил %{tags}.</a>"
+      no_tagged_resources: "Нет <b>ресурсов</b> были найдены отметил с <b>%{tags}.</b> <a href='/resources'>Начать сначала.</a>"
+      no_tags: "Нет меток доступны еще"
+      no_terms_error: "Просьба указать срок или список терминов."
+      oai_endpoint_successfully_created: "Успешно добавлена ИОА конечная точка"
+      oai_prompt: "Если вы укажете тем, вы должны указать полный путь к просьбе ListRecords (а не только конечная точка ИОА)"
+      of: из
+      ok: OK
+      only_courses: "Только курсы"
+      opml_feeds_for: "Корма для %{terms}"
+      opml_generated: "Корма для %{terms}"
+      personal_recommendations: Рекомендаций
+      photos: Фотографий
+      please_specify_url: "Пожалуйста, укажите URL"
+      polyvore_prompt: "Polyvore профиль URL"
+      polyvore_rss: "Ваш профиль Polyvore URL выглядит http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "Powered By"
+      previous: Предыдущее
+      previous_label: Предыдущее
+      problem_adding_feed: "Был проблемой добавлении канала:"
+      rdf: RDF
+      read_more: "читать дальше"
+      related_feeds: "Похожие каналы"
+      related_resources: связанные
+      related_resources_title: "Связанные ресурсы"
+      relevance: Соответствие
+      remix: Remix
+      remove: Удалить
+      repository: Метаданные
+      repository_short_title: "Кодов Сокращенное название:"
+      repository_title: "Кодов Название:"
+      resource_search_results: "Ресурсы <b>%{first}} - %{last}}</b> из <b>%{total}}</b> для поиска <b>%{terms}</b>"
+      resource_tag_results: "Ресурсы <b>%{first}} - %{last}}</b> из <b>%{total}}</b> отметил <b>%{terms}</b>"
+      resources_tag_cloud_label: "Обзор ресурсов, используя тэги <a href=\"/resources?grain_size=course\">[просматривать только Курсы]</a>"
+      results: Результаты
+      rss: RSS
+      rss_url: "Url для Вашей RSS Feed"
+      save_aggreation: "Сохранить Агрегация"
+      save_aggreation_instructions: "Удалите ненужные каналы нажав на ссылку &quot;Удалить&quot;. Вы сможете добавлять новые каналы в следующем шаге."
+      search: поиск
+      search_button: Идти
+      search_for: "Искать:"
+      search_link: "Поиск ресурсов!"
+      search_problem: "Был проблемы с поиском. Пожалуйста, просмотрите ваши критерии поиска и повторите попытку."
+      searching_for_feed: "Поиск каналов ..."
+      select_feeds_prompt: "Выбор каналов вы хотели бы добавить следующее:"
+      select_service_prompt: "Пожалуйста, выберите услугу"
+      service_feed_name: "%{term}} На %{service}"
+      service_username: "%{service} Имя пользователя"
+      setup_aggregation: "Установка Агрегация"
+      share: Разделять
+      short_title: "Сокращенное название:"
+      show_related_resources: "Показать Связанные ресурсы"
+      show_tagged_courses: "Показать только курсах"
+      show_tagged_resources: "Показать любого ресурса"
+      signup: Зарегистрироваться
+      signup_to_save_aggreation: "%{login}} Или %{signup}, чтобы сохранить этот поиск"
+      spinner_image: "Waiting изображение"
+      start_over: "Начать сначала"
+      status: Статус
+      submitting_feed_message: "Передавая свой канал ..."
+      successfully_added_uri_feed: "Успешно добавлена %{uri}"
+      successfully_added_username_feed: "Успешно добавлена %{service}"
+      tags: Метки
+      terms_instructions: "Добавьте столько теги или фраз, как вы хотите. Отдельный каждой запятой. т.е. пищу, рецепты, лучшие места, чтобы поесть, органическое"
+      title: Название
+      topic_feeds_for: "Корма для %{terms}"
+      topic_generated: "Результаты поиска по запросу `%{terms}`."
+      type_of_metadata: "Тип Метаданные:"
+      uri: Url
+      url_not_in_index: "<a href='%{uri}'>Запрашиваемый Вами ресурс рекомендаций</a> еще не были проиндексированы. Пожалуйста, добавьте репозитории метаданных, содержащие рекламу для своего ресурса, чтобы добавить его в индекс."
+      validate_feed: "Марк кормить действительны"
+      videos: Видео
+      visit: Визит
+      xml: XML
+      zotero_group_prompt: "Zotero URL группы"
+      zotero_group_rss: "Ваш Zotero URL группы выглядит следующим образом: http://www.zotero.org/groups/adventures_in_library_instruction/items"

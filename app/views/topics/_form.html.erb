@@ -1,4 +1,4 @@
-<% custom_form_for(:topic, :url => topics_path, :html => {:method => :post}) do |f| -%>
+<%= muck_form_for(:topic, :url => topics_path, :html => {:method => :post}) do |f| -%>
   <%= text_field_tag :terms, params[:terms] || @terms %>
   <%= f.submit t('muck.services.build_topic'), :id => 'generate_topic' %>
   <span id="generating_topic_message" style="display:none;">

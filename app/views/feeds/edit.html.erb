@@ -48,7 +48,7 @@ function validate()
 
 <%= error_messages_for :feed %>
 
-<% form_for :feed, @feed, :url => feed_path(@feed), :html => {:method => :put, :onsubmit => "return validate()"} do |f| %>
+<%= form_for :feed, @feed, :url => feed_path(@feed), :html => {:method => :put, :onsubmit => "return validate()"} do |f| %>
 
   <p>
     <b>Collection Title</b><br />

@@ -1,0 +1,219 @@
+--- 
+sv: 
+  muck: 
+    activity_templates: 
+      entry_comment: Kommentar
+    services: 
+      add_aggregation: "Lägg Aggregation"
+      add_aggregation_title: "Namn för sammanläggning:"
+      add_edit_feeds: "Lägg till / redigera Feeds"
+      add_extended_feed_sub_title: "Bidra med en ny datakälla"
+      add_extended_feed_title: "Lägg till ny feed"
+      add_feed: "Add feed"
+      add_feed_advanced: "Lägg Feed (Advanced)"
+      add_feed_title: "Lägg till ett nytt flöde"
+      add_feed_url: "URL:"
+      add_feeds_to_aggregation: "Lägg till feeds till %{title}"
+      add_more_sources: "Lägg Källor"
+      add_new_feed_title: "Lägg till ett nytt flöde"
+      add_oai: "Lägg OAI"
+      add_oai_feed: "Lägg OAI Endpoint"
+      add_opml_to_aggregation: "Lägg OPML-fil"
+      add_rss: "Lägg Rss"
+      add_rss_feed: "Lägg till RSS Feed"
+      add_sources_by_tag: "Lägg till fler feeds efter taggar."
+      added_date: Added
+      aggregation_deleted: "%{title} Utgår"
+      aggregation_updated: "Sammanläggning Uppdaterad"
+      all_resources: "Alla resurser"
+      already_added_uri_feed: "Du har redan lagt url %{uri}"
+      already_added_username_feed: "Du har redan lagt ett %{service}} konto med användarnamn %{username}"
+      already_shared: "Du har tidigare delat den här sidan."
+      amazon_prompt: "Fyll i den e du använder med Amazon.com"
+      approval_status: Godkänd
+      atom: Atom
+      available_services: Tillgängligt
+      available_sources: "Tillgängliga källor"
+      back: Tillbaka
+      ban_feed: "Mark foder ogiltig"
+      banned: förbjudna
+      blogger_prompt: "URL till din blogg"
+      build_topic: "Live Search"
+      calculated: beräknad
+      cant_modify_aggregation: "Du har inte behörighet att komma åt den angivna sammanläggning."
+      cant_modify_identity_feed: "Du har inte behörighet att komma åt den angivna foder."
+      choose_service: "Välj tjänst:"
+      close: Nära
+      collection_description: "Collection Beskrivning:"
+      collection_home_uri: "Adress Collection Home Page"
+      collection_uri: "Adress Collection Metadata:"
+      collections: Samlingar
+      collections_long: "Indexed Collections"
+      comment_entries_count: 
+        one: "1 Kommentar"
+        other: "%{count} Comments"
+      contributor: Contributor
+      course_search_results: "Kurser <b>%{first}} - %{last}}</b> av <b>%{total}}</b> för sökning <b>%{terms}</b>"
+      course_tag_results: "Kurser <b>%{first}} - %{last}}</b> av <b>%{total}}</b> taggade <b>%{terms}</b>"
+      courses_tag_cloud_label: "Bläddra kurser med taggar <a href=\"/resources\">[bläddra bland alla resurser]</a>"
+      default_language: Språk
+      demo: Demo
+      description: Beskrivning
+      details: Detaljer
+      developers_long: "Information för utvecklare"
+      direct_link: "[direktlänk]"
+      discover_feed: "Upptäck Feed"
+      discover_feed_message: "Söker information om webbadressen som du angav. Please wait."
+      display_address: "Display Adress"
+      display_url: "Webbadressen som ska visas:"
+      download_opml: "Ladda ner OPML-fil för %{terms}"
+      edit_aggregation: "Edit Aggregation"
+      edit_aggregation_title: "Redigering %{title}"
+      entries_count: Inlägg
+      entry_commment_contents: "kommenterade %{resource}"
+      explore: "Sök efter %{topic}"
+      facebook: Facebook
+      facebook_instructions: "På Min länksida, högerklicka på &quot;Mina länkar&quot; och kopiera länken. Vi kommer automatiskt att inkludera, status, kontakter och anteckningar."
+      facebook_link: "Du kan hitta din webbadress på din Facebook Min länksida. %{link} Och klicka på &quot;Mina länkar&quot;"
+      facebook_notes: "Facebook Notes"
+      facebook_notifications: "Facebook Notifications"
+      facebook_prompt: "Dina Facebook Mina länkar URL"
+      facebook_shares: "Facebook Shared Links"
+      failed_harvests: Missväxt
+      failed_last_request: "Misslyckades sista önskan: %{error}"
+      feed: Mata
+      feed_banned_message: "Foder förbjöds."
+      feed_display_address: Feedwebbadress
+      feed_id: ID
+      feed_metadata_address: "Metadata Adress"
+      feed_remove: "Feed Removed"
+      feed_successfully_created: "Feed har skapats."
+      feed_successfully_updated: "Feed har uppdaterats."
+      feed_type: Feedtyp
+      feed_type_prompt: "RSS är den vanligaste matningstyp. Bara välja OAI om du vet slutförvaret stöder det och du har angivit OAI slutpunkt."
+      feed_validated_message: "Feed godkändes."
+      feeds_for_aggregation: "Feeds för denna sammanläggning"
+      feeds_title: "Registrerad Collections"
+      finding_topics: "Söka efter relevant historier ..."
+      for: för
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Du kan hitta din webbadress längst ned i ditt %{link}."
+      generate_new_topic: "Generera ett nytt ämne"
+      generating_topic_message: "Searching. Detta kan ta en minut eller så ...."
+      get_recommendations: "Få rekommendationer"
+      gm_more_prompt: "Mer Närliggande resurser"
+      gm_title: "Närliggande resurser"
+      goodreads_prompt: "Goodreads Profile URL"
+      goodreads_rss: "t.ex. http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Harvest intervall (timmar)"
+      harvested_at: Skördade
+      hide: Gömma
+      identity_feed_removed: "Removed service"
+      identity_feeds: "Identity Feeds"
+      import_service: "Import %{service}"
+      language_not_supported: "Den begärda språket inte stöds"
+      latest_aggregations: "Senaste aggregeringar"
+      linkedin_prompt: "LinkedIn offentlig profil URL"
+      linkedin_rss: "Du kan hitta din webbadress längst ned i ditt %{link}."
+      loading_content_image: "&lt;% = T ( &#39;muck.services.loading_image &quot;)%&gt;"
+      loading_image: "Loading Image"
+      loading_message: "Laddar ..."
+      login: "Logga in"
+      login_or_signup_prompt: "%{signup}} Eller %{login} att diskutera och dela resurser."
+      login_to_comment: "Logga in för att lägga till en kommentar"
+      metadata: metadata
+      metadata_prefix: "Metadata Prefix"
+      my_identity: "My Identity"
+      my_services: "Mina tjänster"
+      narrow_further: "Begränsa resultaten vidare"
+      netflix_prompt: "Netflix Queue RSS URL"
+      netflix_rss: "Du kan hitta din webbadress på din %{link}. Observera att det finns flera matningar på din Netflix Kö sida (kö, rekommendationer, Movie Reviews, etc). Lägg till så många du vill!"
+      new_aggregation: "New Aggregation"
+      new_global_feed: "Ett nytt foder har lagts till %{application_name}"
+      new_search: "Ny sökning"
+      new_topic_title: "Söka efter ett nytt ämne och bygga resultatsidan."
+      next: Nästa
+      next_label: Nästa
+      no_entries_found: "Inga uppgifter funna"
+      no_feeds_at_uri: "Vi kunde inte hitta den angivna webbadressen"
+      no_feeds_found: "Inga flöden hittades"
+      no_feeds_from_username: "Vi kunde inte hitta den angivna kontot"
+      no_hits: "Din sökning - <b>%{search}}</b> - matchade inte något <b>%{resource_type}.</b> Försök med en annan sökning eller välj ett annat språk."
+      no_recommendations: "Inga rekommendationer hittades."
+      no_tagged_courses: "Inga <b>kurser</b> hittades märkta med <b>%{tags}}.</b> <a href='/resources'>Börja om</a> eller visa <a href='/resources/tags/%{tags}}'>alla resurser taggade %{tags}.</a>"
+      no_tagged_resources: "Inga <b>resurser</b> hittades taggade med <b>%{tags}.</b> <a href='/resources'>Börja om.</a>"
+      no_tags: "Inga taggar tillgänglig ännu"
+      no_terms_error: "Ange en term eller lista med termer."
+      oai_endpoint_successfully_created: "Lagts till OAI endpoint"
+      oai_prompt: "Om du anger OAI, måste du ange den fullständiga webbadressen till ListRecords begäran (inte bara OAI effektmått)"
+      of: av
+      ok: OK
+      only_courses: "Endast kurser"
+      opml_feeds_for: "Feeds för %{terms}"
+      opml_generated: "Feeds för %{terms}"
+      personal_recommendations: Rekommendationer
+      photos: Bilder
+      please_specify_url: "Ange en URL"
+      polyvore_prompt: "Polyvore Profile URL"
+      polyvore_rss: "Din Polyvore profil URL ser ut http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: "powered by"
+      previous: Föregående
+      previous_label: Föregående
+      problem_adding_feed: "Fanns ett problem att lägga till feed:"
+      rdf: RDF
+      read_more: Mer
+      related_feeds: "Related Feeds"
+      related_resources: relaterade
+      related_resources_title: "Närliggande resurser"
+      relevance: relevans
+      remix: Remix
+      remove: Flytta
+      repository: Metadata
+      repository_short_title: "Förvaringsplats Kortfattad titel:"
+      repository_title: "Repository Titel:"
+      resource_search_results: "Resurser <b>%{first}} - %{last}}</b> av <b>%{total}}</b> för sökning <b>%{terms}</b>"
+      resource_tag_results: "Resurser <b>%{first}} - %{last}}</b> av <b>%{total}}</b> taggade <b>%{terms}</b>"
+      resources_tag_cloud_label: "Bläddra resurser med taggar <a href=\"/resources?grain_size=course\">[bläddra endast kurser]</a>"
+      results: Resultat
+      rss: RSS
+      rss_url: "URL för ditt RSS-flöde"
+      save_aggreation: "Spara denna Aggregation"
+      save_aggreation_instructions: "Ta bort eventuella oönskade flöden genom att klicka på &quot;Ta bort&quot;. Du kommer att kunna lägga till nya flöden i nästa steg."
+      search: söka
+      search_button: Gå
+      search_for: "Sök efter:"
+      search_link: "Hitta resurser!"
+      search_problem: "Det uppstod ett problem med din sökning. Titta igenom dina sökkriterier och försök igen."
+      searching_for_feed: "Searching for feeds ..."
+      select_feeds_prompt: "Välj de feeds du vill tillägga:"
+      select_service_prompt: "Välj en tjänst"
+      service_feed_name: "%{term}} På %{service}"
+      service_username: "%{service} Användarnamn"
+      setup_aggregation: "Setup Aggregation"
+      share: Del
+      short_title: "Kortform:"
+      show_related_resources: "Visa Närliggande resurser"
+      show_tagged_courses: "Visa endast kurser"
+      show_tagged_resources: "visa någon form av resurs"
+      signup: Underteckna
+      signup_to_save_aggreation: "%{login}} Eller %{signup} att spara den här sökningen"
+      spinner_image: "Väntar bild"
+      start_over: "Börja om"
+      status: Status
+      submitting_feed_message: "Skicka din information ..."
+      successfully_added_uri_feed: "Lagts till %{uri}"
+      successfully_added_username_feed: "Lagts till %{service}"
+      tags: tags
+      terms_instructions: "Lägg till så många taggar eller fraser som du vill. Separera varje med ett kommatecken. säga mat, recept, bästa ställena att äta, organiskt"
+      title: Titel
+      topic_feeds_for: "Feeds för %{terms}"
+      topic_generated: "Resultat för `%{terms}`."
+      type_of_metadata: "Typ av metadata:"
+      uri: Url
+      url_not_in_index: "Den <a href='%{uri}'>resurs du begärde rekommendationer</a> har inte indexerats. Lägg till en förvaringsplats som innehåller metadata för resursen att lägga till det i indexet."
+      validate_feed: "Mark foder som giltiga"
+      videos: Videos
+      visit: visit
+      xml: XML
+      zotero_group_prompt: "Zotero grupp URL"
+      zotero_group_rss: "Din Zotero grupp URL ser ut så här: http://www.zotero.org/groups/adventures_in_library_instruction/items"

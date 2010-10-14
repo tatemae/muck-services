@@ -1,6 +1,6 @@
 <%= output_errors('', {:class => 'help-box'}) %>
 
-<% custom_form_for(:topic, :url => topics_path, :html => {:method => :post}) do |f| -%>
+<%= muck_form_for(:topic, :url => topics_path, :html => {:method => :post}) do |f| -%>
   <div id="add-data-source" class="services-main span-6 column">
     <h2><%= I18n.t('muck.services.search_for') %></h2>
     <%= text_field_tag :terms, params[:terms] %>

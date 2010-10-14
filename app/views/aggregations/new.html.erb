@@ -1,6 +1,6 @@
 <%= output_errors('', {:class => 'help-box'}) %>
 
-<% custom_form_for(:aggregation, :url => preview_aggregations_path(@parent), :html => {:method => :get}) do |f| -%>
+<%= muck_form_for(:aggregation, :url => preview_aggregations_path(@parent), :html => {:method => :get}) do |f| -%>
   <div id="add-data-source" class="services-main span-6 column">
     <%= render :partial => 'aggregations/preview_form', :locals => {:f => f} %>
   </div>

@@ -49,9 +49,9 @@ class Entry < ActiveRecord::Base
     end
   end
 
-  acts_as_commentable
+  include MuckComments::Models::MuckCommentable
   acts_as_taggable
-  acts_as_muck_recommendation
+  include MuckServices::Models::MuckRecommendation
   
   @@min_secs_tracked = 5
   @@max_secs_tracked = 120

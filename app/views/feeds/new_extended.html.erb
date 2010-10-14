@@ -2,7 +2,7 @@
   <h1><%= t('muck.services.add_extended_feed_title') %></h1>
   <p><%= t('muck.services.add_extended_feed_sub_title') %></p>
   <%= error_messages_for :feed -%>
-  <% custom_form_for(:feed, :url => polymorphic_url([@parent, :feeds])) do |f| -%>
+  <%= muck_form_for(:feed, :url => polymorphic_url([@parent, :feeds])) do |f| -%>
     <%= f.text_field :title, { :label => t('muck.services.title' ) }  %>
     <%= f.text_field :short_title, { :label => t('muck.services.short_title' ) }  %>    
     <%= f.text_field :harvested_from_title, { :label => t('muck.services.repository_title' ) }  %>

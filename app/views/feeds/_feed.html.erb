@@ -7,7 +7,7 @@
   <div><span class="label"><%= t('muck.services.entries_count') %></span>: <%= feed.entries_count.nil? ? "0" : feed.entries_count.to_s %></div>
   <div><span class="label"><%= t('muck.services.contributor') %></span>: <%= feed_contributor_link(@feed) %></div>
   <% if defined?(show_admin) && show_admin -%>
-      <% form_for(feed, :url => admin_feed_path(feed), :html => { :method => :put }) do |f| -%>
+      <%= form_for(feed, :url => admin_feed_path(feed), :html => { :method => :put }) do |f| -%>
       <div><span class="label"><%= t('muck.services.approval_status') %></span>:
         <% if feed.banned? -%>
           <%= hidden_field_tag :status, 'approve' %>

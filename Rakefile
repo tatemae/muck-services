@@ -1,14 +1,17 @@
 require 'rubygems'
 require 'rake'
-require 'rake/testtask'
 require 'rake/rdoctask'
+require 'spec/rake/spectask'
 
-desc 'Default: run unit tests.'
-task :default => :test
+desc 'Default: run specs.'
+task :default => :spec
+Spec::Rake::SpecTask.new('spec') do |t|
+  t.spec_files = FileList['test/rails_test/spec/**/*_spec.rb']
+end
 
 desc 'Translate this gem'
 task :translate do
-  file = File.join(File.dirname(__FILE__), 'locales', 'en.yml')
+  file = File.join(File.dirname(__FILE__), 'config', 'locales', 'en.yml')
   system("babelphish -o -y #{file}")
   path = File.join(File.dirname(__FILE__), 'app', 'views', 'services_mailer')
   system("babelphish -o -h #{path} -l en")
@@ -18,8 +21,8 @@ begin
   require 'rcov/rcovtask'
   Rcov::RcovTask.new do |t|
     #t.libs << 'lib'
-    t.libs << 'test/rails_root/lib'
-    t.pattern = 'test/rails_root/test/**/*_test.rb'
+    t.libs << 'test/rails_test/lib'
+    t.pattern = 'test/rails_test/test/**/*_test.rb'
     t.verbose = true
     t.output_dir = 'coverage'
     t.rcov_opts << '--exclude "gems/*"'
@@ -30,14 +33,6 @@ rescue LoadError
   end
 end
 
-desc 'Test muck-services.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.libs << 'test/rails_root/test'
-  t.pattern = 'test/rails_root/test/**/*_test.rb'
-  t.verbose = true
-end
-
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
@@ -45,7 +40,7 @@ begin
     gem.summary = "Feeds, aggregations and services for muck"
     gem.description = "This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem."
     gem.email = "justin@tatemae.com"
-    gem.homepage = "http://github.com/tatemae/muck-services"
+    gem.homepage = "http://github.com/tatemae/muck_services"
     gem.authors = ["Joel Duffin", "Justin Ball"]
     gem.add_dependency "acts-as-taggable-on"
     gem.add_dependency "will_paginate"
@@ -55,6 +50,7 @@ begin
     gem.add_dependency "river"
     gem.add_dependency "overlord"
     gem.add_dependency "feedzirra"
+    gem.add_dependency "muck-raker"
     gem.add_dependency "muck-engine"
     gem.add_dependency "muck-users"
     gem.add_dependency "muck-comments"
@@ -63,7 +59,7 @@ begin
     gem.files.exclude "public/images/service_icons/source/*"
     gem.files.exclude "test/*"
     gem.test_files.exclude 'test/feed_archive/**'
-    gem.test_files.exclude 'test/rails_root/public/images/*'
+    gem.test_files.exclude 'test/rails_test/public/images/*'
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

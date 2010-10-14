@@ -1,6 +1,6 @@
 <div id="add-feed">
   <%= output_errors(t('muck.services.problem_adding_feed'), {:class => 'help-box'}, @feed) %>
-  <% custom_form_for(:feed, :url => select_feeds_feed_previews_path) do |f| -%>
+  <%= muck_form_for(:feed, :url => select_feeds_feed_previews_path) do |f| -%>
     <%= f.text_field :uri, { :label => t('muck.services.add_feed_url' ) }  %>
     <div class="button form-row">
       <%= submit_tag t('muck.services.add_feed'), :id => 'add_feed_uri' %>

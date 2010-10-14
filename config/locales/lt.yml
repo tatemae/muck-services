@@ -1,0 +1,219 @@
+--- 
+lt: 
+  muck: 
+    activity_templates: 
+      entry_comment: Komentaras
+    services: 
+      add_aggregation: "Pridėti sumavimas"
+      add_aggregation_title: "Pavadinimą agreguoti:"
+      add_edit_feeds: "Įdėti / Redaguoti kanalai"
+      add_extended_feed_sub_title: "Prisidėti naujų duomenų šaltinis"
+      add_extended_feed_title: "Pridėti naują kanalą"
+      add_feed: "Pridėti Feed"
+      add_feed_advanced: "Pridėti juosta (Advanced)"
+      add_feed_title: "Pridėti naują kanalą"
+      add_feed_url: "URL:"
+      add_feeds_to_aggregation: "Pridėti kanalai %{title}"
+      add_more_sources: "Pridėti šaltiniai"
+      add_new_feed_title: "Pridėti naują kanalą"
+      add_oai: "Pridėti OAI"
+      add_oai_feed: "Pridėti OAI Vertinamoji baigtis"
+      add_opml_to_aggregation: "Pridėti OPML failą"
+      add_rss: "Įtraukti kanalai RSS"
+      add_rss_feed: "Pridėti RSS"
+      add_sources_by_tag: "Pridėti daugiau kanalų iki žymės."
+      added_date: Skelbimas
+      aggregation_deleted: "%{title} Išbraukta"
+      aggregation_updated: "Sumavimas Atnaujinta"
+      all_resources: "Visi ištekliai"
+      already_added_uri_feed: "Jūs jau įkėlėte URL %{uri}"
+      already_added_username_feed: "Jūs jau įkėlėte %{service}} sąskaitos vardą %{username}"
+      already_shared: "Jūs anksčiau prie šio puslapio."
+      amazon_prompt: "Prašome įvesti elektroninio pašto naudojate with Amazon.com"
+      approval_status: Patvirtinta
+      atom: Atom
+      available_services: "Siūlomos paslaugos"
+      available_sources: "Prieinamų šaltinių"
+      back: Atgal
+      ban_feed: "Pažymėti pašarų negaliojančia"
+      banned: uždraustas
+      blogger_prompt: "URL of your Blog"
+      build_topic: "Live Search"
+      calculated: apskaičiuotas
+      cant_modify_aggregation: "Jūs neturite leidimo prieigą prie nurodytų agregaciją."
+      cant_modify_identity_feed: "Jūs neturite leidimo pasiekti nustatytą kanalą."
+      choose_service: "Pasirinkite paslaugą:"
+      close: Uždaryti
+      collection_description: "Kolekcija Aprašymas:"
+      collection_home_uri: "Adresas Collection Pagrindinis puslapis"
+      collection_uri: "Adresas Kolekcija Duomenys:"
+      collections: Rinkiniai
+      collections_long: "Indeksuotos Kolekcijos"
+      comment_entries_count: 
+        one: "1 komentaras"
+        other: "%{count} Komentarai"
+      contributor: Autorius
+      course_search_results: "Kursai <b>%{first}} - %{last}}</b> iš <b>%{total}}</b> paieškos <b>%{terms}</b>"
+      course_tag_results: "Kursai <b>%{first}} - %{last}}</b> iš <b>%{total}}</b> tagged <b>%{terms}</b>"
+      courses_tag_cloud_label: "Žmonės kursus naudojant žodžius <a href=\"/resources\">[Peržiūrėti visus išteklius]</a>"
+      default_language: Kalba
+      demo: Demo
+      description: Aprašymas
+      details: Detaliau
+      developers_long: "Informacija kūrėjams"
+      direct_link: "[Direct link]"
+      discover_feed: "Atraskite Feed"
+      discover_feed_message: "Ieško informacijos apie adresą. Prašome palaukti."
+      display_address: "Rodyti Adresas"
+      display_url: "URL rodomas:"
+      download_opml: "Parsisiųsti OPML failą %{terms}"
+      edit_aggregation: "Redaguoti sumavimas"
+      edit_aggregation_title: "Taisomas %{title}"
+      entries_count: Įrašai
+      entry_commment_contents: "komentavo %{resource}"
+      explore: "Ieškoti %{topic}"
+      facebook: Facebook
+      facebook_instructions: "On My Links Page dešiniuoju pelės mygtuku ant &quot;Mano nuorodos&quot; ir nukopijuokite nuorodą. Mes automatiškai įtraukti, statusas, nuorodas ir pastabas."
+      facebook_link: "Jūs galite rasti nuorodą į savo Facebook My Links Page. %{link} Ir spauskite &quot;Mano nuorodos&quot;"
+      facebook_notes: "Facebook Pastabos"
+      facebook_notifications: "Facebook pranešimai"
+      facebook_prompt: "Jūsų Facebook Mano Nuorodos URL"
+      facebook_shares: "Facebook Bendri Nuorodos"
+      failed_harvests: "Nepavyko derlius"
+      failed_last_request: "Nepavyko paskutinį prašymą: %{error}"
+      feed: Maitinti
+      feed_banned_message: "Pašarus buvo uždrausta."
+      feed_display_address: Kanalo
+      feed_id: ID
+      feed_metadata_address: "Duomenys Adresas"
+      feed_remove: "Pašarų Removed"
+      feed_successfully_created: "Pašarų buvo sėkmingai sukurtas."
+      feed_successfully_updated: "Pašarų buvo sėkmingai atnaujintas."
+      feed_type: "Tipas kanalo"
+      feed_type_prompt: "RSS yra dažniausias pašarų rūšį. Tik pasirinkite OAI jei žinote saugyklos jį palaiko ir jūs nurodėte OAI požymius."
+      feed_validated_message: "Pašarų buvo patvirtintas."
+      feeds_for_aggregation: "Kanalai šį sumavimo"
+      feeds_title: "Registracija Kolekcijos"
+      finding_topics: "Ieškoma atitinkamų istorijas ..."
+      for: dėl
+      friendfeed_prompt: "FriendFeed RSS URL"
+      friendfeed_rss: "Jūs galite rasti nuorodą į savo %{link}. apačioje"
+      generate_new_topic: "Sukurti naują temą"
+      generating_topic_message: "Paieška. Tai gali trukti minutę ar taip ...."
+      get_recommendations: "Gauti Atsiliepimai"
+      gm_more_prompt: "Daugiau informacijos Susiję šaltiniai ir ištekliai"
+      gm_title: "Susiję šaltiniai ir ištekliai"
+      goodreads_prompt: "Goodreads profilis URL"
+      goodreads_rss: "pvz http://www.goodreads.com/user/show/1111"
+      harvest_interval: "Derliaus intervalas (val)"
+      harvested_at: Išauginti
+      hide: Slėptis
+      identity_feed_removed: "Ištrinta paslaugos"
+      identity_feeds: "Identity kanalai"
+      import_service: "Importo %{service}"
+      language_not_supported: "Pageidaujamos kalbos nėra palaikoma"
+      latest_aggregations: "Paskutinės susikaupimo"
+      linkedin_prompt: "LinkedIn Public Profile URL"
+      linkedin_rss: "Jūs galite rasti nuorodą į savo %{link}. apačioje"
+      loading_content_image: "&lt;% = T ( &quot;muck.services.loading_image&quot;)%&gt;"
+      loading_image: "Loading Image"
+      loading_message: "Kraunasi ..."
+      login: Prisijungimas
+      login_or_signup_prompt: "%{signup}} Arba %{login} diskutuoti ir dalytis ištekliais."
+      login_to_comment: "Prisijungimas prie Pridėti komentarą"
+      metadata: meta
+      metadata_prefix: "Duomenys Prefix"
+      my_identity: "Mano Identity"
+      my_services: "Mano paslaugos"
+      narrow_further: "siauras rezultatus toliau"
+      netflix_prompt: "Netflix Queue RSS URL"
+      netflix_rss: "Jūs galite ieškoti URL jūsų %{link}. Atkreipkite dėmesį, kad yra keli kanalai rasti jūsų Netflix Queue puslapyje (queue, rekomendacijos, filmų recenzijas ir tt). Pridėti kiek tik norite!"
+      new_aggregation: "Naujas sujungimas"
+      new_global_feed: "Naujas kanalas buvo įtrauktas į %{application_name}"
+      new_search: "Nauja paieška"
+      new_topic_title: "Ieškoti naują temą ir kurti rezultatų puslapyje."
+      next: Kitas
+      next_label: Kitas
+      no_entries_found: "No entries found"
+      no_feeds_at_uri: "Mums nepavyko rasti adresu URL"
+      no_feeds_found: "Nėra kanalų nerasta"
+      no_feeds_from_username: "Mums nepavyko rasti atsižvelgiant į"
+      no_hits: "Jūsų paieška - <b>%{search}}</b> - neatitiko jokių <b>%{resource_type}.</b> Prašome pabandyti kitokią užklausą, arba pasirinkti kitą kalbą."
+      no_recommendations: "Nr rekomendacijos nerasta."
+      no_tagged_courses: "Ne <b>kursai</b> buvo rasta pažymėtos <b>%{tags}}.</b> <a href='/resources'>Start virš</a> arba rodyti <a href='/resources/tags/%{tags}}'>visus išteklius tagged %{tags}.</a>"
+      no_tagged_resources: "Nr <b>ištekliai</b> buvo rasti pažymėtos <b>%{tags}.</b> <a href='/resources'>Start virš.</a>"
+      no_tags: "Žymos galima dar"
+      no_terms_error: "Nurodykite terminas ar sąlygų sąrašas."
+      oai_endpoint_successfully_created: "Sėkmingai pridėta OAI baigtis"
+      oai_prompt: "Jei nurodysite OAI, turite nurodyti pilną URL ListRecords prašymu (ne tik OAI tikslas)"
+      of: iš
+      ok: Gerai
+      only_courses: "Tik Kursai"
+      opml_feeds_for: "Pašarai %{terms}"
+      opml_generated: "Pašarai %{terms}"
+      personal_recommendations: Atsiliepimai
+      photos: Nuotraukos
+      please_specify_url: "Prašome nurodyti adresą"
+      polyvore_prompt: "Polyvore profilis URL"
+      polyvore_rss: "Jūsų Polyvore profilis URL išvaizda http://www.polyvore.com/cgi/profile?id=00000"
+      powered_by: varomas
+      previous: Ankstesnis
+      previous_label: Ankstesnis
+      problem_adding_feed: "Iškilo problema pridėti kanalą:"
+      rdf: RDF
+      read_more: Daugiau
+      related_feeds: "Related feeds"
+      related_resources: susijusios
+      related_resources_title: "Susiję šaltiniai ir ištekliai"
+      relevance: tinkamumas
+      remix: Remix
+      remove: Pašalinti
+      repository: Duomenys
+      repository_short_title: "Saugyklų Trumpas pavadinimas:"
+      repository_title: "Saugyklų Pavadinimas:"
+      resource_search_results: "Ištekliai <b>%{first}} - %{last}}</b> iš <b>%{total}}</b> paieškos <b>%{terms}</b>"
+      resource_tag_results: "Ištekliai <b>%{first}} - %{last}}</b> iš <b>%{total}}</b> tagged <b>%{terms}</b>"
+      resources_tag_cloud_label: "Žmonės išteklius naudojant žodžius <a href=\"/resources?grain_size=course\">[naršyti tik kursus]</a>"
+      results: Rezultatai
+      rss: RSS
+      rss_url: "URL RSS"
+      save_aggreation: "Išsaugoti šią sumavimas"
+      save_aggreation_instructions: "Pašalinti visus nepageidaujamus kanalus spustelėdami,, Pašalinti &quot;. Galėsite pridėti naujų kanalų kitą žingsnį."
+      search: ieškoti
+      search_button: Eiti
+      search_for: "Ieškoti:"
+      search_link: "Rasti ištekliai!"
+      search_problem: "Nebuvo su paieškos problema. Prašome patikrinti savo paieškos kriterijus ir bandykite dar kartą."
+      searching_for_feed: "Ieškoma kanalus ..."
+      select_feeds_prompt: "Pasirinkite kanalus norite pridėti:"
+      select_service_prompt: "Pasirinkite paslaugą"
+      service_feed_name: "%{term}} Dėl %{service}"
+      service_username: "%{service} Vardą"
+      setup_aggregation: "Installer sumavimas"
+      share: Dalytis
+      short_title: "Trumpas pavadinimas:"
+      show_related_resources: "Rodyti Susiję šaltiniai ir ištekliai"
+      show_tagged_courses: "Rodyti tik kursus"
+      show_tagged_resources: "jokių išteklių rūšis"
+      signup: Registruotis
+      signup_to_save_aggreation: "%{login}} Arba %{signup} prie Išsaugoti šią paiešką"
+      spinner_image: "Laukiama vaizdas"
+      start_over: "pradėti iš naujo"
+      status: Padėtis
+      submitting_feed_message: "Siunčiamas jūsų kanalą ..."
+      successfully_added_uri_feed: "Sėkmingai pridėta %{uri}"
+      successfully_added_username_feed: "Sėkmingai pridėta %{service}"
+      tags: Žymos
+      terms_instructions: "Pridėti daug žymių ar frazių, kaip norite. Atskirti kableliais. ty maistas, receptai, geriausias vietas pavalgyti, organinių"
+      title: Pavadinimas
+      topic_feeds_for: "Pašarai %{terms}"
+      topic_generated: "Rezultatai `%{terms}`."
+      type_of_metadata: "Tipo Duomenys:"
+      uri: Url
+      url_not_in_index: "<a href='%{uri}'>Jūsų prašomas resursas rekomendacijos</a> nebuvo indeksuojami. Pridėkite saugykloje yra metaduomenys išteklių įtraukti jį į rodyklę."
+      validate_feed: "Pažymėti pašarų kaip galiojantį"
+      videos: Vaizdo
+      visit: apsilankykite
+      xml: XML
+      zotero_group_prompt: "Zotero URL grupės"
+      zotero_group_rss: "Jūsų Zotero URL grupės atrodo taip: http://www.zotero.org/groups/adventures_in_library_instruction/items"

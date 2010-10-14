@@ -5,7 +5,7 @@
 
   <div class="box">
     <h2><%= t('muck.services.edit_aggregation')%></h2>
-    <% custom_form_for(@aggregation, :url => polymorphic_url([@parent, @aggregation]), :id => 'update-aggregation-form') do |f| -%>
+    <%= muck_form_for(@aggregation, :url => polymorphic_url([@parent, @aggregation]), :id => 'update-aggregation-form') do |f| -%>
       <%= f.text_field :title, { :label => t('muck.services.add_aggregation_title') } %>
       <%= f.submit t('muck.general.save'), :id => 'update-aggregation-button' %>
     <% end -%>
@@ -13,7 +13,7 @@
   
   <div class="box">
     <h2><%= t('muck.services.add_feed') %></h2>
-    <% custom_form_for(@aggregation, :url => polymorphic_url([@parent, @aggregation]), :id => 'add-feed-form') do |f| -%>
+    <%= muck_form_for(@aggregation, :url => polymorphic_url([@parent, @aggregation]), :id => 'add-feed-form') do |f| -%>
       <%= text_field_tag :uri, '', :id => 'add_uri' %>
       <%= submit_tag t('muck.services.add_feed'), :id => 'add-feed-button' %>
       <div id="add-feed-waiting" class="waiting" style="display:none;"><%= t('muck.services.searching_for_feed')%></div>
@@ -26,7 +26,7 @@
   
   <div class="box">
     <h2><%= I18n.t('muck.services.add_sources_by_tag') %></h2>
-    <% custom_form_for(@aggregation, :url => polymorphic_url([@parent, @aggregation]), :id => 'add-sources-form') do |f| -%>
+    <%= muck_form_for(@aggregation, :url => polymorphic_url([@parent, @aggregation]), :id => 'add-sources-form') do |f| -%>
       <%= text_field_tag :terms %>
       <%= f.submit t('muck.services.add_more_sources'), :id => 'add-sources-button' %>
       <div id="edit-data-sources" class="services-main span-16 column">

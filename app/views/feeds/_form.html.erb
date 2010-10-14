@@ -1,5 +1,5 @@
 <%= error_messages_for :feed -%>
-<% custom_form_for(:feed, :url => polymorphic_url([parent, :feeds], :format => 'pjs')) do |f| -%>
+<%= muck_form_for(:feed, :url => polymorphic_url([parent, :feeds], :format => 'pjs')) do |f| -%>
   <%= f.text_field :title, { :label => t('muck.services.title' ) }  %>
   <%= f.text_field :uri, { :label => t('muck.services.add_feed_url' ) }  %>
   <%= f.hidden_field :service_id %>
