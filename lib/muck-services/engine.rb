@@ -24,5 +24,9 @@ module MuckServices
       end
     end
         
+    initializer 'muck-services.form' do
+      MuckEngine::FormBuilder.send :include, MuckServicesCustomFormBuilder
+    end
+    
   end
 end

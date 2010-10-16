@@ -15,15 +15,12 @@
 
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class ShareTest < ActiveSupport::TestCase
+describe Share do
 
   describe "share instance" do
     before do
-      @share = Factory(:share)
+      @share = Factory(:service_share)
     end
-    
-    
-    
     it { should belong_to :entry }
     it "should return entry for discover_attach_to" do
       @share.discover_attach_to.should == @share.entry

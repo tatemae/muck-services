@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # admin
-  namespace :admin
+  namespace :admin do
     resources :feeds, :controller => 'muck/feeds'
     resources :oai_endpoints, :controller => 'muck/oai_endpoints'
   end
@@ -17,7 +17,11 @@ Rails.application.routes.draw do
   match 'collections' => 'muck/entries#collections'
 
   resources :visits, :controller => 'muck/visits'
-  resources :feed_previews, :controller => 'muck/feed_previews', :collection => { :select_feeds => :post }
+  resources :feed_previews, :controller => 'muck/feed_previews' do
+    collection do
+      post :select_feeds
+    end
+  end
   
   resources :entries, :controller => 'muck/entries' do
     collection do
@@ -27,9 +31,17 @@ Rails.application.routes.draw do
     resources :comments, :controller => 'muck/comments'
   end
   
-  resources :oai_endpoints, :controller => 'muck/oai_endpoints', :has_many => :feeds
+  resources :oai_endpoints, :controller => 'muck/oai_endpoints' do
+    resources :feeds
+  end
     
-  resources :feeds, :controller => 'muck/feeds', :collection => { :new_extended => :get, :new_oai_rss => :get }, :has_many => :entries
+  resources :feeds, :controller => 'muck/feeds' do
+    collection do
+      get :new_extended
+      get :new_oai_rss
+    end
+    resources :entries
+  end
 
   match 'recommendations/real_time.:format' => 'muck/recommendations#real_time'
   match 'recommendations/get_button' => 'muck/recommendations#get_button'
@@ -37,10 +49,25 @@ Rails.application.routes.draw do
   resources :recommendations, :controller => 'muck/recommendations'
 
   resources :identity_feeds, :controller => 'muck/identity_feeds'
-  resources :aggregations, :controller => 'muck/aggregations', :collection => { :preview => :get }, :member => { :rss_discovery => :get }
+  resources :aggregations, :controller => 'muck/aggregations' do
+    collection do
+      get :preview
+    end
+    member do
+      get :rss_discovery
+    end
+  end
+  
   resources :aggregation_feeds, :controller => 'muck/aggregation_feeds'
 
-  resources :topics, :controller => 'muck/topics', :member => { :rss_discovery => :get, :photos => :get, :videos => :get }
+  resources :topics, :controller => 'muck/topics' do
+    member do
+      get :rss_discovery 
+      get :photos
+      get :videos
+    end
+  end
+  
   #match 'topics/*terms' => 'muck/topics#show'
 
 end

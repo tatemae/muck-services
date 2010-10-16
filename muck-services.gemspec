@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2010-10-13}
+  s.date = %q{2010-10-15}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -425,7 +425,6 @@ Gem::Specification.new do |s|
      "lib/muck-services/models/services_comment.rb",
      "lib/muck-services/muck_custom_form_builder.rb",
      "lib/muck-services/services.rb",
-     "lib/muck-services/tasks/muck-services.rake",
      "muck-services.gemspec",
      "public/javascripts/muck_services.js",
      "public/stylesheets/frame.css",
@@ -552,6 +551,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<will_paginate>, [">= 0"])
       s.add_runtime_dependency(%q<httparty>, [">= 0"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
+      s.add_runtime_dependency(%q<hpricot>, [">= 0"])
       s.add_runtime_dependency(%q<muck-feedbag>, [">= 0"])
       s.add_runtime_dependency(%q<river>, [">= 0"])
       s.add_runtime_dependency(%q<overlord>, [">= 0"])
@@ -566,6 +566,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<will_paginate>, [">= 0"])
       s.add_dependency(%q<httparty>, [">= 0"])
       s.add_dependency(%q<nokogiri>, [">= 0"])
+      s.add_dependency(%q<hpricot>, [">= 0"])
       s.add_dependency(%q<muck-feedbag>, [">= 0"])
       s.add_dependency(%q<river>, [">= 0"])
       s.add_dependency(%q<overlord>, [">= 0"])
@@ -581,6 +582,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<will_paginate>, [">= 0"])
     s.add_dependency(%q<httparty>, [">= 0"])
     s.add_dependency(%q<nokogiri>, [">= 0"])
+    s.add_dependency(%q<hpricot>, [">= 0"])
     s.add_dependency(%q<muck-feedbag>, [">= 0"])
     s.add_dependency(%q<river>, [">= 0"])
     s.add_dependency(%q<overlord>, [">= 0"])

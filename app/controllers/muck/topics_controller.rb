@@ -155,9 +155,9 @@ class Muck::TopicsController < ApplicationController
       @number_of_images = 12
       @number_of_videos = 6
       
-      @show_google_search = GlobalConfig.show_google_search
-      @show_combined = GlobalConfig.combine_feeds_on_server
-      @load_feeds_on_server = GlobalConfig.load_feeds_on_server
+      @show_google_search = MuckServices.configuration.show_google_search
+      @show_combined = MuckServices.configuration.combine_feeds_on_server
+      @load_feeds_on_server = MuckServices.configuration.load_feeds_on_server
     end
     
 end

@@ -1,5 +1,5 @@
 <div id="add_single_feed">
-  <%= error_messages_for :feed -%>
+  <%= output_errors('', {:class => 'help-box'}, @feed) %>
   <%= muck_form_for(:feed, :url => polymorphic_url([@parent, :feeds])) do |f| -%>
     <%= f.text_field :uri, { :label => t('muck.services.add_feed_url' ) }  %>
     <%= f.text_field :title, { :label => t('muck.services.title' ) }  %>

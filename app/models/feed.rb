@@ -50,17 +50,15 @@ class Feed < ActiveRecord::Base
   belongs_to :default_language, :class_name => 'Language', :foreign_key => 'default_language_id'
   belongs_to :service
   
-  named_scope :banned, :conditions => ["status = ?", MuckServices::Status::BANNED]
-  named_scope :valid, :conditions => "status >= 0", :include => [:default_language]
-  named_scope :by_title, :order => "title ASC", :include => [:default_language]
-  named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
-  named_scope :by_newest, :order => "created_at DESC", :include => [:default_language]
+  scope :banned, where("status = ?", MuckServices::Status::BANNED)
+  scope :valid, where("status >= 0").includes(:default_language)
+  scope :by_title, order("title ASC").includes(:default_language)
+  scope :newer_than, lambda { |*args| where("created_at > ?", args.first || DateTime.now) }
+  scope :by_newest, order("created_at DESC").includes(:default_language)
 
   attr_protected :status, :last_requested_at, :last_harvested_at, :harvest_interval, :failed_requests,
                  :created_at, :updated_at, :entries_changed_at, :entries_count, :contributor_id
   
-  # named_scope :ready_to_harvest, lambda { |*args| { :conditions => [ "feeds.last_harvested_at < ?", args.first || 1.day.ago.end_of_day ] } }
-
   def banned?
     self.status == MuckServices::Status::BANNED
   end
@@ -70,8 +68,8 @@ class Feed < ActiveRecord::Base
   end
 
   def inform_admin
-    if GlobalConfig.inform_admin_of_global_feed && global?
-      ServicesMailer.deliver_notification_feed_added(self) # Global feed.  Email the admin to let them know a feed has been added
+    if MuckServices.configuration.inform_admin_of_global_feed && global?
+      ServicesMailer.notification_feed_added(self).deliver # Global feed.  Email the admin to let them know a feed has been added
     end
   end
   

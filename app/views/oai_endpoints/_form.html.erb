@@ -1,4 +1,4 @@
-<%= error_messages_for :oai_endpoint -%>
+<%= output_errors('', {:class => 'help-box'}, @oai_endpoint) %>
 <%= muck_form_for(:oai_endpoint, :url => oai_endpoints_url) do |f| -%>
   <%= f.text_field :title, { :label => t('muck.services.title' ) }  %>
   <%= f.text_field :uri, { :label => t('muck.services.add_feed_url' ) }  %>

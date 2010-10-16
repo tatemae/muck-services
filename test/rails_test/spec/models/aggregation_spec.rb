@@ -16,7 +16,7 @@
 
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class AggregationTest < ActiveSupport::TestCase
+describe Aggregation do
   
   describe "aggregation" do
     before do
@@ -29,7 +29,7 @@ class AggregationTest < ActiveSupport::TestCase
     it { should have_many :aggregation_feeds }
     it { should have_many :feeds }
 
-    should_scope_by_title
+    it { should scope_by_title }
     it { should scope_newer_than }
     it { should scope_by_newest }
 

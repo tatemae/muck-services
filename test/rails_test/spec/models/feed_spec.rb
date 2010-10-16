@@ -36,14 +36,12 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 # Used to test muck_content_permission
-class FeedTest < ActiveSupport::TestCase
+describe Feed do
 
   describe "A feed instance" do
     before do
       @feed = Factory(:feed)
     end
-    
-    
     
     it { should have_many :feed_parents }
     it { should have_many :entries }
@@ -54,22 +52,21 @@ class FeedTest < ActiveSupport::TestCase
     it { should validate_presence_of :uri }
     it { should validate_uniqueness_of :uri }
     
-    should_scope_by_title
+    it { should scope_by_title }
     it { should scope_newer_than }
     it { should scope_by_newest }
     
     it "should set 24 hours as default interval" do
-      24.should == @feed.harvest_interval_hours
+      @feed.harvest_interval_hours.should == 24
     end
     
     it "should set harvest interval by hours" do
       @feed.harvest_interval_hours = 10
-      10 * 3600.should == @feed.harvest_interval
+      @feed.harvest_interval.should == 10 * 3600
     end
     
     describe "named scope" do
       describe "banned" do
-        # named_scope :banned, :conditions => ["status = ?", MuckServices::Status::BANNED]
         before do
           @feed = Factory(:feed, :status => MuckServices::Status::BANNED)
           @feed_not = Factory(:feed)
@@ -78,11 +75,10 @@ class FeedTest < ActiveSupport::TestCase
           Feed.banned.should include(@feed)
         end
         it "should not find feeds that are not banned" do
-          !Feed.banned.should include(@feed_not)
+          Feed.banned.should_not include(@feed_not)
         end
       end
       describe "valid" do
-        # named_scope :valid, :conditions => "status >= 0", :include => [:default_language]
         before do
           @feed = Factory(:feed, :status => 0)
           @feed_not = Factory(:feed, :status => MuckServices::Status::BANNED)
@@ -91,7 +87,7 @@ class FeedTest < ActiveSupport::TestCase
           Feed.valid.should include(@feed)
         end
         it "should not find invalid feeds" do
-          !Feed.valid.should include(@feed_not)
+          Feed.valid.should_not include(@feed_not)
         end
       end
     end
@@ -104,15 +100,15 @@ class FeedTest < ActiveSupport::TestCase
     end
     it "should be banned" do
       @feed.status = MuckServices::Status::BANNED
-      assert @feed.banned?
+      @feed.banned?.should be_true
     end
     it "should be approved" do
       @feed.status = MuckServices::Status::APPROVED
-      assert !@feed.banned?
+      @feed.banned?.should be_false
     end
     it "should be pending" do
       @feed.status = MuckServices::Status::PENDING
-      assert @feed.pending?
+      @feed.pending?.should be_true
     end
   end
   
@@ -134,7 +130,7 @@ class FeedTest < ActiveSupport::TestCase
     end
     it "should get new entries" do
       entries = @feed.harvest
-      assert entries.length > 0
+      entries.length.should > 0
     end
   end
   
@@ -147,10 +143,10 @@ class FeedTest < ActiveSupport::TestCase
       @identity_user.own_feeds << @dont_delete_feed
     end
     it "should delete feed" do
-      assert @delete_feed.delete_if_unused(@user)
+      @delete_feed.delete_if_unused(@user).should be_true
     end
     it "should not delete feed" do
-      assert !@dont_delete_feed.delete_if_unused(@user)
+      @dont_delete_feed.delete_if_unused(@user).should be_false
     end
   end
   
@@ -172,35 +168,35 @@ class FeedTest < ActiveSupport::TestCase
     describe "referenced feed" do
       describe "feed" do
         it "should be non-global" do
-          assert !@feed.global?
+          @feed.global?.should be_false
         end
         it "should be in use" do
-          assert @feed.in_use?
+          @feed.in_use?.should be_true
         end
       end
       describe "identity feed" do
         it "should be non-global" do
-          assert !@identity_feed.global?
+          @identity_feed.global?.should be_false
         end
         it "should be in use" do
-          assert @identity_feed.in_use?
+          @identity_feed.in_use?.should be_true
         end
       end
       describe "aggregation feed" do
         it "should be non-global" do
-          assert !@aggregation_feed.global?
+          @aggregation_feed.global?.should be_false
         end
         it "should be in use" do
-          assert @aggregation_feed.in_use?
+          @aggregation_feed.in_use?.should be_true
         end
       end
     end
     describe "global feed" do
       it "should be a global feed" do
-        assert @global_feed.global?
+        @global_feed.global?.should be_true
       end
       it "should not be in use" do
-        assert !@global_feed.in_use?
+        @global_feed.in_use?.should be_false
       end
     end
   end

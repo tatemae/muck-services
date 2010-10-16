@@ -46,7 +46,7 @@ function validate()
 
 <h1>Edit Collection Metadata: <%= @feed.title %></h1>
 
-<%= error_messages_for :feed %>
+<%= output_errors('', {:class => 'help-box'}, @feed) %>
 
 <%= form_for :feed, @feed, :url => feed_path(@feed), :html => {:method => :put, :onsubmit => "return validate()"} do |f| %>
 

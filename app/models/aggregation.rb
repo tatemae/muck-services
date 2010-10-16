@@ -26,9 +26,9 @@ class Aggregation < ActiveRecord::Base
   has_many :feeds, :through => :aggregation_feeds
   has_many :oai_endpoints, :through => :aggregation_feeds
   
-  named_scope :by_title, :order => "title ASC"
-  named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
-  named_scope :newest, :order => "created_at DESC"
+  scope :by_title, order("title ASC")
+  scope :newer_than, lambda { |*args| where("created_at > ?", args.first || DateTime.now) }
+  scope :by_newest, order("created_at DESC")
 
     
   # Builds and then adds feeds for a given terms

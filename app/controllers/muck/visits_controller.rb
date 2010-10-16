@@ -8,12 +8,12 @@ class Muck::VisitsController < ApplicationController
     @entry = Entry.find(params[:id])
     @page_title = @entry.title
     @resource_uri = @entry.resource_uri
-    @share = Share.new(:title => @entry.title, :uri => @resource_uri, :entry_id => @entry.id) if GlobalConfig.enable_services_shares
+    @share = Share.new(:title => @entry.title, :uri => @resource_uri, :entry_id => @entry.id) if MuckServices.configuration.enable_services_shares
     @recommendations = @entry.related_entries.top
 
-    if GlobalConfig.enable_services_comments
+    if MuckServices.configuration.enable_services_comments
       # Show the activities related to this entry
-      @activities = @entry.activities.oldest.is_public.find(:all, :include => ['comments'])
+      @activities = @entry.activities.by_oldest.is_public.find(:all, :include => ['comments'])
       @comment_count = @activities.length + @activities.inject(0) {|n,activity| activity.comments.length + n }
     end
     

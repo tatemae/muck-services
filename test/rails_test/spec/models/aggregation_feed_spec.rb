@@ -10,15 +10,12 @@
 
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class AggregationFeedTest < ActiveSupport::TestCase
+describe AggregationFeed do
   
   describe "aggregation feed" do
     before do
       @aggregation_feed = Factory(:aggregation_feed)
     end
-    
-    
-    
     it { should belong_to :aggregation }
     it { should belong_to :feed }
   end

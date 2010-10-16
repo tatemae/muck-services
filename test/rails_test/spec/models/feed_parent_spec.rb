@@ -12,7 +12,7 @@
 
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class FeedParentTest < ActiveSupport::TestCase
+describe FeedParent do
 
   describe "A feed parent instance" do
     it { should belong_to :feed }

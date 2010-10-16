@@ -93,7 +93,7 @@ describe Entry do
       it "should not contain entries from those feeds" do
         feed1_id = Factory(:feed).id
         feed2_id = Factory(:feed).id
-        feed1_id.should != feed2_id
+        feed1_id.should_not == feed2_id
         Recommendation.create(:entry_id => @entry.id, :dest_entry_id => Factory.create(:entry, :feed_id => feed1_id).id)
         Recommendation.create(:entry_id => @entry.id, :dest_entry_id => Factory.create(:entry, :feed_id => feed2_id).id)
         r = @entry.related_entries.top(false, 5, feed2_id.to_s)
@@ -118,8 +118,8 @@ describe Entry do
 
       it "should return results in order of relevance by default" do
         related_entries = @entry.related_entries.top
-        assert related_entries[1].relevance < related_entries[0].relevance
-        assert related_entries[2].relevance < related_entries[1].relevance
+        related_entries[1].relevance.should < related_entries[0].relevance
+        related_entries[2].relevance.should < related_entries[1].relevance
       end
 
     end
@@ -131,7 +131,7 @@ describe Entry do
                               :relevance => '.3')
         lambda{
           @entry.related_entries.top.first.author          
-        }.should raise_error(ActiveRecord::MissingAttributeError)
+        }.should raise_error
       end
 
       it "should have basic fields" do

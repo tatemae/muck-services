@@ -17,9 +17,8 @@ class PersonalRecommendation < ActiveRecord::Base
   belongs_to :personal_recommendable, :polymorphic => true
   belongs_to :destination, :polymorphic => true
   
-  named_scope :limit, lambda { |num| { :limit => num } }
-  named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
-  named_scope :newest, :order => "created_at DESC"
-  named_scope :entries_only, :conditions => ["personal_recommendations.destination_type = 'Entry'"]
-  named_scope :users, :conditions => ["personal_recommendations.destination_type = 'User'"]
+  scope :newer_than, lambda { |*args| where("created_at > ?", args.first || DateTime.now) }
+  scope :by_newest, order("created_at DESC").includes(:default_language)
+  scope :entries_only, where("personal_recommendations.destination_type = 'Entry'")
+  scope :users, where("personal_recommendations.destination_type = 'User'")
 end

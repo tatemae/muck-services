@@ -29,13 +29,11 @@
 
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class UserTest < ActiveSupport::TestCase
+describe User do
   describe "users" do
     before do
       @user = Factory(:user)
     end
-    
-    
     
     it { should have_many :feed_parents }
     it { should have_many :aggregations }

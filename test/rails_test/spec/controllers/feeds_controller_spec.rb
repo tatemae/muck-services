@@ -49,7 +49,7 @@ describe Muck::FeedsController do
         end
         it { should_not set_the_flash }
         it { should respond_with :success }
-        it { should render_template :new }_extended
+        it { should render_template :new_extended }
       end
 
       describe "POST create (simple)" do

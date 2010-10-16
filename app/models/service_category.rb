@@ -8,7 +8,7 @@
 #
 
 class ServiceCategory < ActiveRecord::Base
-  named_scope :sorted, :order => "sort ASC"
+  scope :sorted, order("sort ASC")
   has_many :services, :order => 'sort ASC'
   has_many :identity_services, :class_name => 'Service', :order => 'sort ASC', :conditions => ['use_for = ?', 'identity']
   has_many :tag_services, :class_name => 'Service', :order => 'sort ASC', :conditions => ['use_for = ?', 'tags']

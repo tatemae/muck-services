@@ -22,11 +22,11 @@
 class Service < ActiveRecord::Base
   
   belongs_to :service_category
-  named_scope :sorted_id, :order => "id ASC"
-  named_scope :sorted, :order => "sort ASC"
-  named_scope :identity_services, :conditions => ['use_for = ?', 'identity']
-  named_scope :tag_services, :conditions => ['use_for = ?', 'tags']
-  named_scope :photo_services, :conditions => ["service_categories.id = services.service_category_id AND service_categories.name = 'Photos'"], :include => ['service_category']
+  scope :sorted_id, order("id ASC")
+  scope :sorted, order("sort ASC")
+  scope :identity_services, where('use_for = ?', 'identity')
+  scope :tag_services, where('use_for = ?', 'tags')
+  scope :photo_services, where("service_categories.id = services.service_category_id AND service_categories.name = 'Photos'").includes('service_category')
 
   # Indicates whether service is primarily a photo service ie from flick, picasa, etc
   #
@@ -133,7 +133,7 @@ class Service < ActiveRecord::Base
     elsif self.name == 'Amazon'
       return [] if username.blank?
       # Have to build and sign Amazon wishlist rss feeds
-      am = AmazonRequest.new(GlobalConfig.amazon_access_key_id, GlobalConfig.amazon_secret_access_key, GlobalConfig.ecs_to_rss_wishlist, GlobalConfig.amazon_associate_tag)
+      am = AmazonRequest.new(Secrets.amazon_access_key_id, Secrets.amazon_secret_access_key, Secrets.ecs_to_rss_wishlist, Secrets.amazon_associate_tag)
       results = am.get_amazon_feeds(username) # username needs to be the user's Amazon email
       results.collect { |result| OpenStruct.new(:url => result, :title => 'Amazon Wishlist') }
     elsif !self.uri_data_template.blank? && !username.blank?

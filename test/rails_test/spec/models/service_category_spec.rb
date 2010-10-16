@@ -9,11 +9,11 @@
 
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class ServiceCategoryTest < ActiveSupport::TestCase
+describe ServiceCategory do
 
   describe "service category instance" do
     it { should have_many :services }
-    should_scope_sorted
+    it { should scope_sorted }
   end
   
 end

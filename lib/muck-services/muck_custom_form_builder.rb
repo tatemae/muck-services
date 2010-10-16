@@ -18,5 +18,3 @@ module MuckServicesCustomFormBuilder
   end
   
 end
-
-MuckEngine::FormBuilder.send :include, MuckServicesCustomFormBuilder

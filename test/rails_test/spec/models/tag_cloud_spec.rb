@@ -12,7 +12,7 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 # Used to test muck_content_translation
-class TagCloudTest < ActiveSupport::TestCase
+describe TagCloud do
 
   describe "A tag cloud instance" do
     it "should get cached tag cloud" do

@@ -21,16 +21,16 @@
 
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class ServiceTest < ActiveSupport::TestCase
+describe Service do
 
   describe "service instance" do
 
     it { should belong_to :service_category }
-    should_scope_sorted
+    it { should scope_sorted }
+    it { should scope_sorted_id }
     
     describe "named scope" do
       describe "identity_services" do
-        # named_scope :identity_services, :conditions => ['use_for = ?', 'identity']
         before do
           @service = Factory(:service, :use_for => 'identity')
           @service_not = Factory(:service, :use_for => 'not')
@@ -39,11 +39,10 @@ class ServiceTest < ActiveSupport::TestCase
           Service.identity_services.should include(@service)
         end
         it "should not find services that where use_for!='identity_services'" do
-          !Service.identity_services.should include(@service_not)
+          Service.identity_services.should_not include(@service_not)
         end
       end
       describe "tag_services" do
-        # named_scope :tag_services, :conditions => ['use_for = ?', 'tags']
         before do
           @service = Factory(:service, :use_for => 'tags')
           @service_not = Factory(:service, :use_for => 'not')
@@ -52,11 +51,10 @@ class ServiceTest < ActiveSupport::TestCase
           Service.tag_services.should include(@service)
         end
         it "should not find services that where use_for!='tags'" do
-          !Service.tag_services.should include(@service_not)
+          Service.tag_services.should_not include(@service_not)
         end
       end
       describe "sorted_id" do
-        # named_scope :sorted_id, :order => "id ASC"
         before do
           Service.delete_all
           @first = Factory(:service)
@@ -68,7 +66,6 @@ class ServiceTest < ActiveSupport::TestCase
         end
       end
       describe "photo_services" do
-        # named_scope :photo_services, :conditions => ["service_categories.id = services.service_category_id AND service_categories.name = 'Photos'"], :include => ['service_category']
         before do
           @service_category = Factory(:service_category, :name => 'Photos')
           @service = Factory(:service, :service_category => @service_category)
@@ -78,7 +75,7 @@ class ServiceTest < ActiveSupport::TestCase
           Service.photo_services.should include(@service)
         end
         it "should not find services that don't have 'Photos' for a service category" do
-          !Service.photo_services.should include(@service_not)
+          Service.photo_services.should_not include(@service_not)
         end
       end
     end
@@ -89,7 +86,7 @@ class ServiceTest < ActiveSupport::TestCase
         @service = Factory(:service, :service_category_id => service_category.id)
       end
       it "should be a photo service" do
-        @service.pho.should be_o(true)
+        @service.photo?(true).should be_true
       end
     end
     
@@ -99,7 +96,7 @@ class ServiceTest < ActiveSupport::TestCase
         @service = Factory(:service, :service_category_id => service_category.id)
       end
       it "should be a video service" do
-        @service.vid.should be_o(true)
+        @service.video?(true).should be_true
       end
     end
     
@@ -109,7 +106,7 @@ class ServiceTest < ActiveSupport::TestCase
         @service = Factory(:service, :service_category_id => service_category.id)
       end
       it "should be a bookmark service" do
-        @service.bookma.should be_k(true)
+        @service.bookmark?(true).should be_true
       end
     end
     
@@ -119,7 +116,7 @@ class ServiceTest < ActiveSupport::TestCase
         @service = Factory(:service, :service_category_id => service_category.id)
       end
       it "should be a music service" do
-        @service.mus.should be_c(true)
+        @service.music?(true).should be_true
       end
     end
     
@@ -129,7 +126,7 @@ class ServiceTest < ActiveSupport::TestCase
         @service = Factory(:service, :service_category_id => service_category.id)
       end
       it "should be a news service" do
-        @service.ne.should be_s(true)
+        @service.news?(true).should be_true
       end
     end
     
@@ -139,7 +136,7 @@ class ServiceTest < ActiveSupport::TestCase
         @service = Factory(:service, :service_category_id => service_category.id)
       end
       it "should be a blog service" do
-        @service.bl.should be_g(true)
+        @service.blog?(true).should be_true
       end
     end
     
@@ -149,7 +146,7 @@ class ServiceTest < ActiveSupport::TestCase
         @service = Factory(:service, :service_category_id => service_category.id)
       end
       it "should be a search service" do
-        @service.sear.should be_h(true)
+        @service.search?(true).should be_true
       end
     end
     
@@ -159,7 +156,7 @@ class ServiceTest < ActiveSupport::TestCase
         @service = Factory(:service, :service_category_id => service_category.id)
       end
       it "should be a general service" do
-        @service.gener.should be_l(true)
+        @service.general?(true).should be_true
       end
     end
     
@@ -169,17 +166,17 @@ class ServiceTest < ActiveSupport::TestCase
     it "should generate uri using blog url" do
       service = Factory(:service)
       uris = service.generate_uris('', '', TEST_URI)
-      uris.map(&:url).should include(TEST_RSS_URI)
+      uris.map(&:url).include?(TEST_RSS_URI).should be_true
     end
     it "should generate uri using username" do
       service = Factory(:service, :uri_data_template => TEST_USERNAME_TEMPLATE)
       uris = service.generate_uris('jbasdf', '', '')
-      uris.map(&:url).should include(TEST_USERNAME_TEMPLATE.sub('{username}', 'jbasdf')
+      uris.map(&:url).include?(TEST_USERNAME_TEMPLATE.sub('{username}', 'jbasdf')).should be_true
     end
     it "should get twitter uri from username" do
       service = Factory(:service, :uri_data_template => "http://www.twitter.com/{username}")
       uris = service.generate_uris('jbasdf', '', '')
-      uris.map(&:url).should include("http://twitter.com/statuses/user_timeline/7219042.rss")
+      uris.map(&:url).include?("http://twitter.com/statuses/user_timeline/7219042.rss").should be_true
     end
   end
   
@@ -193,30 +190,30 @@ class ServiceTest < ActiveSupport::TestCase
     it "should generate urls for tag" do
       tag = 'rails'
       uris = Service.generate_tag_uris(tag)
-      uris.should include(@template.sub('{tag}', tag)
+      uris.should include(@template.sub('{tag}', tag))
     end
     it "should set display uri when building a feed" do
       tag = 'identity'
       feeds = Service.build_tag_feeds(tag, @user, nil, true)
-      feeds.any?{|feed| feed.display_uri.should == (@uri_template.sub('{tag}', tag))}
+      feeds.any?{|feed| feed.display_uri == (@uri_template.sub('{tag}', tag))}.should be_true
     end
     it "should build a feed for every tag service" do
       tag = 'cycling'
       feeds = Service.build_tag_feeds(tag, @user, nil, true)
       feeds.length.should == Service.tag_services.length
-      feeds.any?{|feed| feed.uri.should == (@template.sub('{tag}', tag))}
+      feeds.any?{|feed| feed.uri == (@template.sub('{tag}', tag))}.should be_true
     end
     it "should build a limited number of feeds for tag" do
       tag = 'ruby'
       feeds = Service.build_tag_feeds(tag, @user, [@service.id], true)
       feeds.length.should == 1
-      feeds.any?{|feed| feed.uri.should == (@template.sub('{tag}', tag))}
+      feeds.any?{|feed| feed.uri == (@template.sub('{tag}', tag))}.should be_true
     end
     it "should create a feed for every tag service" do
       tag = 'physics'
       feeds = Service.create_tag_feeds(tag, @user, nil, true)
       feeds.length.should == Service.tag_services.length
-      feeds.any?{|feed| feed.uri.should == (@template.sub('{tag}', tag))}
+      feeds.any?{|feed| feed.uri == (@template.sub('{tag}', tag))}.should be_true
     end
     it "should create a limited number of feeds for tag" do
       tag = 'math'
@@ -282,7 +279,7 @@ class ServiceTest < ActiveSupport::TestCase
       end
       it "should only create photo feeds" do
         assert @feeds.length > 0
-        @feeds.all? { |feed| feed.service.service_category.name.should == "Photos" }
+        @feeds.all? { |feed| feed.service.service_category.name == "Photos" }.should be_true
       end
     end
     describe "video feeds" do
@@ -291,7 +288,7 @@ class ServiceTest < ActiveSupport::TestCase
       end
       it "should only create video feeds" do
         assert @feeds.length > 0
-        @feeds.all? { |feed| feed.service.service_category.name.should == "Videos" }
+        @feeds.all? { |feed| feed.service.service_category.name == "Videos" }.should be_true
       end
     end
     describe "bookmark feeds" do
@@ -300,7 +297,7 @@ class ServiceTest < ActiveSupport::TestCase
       end
       it "should only create bookmark feeds" do
         assert @feeds.length > 0
-        @feeds.all? { |feed| feed.service.service_category.name.should == "Bookmarks" }
+        @feeds.all? { |feed| feed.service.service_category.name == "Bookmarks" }.should be_true
       end
     end
     describe "music feeds" do
@@ -310,7 +307,7 @@ class ServiceTest < ActiveSupport::TestCase
       end
       it "should only create music feeds" do
         assert @feeds.length > 0
-        @feeds.all? { |feed| feed.service.service_category.name.should == "Music" }
+        @feeds.all? { |feed| feed.service.service_category.name == "Music" }.should be_true
       end
     end
     describe "news feeds" do
@@ -319,7 +316,7 @@ class ServiceTest < ActiveSupport::TestCase
       end
       it "should only create news feeds" do
         assert @feeds.length > 0
-        @feeds.all? { |feed| feed.service.service_category.name.should == "News" }
+        @feeds.all? { |feed| feed.service.service_category.name == "News" }.should be_true
       end
     end
     describe "blog feeds" do
@@ -328,7 +325,7 @@ class ServiceTest < ActiveSupport::TestCase
       end
       it "should only create blog feeds" do
         assert @feeds.length > 0
-        @feeds.all? { |feed| feed.service.service_category.name.should == "Blogging" }
+        @feeds.all? { |feed| feed.service.service_category.name == "Blogging" }.should be_true
       end
     end
     describe "search feeds" do
@@ -337,7 +334,7 @@ class ServiceTest < ActiveSupport::TestCase
       end
       it "should only create search feeds" do
         assert @feeds.length > 0
-        @feeds.all? { |feed| feed.service.service_category.name.should == "Search" }
+        @feeds.all? { |feed| feed.service.service_category.name == "Search" }.should be_true
       end
     end
   end
@@ -348,38 +345,38 @@ class ServiceTest < ActiveSupport::TestCase
     end
     it "should get photo services" do
       assert Service.get_photo_tag_services(true).length > 0
-      Service.get_photo_tag_services.all? { |service| service.service_category.name.should == "Photos" }
+      Service.get_photo_tag_services.all? { |service| service.service_category.name == "Photos" }.should be_true
     end
     it "should get video services" do
       assert Service.get_video_tag_services(true).length > 0
-      Service.get_video_tag_services.all? { |service| service.service_category.name.should == "Videos" }
+      Service.get_video_tag_services.all? { |service| service.service_category.name == "Videos" }.should be_true
     end
     it "should get bookmark services" do
       assert Service.get_bookmark_tag_services(true).length > 0
-      Service.get_bookmark_tag_services.all? { |service| service.service_category.name.should == "Bookmarks" }
+      Service.get_bookmark_tag_services.all? { |service| service.service_category.name == "Bookmarks" }.should be_true
     end
     it "should get music services" do
       assert Service.get_music_tag_services(true).length > 0
-      Service.get_music_tag_services.all? { |service| service.service_category.name.should == "Music" }
+      Service.get_music_tag_services.all? { |service| service.service_category.name == "Music" }.should be_true
     end
     it "should get news services" do
       assert Service.get_news_tag_services(true).length > 0
-      Service.get_news_tag_services.all? { |service| service.service_category.name.should == "News" }
+      Service.get_news_tag_services.all? { |service| service.service_category.name == "News" }.should be_true
     end
     it "should get blog services" do
       assert Service.get_blog_tag_services(true).length > 0
-      Service.get_blog_tag_services.all? { |service| service.service_category.name.should == "Blogging" }
+      Service.get_blog_tag_services.all? { |service| service.service_category.name == "Blogging" }.should be_true
     end
     it "should get search services" do
       assert Service.get_search_tag_services(true).length > 0
-      Service.get_search_tag_services.all? { |service| service.service_category.name.should == "Search" }
+      Service.get_search_tag_services.all? { |service| service.service_category.name == "Search" }.should be_true
     end
     it "should get general services" do
       assert Service.get_general_tag_services(true).length > 0
-      !Service.get_general_tag_services.any? { |service| service.service_category.name.should == "Photos" }
-      !Service.get_general_tag_services.any? { |service| service.service_category.name.should == "Videos" }
-      !Service.get_general_tag_services.any? { |service| service.service_category.name.should == "Bookmarks" }
-      !Service.get_general_tag_services.any? { |service| service.service_category.name.should == "Music" }
+      Service.get_general_tag_services.any? { |service| service.service_category.name == "Photos" }.should_not be_true
+      Service.get_general_tag_services.any? { |service| service.service_category.name == "Videos" }.should_not be_true
+      Service.get_general_tag_services.any? { |service| service.service_category.name == "Bookmarks" }.should_not be_true
+      Service.get_general_tag_services.any? { |service| service.service_category.name == "Music" }.should_not be_true
     end
   end
   

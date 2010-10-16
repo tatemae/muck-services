@@ -39,9 +39,9 @@ class Muck::AggregationsController < ApplicationController
     @music_feeds = @aggregation.music_feeds
     @general_feeds = @aggregation.general_feeds
     
-    if GlobalConfig.render_feeds_client_side
+    if MuckServices.configuration.render_feeds_client_side
       
-    elsif GlobalConfig.render_feeds_server_side
+    elsif MuckServices.configuration.render_feeds_server_side
       @feeds = @aggregation.feeds
     else
       @entries = @aggregation.feeds.entries.paginate(:page => @page, :per_page => @per_page)

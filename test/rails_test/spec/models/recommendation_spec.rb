@@ -13,14 +13,12 @@
 
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class RecommendationTest < ActiveSupport::TestCase
+describe Recommendation do
 
   describe "recommendation" do
     before do
       @recommendation = Factory(:recommendation)
     end
-
-    
 
     it { should belong_to :entry }
     it { should belong_to :dest_entry }

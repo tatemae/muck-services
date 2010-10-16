@@ -10,7 +10,7 @@
 
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class IdentityFeedTest < ActiveSupport::TestCase
+describe IdentityFeed do
   describe "identity feed" do
     it { should belong_to :ownable }
     it { should belong_to :feed }

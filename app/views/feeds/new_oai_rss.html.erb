@@ -7,7 +7,7 @@
     
   <div id="rss" class="add_data_container">
     <h1><%= t('muck.services.add_rss_feed') %></h1>
-    <%= error_messages_for :feed -%>
+    <%= output_errors('', {:class => 'help-box'}, @feed) %>
     <%= muck_form_for(:feed, :url => polymorphic_url([@parent, :feeds])) do |f| -%>
       <%= f.text_field :title, { :label => t('muck.services.title' ) }  %>
       <%= f.text_field :uri, { :label => t('muck.services.add_feed_url' ) }  %>

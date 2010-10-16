@@ -1,7 +1,7 @@
 # include MuckServices::Models::MuckRecommendation
 module MuckServices
   module Models
-    module MuckRecommendations
+    module MuckRecommendation
 
       extend ActiveSupport::Concern
       

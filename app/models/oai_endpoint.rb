@@ -21,11 +21,11 @@ class OaiEndpoint < ActiveRecord::Base
   
   validates_presence_of :uri
   
-  named_scope :banned, :conditions => ["status = ?", MuckServices::Status::BANNED]
-  named_scope :valid, :conditions => "status >= 0"
-  named_scope :by_title, :order => "title ASC"
-  named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
-  named_scope :by_newest, :order => "created_at DESC", :include => [:default_language]
+  scope :banned, where("status = ?", MuckServices::Status::BANNED)
+  scope :valid, where("status >= 0")
+  scope :by_title, order("title ASC")
+  scope :newer_than, lambda { |*args| where("created_at > ?", args.first || DateTime.now) }
+  scope :by_newest, order("created_at DESC").includes(:default_language)
   
   attr_protected :status, :contributor_id
   
@@ -38,7 +38,7 @@ class OaiEndpoint < ActiveRecord::Base
   end
 
   def inform_admin
-    ServicesMailer.deliver_notification_feed_added(self)
+    ServicesMailer.notification_feed_added(self).deliver
   end
   
 end
