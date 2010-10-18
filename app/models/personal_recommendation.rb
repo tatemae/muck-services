@@ -18,7 +18,7 @@ class PersonalRecommendation < ActiveRecord::Base
   belongs_to :destination, :polymorphic => true
   
   scope :newer_than, lambda { |*args| where("created_at > ?", args.first || DateTime.now) }
-  scope :by_newest, order("created_at DESC").includes(:default_language)
+  scope :by_newest, order("created_at DESC")
   scope :entries_only, where("personal_recommendations.destination_type = 'Entry'")
   scope :users, where("personal_recommendations.destination_type = 'User'")
 end

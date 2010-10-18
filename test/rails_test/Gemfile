@@ -8,6 +8,8 @@ gem 'mysql'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem "bcrypt-ruby", :require => "bcrypt"
 
+# TODO this is temporary until a new version of loofah is released. loofah is required by feedzirra. This forces the version that works with rails3
+gem 'loofah', :git => 'http://github.com/phaza/loofah.git', :branch => 'rails3'
 
 gem 'muck-engine', :path => "~/projects/muck-engine"
 gem 'muck-users', :path => "~/projects/muck-users"
