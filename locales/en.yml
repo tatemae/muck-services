@@ -1,6 +1,8 @@
 --- 
 en: 
   muck: 
+    admin:
+      feeds: Feeds
     services: 
       get_recommendations: Get Recommendations
       generate_new_topic: Generate a new topic

@@ -20,3 +20,4 @@ ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckAggregationOwner
 ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckRecommendations }
 
 I18n.load_path += Dir[ File.join(File.dirname(__FILE__), '..', 'locales', '*.{rb,yml}') ]
+MuckEngine.add_muck_admin_nav_item('Feeds', '/admin/feeds')

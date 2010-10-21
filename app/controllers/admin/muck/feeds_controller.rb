@@ -3,7 +3,7 @@ class Admin::Muck::FeedsController < Admin::Muck::BaseController
   unloadable
 
   def index
-    @feeds = Feed.find(:all, :order => (params[:order] || 'created_at') + (params[:asc] == 'false' ? ' DESC' : ' ASC') + ', title', :include => [:default_language]).paginate(:page => @page, :per_page => @per_page)
+    @feeds = Aggregation.global_feeds(params[:order], params[:asc]).paginate(:page => @page, :per_page => @per_page)
     respond_to do |format|
       format.html { render :template => 'admin/feeds/index' }
       format.xml  { render :xml => @feeds.to_xml }

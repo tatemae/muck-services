@@ -14,18 +14,18 @@ module MuckServicesFeedsHelper
 
   def feed_contributor_link(feed)
     if feed.contributor_id.nil?
-      admin = Feed.find_by_login('admin')
+#      admin = Feed.find_by_login('admin')
       'unknown'
     else
       link_to feed.contributor.display_name, profile_path(feed.contributor)
     end
   end
 
-  def sort_feeds_link(current_order, current_asc, new_order, admin = false)
+  def sort_feeds_url(current_order, current_asc, new_order, admin = false)
     if admin == true
       admin_feeds_url(:order => new_order, :asc => (current_order == new_order && (current_asc == 'true' || current_asc == nil)) ? 'false' : 'true')
     else
-      feeds_url(:order => new_order, :asc => (current_order == new_order && (current_asc == 'true' || current_asc == nil)) ? 'false' : 'true')
+      feeds_url(:order => new_order, :asc => (current_order == new_order && (current_asc == 'false' || current_asc == nil)) ? 'true' : 'false')
     end
   end
 

@@ -7,10 +7,10 @@
   </p>
   <table class="feeds">
     <tr>
-      <th><%= link_to t('muck.services.status'), sort_feeds_link(params[:order], params[:asc], 'status', true) %></th>
-      <th><%= link_to t('muck.services.default_language'), sort_feeds_link(params[:order], params[:asc], 'languages.english_name', true) %></th>
-      <th><%= link_to t('muck.services.title'), sort_feeds_link(params[:order], params[:asc], 'title', true)  %></th>
-      <th><%= link_to t('muck.services.added_date'), sort_feeds_link(params[:order], params[:asc], 'created_at', true) %></th>
+      <th><%= link_to t('muck.services.status'), sort_feeds_url(params[:order], params[:asc], 'status', true) %></th>
+      <th><%= link_to t('muck.services.default_language'), sort_feeds_url(params[:order], params[:asc], 'languages.english_name', true) %></th>
+      <th><%= link_to t('muck.services.title'), sort_feeds_url(params[:order], params[:asc], 'title', true)  %></th>
+      <th><%= link_to t('muck.services.added_date'), sort_feeds_url(params[:order], params[:asc], 'created_at', true) %></th>
     </tr>
     <%= render :partial => 'oai_endpoints/oai_endpoint_row', :collection => @oai_endpoints, :locals => { :show_admin => true } %>
   </table>

@@ -7,14 +7,15 @@
   </p>
   <table class="feeds">
     <tr>
-      <th><%= link_to t('muck.services.approval_status'), sort_feeds_link(params[:order], params[:asc], 'status', true) %></th>
-      <th><%= link_to t('muck.services.status'), sort_feeds_link(params[:order], params[:asc], 'status', true) %></th>
-      <th><%= link_to t('muck.services.default_language'), sort_feeds_link(params[:order], params[:asc], 'languages.english_name', true) %></th>
-      <th><%= link_to t('muck.services.entries_count'), sort_feeds_link(params[:order], params[:asc], 'entries_count', true) %></th>
-      <th><%= link_to t('muck.services.repository'), sort_feeds_link(params[:order], params[:asc], 'harvested_from_title', true)  %></th>
-      <th><%= link_to t('muck.services.title'), sort_feeds_link(params[:order], params[:asc], 'title', true)  %></th>
-      <th><%= link_to t('muck.services.harvested_at'), sort_feeds_link(params[:order], params[:asc], 'last_harvested_at', true) %></th>
-      <th><%= link_to t('muck.services.added_date'), sort_feeds_link(params[:order], params[:asc], 'created_at', true) %></th>
+      <th><%= link_to t('muck.services.approval_status'), sort_feeds_url(params[:order], params[:asc], 'status', true) %></th>
+      <th><%= link_to t('muck.services.entries_count'), sort_feeds_url(params[:order], params[:asc], 'entries_count', true) %></th>
+      <th><%= link_to t('muck.services.title'), sort_feeds_url(params[:order], params[:asc], 'title', true)  %></th>
+      <th><%= link_to t('muck.services.contributor'), sort_feeds_url(params[:order], params[:asc], 'feed_contributor', true) %></th>
+      <th width="70px"><%= link_to t('muck.services.added_date'), sort_feeds_url(params[:order], params[:asc], 'created_at', true) %></th>
+      <th width="120px"><%= link_to t('muck.services.harvested_at'), sort_feeds_url(params[:order], params[:asc], 'last_harvested_at', true) %></th>
+      <th><%= link_to t('muck.services.default_language'), sort_feeds_url(params[:order], params[:asc], 'languages.english_name', true) %></th>
+      <th><%= link_to t('muck.services.repository'), sort_feeds_url(params[:order], params[:asc], 'harvested_from_title', true)  %></th>
+      <th><%= link_to t('muck.services.status'), sort_feeds_url(params[:order], params[:asc], 'status') %></th>
     </tr>
     <%= render :partial => 'feeds/feed_row', :collection => @feeds, :locals => { :show_admin => true } %>
   </table>

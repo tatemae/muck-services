@@ -30,7 +30,21 @@ class Aggregation < ActiveRecord::Base
   named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
   named_scope :newest, :order => "created_at DESC"
 
-    
+
+  def self.global_feeds(order_field = 'title', ascending = 'true')
+    allowed_fields = ['languages.english_name','status','entries_count','harvested_from_title','last_harvested_at','created_at','feed_contributor']
+    order_direction = (ascending == 'false' ? ' DESC' : ' ASC')
+    order_by = allowed_fields.include?(order_field) ? (order_field  + order_direction + ', title') : ('title ' + order_direction)
+
+    Feed.find_by_sql("SELECT users.id feed_contributor_id, users.login feed_contributor, languages.english_name default_language_name, feeds.*, aggregation_id <=> 1 FROM aggregations " +
+            "INNER JOIN aggregation_feeds ON aggregations.id = aggregation_feeds.aggregation_id " +
+            "RIGHT OUTER JOIN feeds ON aggregation_feeds.feed_id = feeds.id " +
+            "INNER JOIN languages ON feeds.default_language_id = languages.id " +
+            "LEFT OUTER JOIN users ON feeds.contributor_id = users.id " +
+#            "WHERE aggregations.title = 'global_feeds' AND feeds.status >= 0 " +
+          "ORDER BY #{order_by}")
+  end
+
   # Builds and then adds feeds for a given terms
   # user:         User to be associated with each feed.  Default is nil which makes each feed global.
   # service_ids:  An array of service ids.  Nil will generate a feed for every available service.

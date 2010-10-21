@@ -6,7 +6,7 @@ class Muck::FeedsController < ApplicationController
   before_filter :get_owner, :except => ['index', 'show']
   
   def index
-    @feeds = Feed.find(:all, :conditions => 'status >= 0', :order => (params[:order] || 'title') + (params[:asc] == 'false' ? ' DESC' : ' ASC') + ', title', :include => [:default_language]).paginate(:page => @page, :per_page => @per_page)
+    @feeds = Aggregation.global_feeds(params[:order], params[:asc]).paginate(:page => @page, :per_page => @per_page)
     respond_to do |format|
       format.html { render :template => 'feeds/index' }
       format.xml  { render :xml => @feeds.to_xml }
