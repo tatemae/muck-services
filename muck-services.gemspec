@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-services}
-  s.version = "0.1.46"
+  s.version = "0.1.47"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2010-09-13}
+  s.date = %q{2010-10-21}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "VERSION.orig",
     "app/controllers/admin/muck/feeds_controller.rb",
     "app/controllers/admin/muck/oai_endpoints_controller.rb",
     "app/controllers/muck/aggregation_feeds_controller.rb",
@@ -529,7 +528,6 @@ Gem::Specification.new do |s|
     "test/rails_root/test/unit/feed_test.rb",
     "test/rails_root/test/unit/identity_feed_test.rb",
     "test/rails_root/test/unit/oai_endpoint_test.rb",
-    "test/rails_root/test/unit/one_test.rb",
     "test/rails_root/test/unit/personal_recommendation_test.rb",
     "test/rails_root/test/unit/recommendation_test.rb",
     "test/rails_root/test/unit/service_category_test.rb",
