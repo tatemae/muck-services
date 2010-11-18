@@ -6,8 +6,8 @@ require 'rspec/core/rake_task'
 desc 'Default: run specs.'
 task :default => :spec
 RSpec::Core::RakeTask.new(:spec) do |t|
-  t.rspec_opts = ["--color", "-c", "-f progress", "-r test/rails_test/spec/spec_helper.rb"]
-  t.pattern = 'test/rails_test/spec/**/*_spec.rb'  
+  t.rspec_opts = ["--color", "-c", "-f progress", "-r test/spec/spec_helper.rb"]
+  t.pattern = 'test/spec/**/*_spec.rb'  
 end
 
 desc 'Translate this gem'
@@ -22,8 +22,8 @@ begin
   require 'rcov/rcovtask'
   Rcov::RcovTask.new do |t|
     #t.libs << 'lib'
-    t.libs << 'test/rails_test/lib'
-    t.pattern = 'test/rails_test/test/**/*_test.rb'
+    t.libs << 'test/lib'
+    t.pattern = 'test/test/**/*_spec.rb'
     t.verbose = true
     t.output_dir = 'coverage'
     t.rcov_opts << '--exclude "gems/*"'
@@ -57,11 +57,8 @@ begin
     gem.add_dependency "muck-users"
     gem.add_dependency "muck-comments"
     gem.add_development_dependency "shoulda"
-    gem.rubyforge_project = 'muck-services'
-    gem.files.exclude "public/images/service_icons/source/*"
-    gem.files.exclude "test/*"
-    gem.test_files.exclude 'test/feed_archive/**'
-    gem.test_files.exclude 'test/rails_test/public/images/*'
+    gem.files.exclude 'test/**'
+    gem.test_files.exclude 'test/**'
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

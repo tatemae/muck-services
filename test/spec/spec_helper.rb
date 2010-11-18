@@ -24,11 +24,11 @@ def bootstrap_services
   ActiveRecord::Base.establish_connection(::Rails.env)
   
   ServiceCategory.delete_all
-  yml = File.join(File.dirname(__FILE__), '..', '..', '..', 'db', 'bootstrap',"service_categories")
+  yml = File.join(File.dirname(__FILE__), '..', '..', 'db', 'bootstrap',"service_categories")
   Fixtures.new(Service.connection,"service_categories",ServiceCategory,yml).insert_fixtures
   
   Service.delete_all
-  yml = File.join(File.dirname(__FILE__), '..', '..', '..', 'db', 'bootstrap',"services")
+  yml = File.join(File.dirname(__FILE__), '..', '..', 'db', 'bootstrap',"services")
   Fixtures.new(Service.connection,"services",Service,yml).insert_fixtures
   
 end
