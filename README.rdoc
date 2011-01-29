@@ -18,11 +18,11 @@ Add routes
 Depending on which features you use from muck raker you may need to add additional routes to your application.  For example, 
 a user with include MuckServices::Models::MuckFeedParent and include MuckServices::Models::MuckFeedOwner the following routes would be required:
 
-  map.resources :users, :controller => 'muck/users' do |users|
+  resources :users, :controller => 'muck/users' do
     # have to map into the muck/identity_feeds controller or rails can't find the identity_feeds
-    users.resources :identity_feeds, :controller => 'muck/identity_feeds'
-    users.resources :feeds, :controller => 'muck/feeds'
-    users.resources :aggregations, :controller => 'muck/aggregations'
+    resources :identity_feeds, :controller => 'muck/identity_feeds'
+    resources :feeds, :controller => 'muck/feeds'
+    resources :aggregations, :controller => 'muck/aggregations'
   end
   
 == Usage

@@ -2,9 +2,9 @@
   <h2><%= title || I18n.t('muck.services.my_services') %></h2>
   <ul id="my-services-list" class="services-list">
     <% if edit -%>
-      <%= render :partial => 'services/edit_service', :collection => identity_feeds %>
+      <%= render(:partial => 'services/edit_service', :collection => identity_feeds) %>
     <% else -%>
-      <%= render :partial => 'services/view_service', :collection => identity_feeds %>
+      <%= render(:partial => 'services/view_service', :collection => identity_feeds) %>
     <% end -%>
   </ul>
 </div>
