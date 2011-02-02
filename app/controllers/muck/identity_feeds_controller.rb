@@ -22,43 +22,51 @@ class Muck::IdentityFeedsController < ApplicationController
     @feed = Feed.new
     respond_to do |format|
       format.html { render :template => 'identity_feeds/new' }
-      format.pjs { render :text => get_new_html(@service, @parent, @feed) }
+      format.js { render :template => 'identity_feeds/new', :layout => false }
+      format.pjs { render :template => 'identity_feeds/new', :layout => false }
     end
   end
   
   def create
     @service = Service.find(params[:service_id])
+    
     if !params[:uri].blank?
-      @feed = Feed.new(:uri => params[:uri], :login => params[:username])
-      feeds = Service.create_tag_feeds_for_service(@service, params[:uri], params[:username], params[:password], current_user.id)
+      uri = params[:uri]
+    elsif !@service.uri_data_template.blank? && params[:username]
+      uri = @service.uri_data_template
+    else
+      uri = nil
+    end 
+      
+    if uri
+      @feed = Feed.new(:uri => uri, :login => params[:username])
+      feeds = Service.create_tag_feeds_for_service(@service, uri, params[:username], params[:password], current_user.id)
       if feeds.blank?
-        success = false
+        @success = false
         if params[:username]
-          message = I18n.t('muck.services.no_feeds_from_username')
+          @message = I18n.t('muck.services.no_feeds_from_username')
         else
-          message = I18n.t('muck.services.no_feeds_at_uri')
+          @message = I18n.t('muck.services.no_feeds_at_uri')
         end
       else
-        success, messages = add_feeds_to_parent(@parent, feeds)
-        message = messages.join('<br />')
+        @success, messages = add_feeds_to_parent(@parent, feeds)
+        @message = messages.join('<br />')
       end
     else
-      success = false
-      message = I18n.t('muck.services.please_specify_url')
+      @success = false
+      @message = I18n.t('muck.services.please_specify_url')
     end
+    
+    @user_services = @parent.identity_feeds.find(:all, :include => [{:feed => :service}]) if @success
     
     respond_to do |format|
       format.html do
-        flash[:notice] = message if message
+        flash[:notice] = @message.html_safe if @message
         redirect_to polymorphic_url([@parent, :identity_feeds]) 
       end
-      format.pjs do
-        flash[:notice] = message if message
-        render :template => 'identity_feeds/new', :layout => false
-      end
-      format.json do
-        render :json => {:parent => @parent, :service => @service, :feeds => feeds, :success => success, :message => message }.as_json
-      end
+      format.pjs  { render :template => 'identity_feeds/create', :layout => false }
+      format.js   { render :template => 'identity_feeds/create', :layout => false }
+      format.json { render :json => {:parent => @parent, :service => @service, :feeds => feeds, :success => @success, :message => @message }.as_json }
     end
   end
   
@@ -120,10 +128,6 @@ class Muck::IdentityFeedsController < ApplicationController
     
     def has_permission?
       @parent.can_edit?(current_user)
-    end
-    
-    def get_new_html(service, parent, feed)
-      render_to_string(:partial => 'identity_feeds/form', :locals => { :service => service, :parent => parent, :feed => feed })
     end
     
     def get_edit_html(identity_feed)

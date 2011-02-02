@@ -156,7 +156,7 @@ class Service < ActiveRecord::Base
   # creates a feed for a service with a username and optional password
   def self.create_tag_feeds_for_service(service, uri, username, password, contributor)
     uris = service.generate_uris(username, password, uri)
-    uris.collect{ |u| Feed.find_or_create(u.url, u.title, username, password, service.id, contributor) } if uris
+    uris.collect{ |u| Feed.find_or_create(u.url, u.title, username, password, service.id, contributor, u.human_url) } if uris
   end
 
   def self.build_photo_feeds(terms, user, service_ids = nil, refresh_services = false)

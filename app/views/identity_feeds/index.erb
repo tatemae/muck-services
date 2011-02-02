@@ -1,0 +1,49 @@
+<%= output_errors('', {:class => 'help-box'}) %>
+<%= available_service_categories(@service_categories, nil, 'span-15') %>
+<%= services_for_user(@user_services, nil, 'span-5') %>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  jQuery('a.lightbox').fancybox({
+    'width': 400,
+    'height': 100,
+    'ajax' : {
+      dataType: 'html',
+      beforeSend: add_headers
+    }
+  });
+  jQuery('a#facebook-link').fancybox({
+    'width': 400,
+    'height': 375,
+    'ajax' : {
+      dataType: 'html',
+      beforeSend: add_headers
+    }
+  });
+  jQuery('a#zotero-groups-link').fancybox({
+    'width': 400,
+    'height': 130,
+    'ajax' : {
+      dataType: 'html',
+      beforeSend: add_headers
+    }
+  }); 
+  jQuery('a#netflix-link').fancybox({
+    'width': 400,
+    'height': 160,
+    'ajax' : {
+      dataType: 'html',
+      beforeSend: add_headers
+    }
+  }); 
+});
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  //apply_delete_hover();
+  apply_delete_feed();
+});
+</script>
+
+

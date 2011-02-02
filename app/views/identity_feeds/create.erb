@@ -1,0 +1,10 @@
+<% if @success -%>
+  jQuery('#my-services').replaceWith('<%= escape_javascript(services_for_user(@user_services, nil, 'span-5').html_safe) %>');
+  apply_delete_feed();
+  jQuery.fancybox.close();
+<% else -%>
+  jQuery('#identity-feed-message').addClass('error');
+  jQuery('#identity-feed-message').html("<%=@message.html_safe%>");
+  jQuery('#submit_add_feed').show();
+  jQuery('#finding_uri_message').hide();
+<% end -%>

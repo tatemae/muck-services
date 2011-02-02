@@ -44,7 +44,7 @@ describe Muck::IdentityFeedsController do
     describe "POST create using bogus service and username" do
       before do
         @service = Factory(:service)
-        post :create, :service_id => @service.to_param, :username => 'test', :user_id => @user, :uri => 'http://www.example.com'
+        post :create, :service_id => @service.to_param, :username => 'test', :user_id => @user
       end
       it { should set_the_flash.to(I18n.t('muck.services.no_feeds_from_username')) }
       it { should redirect_to( user_identity_feeds_url(@user.id) ) }
@@ -68,7 +68,7 @@ describe Muck::IdentityFeedsController do
       end
       describe "html" do
         before do
-          post :create, :service_id => @service.to_param, :username => @username, :user_id => @user, :uri => 'http://www.example.com'
+          post :create, :service_id => @service.to_param, :username => @username, :user_id => @user
         end
         it { should set_the_flash.to(I18n.t('muck.services.successfully_added_username_feed', :service => '')) }
         it { should redirect_to( user_identity_feeds_url(@user.id) ) }

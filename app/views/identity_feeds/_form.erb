@@ -1,5 +1,6 @@
+<div id="identity-feed-message"></div>
 <div id="identity-feed">
-  <%= form_for(:feed, :url => url_by_identity_feed(parent, @identity_feed, service)) do |f| -%>
+  <%= form_for(:feed, :url => url_by_identity_feed(parent, @identity_feed, service), :html => { :class => 'add-identity' } ) do |f| -%>
     <%= service_title(service) %>
     <% if service.template.blank? -%>
       <% if service.uri_data_template.blank? -%>
@@ -11,10 +12,15 @@
       <%= render :partial => "service_templates/#{service.template}", :locals => { :service => service, :feed => feed } -%>
     <% end -%>
     <div class="button form-row">
-      <%= f.submit t('muck.services.import_service', :service => service.name), :id => 'submit_feed', :onclick => "jQuery('#submit_feed').hide();jQuery('#finding_uri_message').show();" %>
-      <span id="finding_uri_message" style="display:none;">
-        <%= t('muck.services.submitting_feed_message') %><img src="/images/spinner.gif" alt="<%= t('muck.services.loading_content_image') %>" />
+      <%= f.submit t('muck.services.import_service', :service => service.name), :id => 'submit_add_feed' %>
+      <span id="finding_uri_message" class="waiting" style="display:none;">
+        <%= t('muck.services.submitting_feed_message') %>
       </span>
     </div>
   <% end -%>
 </div>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  apply_add_feed();
+});
+</script>

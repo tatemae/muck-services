@@ -50,7 +50,7 @@ en:
       rss: RSS
       validate_feed: Mark feed as valid
       discover_feed_message: Searching for information about the url you provided.  Please wait.
-      service_feed_name: "%{term}} on %{service}"
+      service_feed_name: "%{term} on %{service}"
       please_specify_url: Please specify a url
       available_sources: Available Sources
       import_service: Import %{service}
@@ -61,7 +61,7 @@ en:
       add_aggregation_title: "Name for aggregation:"
       back: Back
       polyvore_prompt: Polyvore profile URL
-      login_or_signup_prompt: "%{signup}} or %{login} to discuss and share resources."
+      login_or_signup_prompt: "%{signup} or %{login} to discuss and share resources."
       facebook_shares: Facebook Shared Links
       facebook: Facebook
       for: for
@@ -70,18 +70,18 @@ en:
       loading_content_image: <%= t('muck.services.loading_image') %>
       save_aggreation: Save this Aggregation
       metadata: metadata
-      signup_to_save_aggreation: "%{login}} or %{signup} to save this search"
+      signup_to_save_aggreation: "%{login} or %{signup} to save this search"
       visit: visit
       facebook_link: You can find your URL on your Facebook My Links page. %{link} and then click on 'My Links'
-      course_search_results: Courses <b>%{first}} - %{last}}</b> of <b>%{total}}</b> for search <b>%{terms}</b>
+      course_search_results: Courses <b>%{first} - %{last}</b> of <b>%{total}</b> for search <b>%{terms}</b>
       only_courses: Only Courses
-      no_hits: Your search - <b>%{search}}</b> - did not match any <b>%{resource_type}</b>. Please try a different search or choose a different language.
+      no_hits: Your search - <b>%{search}</b> - did not match any <b>%{resource_type}</b>. Please try a different search or choose a different language.
       no_recommendations: No recommendations were found.
       feed_successfully_created: Thank you for submitting a feed. You will be emailed when the feed is approved.
       login: Login
       next_label: Next
       add_rss: Add Rss
-      already_added_username_feed: You've already added a %{service}} account with the username %{username}
+      already_added_username_feed: You've already added a %{service} account with the username %{username}
       topic_feeds_for: Feeds for %{terms}
       explore: Search the Web
       videos: Videos
@@ -98,7 +98,7 @@ en:
       loading_message: "Loading... "
       feed_successfully_updated: Feed was successfully updated.
       approval_status: Approved
-      course_tag_results: Courses <b>%{first}} - %{last}}</b> of <b>%{total}}</b> tagged <b>%{terms}</b>
+      course_tag_results: Courses <b>%{first} - %{last}</b> of <b>%{total}</b> tagged <b>%{terms}</b>
       goodreads_prompt: Goodreads profile URL
       feed_remove: Feed Removed
       loading_image: Loading Image
@@ -123,7 +123,7 @@ en:
       oai_endpoint_successfully_created: Successfully added OAI endpoint
       add_extended_feed_title: Add new feed
       gm_title: Related Resources
-      resource_tag_results: Resources <b>%{first}} - %{last}}</b> of <b>%{total}}</b> tagged <b>%{terms}</b>
+      resource_tag_results: Resources <b>%{first} - %{last}</b> of <b>%{total}</b> tagged <b>%{terms}</b>
       rdf: RDF
       amazon_prompt: Please enter the email you use with Amazon.com
       edit_aggregation_title: Editing %{title}
@@ -192,7 +192,7 @@ en:
       already_shared: You've previously shared this page.
       add_edit_feeds: Add/Edit Feeds
       harvest_interval: Harvest interval (hrs)
-      resource_search_results: Resources <b>%{first}} - %{last}}</b> of <b>%{total}}</b> for search <b>%{terms}</b>
+      resource_search_results: Resources <b>%{first} - %{last}</b> of <b>%{total}</b> for search <b>%{terms}</b>
       successfully_added_uri_feed: Successfully added %{uri}
       no_feeds_found: No feeds were found
       direct_link: "[direct link]"
@@ -207,7 +207,7 @@ en:
       add_feed: Add Feed
       identity_feeds: Identity Feeds
       added_date: Added
-      no_tagged_courses: No <b>courses</b> were found tagged with <b>%{tags}}</b>. <a href='/resources'>Start over</a> or show <a href='/resources/tags/%{tags}}'>all resources tagged %{tags}</a>.
+      no_tagged_courses: No <b>courses</b> were found tagged with <b>%{tags}</b>. <a href='/resources'>Start over</a> or show <a href='/resources/tags/%{tags}'>all resources tagged %{tags}</a>.
       personal_recommendations: Recommendations
       feed_id: ID
       repository_short_title: "Repository Short Title:"

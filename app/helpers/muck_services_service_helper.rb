@@ -71,10 +71,17 @@ module MuckServicesServiceHelper
     service_link(path, identity_feed.feed.service, link_css, wrapper, link_text)
   end
   
+  # Renders a link with an icon and text
   def service_external_link(identity_feed, link_css = nil, wrapper = nil)
     path = identity_feed.feed.display_uri || identity_feed.feed.uri
     link_text = identity_feed.feed.title unless identity_feed.feed.title.blank?
     service_link(path, identity_feed.feed.service, link_css, wrapper, link_text, 'blank')
+  end
+  
+  # Render a link with an icon an no text
+  def service_external_icon_link(identity_feed, link_css = nil, wrapper = nil, target = 'blank', id = nil)
+    path = identity_feed.feed.display_uri || identity_feed.feed.uri
+    service_icon_link(path, identity_feed.feed.service, link_css, wrapper, target, id)
   end
   
   # Renders a delete button for an identity_feed
@@ -96,6 +103,21 @@ module MuckServicesServiceHelper
     end
   end
   
+  # Renders a service link optionally wrapping it in the specified element
+  def service_icon_link(path, service, link_css, wrapper, target = nil, id = nil)
+    if service.respond_to?(:icon)
+      service_name = service.icon
+    else
+      service_name = "#{service}.png"
+    end
+    link = %Q{<a #{'id=' + id if id} href="#{path}" #{'target=' + target if target} class="service-link #{link_css}">#{service_icon(service_name, 16, service.name)}</a>}.html_safe
+    if wrapper
+      content_tag(wrapper, link, :class => 'identity-service').html_safe
+    else
+      link
+    end
+  end
+    
   def url_by_identity_feed(owner, identity_feed, service)
     if identity_feed
       polymorphic_url([owner, identity_feed], :service_id => service.to_param).html_safe
