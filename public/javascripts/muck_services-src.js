@@ -12,8 +12,7 @@ function apply_add_feed(){
 
 function apply_delete_feed(){
   jQuery('.identity-feed-delete').bind('submit', function(){
-		jQuery(this).hide();
-		jQuery(this).parents('li').html(jQuery('#muck_ajax_delete_control_message').show().html());
+		jQuery(this).replaceWith(jQuery(jQuery('#muck_ajax_delete_control_message').html()).show());		
     jQuery(this).ajaxSubmit({
   		dataType: 'script',
       beforeSend: add_headers

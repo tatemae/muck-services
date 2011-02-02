@@ -90,11 +90,8 @@ class Muck::IdentityFeedsController < ApplicationController
         flash[:notice] = t("muck.services.identity_feed_removed")
         redirect_to polymorphic_url([@identity_feed.ownable, :identity_feeds]) 
       end
-      format.js do
-        render(:update) do |page|
-          page << "jQuery('##{@identity_feed.dom_id}').fadeOut();"
-        end
-      end
+      format.js { render :template => 'identity_feeds/destroy', :layout => false }
+      format.pjs { render :template => 'identity_feeds/destroy', :layout => false }
       format.json do
         render :json => { :success => true,
                           :identity_feed => @identity_feed,

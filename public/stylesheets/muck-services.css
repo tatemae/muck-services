@@ -13,6 +13,7 @@
 #identity-feed input[type="text"] {width:380px;}
 ul#my-services-list li {position:relative;}
 ul#my-services-list li form {right:-25px;position:absolute;top:3px;}
+ul#my-services-list li .waiting{height:15px;display:inline-block;} 
 ul.service-summary{margin:0;padding:0;list-style:none;}
 ul.service-summary a.service-link{display:inline-block;margin:2px 0;padding:2px 0 5px 28px;text-decoration:none;}
 #data-sources #sources-list ul {float:left;display:inline-block;height:170px;margin:0 20px;width:150px;}

@@ -719,7 +719,7 @@ amazon:
   icon: amazon.png
   use_for: "identity"
   service_category_id: 12
-  active: true
+  active: false
   prompt: amazon_prompt
 twitter_tags:
   id: 59

@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2011-01-28}
+  s.date = %q{2011-02-01}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -104,12 +104,13 @@ Gem::Specification.new do |s|
     "app/views/feeds/new_oai_rss.html.erb",
     "app/views/feeds/show.html.erb",
     "app/views/feeds/unban.html.erb",
-    "app/views/identity_feeds/_available_service_categories.html.erb",
+    "app/views/identity_feeds/_available_service_categories.erb",
     "app/views/identity_feeds/_form.erb",
-    "app/views/identity_feeds/_services_for_user.html.erb",
-    "app/views/identity_feeds/edit.html.erb",
-    "app/views/identity_feeds/index.html.erb",
-    "app/views/identity_feeds/new.html.erb",
+    "app/views/identity_feeds/_services_for_user.erb",
+    "app/views/identity_feeds/create.erb",
+    "app/views/identity_feeds/edit.erb",
+    "app/views/identity_feeds/index.erb",
+    "app/views/identity_feeds/new.erb",
     "app/views/oai_endpoints/_form.html.erb",
     "app/views/oai_endpoints/_oai_endpoint_row.html.erb",
     "app/views/oai_endpoints/new.html.erb",
@@ -123,18 +124,18 @@ Gem::Specification.new do |s|
     "app/views/recommendations/index.rss.builder",
     "app/views/recommendations/index.xml.builder",
     "app/views/recommendations/real_time.html.erb",
-    "app/views/service_templates/_facebook.html.erb",
-    "app/views/service_templates/_friendfeed.html.erb",
-    "app/views/service_templates/_goodreads.html.erb",
-    "app/views/service_templates/_linkedin.html.erb",
-    "app/views/service_templates/_netflix.html.erb",
-    "app/views/service_templates/_polyvore.html.erb",
-    "app/views/service_templates/_zotero_group.html.erb",
-    "app/views/services/_edit_service.html.erb",
-    "app/views/services/_new_service.html.erb",
-    "app/views/services/_personal_recommendations.html.erb",
-    "app/views/services/_summary.html.erb",
-    "app/views/services/_view_service.html.erb",
+    "app/views/service_templates/_facebook.erb",
+    "app/views/service_templates/_friendfeed.erb",
+    "app/views/service_templates/_goodreads.erb",
+    "app/views/service_templates/_linkedin.erb",
+    "app/views/service_templates/_netflix.erb",
+    "app/views/service_templates/_polyvore.erb",
+    "app/views/service_templates/_zotero_group.erb",
+    "app/views/services/_edit_service.erb",
+    "app/views/services/_new_service.erb",
+    "app/views/services/_personal_recommendations.erb",
+    "app/views/services/_summary.erb",
+    "app/views/services/_view_service.erb",
     "app/views/services_mailer/notification_feed_added.html.erb",
     "app/views/services_mailer/notification_feed_added.text.erb",
     "app/views/services_mailer/notification_oai_endpoint_added.html.erb",
@@ -252,6 +253,7 @@ Gem::Specification.new do |s|
     "lib/muck-services/services.rb",
     "lib/tasks/muck_services.rake",
     "muck-services.gemspec",
+    "public/javascripts/muck_services-src.js",
     "public/javascripts/muck_services.js",
     "public/stylesheets/frame.css",
     "public/stylesheets/muck-services.css"
