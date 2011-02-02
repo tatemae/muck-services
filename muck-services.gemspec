@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-services}
-  s.version = "3.1.1"
+  s.version = "3.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
@@ -108,6 +108,7 @@ Gem::Specification.new do |s|
     "app/views/identity_feeds/_form.erb",
     "app/views/identity_feeds/_services_for_user.erb",
     "app/views/identity_feeds/create.erb",
+    "app/views/identity_feeds/destroy.erb",
     "app/views/identity_feeds/edit.erb",
     "app/views/identity_feeds/index.erb",
     "app/views/identity_feeds/new.erb",
