@@ -20,7 +20,7 @@ namespace :muck do
       task :populate => :environment do
         require 'active_record/fixtures'
         ['en', 'es', 'zh-CN', 'fr', 'ja', 'de', 'ru', 'nl'].each{|l|
-          r = Language.first(:one, :conditions => "locale = '#{l}'")
+          r = Language.where("locale='#{l}'").first
           if r
             r.update_attribute(:muck_raker_supported, true)
           else
