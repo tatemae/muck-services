@@ -33,7 +33,7 @@ class Muck::RecommendationsController < ApplicationController
         if !@entry.id.nil?
           redirect_to resource_path(@entry) + "?limit=#{@limit}&order=#{@order}&details=#{@details}"
         else
-          render(:text => t('muck.services.url_not_in_index', :uri => params[:uri]), :layout => true)
+          render(:text => t('muck.services.url_not_in_index', :uri => params[:uri]), :layout => true).html_safe
         end
       end
       format.xml  { render('recommendations/index.xml.builder', :layout => false) }

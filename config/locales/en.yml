@@ -67,7 +67,6 @@ en:
       for: for
       zotero_group_prompt: Zotero group URL
       download_opml: Download OPML file for %{terms}
-      loading_content_image: <%= t('muck.services.loading_image') %>
       save_aggreation: Save this Aggregation
       metadata: metadata
       signup_to_save_aggreation: "%{login} or %{signup} to save this search"

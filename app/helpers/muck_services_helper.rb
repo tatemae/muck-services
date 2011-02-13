@@ -33,14 +33,14 @@ module MuckServicesHelper
         :last => (@offset + @per_page) < @hit_count ? (@offset + @per_page) : @hit_count,
         :total => @hit_count,
         :filter => @tag_filter,
-        :terms => URI.unescape(@term_list))
+        :terms => URI.unescape(@term_list)).html_safe
       else
         t('muck.services.resource_search_results', 
         :first => @offset+1, 
         :last => (@offset + @per_page) < @hit_count ? (@offset + @per_page) : @hit_count,
         :total => @hit_count,
         :filter => @tag_filter,
-        :terms => URI.unescape(@term_list))
+        :terms => URI.unescape(@term_list)).html_safe
       end
     else
       if (@grain_size == 'course')
@@ -49,14 +49,14 @@ module MuckServicesHelper
         :last => (@offset + @per_page) < @hit_count ? (@offset + @per_page) : @hit_count,
         :total => @hit_count,
         :filter => @tag_filter,
-        :terms => @tag_filter.split('/').join('</b>, <b>'))
+        :terms => @tag_filter.split('/').join('</b>, <b>')).html_safe
       else
         t('muck.services.resource_tag_results', 
         :first => @offset+1, 
         :last => (@offset + @per_page) < @hit_count ? (@offset + @per_page) : @hit_count,
         :total => @hit_count,
         :filter => @tag_filter,
-        :terms => @tag_filter.split('/').join('</b>, <b>'))
+        :terms => @tag_filter.split('/').join('</b>, <b>')).html_safe
       end
     end
   end
