@@ -232,7 +232,7 @@ describe Service do
       @user = Factory(:user)
     end
     it "should create feed from service" do
-      feeds = Service.create_tag_feeds_for_service(@service, '', @login, @password, @user.id)
+      feeds = Service.create_tag_feeds_for_service(@service, '', @login, @password, @user)
       feed = feeds[0]
       feed.uri.should == @uri_data_template.sub("{username}", @login)
       feed.login.should == @login
@@ -240,7 +240,7 @@ describe Service do
       feed.service_id.should == @service.id
     end
     it "should create feed from service even with nil template" do
-      feeds = Service.create_tag_feeds_for_service(@service, '', @login, @password, @user.id)
+      feeds = Service.create_tag_feeds_for_service(@service, '', @login, @password, @user)
       feed = feeds[0]
       feed.uri.should == @uri_data_template.sub("{username}", @login)
       feed.login.should == @login

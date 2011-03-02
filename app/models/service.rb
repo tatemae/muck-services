@@ -428,7 +428,7 @@ class Service < ActiveRecord::Base
   def self.create_tag_feeds(terms, user = nil, selected_service_ids = nil, refresh_services = false)
     services = get_tag_services(selected_service_ids, refresh_services)
     split_terms(terms).collect { |tag|
-      services.collect { |service| Feed.find_or_create(service.generate_tag_uri(tag), tag, '', '', service.id, user, service.human_uri(tag)) }
+      services.collect { |service| Feed.find_or_create(service.generate_tag_uri(tag), tag, '', '', service, user, service.human_uri(tag)) }
     }.flatten!
   end
   

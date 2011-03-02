@@ -10,6 +10,7 @@ module MuckServices
       extend ActiveSupport::Concern
       
       included do
+        has_many :contributed_feeds, :class_name => 'Feed'
         has_many :identity_feeds, :as => :ownable
         has_many :own_feeds, :through => :identity_feeds, :source => :feed, :order => 'created_at desc'
       end

@@ -50,7 +50,6 @@ describe Feed do
     it { should belong_to :service }
     
     it { should validate_presence_of :uri }
-    it { should validate_uniqueness_of :uri }
     
     it { should scope_by_title }
     it { should scope_newer_than }
@@ -63,6 +62,18 @@ describe Feed do
     it "should set harvest interval by hours" do
       @feed.harvest_interval_hours = 10
       @feed.harvest_interval.should == 10 * 3600
+    end
+    
+    describe "validate_uniqueness_of" do
+      before do
+        @contributor = Factory(:user)
+        @feed = Factory(:feed, :contributor => @contributor, :uri => 'http://www.example.com/same')
+      end
+      it "shouldn't allow the creation of a second feed with the same uri for the same user" do
+        @feed = Factory.build(:feed, :contributor => @contributor, :uri => 'http://www.example.com/same')
+        @feed.valid?.should be_false
+        @feed.errors[:uri].should be_true
+      end
     end
     
     describe "named scope" do
@@ -92,6 +103,15 @@ describe Feed do
       end
     end
     
+  end
+  
+  describe "is_website?" do
+    before do
+      @feed = Factory(:feed, :uri => nil, :display_uri => 'http://www.example.com')
+    end
+    it "indicates the feed is a website" do
+      @feed.is_website?.should be_true
+    end
   end
   
   describe "Feed status" do
@@ -198,6 +218,47 @@ describe Feed do
       it "should not be in use" do
         @global_feed.in_use?.should be_false
       end
+    end
+  end
+  
+  describe "find_or_create_as_website" do
+    before do
+      @service = Factory(:service)
+      @contributor = Factory(:user)
+    end
+    it "should create a feed without a uri but with a display_uri" do
+        lambda {
+          Feed.find_or_create_as_website('http://www.justinball.com', "Justin's site", @service, @contributor)
+        }.should change(Feed, :count)
+    end
+  end
+  
+  describe "find_or_create" do
+    before do
+      @service = Factory(:service)
+      @contributor = Factory(:user)
+    end
+    it "should create a feed" do
+        lambda {
+          Feed.find_or_create('http://www.justinball.com', "Justin's site", '', '', @service, @contributor)
+        }.should change(Feed, :count)
+    end
+  end
+  
+  describe "make_feeds_or_website" do
+    before do
+      @service = Factory(:service)
+      @contributor = Factory(:user)
+    end
+    it "should create a feed when it can find one" do
+      lambda {
+        feeds = Feed.make_feeds_or_website('http://www.justinball.com', @contributor)
+      }.should change(Feed, :count)
+    end
+    it "should create a website (feed without a uri) when it can't find a valid feed" do
+      lambda {
+        feeds = Feed.make_feeds_or_website('http://www.example.com', @contributor)
+      }.should change(Feed, :count)
     end
   end
   

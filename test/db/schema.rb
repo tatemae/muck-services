@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100903205928) do
+ActiveRecord::Schema.define(:version => 20110226174321) do
 
   create_table "access_code_requests", :force => true do |t|
     t.string   "email"
     t.datetime "code_sent_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "access_code_requests", ["email"], :name => "index_access_code_requests_on_email"
@@ -173,8 +174,10 @@ ActiveRecord::Schema.define(:version => 20100903205928) do
     t.datetime "updated_at"
     t.string   "layout"
     t.integer  "comment_count",    :default => 0
+    t.string   "cached_slug"
   end
 
+  add_index "contents", ["cached_slug"], :name => "index_contents_on_cached_slug"
   add_index "contents", ["creator_id"], :name => "index_contents_on_creator_id"
   add_index "contents", ["parent_id"], :name => "index_contents_on_parent_id"
 
@@ -480,14 +483,15 @@ ActiveRecord::Schema.define(:version => 20100903205928) do
   end
 
   create_table "shares", :force => true do |t|
-    t.string   "uri",           :limit => 2083, :default => "", :null => false
+    t.string   "uri",            :limit => 2083, :default => "", :null => false
     t.string   "title"
     t.text     "message"
-    t.integer  "shared_by_id",                                  :null => false
+    t.integer  "shared_by_id",                                   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "comment_count",                 :default => 0
+    t.integer  "comment_count",                  :default => 0
     t.integer  "entry_id"
+    t.string   "shared_by_type"
   end
 
   add_index "shares", ["shared_by_id"], :name => "index_shares_on_shared_by_id"

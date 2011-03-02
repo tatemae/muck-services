@@ -37,7 +37,7 @@ class Muck::IdentityFeedsController < ApplicationController
     else
       uri = nil
     end 
-      
+  
     if uri
       @feed = Feed.new(:uri => uri, :login => params[:username])
       feeds = Service.create_tag_feeds_for_service(@service, uri, params[:username], params[:password], current_user.id)

@@ -317,7 +317,7 @@ pandora:
   icon: pandora.png
   use_for: "identity"
   service_category_id: 5
-  active: true
+  active: false
 technorati_tags:
   id: 27
   sort: 27
@@ -719,7 +719,7 @@ amazon:
   icon: amazon.png
   use_for: "identity"
   service_category_id: 12
-  active: true
+  active: false
   prompt: amazon_prompt
 twitter_tags:
   id: 59

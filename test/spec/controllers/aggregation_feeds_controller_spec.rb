@@ -26,7 +26,10 @@ describe Muck::AggregationFeedsController do
         before do
           delete :destroy, :id => -1, :aggregation_id => @aggregation.id, :feed_id => @feed.id, :format => 'json'
         end
-        it { should redirect_to( login_path ) }
+        it "should render json indicating login required" do
+          data = JSON.parse(response.body)
+          data['logged_in'].should be_false
+        end
       end
       
     end

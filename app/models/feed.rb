@@ -38,8 +38,8 @@ class Feed < ActiveRecord::Base
   include HTTParty
   format :xml
 
-  validates_presence_of :uri
-  validates_uniqueness_of :uri
+  validates_presence_of :uri, :unless => :is_website?
+  validates_uniqueness_of :uri, :scope => [:contributor_id]
 
   has_many :feed_parents
   has_many :identity_feeds
@@ -58,6 +58,11 @@ class Feed < ActiveRecord::Base
 
   attr_protected :status, :last_requested_at, :last_harvested_at, :harvest_interval, :failed_requests,
                  :created_at, :updated_at, :entries_changed_at, :entries_count, :contributor_id
+  
+  # let uri be blank if display_uri is not blank. In that case the 'feed' is really a site rather than a feed.
+  def is_website?
+    self.uri.blank? && !self.display_uri.blank?
+  end
   
   def banned?
     self.status == MuckServices::Status::BANNED
@@ -148,11 +153,11 @@ class Feed < ActiveRecord::Base
 
   # Gathers all available feed uris from the given uri and parses them into
   # feed objects
-  def self.feeds_from_uri(uri, user = nil)
+  def self.feeds_from_uri(uri, contributor = nil)
     feeds = []
     @available_feeds = discover_feeds(uri)
     @available_feeds.each do |feed|
-      feeds << create_from_feedzirra(fetch_feed(feed.url), user) unless feed.blank?
+      feeds << create_from_feedzirra(fetch_feed(feed.url), contributor) unless feed.blank?
     end
     feeds
   end
@@ -173,9 +178,9 @@ class Feed < ActiveRecord::Base
   end
 
   # Creates a feed from feedzirra into a muck feed
-  def self.create_from_feedzirra(feed, user)
+  def self.create_from_feedzirra(feed, contributor)
     return if feed.blank?
-    Feed.find_or_create(feed.feed_url, feed.title, '', '', Service.find_service_by_uri(feed.url), user, feed.url)
+    Feed.find_or_create(feed.feed_url, feed.title, '', '', Service.find_service_by_uri(feed.url), contributor, feed.url)
   end
   
   # Looks for feeds from a given url
@@ -188,8 +193,31 @@ class Feed < ActiveRecord::Base
     end
   end
   
+  # Attempts to build feeds from the provided uri. If that fails the uri is added as a website (a feed without a uri but with a display_uri)
+  def self.make_feeds_or_website(uri, contributor, service_name = nil)
+    return [] if uri.blank?
+    feeds = Feed.feeds_from_uri(uri, contributor)
+    if feeds.blank?
+      # Couldn't find a feed. Create it as a website
+      service = Service.find_by_name(service_name)
+      service ||= Service.find_service_by_uri(uri)
+      feeds = [Feed.find_or_create_as_website(uri, '', service, contributor)]
+    end
+    feeds
+  end
+  
   # Finds or creates a feed based on the url.  Any give feed uri should only exist once in the system
-  def self.find_or_create(uri, title, username, password, service_id, contributor_id, display_uri = nil)
+  def self.find_or_create(uri, title, username, password, service, contributor, display_uri = nil)
+    if service.is_a?(Service)
+      service_id = service.id
+    else
+      service_id = service
+    end
+    if contributor.is_a?(User)
+      contributor_id = contributor.id
+    else
+      contributor_id = contributor
+    end
     Feed.find_by_uri(uri) ||
       Feed.create(:uri => uri,
                  :harvest_interval => '01:00:00',
@@ -202,6 +230,11 @@ class Feed < ActiveRecord::Base
                  :display_uri => display_uri)
   end
   
+  # Finds or creates a feed based on the url.  Any give feed uri should only exist once in the system
+  def self.find_or_create_as_website(display_uri, title, service, contributor)
+    Feed.find_or_create(nil, title, nil, nil, service, contributor, display_uri)
+  end
+  
   # Create feeds for the given uris
   # user: User that will be set as the feed contributor
   # uris: An array of uris for which to create feeds
@@ -209,7 +242,7 @@ class Feed < ActiveRecord::Base
   def self.create_tag_feeds(user = nil, uris = nil, service = nil)
     return [] if uris.blank?
     service ||= Service.default_service
-    uris.collect { |uri| Feed.find_or_create(uri, '', '', '', service.id, user, uri) }
+    uris.collect { |uri| Feed.find_or_create(uri, '', '', '', service, user, uri) }
   end
   
   # Combines entries in a collection of feeds together and sorts the entries by date
