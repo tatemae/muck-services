@@ -11,14 +11,14 @@ gem "bcrypt-ruby", :require => "bcrypt"
 # TODO this is temporary until a new version of loofah is released. loofah is required by feedzirra. This forces the version that works with rails3
 gem 'loofah', :git => 'http://github.com/phaza/loofah.git', :branch => 'rails3'
 
-gem 'muck-engine', :path => "~/projects/muck-engine"
-gem 'muck-users', :path => "~/projects/muck-users"
-gem 'muck-profiles', :path => "~/projects/muck-profiles"
-gem 'muck-activities', :path => "~/projects/muck-activities"
+gem 'muck-engine' #, :path => "~/projects/muck-engine"
+gem 'muck-users' #, :path => "~/projects/muck-users"
+gem 'muck-profiles' #, :path => "~/projects/muck-profiles"
+gem 'muck-activities' #, :path => "~/projects/muck-activities"
 gem 'muck-services', :path => '../'  
-gem "muck-contents", :path => "~/projects/muck-contents"
-gem "muck-comments", :path => "~/projects/muck-comments"
-gem "muck-shares", :path => "~/projects/muck-shares"
+gem "muck-contents" #, :path => "~/projects/muck-contents"
+gem "muck-comments" #, :path => "~/projects/muck-comments"
+gem "muck-shares" #, :path => "~/projects/muck-shares"
   
 if RUBY_VERSION < '1.9'
   gem "ruby-debug"
