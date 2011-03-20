@@ -3,6 +3,7 @@
   <%= javascript_tag %[var ADD_SHARE_MESSAGE = '#{t('muck.shares.adding_share')}';] %>
 <% end -%>
 <% content_for :javascript do -%>
+<script type="text/javascript" language="JavaScript">
   jQuery(document).ready(function() {
     <%= "show_tool('comments');" if params[:show_comments] || @entry.comment_count > 0 -%>
     jQuery(window).bind('resize', function() {
@@ -24,4 +25,5 @@
     setup_share_submit();
     apply_frame_comment_hover();
   });
+</script>
 <% end -%>

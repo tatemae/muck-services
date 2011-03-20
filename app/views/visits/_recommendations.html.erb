@@ -7,6 +7,8 @@
  </ul>
  <div id="more_recs"><%= link_to t('muck.services.gm_more_prompt'), resource_path(@entry) %></div>
 </div>
+<% content_for :javascript do -%>
 <script type="text/javascript">
 initRecsPanel();
 </script>
+<% end -%>

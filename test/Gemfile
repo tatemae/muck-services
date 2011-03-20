@@ -1,24 +1,25 @@
 source "http://rubygems.org"
 
-gem "rails", "3.0.1"
+gem "rails", "3.0.5"
 gem 'mysql'
 
 # gem 'authlogic'
 # TODO this is temporary until the official authlogic gem is updated for rails 3
-gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
+gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git'
 gem "bcrypt-ruby", :require => "bcrypt"
+gem "jammit"
 
 # TODO this is temporary until a new version of loofah is released. loofah is required by feedzirra. This forces the version that works with rails3
-gem 'loofah', :git => 'http://github.com/phaza/loofah.git', :branch => 'rails3'
+gem 'loofah'
 
-gem 'muck-engine' #, :path => "~/projects/muck-engine"
-gem 'muck-users' #, :path => "~/projects/muck-users"
-gem 'muck-profiles' #, :path => "~/projects/muck-profiles"
-gem 'muck-activities' #, :path => "~/projects/muck-activities"
+gem 'muck-engine', :path => "~/projects/muck-engine"
+gem 'muck-users', :path => "~/projects/muck-users"
+gem 'muck-profiles', :path => "~/projects/muck-profiles"
+gem 'muck-activities', :path => "~/projects/muck-activities"
+gem "muck-contents", :path => "~/projects/muck-contents"
+gem "muck-comments", :path => "~/projects/muck-comments"
+gem "muck-shares", :path => "~/projects/muck-shares"
 gem 'muck-services', :path => '../'  
-gem "muck-contents" #, :path => "~/projects/muck-contents"
-gem "muck-comments" #, :path => "~/projects/muck-comments"
-gem "muck-shares" #, :path => "~/projects/muck-shares"
   
 if RUBY_VERSION < '1.9'
   gem "ruby-debug"
@@ -30,7 +31,6 @@ group :test, :development do
 end
 
 group :test do
-  gem "autotest"
   gem "capybara", ">= 0.3.9"
   gem "shoulda"
   gem "factory_girl"

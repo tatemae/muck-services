@@ -1,3 +1,4 @@
+<% content_for :javascript do -%>
 <script type="text/javascript">
 function validate()
 {
@@ -43,6 +44,7 @@ function validate()
     return true;
 }
 </script>
+<% end -%>
 
 <h1>Edit Collection Metadata: <%= @feed.title %></h1>
 

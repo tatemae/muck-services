@@ -6,10 +6,12 @@
   </span>
 <% end -%>
 <% content_for :javascript do -%>
+<script type="text/javascript" language="JavaScript">
 jQuery(document).ready(function() {
     jQuery('#generate_topic').click(function(){
         jQuery(this).hide();
         jQuery('#generating_topic_message').show();
     });
 });
+</script>
 <% end -%>

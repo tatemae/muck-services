@@ -32,6 +32,7 @@
 </div>
 
 <% content_for :javascript do -%>
+<script type="text/javascript" language="JavaScript">
 jQuery(document).ready(function() {
   jQuery('#oai').hide();
   jQuery('#add_rss').click(function(){
@@ -47,4 +48,5 @@ jQuery(document).ready(function() {
     jQuery('#finding_uri_message').show();
   });
 });
+</script>
 <% end -%>

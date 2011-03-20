@@ -13,10 +13,12 @@
   </div>
 <% end -%>
 <% content_for :javascript do -%>
+<script type="text/javascript" language="JavaScript">
 jQuery(document).ready(function() {
   jQuery('#add_oai_uri').click(function() {
     jQuery('#add_oai_uri').hide();
     jQuery('#finding_oai_message').show();
   });
 });
+</script>
 <% end -%>

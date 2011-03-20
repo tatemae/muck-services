@@ -23,10 +23,12 @@
   <% end -%>
 </div>
 <% content_for :javascript do -%>
+<script type="text/javascript" language="JavaScript">
 jQuery(document).ready(function() {
     jQuery('#add_feed_uri').click(function(){
         jQuery(this).hide();
         jQuery('#finding_uri_message').show();
     });
 });
+</script>
 <% end -%>

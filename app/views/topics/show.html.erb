@@ -27,11 +27,13 @@
       <ul class="combined-feed-list">
         <%= render :partial => 'topics/simple_entry', :collection => @server_combined_data_feeds %>
       </ul>
+      <% content_for :javascript do -%>
       <script type="text/javascript">
         jQuery(document).ready(function() {
           apply_show_entry_content();
         });
       </script>
+      <% end -%>
     <% else -%>
       <%= render :partial => 'topics/feed', :collection => @server_loaded_data_feeds %>
     <% end -%>

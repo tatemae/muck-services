@@ -1,3 +1,5 @@
 <h1>The <%= @feed.title %> feed has been unbanned and is being re-harvested</h1>
 <p>You will be redirected to the updated course list in a few seconds.</p>
+<% content_for :javascript do -%>
 <script type="text/javascript">setTimeout("window.location = '/feeds/<%= @feed.id %>/entries'", 5000);</script>
+<% end -%>

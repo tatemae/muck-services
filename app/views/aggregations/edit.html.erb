@@ -45,6 +45,7 @@
 <%= render :partial => 'google/feeds_scripts' %>
 
 <% content_for :javascript do -%>
+<script type="text/javascript" language="JavaScript">
 jQuery(document).ready(function() {
   jQuery("#add-feed-button").click(function() {
     jQuery('#add-feed-waiting').show();
@@ -62,4 +63,5 @@ jQuery(document).ready(function() {
     return false;
   });
 });
+</script>
 <% end -%>
