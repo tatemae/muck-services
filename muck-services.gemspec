@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-services}
-  s.version = "3.3.1"
+  s.version = "3.3.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Duffin", "Justin Ball"]
-  s.date = %q{2011-03-19}
+  s.date = %q{2011-05-30}
   s.description = %q{This gem contains the rails specific code for dealing with feeds, aggregations and recommendations.  It is meant to work with the muck-raker gem.}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -54,7 +54,6 @@ Gem::Specification.new do |s|
     "app/models/service_category.rb",
     "app/models/services_mailer.rb",
     "app/models/subject.rb",
-    "app/models/tag_cloud.rb",
     "app/views/activity_templates/_entry_comment.erb",
     "app/views/activity_templates/_entry_share.erb",
     "app/views/admin/feeds/index.html.erb",
@@ -250,6 +249,7 @@ Gem::Specification.new do |s|
     "lib/muck-services/models/recommendation_owner.rb",
     "lib/muck-services/models/services_comment.rb",
     "lib/muck-services/models/services_share.rb",
+    "lib/muck-services/models/tag_cloud.rb",
     "lib/muck-services/muck_custom_form_builder.rb",
     "lib/muck-services/services.rb",
     "lib/tasks/muck_services.rake",
@@ -261,7 +261,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = %q{http://github.com/tatemae/muck_services}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.0}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{Feeds, aggregations and services for muck}
 
   if s.respond_to? :specification_version then
