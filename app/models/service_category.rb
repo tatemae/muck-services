@@ -10,6 +10,6 @@
 class ServiceCategory < ActiveRecord::Base
   scope :sorted, order("sort ASC")
   has_many :services, :order => 'sort ASC'
-  has_many :identity_services, :class_name => 'Service', :order => 'sort ASC', :conditions => ['use_for = ?', 'identity']
-  has_many :tag_services, :class_name => 'Service', :order => 'sort ASC', :conditions => ['use_for = ?', 'tags']
+  has_many :identity_services, :class_name => 'Service', :order => 'sort ASC', :conditions => ['use_for = ? AND active = ?', 'identity', true]
+  has_many :tag_services, :class_name => 'Service', :order => 'sort ASC', :conditions => ['use_for = ? AND active = ?', 'tags', true]
 end

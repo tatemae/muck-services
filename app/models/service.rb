@@ -26,6 +26,7 @@ class Service < ActiveRecord::Base
   scope :sorted, order("sort ASC")
   scope :identity_services, where('use_for = ?', 'identity')
   scope :tag_services, where('use_for = ?', 'tags')
+  scope :active, where('active = ?', true)
   scope :photo_services, where("service_categories.id = services.service_category_id AND service_categories.name = 'Photos'").includes('service_category')
 
   # Indicates whether service is primarily a photo service ie from flick, picasa, etc

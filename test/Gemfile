@@ -1,7 +1,8 @@
 source "http://rubygems.org"
 
-gem "rails", "3.0.5"
+gem "rails", "3.0.7"
 gem 'mysql'
+gem 'rake', '~> 0.8.7'
 
 # gem 'authlogic'
 # TODO this is temporary until the official authlogic gem is updated for rails 3

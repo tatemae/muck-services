@@ -20,5 +20,6 @@ require 'muck-services/models/recommendation'
 require 'muck-services/models/recommendation_owner'
 require 'muck-services/models/services_comment'
 require 'muck-services/models/services_share'
+require 'muck-services/models/tag_cloud'
 
 require 'muck-services/engine'

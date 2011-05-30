@@ -27,6 +27,7 @@ describe Service do
 
     it { should belong_to :service_category }
     it { should scope_sorted }
+    it { should scope_active }
     it { should scope_sorted_id }
     
     describe "named scope" do

@@ -1,6 +1,5 @@
 require 'rubygems'
-require 'rake'
-require 'rake/rdoctask'
+require 'bundler'
 require 'rspec/core/rake_task'
 
 desc 'Default: run specs.'
@@ -21,7 +20,6 @@ end
 begin
   require 'rcov/rcovtask'
   Rcov::RcovTask.new do |t|
-    #t.libs << 'lib'
     t.libs << 'test/lib'
     t.pattern = 'test/test/**/*_spec.rb'
     t.verbose = true
@@ -58,23 +56,25 @@ begin
     gem.add_dependency "muck-comments"
     gem.add_development_dependency "shoulda"
     gem.files.exclude 'test/**'
-    gem.test_files.exclude 'test/**'
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
-  Jeweler::GemcutterTasks.new
+  Jeweler::RubygemsDotOrgTasks.new
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
 end
 
-Rake::RDocTask.new do |rdoc|
-  if File.exist?('VERSION')
-    version = File.read('VERSION')
+require 'rake/rdoctask'
+desc 'Generate documentation for the muck-services plugin.'
+Rake::RDocTask.new(:rdoc) do |rdoc|
+  if File.exist?('VERSION.yml')
+    config = YAML.load(File.read('VERSION.yml'))
+    version = "#{config[:major]}.#{config[:minor]}.#{config[:patch]}"
   else
     version = ""
   end
-
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "muck-services #{version}"
+  rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
