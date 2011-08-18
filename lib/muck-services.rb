@@ -4,8 +4,6 @@ require 'river'
 require 'feedbag'
 require 'feedzirra'
 
-require 'acts_as_solr'
-
 require 'muck-services/config'
 
 require 'muck-services/muck_custom_form_builder'

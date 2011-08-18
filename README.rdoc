@@ -35,7 +35,8 @@ Add the following to your Gemfile:
   gem "feedzirra"
   gem 'muck-engine'
   gem 'muck-users'
-  gem 'muck-solr', :require => 'acts_as_solr'
+  gem 'muck-solr', :require => 'acts_as_solr' # if using solr
+  gem 'sunspot' # if using sunspot (recommended)
 
 The following are optional but almost always used so you may as well pull them in.
   gem 'muck-comments'
@@ -62,7 +63,7 @@ muck-services uses muck-comments and muck-activities to add comments to entries 
 muck-services also uses muck-shares and muck-activities to share entries with other users.  Again you can omit these gems if you don't desire the share capability.
 
 To turn on this functionality create an initializer:
-  MuckServices.configure.do |config|
+  MuckServices.configure do |config|
     config.inform_admin_of_global_feed = true   # If true then the 'admin_email' will recieve an email anytime a global feed (one that is not 
                                                 # attached to any object) is added.
     config.enable_services_comments = true      # Enables or disables comments in the frame that wraps content as a user browses recommendation results

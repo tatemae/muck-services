@@ -57,8 +57,21 @@ class Entry < ActiveRecord::Base
   @@max_secs_tracked = 120
   @@default_time_on_page = 60.0
   
-  acts_as_solr({:if => false, :fields => [{:aggregation => :integer}, {:feed_id => :integer}, {:grain_size => :string}, {:tags => :string}]}, {:type_field => :type_s})
-
+  if MuckServices.configuration.enable_solr && MuckServices.configuration.enable_sunspot
+    fields = [{:aggregation => :integer}, {:feed_id => :integer}, {:grain_size => :string}, {:tags => :string}]
+    if MuckServices.configuration.enable_solr
+      require 'acts_as_solr'
+      acts_as_solr({:if => false, :fields => fields}, {:type_field => :type_s})
+    elsif MuckServices.configuration.enable_sunspot
+      require 'sunspot'
+      searchable do
+        fields.each do |field|
+          text field
+        end
+      end
+    end
+  end
+  
   def self.search(search_terms, grain_size = nil, language = "en", limit = 10, offset = 0, operator = :or)
     raise MuckServices::Exceptions::LanguageNotSupported, I18n.t('muck.services.language_not_supported') unless Recommender::Languages.supported_languages.include?(language)
     query = ((!grain_size.nil? && grain_size != 'all') ? (search_terms + ") AND (grain_size:#{grain_size}") : search_terms) + ") AND (aggregation:#{Aggregation.global_feeds_id}"

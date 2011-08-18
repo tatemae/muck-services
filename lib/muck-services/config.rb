@@ -21,6 +21,8 @@ module MuckServices
     attr_accessor :show_google_search           # Determines whether or not a google search is displayed on the topic page
     attr_accessor :combine_feeds_on_server      # Combines feeds loaded on the server
     attr_accessor :load_feeds_on_server         # Determines whether feeds on a topic page are loaded on the server or the client.  Loading on the server can take a while
+    attr_accessor :enable_sunspot         # This enables or disables sunspot. Only use acts_as_solr or sunspot not both. Sunspot does not include multicore support.
+    attr_accessor :enable_solr            # This enables or disables acts as solr.
     
     def initialize
       self.enable_services_shares = true
@@ -30,6 +32,8 @@ module MuckServices
       self.show_google_search = true
       self.combine_feeds_on_server = false
       self.load_feeds_on_server = false
+      self.enable_sunspot = false
+      self.enable_solr = false
     end
     
   end
